@@ -1,0 +1,133 @@
+{
+  "version": "index-v1",
+  "generated_at": "2026-03-24T13:23:01.183929+00:00",
+  "source_catalog": "skills-catalog-v1.json",
+  "source_shortlist": "skills-shortlist-v1.json",
+  "count": 5,
+  "search_ready": true,
+  "fields": [
+    "id",
+    "slug",
+    "name",
+    "repo",
+    "source",
+    "category",
+    "stars",
+    "summary",
+    "security_rating",
+    "collection_status",
+    "priority_score",
+    "audit_status",
+    "review_status",
+    "updated_at"
+  ],
+  "items": [
+    {
+      "id": "obra-superpowers",
+      "slug": "obra-superpowers",
+      "name": "superpowers",
+      "repo": "obra/superpowers",
+      "source": "https://github.com/obra/superpowers",
+      "category": "general",
+      "stars": 109623,
+      "summary": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "security_rating": "medium",
+      "collection_status": "recommended",
+      "priority_score": 68,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one.",
+      "safety_precheck": {},
+      "audit_status": "shortlisted",
+      "review_status": "pending_repo_index_integration",
+      "updated_at": "2026-03-24T13:23:01.183653+00:00"
+    },
+    {
+      "id": "anthropics-skills",
+      "slug": "anthropics-skills",
+      "name": "skills",
+      "repo": "anthropics/skills",
+      "source": "https://github.com/anthropics/skills",
+      "category": "registry",
+      "stars": 101633,
+      "summary": "Official public repository for Agent Skills",
+      "security_rating": "medium",
+      "collection_status": "recommended",
+      "priority_score": 68,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      },
+      "audit_status": "shortlisted",
+      "review_status": "pending_repo_index_integration",
+      "updated_at": "2026-03-24T13:23:01.183897+00:00"
+    },
+    {
+      "id": "composiohq-awesome-claude-skills",
+      "slug": "composiohq-awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "source": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "category": "registry",
+      "stars": 47432,
+      "summary": "Large discovery index for Claude Skills and related tooling",
+      "security_rating": "medium",
+      "collection_status": "recommended",
+      "priority_score": 63.4,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      },
+      "audit_status": "shortlisted",
+      "review_status": "pending_repo_index_integration",
+      "updated_at": "2026-03-24T13:23:01.183908+00:00"
+    },
+    {
+      "id": "voltagent-awesome-openclaw-skills",
+      "slug": "voltagent-awesome-openclaw-skills",
+      "name": "awesome-openclaw-skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "source": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "category": "registry",
+      "stars": 41534,
+      "summary": "Large OpenClaw skill collection sourced from registry",
+      "security_rating": "medium",
+      "collection_status": "recommended",
+      "priority_score": 57.5,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      },
+      "audit_status": "shortlisted",
+      "review_status": "pending_repo_index_integration",
+      "updated_at": "2026-03-24T13:23:01.183915+00:00"
+    },
+    {
+      "id": "hesreallyhim-awesome-claude-code",
+      "slug": "hesreallyhim-awesome-claude-code",
+      "name": "awesome-claude-code",
+      "repo": "hesreallyhim/awesome-claude-code",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code",
+      "category": "registry",
+      "stars": 31478,
+      "summary": "Curated Claude Code skills / hooks / commands / plugins list",
+      "security_rating": "medium",
+      "collection_status": "recommended",
+      "priority_score": 47.5,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      },
+      "audit_status": "shortlisted",
+      "review_status": "pending_repo_index_integration",
+      "updated_at": "2026-03-24T13:23:01.183926+00:00"
+    }
+  ]
+}
