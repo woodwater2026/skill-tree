@@ -11,6 +11,10 @@ Then open:
 
 - http://localhost:8000/web/
 
+GitHub Pages target URL after deployment:
+
+- https://woodwater2026.github.io/skill-tree/web/
+
 This static MVP loads:
 
 - `../catalog/skills-catalog-v1.json`

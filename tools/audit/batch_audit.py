@@ -16,6 +16,7 @@ WORKSPACE_ROOT = REPO_ROOT.parent
 AUDITOR_PATH = WORKSPACE_ROOT / "projects" / "skill_tree_auditor.py"
 CATALOG_PATH = REPO_ROOT / "catalog" / "skills-catalog-v1.json"
 OUTPUT_DIR = REPO_ROOT / "audits"
+SCHEMA_PATH = REPO_ROOT / "schema" / "skill.schema.json"
 
 DEFAULT_TARGETS = [
     "skills-directory/skill-codex",
@@ -56,6 +57,10 @@ def load_catalog() -> Dict[str, Dict[str, Any]]:
     for item in data.get("items", []):
         mapping[item.get("repo", "")] = item
     return mapping
+
+
+def load_schema() -> Dict[str, Any]:
+    return json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
 
 
 def slugify(repo_name: str) -> str:
@@ -167,6 +172,36 @@ def to_skill_record(item: Dict[str, Any], report: Dict[str, Any]) -> Dict[str, A
     }
 
 
+def validate_record(record: Dict[str, Any], schema: Dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    for field in schema.get("required", []):
+        if field not in record:
+            errors.append(f"missing required field: {field}")
+
+    enum_values = schema.get("properties", {}).get("primary_category", {}).get("enum", [])
+    if record.get("primary_category") not in enum_values:
+        errors.append(f"invalid primary_category: {record.get('primary_category')}")
+
+    risk_enum = schema.get("properties", {}).get("security", {}).get("properties", {}).get("risk_level", {}).get("enum", [])
+    if record.get("security", {}).get("risk_level") not in risk_enum:
+        errors.append(f"invalid risk_level: {record.get('security', {}).get('risk_level')}")
+
+    audit_status_enum = schema.get("properties", {}).get("audit", {}).get("properties", {}).get("status", {}).get("enum", [])
+    if record.get("audit", {}).get("status") not in audit_status_enum:
+        errors.append(f"invalid audit.status: {record.get('audit', {}).get('status')}")
+
+    recommendation_enum = schema.get("properties", {}).get("audit", {}).get("properties", {}).get("recommendation", {}).get("enum", [])
+    if record.get("audit", {}).get("recommendation") not in recommendation_enum:
+        errors.append(f"invalid audit.recommendation: {record.get('audit', {}).get('recommendation')}")
+
+    for finding in record.get("audit", {}).get("findings", []):
+        if finding.get("severity") not in {"info", "low", "medium", "high", "critical"}:
+            errors.append(f"invalid finding severity: {finding.get('severity')}")
+            break
+
+    return errors
+
+
 def to_markdown(record: Dict[str, Any]) -> str:
     lines = [
         f"# {record['slug']} audit",
@@ -202,8 +237,10 @@ def main() -> int:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     auditor = load_auditor_module()
     catalog = load_catalog()
+    schema = load_schema()
 
     generated: List[str] = []
+    validation_errors: Dict[str, list[str]] = {}
     for repo in DEFAULT_TARGETS[: args.limit]:
         item = catalog.get(repo, {
             "name": repo.split("/")[-1],
@@ -216,6 +253,9 @@ def main() -> int:
         report = auditor.build_report(f"https://github.com/{repo}")
         record = to_skill_record(item, report)
         slug = record["slug"]
+        errors = validate_record(record, schema)
+        if errors:
+            validation_errors[slug] = errors
         json_path = OUTPUT_DIR / f"{slug}.json"
         md_path = OUTPUT_DIR / f"{slug}.md"
         json_path.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -227,6 +267,10 @@ def main() -> int:
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "count": len(generated),
         "items": generated,
+        "validation": {
+            "valid": len(validation_errors) == 0,
+            "invalid_items": validation_errors,
+        },
     }
     (OUTPUT_DIR / "index.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False))

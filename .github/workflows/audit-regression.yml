@@ -1,0 +1,25 @@
+name: Audit tool regression check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/audit/**'
+      - 'schema/**'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Syntax check
+        run: |
+          python -m py_compile tools/audit/batch_audit.py
