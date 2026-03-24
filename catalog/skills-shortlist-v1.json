@@ -1,0 +1,58 @@
+{
+  "version": "shortlist-v1",
+  "generated_at": "2026-03-24",
+  "count": 5,
+  "selection_rule": "core tier + low/medium risk only",
+  "items": [
+    {
+      "name": "superpowers",
+      "repo": "obra/superpowers",
+      "category": "general",
+      "stars": 109623,
+      "risk": "medium",
+      "priority_score": 68,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one."
+    },
+    {
+      "name": "skills",
+      "repo": "anthropics/skills",
+      "category": "general",
+      "stars": 101633,
+      "risk": "medium",
+      "priority_score": 68,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one."
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "category": "registry",
+      "stars": 47432,
+      "risk": "medium",
+      "priority_score": 63.4,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one."
+    },
+    {
+      "name": "awesome-openclaw-skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "category": "registry",
+      "stars": 41534,
+      "risk": "medium",
+      "priority_score": 57.5,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one."
+    },
+    {
+      "name": "awesome-claude-code",
+      "repo": "hesreallyhim/awesome-claude-code",
+      "category": "registry",
+      "stars": 31478,
+      "risk": "medium",
+      "priority_score": 47.5,
+      "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "direct_value_to_skill_tree": "Improves trust and coverage of a major category users will search for on day one."
+    }
+  ]
+}

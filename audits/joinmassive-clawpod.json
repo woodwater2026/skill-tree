@@ -1,0 +1,700 @@
+{
+  "id": "joinmassive-clawpod",
+  "name": "clawpod",
+  "slug": "joinmassive-clawpod",
+  "primary_category": "agent-operations",
+  "secondary_categories": [],
+  "tags": [
+    "networking-growth",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "OpenClaw skill using proxy network integration",
+  "description": "Automated Skill Tree audit for joinmassive/clawpod. Source category: networking-growth.",
+  "source": {
+    "repo_url": "https://github.com/joinmassive/clawpod",
+    "platform": "github",
+    "owner": "joinmassive",
+    "repo": "clawpod",
+    "stars": 73
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".md",
+      ".json"
+    ]
+  },
+  "capabilities": [
+    "credentials-access",
+    "network"
+  ],
+  "security": {
+    "risk_level": "high",
+    "summary": [
+      "Overall risk assessed as HIGH based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": false,
+    "shell_execution": false,
+    "browser_control": false,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 63,
+    "last_audited_at": "2026-03-24T13:16:54.148559+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "sensitive-path-0001",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 17,
+        "evidence": "### 1. Get an API Token"
+      },
+      {
+        "id": "sensitive-path-0002",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 19,
+        "evidence": "Sign up at [Massive](https://clawpod.joinmassive.com/waitlist) and get your Unblocker API token."
+      },
+      {
+        "id": "sensitive-path-0003",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 21,
+        "evidence": "### 2. Set the Token"
+      },
+      {
+        "id": "sensitive-path-0004",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 24,
+        "evidence": "export MASSIVE_UNBLOCKER_TOKEN=\"your-token\""
+      },
+      {
+        "id": "network-0005",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 30,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0006",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 31,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0007",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 44,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0008",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 45,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0009",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 58,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0010",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 59,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0011",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 63,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0012",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 64,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0013",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 68,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0014",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 69,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0015",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 73,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0016",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 74,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0017",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 78,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0018",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 79,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0019",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 83,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0020",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 84,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0021",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 88,
+        "evidence": "curl -s -G --data-urlencode \"url=https://example.com\" \\"
+      },
+      {
+        "id": "sensitive-path-0022",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 89,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0023",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 95,
+        "evidence": "curl -s -G --data-urlencode \"url=$url\" \\"
+      },
+      {
+        "id": "sensitive-path-0024",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 96,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0025",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 105,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0026",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 105,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0027",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 109,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0028",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 109,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0029",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 113,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0030",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 113,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0031",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 117,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0032",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 117,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0033",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 121,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0034",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 121,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0035",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 125,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0036",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 125,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0037",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 163,
+        "evidence": "> `curl` and an API token. Optionally Node.js for HTML-to-markdown conversion."
+      },
+      {
+        "id": "sensitive-path-0038",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 175,
+        "evidence": "> Token is invalid or missing. Verify `MASSIVE_UNBLOCKER_TOKEN` is set correctly."
+      },
+      {
+        "id": "sensitive-path-0040",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 6,
+        "evidence": "metadata: {\"openclaw\":{\"emoji\":\"🔓\",\"homepage\":\"https://clawpod.joinmassive.com\",\"primaryEnv\":\"MASSIVE_UNBLOCKER_TOKEN\",\"requires\":{\"bins\":[\"curl\"],\"env\":[\"MASSIVE_UNBLOCKER_TOKEN\"]}}}"
+      },
+      {
+        "id": "sensitive-path-0041",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 29,
+        "evidence": "Check for the API token:"
+      },
+      {
+        "id": "sensitive-path-0042",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 32,
+        "evidence": "[ -n \"$MASSIVE_UNBLOCKER_TOKEN\" ] && echo \"TOKEN=SET\" || echo \"TOKEN=MISSING\""
+      },
+      {
+        "id": "sensitive-path-0043",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 35,
+        "evidence": "If token is `MISSING`, stop and tell the user:"
+      },
+      {
+        "id": "sensitive-path-0044",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 37,
+        "evidence": "> To use ClawPod, you need an API token. It takes under a minute to set up:"
+      },
+      {
+        "id": "sensitive-path-0045",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 41,
+        "evidence": "> 3. Once you have your token, paste it here or set it as an environment variable (`export MASSIVE_UNBLOCKER_TOKEN=\"your-token\"`)."
+      },
+      {
+        "id": "sensitive-path-0046",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 43,
+        "evidence": "Do not proceed until the token is available."
+      },
+      {
+        "id": "sensitive-path-0047",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 47,
+        "evidence": "Two endpoints. Both use `GET` requests with the same auth token."
+      },
+      {
+        "id": "sensitive-path-0048",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 59,
+        "evidence": "Auth header: `Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN`"
+      },
+      {
+        "id": "network-0049",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 64,
+        "evidence": "curl -s -G --data-urlencode \"url=THE_URL\" \\"
+      },
+      {
+        "id": "sensitive-path-0050",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 65,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0051",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 69,
+        "evidence": "Replace `THE_URL` with the actual URL. `curl --data-urlencode` handles URL-encoding automatically."
+      },
+      {
+        "id": "network-0052",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 83,
+        "evidence": "curl -s -G --data-urlencode \"url=$url\" \\"
+      },
+      {
+        "id": "sensitive-path-0053",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 84,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0054",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 97,
+        "evidence": "Auth header: `Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN` (same token as browser fetching)"
+      },
+      {
+        "id": "network-0055",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 102,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0056",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 102,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0057",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 111,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0058",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 111,
+        "evidence": "curl -s -H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "network-0059",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 156,
+        "evidence": "curl -s -G --data-urlencode \"url=THE_URL\" \\"
+      },
+      {
+        "id": "sensitive-path-0060",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 157,
+        "evidence": "-H \"Authorization: Bearer $MASSIVE_UNBLOCKER_TOKEN\" \\"
+      },
+      {
+        "id": "sensitive-path-0061",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "SKILL.md",
+        "line": 163,
+        "evidence": "- **401 Unauthorized** — Token is invalid or missing. Tell the user: \"Your ClawPod API token appears to be invalid or expired. You can get a new one at **clawpod.joinmassive.com**.\""
+      },
+      {
+        "id": "network-0062",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 178,
+        "evidence": "- **Sequential for multiple URLs.** No parallel requests."
+      },
+      {
+        "id": "docs-0039",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "README.md",
+        "line": 1,
+        "evidence": "# ClawPod"
+      },
+      {
+        "id": "docs-0063",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "SKILL.md",
+        "line": 1,
+        "evidence": "---"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 35.0,
+    "quality_score": 90.0,
+    "security_score": 0.0
+  },
+  "updated_at": "2026-03-24T13:16:54.153645+00:00"
+}

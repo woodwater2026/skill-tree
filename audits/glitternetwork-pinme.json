@@ -1,0 +1,1759 @@
+{
+  "id": "glitternetwork-pinme",
+  "name": "pinme",
+  "slug": "glitternetwork-pinme",
+  "primary_category": "agent-operations",
+  "secondary_categories": [],
+  "tags": [
+    "deployment",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "Single-command frontend deployment with Claude Code support",
+  "description": "Automated Skill Tree audit for glitternetwork/pinme. Source category: deployment.",
+  "source": {
+    "repo_url": "https://github.com/glitternetwork/pinme",
+    "platform": "github",
+    "owner": "glitternetwork",
+    "repo": "pinme",
+    "stars": 3027
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".ts",
+      ".md",
+      ".json",
+      ".js",
+      ".tsx",
+      ".yaml",
+      ".toml"
+    ]
+  },
+  "capabilities": [
+    "credentials-access",
+    "file-write",
+    "network"
+  ],
+  "security": {
+    "risk_level": "high",
+    "summary": [
+      "Overall risk assessed as HIGH based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository can write, modify, or delete local files.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": true,
+    "shell_execution": false,
+    "browser_control": false,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "\\.env",
+      "secret",
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 168,
+    "last_audited_at": "2026-03-24T13:16:56.318090+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "sensitive-path-0168",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": ".claude/skills/pinme/SKILL.md",
+        "line": 109,
+        "evidence": "- Upload `.env` files"
+      },
+      {
+        "id": "sensitive-path-0010",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 138,
+        "evidence": "- ❌ Do not upload `node_modules`, `.env`, `.git` directories"
+      },
+      {
+        "id": "sensitive-path-0011",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 158,
+        "evidence": "\"excludePatterns\": [\"node_modules\", \".env\", \".git\", \"src\"],"
+      },
+      {
+        "id": "sensitive-path-0012",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 361,
+        "evidence": "- ❌ `.env` - Environment configuration"
+      },
+      {
+        "id": "permissions-0013",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 625,
+        "evidence": "**Solution:** Check folder permissions, or use sudo (only when necessary)"
+      },
+      {
+        "id": "sensitive-path-0014",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 757,
+        "evidence": "2. **Configure GitHub Secrets:**"
+      },
+      {
+        "id": "sensitive-path-0015",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 758,
+        "evidence": "- Go to repository → Settings → Secrets and variables → Actions"
+      },
+      {
+        "id": "sensitive-path-0016",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 794,
+        "evidence": "- run: pinme set-appkey \"${{ secrets.PINME_APPKEY }}\""
+      },
+      {
+        "id": "sensitive-path-0017",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 795,
+        "evidence": "- run: pinme upload dist --domain \"${{ secrets.PINME_DOMAIN }}\""
+      },
+      {
+        "id": "sensitive-path-0018",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 814,
+        "evidence": "- Verify `PINME_APPKEY` secret is correct"
+      },
+      {
+        "id": "sensitive-path-0025",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 76,
+        "evidence": "async function checkVipStatus(authConfig: { address: string; token: string }): Promise<boolean> {"
+      },
+      {
+        "id": "sensitive-path-0026",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 79,
+        "evidence": "const vipResult = await isVip(authConfig.address, authConfig.token);"
+      },
+      {
+        "id": "sensitive-path-0027",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 86,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0028",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 144,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0029",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 145,
+        "evidence": "return; // Token expired hint already shown in API"
+      },
+      {
+        "id": "sensitive-path-0030",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 159,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0031",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 160,
+        "evidence": "return; // Token expired hint already shown in API"
+      },
+      {
+        "id": "sensitive-path-0032",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 180,
+        "evidence": "const dnsResult = await bindDnsDomainV4(displayDomain, up.contentHash, authConfig.address, authConfig.token);"
+      },
+      {
+        "id": "sensitive-path-0033",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 200,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0034",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/bind.ts",
+        "line": 201,
+        "evidence": "return; // Token expired hint already shown in API"
+      },
+      {
+        "id": "sensitive-path-0061",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/importCar.ts",
+        "line": 12,
+        "evidence": "const URL = process.env.IPFS_PREVIEW_URL;"
+      },
+      {
+        "id": "sensitive-path-0062",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/importCar.ts",
+        "line": 13,
+        "evidence": "const secretKey = process.env.SECRET_KEY;"
+      },
+      {
+        "id": "sensitive-path-0063",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/importCar.ts",
+        "line": 22,
+        "evidence": "throw new Error('Secret key not found');"
+      },
+      {
+        "id": "sensitive-path-0064",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/importCar.ts",
+        "line": 116,
+        "evidence": "const encryptedCID = encryptHash(result.contentHash, secretKey, uid);"
+      },
+      {
+        "id": "sensitive-path-0065",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/importCar.ts",
+        "line": 175,
+        "evidence": "const encryptedCID = encryptHash(result.contentHash, secretKey, uid);"
+      },
+      {
+        "id": "filesystem-0043",
+        "severity": "medium",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "bin/index.ts",
+        "line": 63,
+        "evidence": ".action(() => remove());"
+      },
+      {
+        "id": "sensitive-path-0066",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/logout.ts",
+        "line": 3,
+        "evidence": "import { clearAuthToken, getAuthConfig } from './utils/auth';"
+      },
+      {
+        "id": "sensitive-path-0067",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/logout.ts",
+        "line": 29,
+        "evidence": "// Clear auth token"
+      },
+      {
+        "id": "sensitive-path-0068",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/logout.ts",
+        "line": 30,
+        "evidence": "clearAuthToken();"
+      },
+      {
+        "id": "sensitive-path-0023",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/set-appkey.ts",
+        "line": 3,
+        "evidence": "import { setAuthToken } from './utils/auth';"
+      },
+      {
+        "id": "sensitive-path-0024",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/set-appkey.ts",
+        "line": 25,
+        "evidence": "const saved = setAuthToken(appKey);"
+      },
+      {
+        "id": "sensitive-path-0035",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 17,
+        "evidence": "// Show token with masking (show first 8 chars and last 4 chars)"
+      },
+      {
+        "id": "sensitive-path-0036",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 18,
+        "evidence": "const token = auth.token;"
+      },
+      {
+        "id": "sensitive-path-0037",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 19,
+        "evidence": "if (token.length > 12) {"
+      },
+      {
+        "id": "sensitive-path-0038",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 20,
+        "evidence": "const maskedToken = `${token.substring(0, 8)}${'*'.repeat(token.length - 12)}${token.substring(token.length - 4)}`;"
+      },
+      {
+        "id": "sensitive-path-0039",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 21,
+        "evidence": "console.log(chalk.cyan(`  Token: ${maskedToken}`));"
+      },
+      {
+        "id": "sensitive-path-0040",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 23,
+        "evidence": "// If token is too short, just show asterisks"
+      },
+      {
+        "id": "sensitive-path-0041",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 24,
+        "evidence": "console.log(chalk.cyan(`  Token: ${'*'.repeat(token.length)}`));"
+      },
+      {
+        "id": "sensitive-path-0042",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/show-appkey.ts",
+        "line": 28,
+        "evidence": "const combined = `${auth.address}-${auth.token}`;"
+      },
+      {
+        "id": "sensitive-path-0044",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 13,
+        "evidence": "const URL = process.env.IPFS_PREVIEW_URL;"
+      },
+      {
+        "id": "sensitive-path-0045",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 14,
+        "evidence": "const secretKey = process.env.SECRET_KEY;"
+      },
+      {
+        "id": "sensitive-path-0046",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 69,
+        "evidence": "throw new Error('Secret key not found');"
+      },
+      {
+        "id": "sensitive-path-0047",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 120,
+        "evidence": "async function checkVipStatus(authConfig: { address: string; token: string }): Promise<boolean> {"
+      },
+      {
+        "id": "sensitive-path-0048",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 123,
+        "evidence": "const vipResult = await isVip(authConfig.address, authConfig.token);"
+      },
+      {
+        "id": "sensitive-path-0049",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 130,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0050",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 142,
+        "evidence": "authConfig: { address: string; token: string },"
+      },
+      {
+        "id": "sensitive-path-0051",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 149,
+        "evidence": "const dnsResult = await bindDnsDomainV4(displayDomain, contentHash, authConfig.address, authConfig.token);"
+      },
+      {
+        "id": "sensitive-path-0052",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 189,
+        "evidence": "let authConfig: { address: string; token: string } | null = null;"
+      },
+      {
+        "id": "sensitive-path-0053",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 231,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0054",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 252,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0055",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 264,
+        "evidence": "const encryptedCID = encryptHash(result.contentHash, secretKey, uid);"
+      },
+      {
+        "id": "sensitive-path-0056",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 283,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0057",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 335,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0058",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 356,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0059",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 369,
+        "evidence": "const encryptedCID = encryptHash(result.contentHash, secretKey, uid);"
+      },
+      {
+        "id": "sensitive-path-0060",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/upload.ts",
+        "line": 386,
+        "evidence": "if (e.message === 'Token expired') {"
+      },
+      {
+        "id": "sensitive-path-0148",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 10,
+        "evidence": "token: string;"
+      },
+      {
+        "id": "sensitive-path-0149",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 19,
+        "evidence": "export function parseCombinedToken(combined: string): AuthConfig {"
+      },
+      {
+        "id": "sensitive-path-0150",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 24,
+        "evidence": "throw new Error('Invalid token format. Expected \"<address>-<jwt>\".');"
+      },
+      {
+        "id": "sensitive-path-0151",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 27,
+        "evidence": "const token = combined.slice(firstDash + 1).trim();"
+      },
+      {
+        "id": "sensitive-path-0152",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 28,
+        "evidence": "if (!address || !token) {"
+      },
+      {
+        "id": "sensitive-path-0153",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 29,
+        "evidence": "throw new Error('Invalid token content. Address or token is empty.');"
+      },
+      {
+        "id": "sensitive-path-0154",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 31,
+        "evidence": "return { address, token };"
+      },
+      {
+        "id": "sensitive-path-0155",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 34,
+        "evidence": "export function setAuthToken(combined: string): AuthConfig {"
+      },
+      {
+        "id": "sensitive-path-0156",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 36,
+        "evidence": "const auth = parseCombinedToken(combined);"
+      },
+      {
+        "id": "sensitive-path-0157",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 41,
+        "evidence": "export function clearAuthToken(): void {"
+      },
+      {
+        "id": "sensitive-path-0158",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 47,
+        "evidence": "console.error(`Failed to clear auth token: ${error}`);"
+      },
+      {
+        "id": "sensitive-path-0159",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 55,
+        "evidence": "if (!data?.address || !data?.token) return null;"
+      },
+      {
+        "id": "sensitive-path-0160",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 68,
+        "evidence": "'token-address': conf.address,"
+      },
+      {
+        "id": "sensitive-path-0161",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/auth.ts",
+        "line": 69,
+        "evidence": "'authentication-tokens': conf.token,"
+      },
+      {
+        "id": "sensitive-path-0121",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/help.ts",
+        "line": 176,
+        "evidence": "console.log(\"  Sensitive information (token and AppKey) will be masked for security.\\n\");"
+      },
+      {
+        "id": "sensitive-path-0069",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 6,
+        "evidence": "process.env.PINME_API_BASE || 'http://ipfs-proxy.opena.chat/api/v4';"
+      },
+      {
+        "id": "sensitive-path-0070",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 8,
+        "evidence": "// Token expired error codes"
+      },
+      {
+        "id": "sensitive-path-0071",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 9,
+        "evidence": "const TOKEN_EXPIRED_CODES = ["
+      },
+      {
+        "id": "sensitive-path-0072",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 15,
+        "evidence": "'TOKEN_EXPIRED',"
+      },
+      {
+        "id": "sensitive-path-0073",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 18,
+        "evidence": "const TOKEN_EXPIRED_MESSAGES = ["
+      },
+      {
+        "id": "sensitive-path-0074",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 19,
+        "evidence": "'token expired',"
+      },
+      {
+        "id": "sensitive-path-0075",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 20,
+        "evidence": "'invalid token',"
+      },
+      {
+        "id": "sensitive-path-0076",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 26,
+        "evidence": "'token',"
+      },
+      {
+        "id": "sensitive-path-0077",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 30,
+        "evidence": "function isTokenExpired(error: any): boolean {"
+      },
+      {
+        "id": "sensitive-path-0078",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 39,
+        "evidence": "if (status && TOKEN_EXPIRED_CODES.includes(status)) {"
+      },
+      {
+        "id": "sensitive-path-0079",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 42,
+        "evidence": "if (code && TOKEN_EXPIRED_CODES.includes(code)) {"
+      },
+      {
+        "id": "sensitive-path-0080",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 46,
+        "evidence": "return TOKEN_EXPIRED_MESSAGES.some((m) =>"
+      },
+      {
+        "id": "sensitive-path-0081",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 51,
+        "evidence": "function showTokenExpiredHint(): void {"
+      },
+      {
+        "id": "sensitive-path-0082",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 52,
+        "evidence": "console.log(chalk.red('\\n⚠️  Token has expired or is invalid.'));"
+      },
+      {
+        "id": "sensitive-path-0084",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 81,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0085",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 82,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0086",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 102,
+        "evidence": "const configured = process.env.PINME_CHECK_DOMAIN_PATH || '/check_domain';"
+      },
+      {
+        "id": "sensitive-path-0087",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 116,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0088",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 117,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0089",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 118,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0090",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 139,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0091",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 140,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0092",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 141,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0093",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 169,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0094",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 170,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0095",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 174,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0096",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 175,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0097",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 176,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0098",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 195,
+        "evidence": "tokenAddress: string,"
+      },
+      {
+        "id": "sensitive-path-0099",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 196,
+        "evidence": "authToken: string,"
+      },
+      {
+        "id": "sensitive-path-0100",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 208,
+        "evidence": "'x-auth-token': authToken,"
+      },
+      {
+        "id": "sensitive-path-0101",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 209,
+        "evidence": "'x-token-address': tokenAddress,"
+      },
+      {
+        "id": "sensitive-path-0102",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 215,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0103",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 216,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0104",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 217,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0105",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 233,
+        "evidence": "tokenAddress: string,"
+      },
+      {
+        "id": "sensitive-path-0106",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 234,
+        "evidence": "authToken: string,"
+      },
+      {
+        "id": "sensitive-path-0107",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 240,
+        "evidence": "'x-auth-token': authToken,"
+      },
+      {
+        "id": "sensitive-path-0108",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 241,
+        "evidence": "'x-token-address': tokenAddress,"
+      },
+      {
+        "id": "sensitive-path-0109",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 246,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0110",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 247,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0111",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 248,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0112",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 256,
+        "evidence": "process.env.CAR_API_BASE ||"
+      },
+      {
+        "id": "sensitive-path-0113",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 257,
+        "evidence": "process.env.PINME_API_BASE ||"
+      },
+      {
+        "id": "sensitive-path-0115",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 319,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0116",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 320,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0117",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 321,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0118",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 357,
+        "evidence": "if (isTokenExpired(e)) {"
+      },
+      {
+        "id": "sensitive-path-0119",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 358,
+        "evidence": "showTokenExpiredHint();"
+      },
+      {
+        "id": "sensitive-path-0120",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 359,
+        "evidence": "throw new Error('Token expired');"
+      },
+      {
+        "id": "sensitive-path-0122",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/removeFromIpfs.ts",
+        "line": 7,
+        "evidence": "process.env.IPFS_API_URL || 'https://ipfs.glitterprotocol.dev/api/v2';"
+      },
+      {
+        "id": "sensitive-path-0146",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadLimits.ts",
+        "line": 4,
+        "evidence": "const FILE_SIZE_LIMIT = parseInt(process.env.FILE_SIZE_LIMIT || '100', 10) * 1024 * 1024; // MB to bytes"
+      },
+      {
+        "id": "sensitive-path-0147",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadLimits.ts",
+        "line": 5,
+        "evidence": "const DIRECTORY_SIZE_LIMIT = parseInt(process.env.DIRECTORY_SIZE_LIMIT || '500', 10) * 1024 * 1024; // MB to bytes"
+      },
+      {
+        "id": "sensitive-path-0137",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 16,
+        "evidence": "process.env.IPFS_API_URL || 'https://ipfs.glitterprotocol.dev/api/v2';"
+      },
+      {
+        "id": "sensitive-path-0138",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 20,
+        "evidence": "parseInt(process.env.MAX_POLL_TIME_MINUTES || '5') * 60 * 1000; // Default 5 minutes"
+      },
+      {
+        "id": "sensitive-path-0139",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 22,
+        "evidence": "const pollInterval = parseInt(process.env.POLL_INTERVAL_SECONDS || '2') * 1000; // Default 2 seconds"
+      },
+      {
+        "id": "sensitive-path-0140",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 24,
+        "evidence": "const pollTimeout = parseInt(process.env.POLL_TIMEOUT_SECONDS || '10') * 1000; // Default 10 seconds"
+      },
+      {
+        "id": "sensitive-path-0142",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 191,
+        "evidence": "'30001': `File too large, single file max size: ${process.env.FILE_SIZE_LIMIT}MB,single folder max size: ${process.env.DIRECTORY_SIZE_LIMIT}MB`,"
+      },
+      {
+        "id": "sensitive-path-0143",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 193,
+        "evidence": "Number(process.env.STORAGE_SIZE_LIMIT) / 1000"
+      },
+      {
+        "id": "sensitive-path-0124",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 17,
+        "evidence": "process.env.IPFS_API_URL || 'https://ipfs.glitterprotocol.dev/api/v2';"
+      },
+      {
+        "id": "sensitive-path-0125",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 18,
+        "evidence": "const MAX_RETRIES = parseInt(process.env.MAX_RETRIES || '2');"
+      },
+      {
+        "id": "sensitive-path-0126",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 19,
+        "evidence": "const RETRY_DELAY = parseInt(process.env.RETRY_DELAY_MS || '1000');"
+      },
+      {
+        "id": "sensitive-path-0127",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 20,
+        "evidence": "const TIMEOUT = parseInt(process.env.TIMEOUT_MS || '600000');"
+      },
+      {
+        "id": "sensitive-path-0128",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 22,
+        "evidence": "parseInt(process.env.MAX_POLL_TIME_MINUTES || '5') * 60 * 1000;"
+      },
+      {
+        "id": "sensitive-path-0129",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 23,
+        "evidence": "const POLL_INTERVAL = parseInt(process.env.POLL_INTERVAL_SECONDS || '2') * 1000;"
+      },
+      {
+        "id": "sensitive-path-0004",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "build.js",
+        "line": 5,
+        "evidence": "for (const key in process.env) {"
+      },
+      {
+        "id": "sensitive-path-0005",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "build.js",
+        "line": 6,
+        "evidence": "define[`process.env.${key}`] = JSON.stringify(process.env[key]);"
+      },
+      {
+        "id": "sensitive-path-0006",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "build.js",
+        "line": 9,
+        "evidence": "define['process.env.IPFS_PREVIEW_URL'] = JSON.stringify(process.env.IPFS_PREVIEW_URL);"
+      },
+      {
+        "id": "sensitive-path-0007",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "build.js",
+        "line": 10,
+        "evidence": "define['process.env.SECRET_KEY'] = JSON.stringify(process.env.SECRET_KEY);"
+      },
+      {
+        "id": "sensitive-path-0162",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "example/supabase/pnpm-lock.yaml",
+        "line": 926,
+        "evidence": "js-tokens@4.0.0:"
+      },
+      {
+        "id": "sensitive-path-0163",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "example/supabase/pnpm-lock.yaml",
+        "line": 1297,
+        "evidence": "js-tokens: 4.0.0"
+      },
+      {
+        "id": "sensitive-path-0164",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "example/supabase/pnpm-lock.yaml",
+        "line": 2131,
+        "evidence": "js-tokens@4.0.0: {}"
+      },
+      {
+        "id": "sensitive-path-0165",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "example/supabase/pnpm-lock.yaml",
+        "line": 2164,
+        "evidence": "js-tokens: 4.0.0"
+      },
+      {
+        "id": "sensitive-path-0166",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "example/supabase/src/utils/supabase.ts",
+        "line": 3,
+        "evidence": "const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;"
+      },
+      {
+        "id": "sensitive-path-0167",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "example/supabase/src/utils/supabase.ts",
+        "line": 4,
+        "evidence": "const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;"
+      },
+      {
+        "id": "sensitive-path-0008",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "llms.txt.md",
+        "line": 93,
+        "evidence": "- Do NOT upload node_modules, .env, .git"
+      },
+      {
+        "id": "sensitive-path-0009",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "llms.txt.md",
+        "line": 109,
+        "evidence": "\"excludePatterns\": [\"node_modules\", \".env\", \".git\", \"src\"],"
+      },
+      {
+        "id": "sensitive-path-0020",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "package-lock.json",
+        "line": 57,
+        "evidence": "\"js-tokens\": \"^4.0.0\","
+      },
+      {
+        "id": "sensitive-path-0021",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "package-lock.json",
+        "line": 4133,
+        "evidence": "\"node_modules/js-tokens\": {"
+      },
+      {
+        "id": "sensitive-path-0022",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "package-lock.json",
+        "line": 4135,
+        "evidence": "\"resolved\": \"https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz\","
+      },
+      {
+        "id": "sensitive-path-0001",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "pnpm-lock.yaml",
+        "line": 1250,
+        "evidence": "js-tokens@4.0.0:"
+      },
+      {
+        "id": "sensitive-path-0002",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "pnpm-lock.yaml",
+        "line": 1805,
+        "evidence": "js-tokens: 4.0.0"
+      },
+      {
+        "id": "sensitive-path-0003",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "pnpm-lock.yaml",
+        "line": 3189,
+        "evidence": "js-tokens@4.0.0: {}"
+      },
+      {
+        "id": "network-0083",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 58,
+        "evidence": "return axios.create({"
+      },
+      {
+        "id": "network-0114",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/pinmeApi.ts",
+        "line": 267,
+        "evidence": "return axios.create({"
+      },
+      {
+        "id": "network-0123",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/removeFromIpfs.ts",
+        "line": 41,
+        "evidence": "const response = await axios.post<RemoveResponse>("
+      },
+      {
+        "id": "network-0141",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 79,
+        "evidence": "const response = await axios.get<UploadStatusResponse>("
+      },
+      {
+        "id": "network-0144",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 363,
+        "evidence": "const response = await axios.post<TraceIdResponse>("
+      },
+      {
+        "id": "network-0145",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfs.ts",
+        "line": 552,
+        "evidence": "const response = await axios.post<TraceIdResponse>("
+      },
+      {
+        "id": "network-0130",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 261,
+        "evidence": "const response = await axios.post<ChunkSessionResponse>("
+      },
+      {
+        "id": "network-0131",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 282,
+        "evidence": "if (axios.isAxiosError(error)) {"
+      },
+      {
+        "id": "network-0132",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 311,
+        "evidence": "const response = await axios.post<ChunkUploadResponse>("
+      },
+      {
+        "id": "network-0133",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 461,
+        "evidence": "const response = await axios.post<ChunkCompleteResponse>("
+      },
+      {
+        "id": "network-0134",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 476,
+        "evidence": "if (axios.isAxiosError(error)) {"
+      },
+      {
+        "id": "network-0135",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 488,
+        "evidence": "const response = await axios.get<ChunkStatusResponse>("
+      },
+      {
+        "id": "network-0136",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "bin/utils/uploadToIpfsSplit.ts",
+        "line": 503,
+        "evidence": "if (axios.isAxiosError(error)) {"
+      },
+      {
+        "id": "docs-0019",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "README.md",
+        "line": 1,
+        "evidence": "<p align=\"center\">"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 55.0,
+    "quality_score": 100.0,
+    "security_score": 0.0
+  },
+  "updated_at": "2026-03-24T13:16:56.334150+00:00"
+}

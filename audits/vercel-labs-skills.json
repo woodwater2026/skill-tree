@@ -1,0 +1,972 @@
+{
+  "id": "vercel-labs-skills",
+  "name": "skills",
+  "slug": "vercel-labs-skills",
+  "primary_category": "system-environment",
+  "secondary_categories": [],
+  "tags": [
+    "tooling",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "Open agent skills tool distributed via npx",
+  "description": "Automated Skill Tree audit for vercel-labs/skills. Source category: tooling.",
+  "source": {
+    "repo_url": "https://github.com/vercel-labs/skills",
+    "platform": "github",
+    "owner": "vercel-labs",
+    "repo": "skills",
+    "stars": 11486
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".ts",
+      ".yml",
+      ".md",
+      ".mjs",
+      ".json",
+      ".yaml",
+      ".txt"
+    ]
+  },
+  "capabilities": [
+    "browser-control",
+    "credentials-access",
+    "network",
+    "shell-execution"
+  ],
+  "security": {
+    "risk_level": "high",
+    "summary": [
+      "Overall risk assessed as HIGH based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository invokes shell / subprocess style execution paths.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": false,
+    "shell_execution": true,
+    "browser_control": true,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "/etc/",
+      "\\.env",
+      "credentials",
+      "secret",
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 89,
+    "last_audited_at": "2026-03-24T13:16:57.472511+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "sensitive-path-0020",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": ".github/workflows/publish.yml",
+        "line": 25,
+        "evidence": "id-token: write"
+      },
+      {
+        "id": "sensitive-path-0021",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": ".github/workflows/publish.yml",
+        "line": 32,
+        "evidence": "token: ${{ secrets.GITHUB_TOKEN }}"
+      },
+      {
+        "id": "sensitive-path-0022",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": ".github/workflows/publish.yml",
+        "line": 122,
+        "evidence": "NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}"
+      },
+      {
+        "id": "sensitive-path-0023",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": ".github/workflows/publish.yml",
+        "line": 153,
+        "evidence": "GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
+      },
+      {
+        "id": "sensitive-path-0002",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "AGENTS.md",
+        "line": 85,
+        "evidence": "3. For each skill, call `fetchSkillFolderHash(source, skillPath, token)`. Optional auth token is sourced from `GITHUB_TOKEN`, `GH_TOKEN`, or `gh auth token` to improve rate limits."
+      },
+      {
+        "id": "sensitive-path-0003",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "bin/cli.mjs",
+        "line": 6,
+        "evidence": "if (module.enableCompileCache && !process.env.NODE_DISABLE_COMPILE_CACHE) {"
+      },
+      {
+        "id": "execution-0017",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/execute-tests.ts",
+        "line": 3,
+        "evidence": "import { spawn } from 'node:child_process';"
+      },
+      {
+        "id": "execution-0018",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/execute-tests.ts",
+        "line": 66,
+        "evidence": "const child = spawn('node', [testFile], {"
+      },
+      {
+        "id": "execution-0019",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/generate-licenses.ts",
+        "line": 7,
+        "evidence": "import { execSync } from 'child_process';"
+      },
+      {
+        "id": "sensitive-path-0024",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 300,
+        "evidence": "const originalEnv = process.env;"
+      },
+      {
+        "id": "sensitive-path-0025",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 304,
+        "evidence": "process.env = { ...originalEnv };"
+      },
+      {
+        "id": "sensitive-path-0026",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 308,
+        "evidence": "process.env = originalEnv;"
+      },
+      {
+        "id": "sensitive-path-0027",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 312,
+        "evidence": "delete process.env.INSTALL_INTERNAL_SKILLS;"
+      },
+      {
+        "id": "sensitive-path-0028",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 317,
+        "evidence": "process.env.INSTALL_INTERNAL_SKILLS = '1';"
+      },
+      {
+        "id": "sensitive-path-0029",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 322,
+        "evidence": "process.env.INSTALL_INTERNAL_SKILLS = 'true';"
+      },
+      {
+        "id": "sensitive-path-0030",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 327,
+        "evidence": "process.env.INSTALL_INTERNAL_SKILLS = '0';"
+      },
+      {
+        "id": "sensitive-path-0031",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 330,
+        "evidence": "process.env.INSTALL_INTERNAL_SKILLS = 'false';"
+      },
+      {
+        "id": "sensitive-path-0032",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.test.ts",
+        "line": 333,
+        "evidence": "process.env.INSTALL_INTERNAL_SKILLS = 'yes';"
+      },
+      {
+        "id": "sensitive-path-0081",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.ts",
+        "line": 51,
+        "evidence": "getGitHubToken,"
+      },
+      {
+        "id": "sensitive-path-0082",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.ts",
+        "line": 1508,
+        "evidence": "const token = getGitHubToken();"
+      },
+      {
+        "id": "sensitive-path-0083",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/add.ts",
+        "line": 1509,
+        "evidence": "const hash = await fetchSkillFolderHash(normalizedSource, skillPathValue, token);"
+      },
+      {
+        "id": "sensitive-path-0046",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/agents.ts",
+        "line": 10,
+        "evidence": "const codexHome = process.env.CODEX_HOME?.trim() || join(home, '.codex');"
+      },
+      {
+        "id": "sensitive-path-0047",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/agents.ts",
+        "line": 11,
+        "evidence": "const claudeHome = process.env.CLAUDE_CONFIG_DIR?.trim() || join(home, '.claude');"
+      },
+      {
+        "id": "execution-0035",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "src/cli.ts",
+        "line": 3,
+        "evidence": "import { spawnSync } from 'child_process';"
+      },
+      {
+        "id": "sensitive-path-0036",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 15,
+        "evidence": "import { fetchSkillFolderHash, getGitHubToken } from './skill-lock.ts';"
+      },
+      {
+        "id": "sensitive-path-0037",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 300,
+        "evidence": "const xdgStateHome = process.env.XDG_STATE_HOME;"
+      },
+      {
+        "id": "sensitive-path-0038",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 378,
+        "evidence": "// Get GitHub token from user's environment for higher rate limits"
+      },
+      {
+        "id": "sensitive-path-0039",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 379,
+        "evidence": "const token = getGitHubToken();"
+      },
+      {
+        "id": "sensitive-path-0040",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 416,
+        "evidence": "const latestHash = await fetchSkillFolderHash(source, entry.skillPath!, token);"
+      },
+      {
+        "id": "sensitive-path-0041",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 488,
+        "evidence": "// Get GitHub token from user's environment for higher rate limits"
+      },
+      {
+        "id": "sensitive-path-0042",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 489,
+        "evidence": "const token = getGitHubToken();"
+      },
+      {
+        "id": "sensitive-path-0043",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/cli.ts",
+        "line": 506,
+        "evidence": "const latestHash = await fetchSkillFolderHash(entry.source, entry.skillPath, token);"
+      },
+      {
+        "id": "sensitive-path-0033",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/find.ts",
+        "line": 15,
+        "evidence": "const SEARCH_API_BASE = process.env.SKILLS_API_URL || 'https://skills.sh';"
+      },
+      {
+        "id": "sensitive-path-0084",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/git.ts",
+        "line": 26,
+        "evidence": "env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },"
+      },
+      {
+        "id": "sensitive-path-0085",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/git.ts",
+        "line": 48,
+        "evidence": "`  Ensure you have access and your SSH keys or credentials are configured:\\n` +"
+      },
+      {
+        "id": "sensitive-path-0086",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/git.ts",
+        "line": 62,
+        "evidence": "`  - For HTTPS: Run 'gh auth login' or configure git credentials`,"
+      },
+      {
+        "id": "execution-0061",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "src/skill-lock.ts",
+        "line": 5,
+        "evidence": "import { execSync } from 'child_process';"
+      },
+      {
+        "id": "sensitive-path-0062",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 65,
+        "evidence": "const xdgStateHome = process.env.XDG_STATE_HOME;"
+      },
+      {
+        "id": "sensitive-path-0063",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 125,
+        "evidence": "* Get GitHub token from user's environment."
+      },
+      {
+        "id": "sensitive-path-0064",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 127,
+        "evidence": "* 1. GITHUB_TOKEN environment variable"
+      },
+      {
+        "id": "sensitive-path-0065",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 128,
+        "evidence": "* 2. GH_TOKEN environment variable"
+      },
+      {
+        "id": "sensitive-path-0066",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 129,
+        "evidence": "* 3. gh CLI auth token (if gh is installed)"
+      },
+      {
+        "id": "sensitive-path-0067",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 131,
+        "evidence": "* @returns The token string or null if not available"
+      },
+      {
+        "id": "sensitive-path-0068",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 133,
+        "evidence": "export function getGitHubToken(): string | null {"
+      },
+      {
+        "id": "sensitive-path-0069",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 135,
+        "evidence": "if (process.env.GITHUB_TOKEN) {"
+      },
+      {
+        "id": "sensitive-path-0070",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 136,
+        "evidence": "return process.env.GITHUB_TOKEN;"
+      },
+      {
+        "id": "sensitive-path-0071",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 138,
+        "evidence": "if (process.env.GH_TOKEN) {"
+      },
+      {
+        "id": "sensitive-path-0072",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 139,
+        "evidence": "return process.env.GH_TOKEN;"
+      },
+      {
+        "id": "sensitive-path-0073",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 144,
+        "evidence": "const token = execSync('gh auth token', {"
+      },
+      {
+        "id": "sensitive-path-0074",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 148,
+        "evidence": "if (token) {"
+      },
+      {
+        "id": "sensitive-path-0075",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 149,
+        "evidence": "return token;"
+      },
+      {
+        "id": "sensitive-path-0076",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 165,
+        "evidence": "* @param token - Optional GitHub token for authenticated requests (higher rate limits)"
+      },
+      {
+        "id": "sensitive-path-0077",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 171,
+        "evidence": "token?: string | null"
+      },
+      {
+        "id": "sensitive-path-0078",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 197,
+        "evidence": "if (token) {"
+      },
+      {
+        "id": "sensitive-path-0079",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skill-lock.ts",
+        "line": 198,
+        "evidence": "headers['Authorization'] = `Bearer ${token}`;"
+      },
+      {
+        "id": "sensitive-path-0060",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/skills.ts",
+        "line": 14,
+        "evidence": "const envValue = process.env.INSTALL_INTERNAL_SKILLS;"
+      },
+      {
+        "id": "sensitive-path-0048",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 68,
+        "evidence": "process.env.CI ||"
+      },
+      {
+        "id": "sensitive-path-0049",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 69,
+        "evidence": "process.env.GITHUB_ACTIONS ||"
+      },
+      {
+        "id": "sensitive-path-0050",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 70,
+        "evidence": "process.env.GITLAB_CI ||"
+      },
+      {
+        "id": "sensitive-path-0051",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 71,
+        "evidence": "process.env.CIRCLECI ||"
+      },
+      {
+        "id": "sensitive-path-0052",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 72,
+        "evidence": "process.env.TRAVIS ||"
+      },
+      {
+        "id": "sensitive-path-0053",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 73,
+        "evidence": "process.env.BUILDKITE ||"
+      },
+      {
+        "id": "sensitive-path-0054",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 74,
+        "evidence": "process.env.JENKINS_URL ||"
+      },
+      {
+        "id": "sensitive-path-0055",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 75,
+        "evidence": "process.env.TEAMCITY_VERSION"
+      },
+      {
+        "id": "sensitive-path-0056",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/telemetry.ts",
+        "line": 80,
+        "evidence": "return !process.env.DISABLE_TELEMETRY && !process.env.DO_NOT_TRACK;"
+      },
+      {
+        "id": "execution-0044",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "src/test-utils.ts",
+        "line": 1,
+        "evidence": "import { execSync } from 'child_process';"
+      },
+      {
+        "id": "sensitive-path-0045",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "src/test-utils.ts",
+        "line": 34,
+        "evidence": "env: env ? { ...process.env, ...env } : undefined,"
+      },
+      {
+        "id": "sensitive-path-0009",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/cross-platform-paths.test.ts",
+        "line": 183,
+        "evidence": "expect(isValidSkillFile('/etc/passwd')).toBe(false);"
+      },
+      {
+        "id": "sensitive-path-0010",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/cross-platform-paths.test.ts",
+        "line": 193,
+        "evidence": "expect(isValidSkillFile('../../../etc/passwd')).toBe(false);"
+      },
+      {
+        "id": "sensitive-path-0011",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/cross-platform-paths.test.ts",
+        "line": 194,
+        "evidence": "expect(isValidSkillFile('foo/../../../etc/passwd')).toBe(false);"
+      },
+      {
+        "id": "execution-0012",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "tests/dist.test.ts",
+        "line": 2,
+        "evidence": "import { execSync } from 'node:child_process';"
+      },
+      {
+        "id": "sensitive-path-0007",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/plugin-manifest-discovery.test.ts",
+        "line": 387,
+        "evidence": "{ source: '../../../etc', skills: ['./passwd'] }, // Traversal via source"
+      },
+      {
+        "id": "sensitive-path-0008",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/plugin-manifest-discovery.test.ts",
+        "line": 432,
+        "evidence": "skills: ['/etc/passwd', '/tmp/malicious-skill'],"
+      },
+      {
+        "id": "sensitive-path-0013",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/sanitize-name.test.ts",
+        "line": 57,
+        "evidence": "expect(sanitizeName('../etc/passwd')).toBe('etc-passwd');"
+      },
+      {
+        "id": "sensitive-path-0014",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/sanitize-name.test.ts",
+        "line": 58,
+        "evidence": "expect(sanitizeName('../../secret')).toBe('secret');"
+      },
+      {
+        "id": "sensitive-path-0015",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/sanitize-name.test.ts",
+        "line": 62,
+        "evidence": "expect(sanitizeName('..\\\\..\\\\secret')).toBe('secret');"
+      },
+      {
+        "id": "sensitive-path-0016",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/sanitize-name.test.ts",
+        "line": 66,
+        "evidence": "expect(sanitizeName('/etc/passwd')).toBe('etc-passwd');"
+      },
+      {
+        "id": "sensitive-path-0004",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/subpath-traversal.test.ts",
+        "line": 23,
+        "evidence": "expect(() => sanitizeSubpath('../../etc/passwd')).toThrow('Unsafe subpath');"
+      },
+      {
+        "id": "sensitive-path-0005",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/subpath-traversal.test.ts",
+        "line": 30,
+        "evidence": "expect(() => sanitizeSubpath('..\\\\..\\\\secret')).toThrow('Unsafe subpath');"
+      },
+      {
+        "id": "sensitive-path-0006",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tests/subpath-traversal.test.ts",
+        "line": 52,
+        "evidence": "expect(isSubpathSafe('/tmp/repo', '../../etc/passwd')).toBe(false);"
+      },
+      {
+        "id": "network-0001",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 432,
+        "evidence": "- [Codex Skills Documentation](https://developers.openai.com/codex/skills)"
+      },
+      {
+        "id": "network-0034",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/find.ts",
+        "line": 35,
+        "evidence": "const res = await fetch(url);"
+      },
+      {
+        "id": "network-0087",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/providers/wellknown.ts",
+        "line": 133,
+        "evidence": "const response = await fetch(indexUrl);"
+      },
+      {
+        "id": "network-0088",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/providers/wellknown.ts",
+        "line": 270,
+        "evidence": "const response = await fetch(skillMdUrl);"
+      },
+      {
+        "id": "network-0089",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/providers/wellknown.ts",
+        "line": 293,
+        "evidence": "const fileResponse = await fetch(fileUrl);"
+      },
+      {
+        "id": "network-0080",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/skill-lock.ts",
+        "line": 201,
+        "evidence": "const response = await fetch(url, { headers });"
+      },
+      {
+        "id": "network-0059",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/source-parser.ts",
+        "line": 69,
+        "evidence": "const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);"
+      },
+      {
+        "id": "network-0057",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/telemetry.ts",
+        "line": 119,
+        "evidence": "const response = await fetch(`${AUDIT_URL}?${params.toString()}`, {"
+      },
+      {
+        "id": "network-0058",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "src/telemetry.ts",
+        "line": 155,
+        "evidence": "fetch(`${TELEMETRY_URL}?${params.toString()}`).catch(() => {});"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 85.0,
+    "quality_score": 100.0,
+    "security_score": 0.0
+  },
+  "updated_at": "2026-03-24T13:16:57.484819+00:00"
+}

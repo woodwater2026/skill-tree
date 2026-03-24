@@ -1,0 +1,222 @@
+{
+  "id": "tuya-tuya-openclaw-skills",
+  "name": "tuya-openclaw-skills",
+  "slug": "tuya-tuya-openclaw-skills",
+  "primary_category": "agent-operations",
+  "secondary_categories": [],
+  "tags": [
+    "iot-domain",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "OpenClaw skill library for Tuya smart ecosystem",
+  "description": "Automated Skill Tree audit for tuya/tuya-openclaw-skills. Source category: iot-domain.",
+  "source": {
+    "repo_url": "https://github.com/tuya/tuya-openclaw-skills",
+    "platform": "github",
+    "owner": "tuya",
+    "repo": "tuya-openclaw-skills",
+    "stars": 150
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".md",
+      ".py"
+    ]
+  },
+  "capabilities": [
+    "credentials-access",
+    "network"
+  ],
+  "security": {
+    "risk_level": "high",
+    "summary": [
+      "Overall risk assessed as HIGH based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": false,
+    "shell_execution": false,
+    "browser_control": false,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "\\.env",
+      "credentials",
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 15,
+    "last_audited_at": "2026-03-24T13:16:55.437089+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "permissions-0001",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 58,
+        "evidence": "- `requests` library (`pip install requests`)"
+      },
+      {
+        "id": "sensitive-path-0002",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 155,
+        "evidence": "| Device Control | Issue properties | POST | `/v1.0/end-user/devices/{device_id}/shadow/properties/issue` | [device-control.md](Tuya%20Smart%20control/references/device-control.md) |"
+      },
+      {
+        "id": "permissions-0003",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README_zh.md",
+        "line": 57,
+        "evidence": "- `requests` 库（`pip install requests`）"
+      },
+      {
+        "id": "sensitive-path-0004",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README_zh.md",
+        "line": 154,
+        "evidence": "| 设备控制 | 下发属性指令 | POST | `/v1.0/end-user/devices/{device_id}/shadow/properties/issue` | [device-control.md](Tuya%20Smart%20control/references/device-control.md) |"
+      },
+      {
+        "id": "sensitive-path-0005",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/SKILL.md",
+        "line": 28,
+        "evidence": "- **Credentials**: Read from environment variable `TUYA_API_KEY`. The base URL is auto-detected from the API key prefix (e.g. `sk-AY...` → China, `sk-EU...` → Europe). You can override by setting `TUYA_BASE_URL`."
+      },
+      {
+        "id": "network-0006",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "tuya-smart-control/SKILL.md",
+        "line": 110,
+        "evidence": "curl -s -H \"Authorization: Bearer $TUYA_API_KEY\" \"$TUYA_BASE_URL/v1.0/end-user/homes/all\""
+      },
+      {
+        "id": "sensitive-path-0007",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/SKILL.md",
+        "line": 180,
+        "evidence": "POST {base_url}/v1.0/end-user/devices/{device_id}/shadow/properties/issue"
+      },
+      {
+        "id": "sensitive-path-0008",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/SKILL.md",
+        "line": 217,
+        "evidence": "| token invalid (code: 1010) | Tell the user the Api-key has expired and needs to be updated |"
+      },
+      {
+        "id": "sensitive-path-0010",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/references/device-control.md",
+        "line": 147,
+        "evidence": "POST /v1.0/end-user/devices/{device_id}/shadow/properties/issue"
+      },
+      {
+        "id": "sensitive-path-0011",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/scripts/tuya_api.py",
+        "line": 7,
+        "evidence": "Credentials are read from environment variables. TUYA_API_KEY is required;"
+      },
+      {
+        "id": "sensitive-path-0012",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/scripts/tuya_api.py",
+        "line": 53,
+        "evidence": "api_key = os.environ.get(\"TUYA_API_KEY\")"
+      },
+      {
+        "id": "sensitive-path-0013",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/scripts/tuya_api.py",
+        "line": 55,
+        "evidence": "base_url = os.environ.get(\"TUYA_BASE_URL\")"
+      },
+      {
+        "id": "sensitive-path-0015",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "tuya-smart-control/scripts/tuya_api.py",
+        "line": 125,
+        "evidence": "f\"/v1.0/end-user/devices/{device_id}/shadow/properties/issue\","
+      },
+      {
+        "id": "network-0014",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "tuya-smart-control/scripts/tuya_api.py",
+        "line": 65,
+        "evidence": "self.session = requests.Session()"
+      },
+      {
+        "id": "docs-0009",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "tuya-smart-control/SKILL.md",
+        "line": 1,
+        "evidence": "---"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 35.0,
+    "quality_score": 90.0,
+    "security_score": 47.0
+  },
+  "updated_at": "2026-03-24T13:16:55.443232+00:00"
+}

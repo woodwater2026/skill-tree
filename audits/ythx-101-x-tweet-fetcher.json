@@ -1,0 +1,2997 @@
+{
+  "id": "ythx-101-x-tweet-fetcher",
+  "name": "x-tweet-fetcher",
+  "slug": "ythx-101-x-tweet-fetcher",
+  "primary_category": "agent-operations",
+  "secondary_categories": [],
+  "tags": [
+    "social-data",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "OpenClaw skill to fetch X/Twitter data without API",
+  "description": "Automated Skill Tree audit for ythx-101/x-tweet-fetcher. Source category: social-data.",
+  "source": {
+    "repo_url": "https://github.com/ythx-101/x-tweet-fetcher",
+    "platform": "github",
+    "owner": "ythx-101",
+    "repo": "x-tweet-fetcher",
+    "stars": 719
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".py",
+      ".md"
+    ]
+  },
+  "capabilities": [
+    "browser-control",
+    "credentials-access",
+    "file-write",
+    "network",
+    "shell-execution"
+  ],
+  "security": {
+    "risk_level": "critical",
+    "summary": [
+      "Overall risk assessed as CRITICAL based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository can write, modify, or delete local files.",
+      "Repository invokes shell / subprocess style execution paths.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": true,
+    "shell_execution": true,
+    "browser_control": true,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "\\.env",
+      "secret",
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 292,
+    "last_audited_at": "2026-03-24T13:16:55.057309+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "remote-code-0005",
+        "severity": "critical",
+        "category": "remote-code",
+        "title": "Remote code execution pattern detected",
+        "description": "Pipeline-style remote fetch and execution pattern detected.",
+        "path": "README.md",
+        "line": 163,
+        "evidence": "curl https://nim-lang.org/choosenim/init.sh -sSf | sh"
+      },
+      {
+        "id": "permissions-0001",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 130,
+        "evidence": "| **VPS (headless Linux)** | ✅ | ✅* | *needs `pip install playwright` |"
+      },
+      {
+        "id": "permissions-0002",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 131,
+        "evidence": "| **Mac / Windows** | ✅ | ✅* | *needs `pip install playwright` |"
+      },
+      {
+        "id": "permissions-0003",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 160,
+        "evidence": "sudo apt install -y redis-server libpcre3-dev libsass-dev"
+      },
+      {
+        "id": "network-0004",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 163,
+        "evidence": "curl https://nim-lang.org/choosenim/init.sh -sSf | sh"
+      },
+      {
+        "id": "sensitive-path-0006",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 182,
+        "evidence": "2. Copy `auth_token` and `ct0`"
+      },
+      {
+        "id": "sensitive-path-0007",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 186,
+        "evidence": "{\"name\":\"myaccount\",\"auth_token\":\"YOUR_AUTH_TOKEN\",\"ct0\":\"YOUR_CT0\"}"
+      },
+      {
+        "id": "sensitive-path-0008",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 199,
+        "evidence": "[Tokens]"
+      },
+      {
+        "id": "sensitive-path-0009",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 200,
+        "evidence": "tokenFile = \"sessions.jsonl\""
+      },
+      {
+        "id": "permissions-0010",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 206,
+        "evidence": "sudo systemctl start redis-server"
+      },
+      {
+        "id": "network-0011",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "README.md",
+        "line": 210,
+        "evidence": "curl http://127.0.0.1:8788/YuLin807"
+      },
+      {
+        "id": "sensitive-path-0012",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 218,
+        "evidence": "- **Use a secondary X account** — session token gives full access"
+      },
+      {
+        "id": "sensitive-path-0013",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 219,
+        "evidence": "- **Session tokens last ~1 year**"
+      },
+      {
+        "id": "permissions-0014",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 258,
+        "evidence": "| `--backend browser` | `pip install playwright` + `playwright install chromium` |"
+      },
+      {
+        "id": "network-0016",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "SKILL.md",
+        "line": 142,
+        "evidence": "curl http://localhost:9377/health"
+      },
+      {
+        "id": "sensitive-path-0152",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 8,
+        "evidence": "Layer 2: GitHub HTML scraping → twitter_username (zero API token)"
+      },
+      {
+        "id": "sensitive-path-0153",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 18,
+        "evidence": "GITHUB_TOKEN — GitHub Personal Access Token（5000次/小时 vs 60次/小时）"
+      },
+      {
+        "id": "permissions-0154",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 21,
+        "evidence": "duckduckgo_search — Layer 4 网络搜索的首选后端（pip install duckduckgo-search）。"
+      },
+      {
+        "id": "sensitive-path-0018",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/camofox_client.py",
+        "line": 11,
+        "evidence": "import secrets"
+      },
+      {
+        "id": "sensitive-path-0030",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/camofox_client.py",
+        "line": 108,
+        "evidence": "snapshot = camofox_fetch_page(search_url, f\"ddg-{secrets.token_hex(8)}\", wait=5, port=port)"
+      },
+      {
+        "id": "sensitive-path-0031",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/camofox_client.py",
+        "line": 114,
+        "evidence": "snapshot = camofox_fetch_page(search_url, f\"search-{secrets.token_hex(8)}\", wait=4, port=port)"
+      },
+      {
+        "id": "sensitive-path-0162",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 17,
+        "evidence": "from config import SEARXNG_URL, GITHUB_TOKEN, ARXIV_API"
+      },
+      {
+        "id": "sensitive-path-0167",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 133,
+        "evidence": "# ─── GitHub helpers (REST API when token available, HTML scraping as fallback)"
+      },
+      {
+        "id": "sensitive-path-0168",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 137,
+        "evidence": "if not GITHUB_TOKEN:"
+      },
+      {
+        "id": "sensitive-path-0169",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 141,
+        "evidence": "\"Authorization\": f\"token {GITHUB_TOKEN}\","
+      },
+      {
+        "id": "sensitive-path-0170",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 149,
+        "evidence": "\"\"\"Get GitHub profile (name + twitter). Uses REST API if token available, HTML scraping as fallback.\"\"\""
+      },
+      {
+        "id": "sensitive-path-0171",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 163,
+        "evidence": "# Fallback: HTML scraping (zero token needed)"
+      },
+      {
+        "id": "sensitive-path-0172",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 181,
+        "evidence": "\"\"\"Get contributor usernames. Uses REST API if token available, atom feed as fallback.\"\"\""
+      },
+      {
+        "id": "sensitive-path-0173",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/common.py",
+        "line": 187,
+        "evidence": "# Fallback: atom feed (zero token needed)"
+      },
+      {
+        "id": "sensitive-path-0053",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/config.py",
+        "line": 10,
+        "evidence": "GITHUB_TOKEN      — GitHub Personal Access Token (optional, for higher rate limits)"
+      },
+      {
+        "id": "sensitive-path-0054",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/config.py",
+        "line": 16,
+        "evidence": "SEARXNG_URL = os.environ.get(\"XTF_SEARXNG\", \"http://localhost:8080/search\")"
+      },
+      {
+        "id": "sensitive-path-0055",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/config.py",
+        "line": 19,
+        "evidence": "GITHUB_TOKEN = os.environ.get(\"GITHUB_TOKEN\", \"\")"
+      },
+      {
+        "id": "sensitive-path-0056",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/config.py",
+        "line": 20,
+        "evidence": "OPENALEX_EMAIL = os.environ.get(\"OPENALEX_EMAIL\", \"\")"
+      },
+      {
+        "id": "network-0071",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1290,
+        "evidence": "# Write curl command to router queue"
+      },
+      {
+        "id": "network-0072",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1292,
+        "evidence": "f'curl -sL {shlex.quote(url)} '"
+      },
+      {
+        "id": "sensitive-path-0190",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/growth_config.py",
+        "line": 11,
+        "evidence": "DATA_FILE = Path(os.environ.get("
+      },
+      {
+        "id": "sensitive-path-0191",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/growth_config.py",
+        "line": 16,
+        "evidence": "DISCOVER_CACHE = Path(os.environ.get("
+      },
+      {
+        "id": "sensitive-path-0140",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/nitter_client.py",
+        "line": 32,
+        "evidence": "NITTER_URL = os.environ.get(\"NITTER_URL\", \"http://127.0.0.1:8788\").rstrip(\"/\")"
+      },
+      {
+        "id": "execution-0099",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/paper_recommend.py",
+        "line": 199,
+        "evidence": "result = subprocess.run("
+      },
+      {
+        "id": "execution-0101",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Process execution detected",
+        "description": "Python AST found explicit process execution call.",
+        "path": "scripts/paper_recommend.py",
+        "line": 199,
+        "evidence": "subprocess.run"
+      },
+      {
+        "id": "sensitive-path-0259",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/playwright_client.py",
+        "line": 25,
+        "evidence": "import secrets"
+      },
+      {
+        "id": "sensitive-path-0261",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/playwright_client.py",
+        "line": 32,
+        "evidence": "_CHROMIUM_EXEC = os.environ.get("
+      },
+      {
+        "id": "network-0262",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/playwright_client.py",
+        "line": 41,
+        "evidence": "\"xcancel.com\",             # 🇺🇸 403 to curl but Playwright works"
+      },
+      {
+        "id": "sensitive-path-0263",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/playwright_client.py",
+        "line": 44,
+        "evidence": "DEFAULT_NITTER = os.environ.get(\"NITTER_INSTANCE\", NITTER_INSTANCES[0])"
+      },
+      {
+        "id": "permissions-0264",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "scripts/playwright_client.py",
+        "line": 65,
+        "evidence": "\"--disable-setuid-sandbox\","
+      },
+      {
+        "id": "sensitive-path-0267",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/playwright_client.py",
+        "line": 493,
+        "evidence": "tab_id = f\"pw-{session_key}-{secrets.token_hex(4)}\""
+      },
+      {
+        "id": "sensitive-path-0103",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 38,
+        "evidence": "queue_file = os.environ.get(\"ROUTER_CMD_QUEUE\", \"/root/router-agent/cmd-queue\")"
+      },
+      {
+        "id": "sensitive-path-0104",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 39,
+        "evidence": "result_file = os.environ.get(\"ROUTER_CMD_RESULT\", \"/root/router-agent/cmd-result\")"
+      },
+      {
+        "id": "sensitive-path-0105",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 40,
+        "evidence": "output_file = os.environ.get(\"ROUTER_CMD_OUTPUT\", \"/root/router-agent/cmd-output\")"
+      },
+      {
+        "id": "network-0106",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 55,
+        "evidence": "# Queue the curl command — router will fetch raw HTML"
+      },
+      {
+        "id": "network-0107",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 58,
+        "evidence": "cmd = f'curl -s {shlex.quote(search_url)} -H \"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36\"'"
+      },
+      {
+        "id": "sensitive-path-0109",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 122,
+        "evidence": "host = ssh_host or os.environ.get(\"SOGOU_SSH_HOST\")"
+      },
+      {
+        "id": "execution-0112",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 166,
+        "evidence": "subprocess.run([\"scp\", \"-o\", \"ConnectTimeout=5\", \"-q\", local_path, f\"{host}:{remote_path}\"],"
+      },
+      {
+        "id": "execution-0117",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Process execution detected",
+        "description": "Python AST found explicit process execution call.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 166,
+        "evidence": "subprocess.run"
+      },
+      {
+        "id": "filesystem-0113",
+        "severity": "medium",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 168,
+        "evidence": "os.unlink(local_path)"
+      },
+      {
+        "id": "execution-0114",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 170,
+        "evidence": "result = subprocess.run("
+      },
+      {
+        "id": "execution-0118",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Process execution detected",
+        "description": "Python AST found explicit process execution call.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 170,
+        "evidence": "subprocess.run"
+      },
+      {
+        "id": "sensitive-path-0229",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 392,
+        "evidence": "self._cur_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0230",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 396,
+        "evidence": "self._cur_link_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0231",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 400,
+        "evidence": "self._md_code_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0232",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 415,
+        "evidence": "self._md_code_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0233",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 431,
+        "evidence": "self._cur_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0234",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 437,
+        "evidence": "self._cur_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0235",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 447,
+        "evidence": "self._cur_link_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0236",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 459,
+        "evidence": "link_text = ''.join(self._cur_link_tokens).strip()"
+      },
+      {
+        "id": "sensitive-path-0237",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 463,
+        "evidence": "self._cur_tokens.append(f'\\n{href}\\n')"
+      },
+      {
+        "id": "sensitive-path-0238",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 465,
+        "evidence": "self._cur_tokens.append(f'\\n[{link_text}]({href})\\n')"
+      },
+      {
+        "id": "sensitive-path-0239",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 467,
+        "evidence": "self._cur_link_tokens = []"
+      },
+      {
+        "id": "sensitive-path-0240",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 476,
+        "evidence": "code = ''.join(self._md_code_tokens)"
+      },
+      {
+        "id": "sensitive-path-0241",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 496,
+        "evidence": "self._md_code_tokens.append(data)"
+      },
+      {
+        "id": "sensitive-path-0242",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 502,
+        "evidence": "self._cur_tokens.append(data)"
+      },
+      {
+        "id": "sensitive-path-0243",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 504,
+        "evidence": "token = f'**{data}**' if self._bold_depth > 0 else data"
+      },
+      {
+        "id": "sensitive-path-0244",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 506,
+        "evidence": "self._cur_link_tokens.append(data)"
+      },
+      {
+        "id": "sensitive-path-0245",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 508,
+        "evidence": "self._cur_tokens.append(token)"
+      },
+      {
+        "id": "sensitive-path-0246",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 511,
+        "evidence": "if self._cur_block_type and self._cur_tokens:"
+      },
+      {
+        "id": "sensitive-path-0247",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 512,
+        "evidence": "text = ''.join(self._cur_tokens)"
+      },
+      {
+        "id": "sensitive-path-0248",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/to_obsidian.py",
+        "line": 518,
+        "evidence": "self._cur_tokens = []"
+      },
+      {
+        "id": "execution-0250",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "scripts/to_obsidian.py",
+        "line": 837,
+        "evidence": "result = subprocess.run([sys.executable, str(fetch_script), '--url', tweet_url, '--pretty'], capture_output=True, text=True)"
+      },
+      {
+        "id": "execution-0255",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Process execution detected",
+        "description": "Python AST found explicit process execution call.",
+        "path": "scripts/to_obsidian.py",
+        "line": 837,
+        "evidence": "subprocess.run"
+      },
+      {
+        "id": "filesystem-0254",
+        "severity": "medium",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/to_obsidian.py",
+        "line": 949,
+        "evidence": "shutil.rmtree(assets_subdir)"
+      },
+      {
+        "id": "filesystem-0257",
+        "severity": "medium",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/to_obsidian.py",
+        "line": 949,
+        "evidence": "shutil.rmtree"
+      },
+      {
+        "id": "sensitive-path-0039",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 57,
+        "evidence": "mm_key = os.environ.get(\"MINIMAX_API_KEY\")"
+      },
+      {
+        "id": "sensitive-path-0040",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 74,
+        "evidence": "openai_key = os.environ.get(\"OPENAI_API_KEY\")"
+      },
+      {
+        "id": "sensitive-path-0041",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 75,
+        "evidence": "openai_url = os.environ.get(\"OPENAI_BASE_URL\", OPENAI_API_URL)"
+      },
+      {
+        "id": "sensitive-path-0042",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 76,
+        "evidence": "openai_model = os.environ.get(\"OPENAI_MODEL\", \"gpt-4o-mini\")"
+      },
+      {
+        "id": "sensitive-path-0043",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 202,
+        "evidence": "\"max_tokens\": 4096,"
+      },
+      {
+        "id": "sensitive-path-0269",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 22,
+        "evidence": "USERNAME = os.environ.get(\"NITTER_USERNAME\", \"YuLin807\")"
+      },
+      {
+        "id": "network-0155",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 32,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0156",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 49,
+        "evidence": "query = urllib.parse.quote(f'\"{title[:80]}\"')"
+      },
+      {
+        "id": "network-0157",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 116,
+        "evidence": "query = urllib.parse.quote(author_name)"
+      },
+      {
+        "id": "filesystem-0158",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/arxiv_author_finder.py",
+        "line": 154,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0019",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 14,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0020",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 15,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0021",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 16,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0022",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 23,
+        "evidence": "req = urllib.request.Request(f\"http://localhost:{port}/tabs\", method=\"GET\")"
+      },
+      {
+        "id": "network-0023",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 24,
+        "evidence": "with urllib.request.urlopen(req, timeout=3) as resp:"
+      },
+      {
+        "id": "network-0033",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/camofox_client.py",
+        "line": 24,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0024",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 42,
+        "evidence": "req = urllib.request.Request("
+      },
+      {
+        "id": "network-0025",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 48,
+        "evidence": "with urllib.request.urlopen(req, timeout=10) as resp:"
+      },
+      {
+        "id": "network-0034",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/camofox_client.py",
+        "line": 48,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0026",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 60,
+        "evidence": "with urllib.request.urlopen(url, timeout=15) as resp:"
+      },
+      {
+        "id": "network-0035",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/camofox_client.py",
+        "line": 60,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0027",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 71,
+        "evidence": "req = urllib.request.Request("
+      },
+      {
+        "id": "network-0028",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 75,
+        "evidence": "urllib.request.urlopen(req, timeout=5)"
+      },
+      {
+        "id": "network-0032",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/camofox_client.py",
+        "line": 75,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0029",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/camofox_client.py",
+        "line": 104,
+        "evidence": "encoded = urllib.parse.quote(query)"
+      },
+      {
+        "id": "network-0159",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 12,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0160",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 13,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0161",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 14,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0163",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 42,
+        "evidence": "req = urllib.request.Request(url, headers=headers or {})"
+      },
+      {
+        "id": "network-0164",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 45,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0179",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/common.py",
+        "line": 45,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0165",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 51,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0166",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 92,
+        "evidence": "url = ARXIV_API.format(arxiv_id=urllib.parse.quote(clean_id))"
+      },
+      {
+        "id": "network-0174",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 331,
+        "evidence": "url = f'https://search.brave.com/search?q={urllib.parse.quote(query)}'"
+      },
+      {
+        "id": "network-0175",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 332,
+        "evidence": "req = urllib.request.Request(url, headers={"
+      },
+      {
+        "id": "network-0176",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 336,
+        "evidence": "with urllib.request.urlopen(req, timeout=10) as resp:"
+      },
+      {
+        "id": "network-0180",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/common.py",
+        "line": 336,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0177",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 347,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0178",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/common.py",
+        "line": 368,
+        "evidence": "url = f\"{SEARXNG_URL}?{urllib.parse.urlencode(params)}\""
+      },
+      {
+        "id": "network-0057",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 15,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0058",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 16,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0059",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 145,
+        "evidence": "def fetch(self, url: str, port: int = 9377) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0060",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 198,
+        "evidence": "def fetch(self, url: str, port: int = 9377) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0061",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 451,
+        "evidence": "def fetch(self, url: str, port: int = 9377) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0062",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 685,
+        "evidence": "def fetch(self, url: str, port: int = 9377) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0063",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 897,
+        "evidence": "def fetch(self, url: str, port: int = 9377) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0064",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 902,
+        "evidence": "req = urllib.request.Request(url, headers={"
+      },
+      {
+        "id": "network-0065",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 905,
+        "evidence": "with urllib.request.urlopen(req, timeout=15) as resp:"
+      },
+      {
+        "id": "network-0086",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_china.py",
+        "line": 905,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0066",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1087,
+        "evidence": "req = urllib.request.Request(url, method='HEAD')"
+      },
+      {
+        "id": "network-0067",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1089,
+        "evidence": "resp = urllib.request.urlopen(req, timeout=10)"
+      },
+      {
+        "id": "network-0085",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_china.py",
+        "line": 1089,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0068",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1094,
+        "evidence": "def fetch(self, url: str, port: int = 9377) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0069",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1275,
+        "evidence": "req = urllib.request.Request(url, method='HEAD')"
+      },
+      {
+        "id": "network-0070",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1277,
+        "evidence": "resp = urllib.request.urlopen(req, timeout=10)"
+      },
+      {
+        "id": "network-0087",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_china.py",
+        "line": 1277,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0073",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/fetch_china.py",
+        "line": 1302,
+        "evidence": "open(cmd_output, 'w').close()"
+      },
+      {
+        "id": "filesystem-0090",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/fetch_china.py",
+        "line": 1302,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0074",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/fetch_china.py",
+        "line": 1304,
+        "evidence": "with open(cmd_queue, 'w') as f:"
+      },
+      {
+        "id": "filesystem-0088",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/fetch_china.py",
+        "line": 1304,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0092",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/fetch_china.py",
+        "line": 1312,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0075",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1473,
+        "evidence": "proxy_handler = urllib.request.ProxyHandler({"
+      },
+      {
+        "id": "network-0076",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1476,
+        "evidence": "opener = urllib.request.build_opener(proxy_handler)"
+      },
+      {
+        "id": "network-0077",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1485,
+        "evidence": "req = urllib.request.Request(url, headers=headers)"
+      },
+      {
+        "id": "network-0078",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1497,
+        "evidence": "req = urllib.request.Request(url, headers={"
+      },
+      {
+        "id": "network-0079",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1504,
+        "evidence": "with urllib.request.urlopen(req, timeout=15) as r:"
+      },
+      {
+        "id": "network-0089",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_china.py",
+        "line": 1504,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0091",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/fetch_china.py",
+        "line": 1519,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0080",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1530,
+        "evidence": "def fetch(self, url: str, port: int = 9377, proxy: str = None, cookies: str = None) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0081",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1668,
+        "evidence": "def fetch(url: str, port: int = 9377, proxy: str = None, cookies: str = None) -> Dict[str, Any]:"
+      },
+      {
+        "id": "network-0082",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1680,
+        "evidence": "return parser.fetch(url, port, proxy=proxy, cookies=cookies)"
+      },
+      {
+        "id": "network-0083",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1681,
+        "evidence": "return parser.fetch(url, port)"
+      },
+      {
+        "id": "network-0084",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_china.py",
+        "line": 1723,
+        "evidence": "result = fetch(args.url, port=args.port, proxy=getattr(args, 'proxy', None),"
+      },
+      {
+        "id": "network-0192",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 30,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0193",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 31,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0194",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 32,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0195",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 205,
+        "evidence": "req = urllib.request.Request(f\"http://localhost:{port}/tabs\", method=\"GET\")"
+      },
+      {
+        "id": "network-0196",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 206,
+        "evidence": "with urllib.request.urlopen(req, timeout=3) as resp:"
+      },
+      {
+        "id": "network-0218",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 206,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0197",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 221,
+        "evidence": "req = urllib.request.Request("
+      },
+      {
+        "id": "network-0198",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 227,
+        "evidence": "with urllib.request.urlopen(req, timeout=10) as resp:"
+      },
+      {
+        "id": "network-0219",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 227,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0199",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 239,
+        "evidence": "with urllib.request.urlopen(url, timeout=15) as resp:"
+      },
+      {
+        "id": "network-0220",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 239,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0200",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 249,
+        "evidence": "req = urllib.request.Request("
+      },
+      {
+        "id": "network-0201",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 253,
+        "evidence": "urllib.request.urlopen(req, timeout=5)"
+      },
+      {
+        "id": "network-0216",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 253,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0202",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 367,
+        "evidence": "req = urllib.request.Request(api_url, headers={\"User-Agent\": \"Mozilla/5.0\"})"
+      },
+      {
+        "id": "network-0203",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 368,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0221",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 368,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0204",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 526,
+        "evidence": "except urllib.error.URLError:"
+      },
+      {
+        "id": "network-0205",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 533,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0206",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 793,
+        "evidence": "decoded = urllib.parse.unquote(url_m.group(2))"
+      },
+      {
+        "id": "network-0207",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 985,
+        "evidence": "decoded = urllib.parse.unquote(encoded)"
+      },
+      {
+        "id": "network-0208",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 998,
+        "evidence": "decoded_url = urllib.parse.unquote(url_part)"
+      },
+      {
+        "id": "network-0209",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1117,
+        "evidence": "return urllib.parse.unquote(m.group(1))"
+      },
+      {
+        "id": "network-0210",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1145,
+        "evidence": "encoded = urllib.parse.quote(cursor, safe=\"\")"
+      },
+      {
+        "id": "network-0211",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1261,
+        "evidence": "encoded = urllib.parse.quote(cursor, safe=\"\")"
+      },
+      {
+        "id": "filesystem-0222",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1642,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0212",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1660,
+        "evidence": "with open(path, \"w\", encoding=\"utf-8\") as f:"
+      },
+      {
+        "id": "filesystem-0217",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1660,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0213",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 1661,
+        "evidence": "json.dump(cache, f, ensure_ascii=False, indent=2)"
+      },
+      {
+        "id": "network-0214",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 2193,
+        "evidence": "req = urllib.request.Request(url, headers={\"User-Agent\": \"x-tweet-fetcher/1.0\"})"
+      },
+      {
+        "id": "network-0215",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 2194,
+        "evidence": "with urllib.request.urlopen(req, timeout=5) as resp:"
+      },
+      {
+        "id": "network-0223",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/fetch_tweet.py",
+        "line": 2194,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0136",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 5,
+        "evidence": "纯标准库实现 (urllib.request + html.parser + re)"
+      },
+      {
+        "id": "network-0137",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 22,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0138",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 23,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0139",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 24,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0141",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 49,
+        "evidence": "req = urllib.request.Request(url, headers=_HEADERS)"
+      },
+      {
+        "id": "network-0142",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 51,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0150",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/nitter_client.py",
+        "line": 51,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0143",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 57,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0144",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 68,
+        "evidence": "req = urllib.request.Request(url + \"/\", headers=_HEADERS)"
+      },
+      {
+        "id": "network-0145",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 69,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0151",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/nitter_client.py",
+        "line": 69,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0146",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 276,
+        "evidence": "decoded = urllib.parse.unquote(raw_path)"
+      },
+      {
+        "id": "network-0147",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 359,
+        "evidence": "return urllib.parse.unquote(m.group(1))"
+      },
+      {
+        "id": "network-0148",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 432,
+        "evidence": "url = f\"{NITTER_URL}/{username}?cursor={urllib.parse.quote(current_cursor, safe='')}\""
+      },
+      {
+        "id": "network-0149",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/nitter_client.py",
+        "line": 481,
+        "evidence": "url = f\"{NITTER_URL}/search?\" + urllib.parse.urlencode(params)"
+      },
+      {
+        "id": "network-0093",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 30,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0094",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 48,
+        "evidence": "url += f\"{sep}mailto={urllib.parse.quote(OPENALEX_EMAIL)}\""
+      },
+      {
+        "id": "network-0095",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 59,
+        "evidence": "data = _oa_get(f\"{OPENALEX_API}/works/{urllib.parse.quote(doi_url, safe='')}\")"
+      },
+      {
+        "id": "network-0096",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 63,
+        "evidence": "data = _oa_get(f\"{OPENALEX_API}/works/doi:{urllib.parse.quote(doi)}\")"
+      },
+      {
+        "id": "network-0097",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 67,
+        "evidence": "q = urllib.parse.quote(title[:200], safe='')"
+      },
+      {
+        "id": "network-0098",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 76,
+        "evidence": "data = _oa_get(f\"{OPENALEX_API}/works?search={urllib.parse.quote(arxiv_id)}&per_page=1\")"
+      },
+      {
+        "id": "network-0100",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_recommend.py",
+        "line": 394,
+        "evidence": "q = urllib.parse.quote(title[:200], safe='')"
+      },
+      {
+        "id": "network-0277",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 19,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0278",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 36,
+        "evidence": "from urllib.parse import urlparse"
+      },
+      {
+        "id": "network-0279",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 46,
+        "evidence": "req = urllib.request.Request(url, headers={"
+      },
+      {
+        "id": "network-0280",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 51,
+        "evidence": "with urllib.request.urlopen(req, timeout=30) as resp:"
+      },
+      {
+        "id": "network-0292",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 51,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0281",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 52,
+        "evidence": "dest.write_bytes(resp.read())"
+      },
+      {
+        "id": "network-0282",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 75,
+        "evidence": "req = urllib.request.Request(url, headers={"
+      },
+      {
+        "id": "network-0283",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 80,
+        "evidence": "with urllib.request.urlopen(req, timeout=60) as resp:"
+      },
+      {
+        "id": "network-0289",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 80,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0284",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 93,
+        "evidence": "req = urllib.request.Request(api_url, headers={'User-Agent': 'Mozilla/5.0'})"
+      },
+      {
+        "id": "network-0285",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 94,
+        "evidence": "with urllib.request.urlopen(req, timeout=15) as resp:"
+      },
+      {
+        "id": "network-0290",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 94,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0286",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 605,
+        "evidence": "req = urllib.request.Request(args.url, headers={'User-Agent': 'Mozilla/5.0'})"
+      },
+      {
+        "id": "network-0287",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 606,
+        "evidence": "with urllib.request.urlopen(req, timeout=60) as resp:"
+      },
+      {
+        "id": "network-0291",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 606,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0288",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/paper_to_obsidian.py",
+        "line": 663,
+        "evidence": "output_path.write_text(md, encoding='utf-8')"
+      },
+      {
+        "id": "network-0260",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/playwright_client.py",
+        "line": 26,
+        "evidence": "import urllib.parse"
+      },
+      {
+        "id": "network-0265",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/playwright_client.py",
+        "line": 297,
+        "evidence": "url = f\"https://{nitter}/{username}?cursor={urllib.parse.quote(cursor, safe='')}\""
+      },
+      {
+        "id": "network-0266",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/playwright_client.py",
+        "line": 384,
+        "evidence": "url = f\"https://{nitter}/i/lists/{list_id}?cursor={urllib.parse.quote(cursor, safe='')}\""
+      },
+      {
+        "id": "network-0268",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/playwright_client.py",
+        "line": 529,
+        "evidence": "encoded = urllib.parse.quote(query)"
+      },
+      {
+        "id": "network-0102",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 20,
+        "evidence": "from urllib.parse import quote"
+      },
+      {
+        "id": "filesystem-0120",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 49,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0108",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 60,
+        "evidence": "with open(queue_file, 'w') as f:"
+      },
+      {
+        "id": "filesystem-0116",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 60,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0121",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 69,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0122",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 74,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0110",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 133,
+        "evidence": "from urllib.parse import quote"
+      },
+      {
+        "id": "network-0111",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 136,
+        "evidence": "r = requests.get(url, headers=headers, timeout=10)"
+      },
+      {
+        "id": "network-0115",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 196,
+        "evidence": "response = requests.get(url, headers=headers, timeout=10)"
+      },
+      {
+        "id": "network-0119",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/sogou_wechat.py",
+        "line": 196,
+        "evidence": "requests.get"
+      },
+      {
+        "id": "network-0224",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/to_obsidian.py",
+        "line": 31,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0225",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/to_obsidian.py",
+        "line": 34,
+        "evidence": "from urllib.parse import urlparse"
+      },
+      {
+        "id": "network-0226",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/to_obsidian.py",
+        "line": 208,
+        "evidence": "req = urllib.request.Request(fetch_url, headers={"
+      },
+      {
+        "id": "network-0227",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/to_obsidian.py",
+        "line": 213,
+        "evidence": "with urllib.request.urlopen(req, timeout=15) as resp:"
+      },
+      {
+        "id": "network-0256",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/to_obsidian.py",
+        "line": 213,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0228",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/to_obsidian.py",
+        "line": 214,
+        "evidence": "dest.write_bytes(resp.read())"
+      },
+      {
+        "id": "filesystem-0249",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/to_obsidian.py",
+        "line": 823,
+        "evidence": "output_path.write_text(new_content, encoding='utf-8')"
+      },
+      {
+        "id": "network-0251",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/to_obsidian.py",
+        "line": 854,
+        "evidence": "req = urllib.request.Request(fx_url, headers={'User-Agent': 'Mozilla/5.0'})"
+      },
+      {
+        "id": "network-0252",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/to_obsidian.py",
+        "line": 855,
+        "evidence": "with urllib.request.urlopen(req, timeout=20) as resp:"
+      },
+      {
+        "id": "network-0258",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/to_obsidian.py",
+        "line": 855,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0253",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/to_obsidian.py",
+        "line": 941,
+        "evidence": "output_path.write_text(md_content, encoding='utf-8')"
+      },
+      {
+        "id": "network-0124",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/tweet_growth.py",
+        "line": 18,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0125",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/tweet_growth.py",
+        "line": 19,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "filesystem-0126",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/tweet_growth.py",
+        "line": 46,
+        "evidence": "lf = open(LOCK_FILE, \"a\")  # \"a\" avoids truncating the file on open"
+      },
+      {
+        "id": "filesystem-0132",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/tweet_growth.py",
+        "line": 46,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0134",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/tweet_growth.py",
+        "line": 64,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0127",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/tweet_growth.py",
+        "line": 73,
+        "evidence": "with open(tmp, \"w\") as f:"
+      },
+      {
+        "id": "filesystem-0133",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/tweet_growth.py",
+        "line": 73,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0128",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/tweet_growth.py",
+        "line": 74,
+        "evidence": "json.dump(data, f, indent=2, ensure_ascii=False)"
+      },
+      {
+        "id": "network-0129",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/tweet_growth.py",
+        "line": 82,
+        "evidence": "req = urllib.request.Request(url, headers={\"User-Agent\": \"tweet-growth/2.1\"})"
+      },
+      {
+        "id": "network-0130",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/tweet_growth.py",
+        "line": 85,
+        "evidence": "with urllib.request.urlopen(req, timeout=10) as resp:"
+      },
+      {
+        "id": "network-0135",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/tweet_growth.py",
+        "line": 85,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0131",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/tweet_growth.py",
+        "line": 102,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0181",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/version_check.py",
+        "line": 12,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "filesystem-0186",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/version_check.py",
+        "line": 43,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0189",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/version_check.py",
+        "line": 57,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0182",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/version_check.py",
+        "line": 69,
+        "evidence": "req = urllib.request.Request(url, headers={\"Accept\": \"application/vnd.github.v3+json\"})"
+      },
+      {
+        "id": "network-0183",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/version_check.py",
+        "line": 71,
+        "evidence": "with urllib.request.urlopen(req, timeout=5) as resp:"
+      },
+      {
+        "id": "network-0187",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/version_check.py",
+        "line": 71,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "filesystem-0184",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/version_check.py",
+        "line": 77,
+        "evidence": "with open(cache_file, 'w') as f:"
+      },
+      {
+        "id": "filesystem-0188",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/version_check.py",
+        "line": 77,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0185",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/version_check.py",
+        "line": 78,
+        "evidence": "json.dump({\"checked_at\": now, \"remote_version\": remote_version}, f)"
+      },
+      {
+        "id": "network-0036",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 29,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0037",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 30,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0038",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 39,
+        "evidence": "OPENAI_API_URL = \"https://api.openai.com/v1/chat/completions\""
+      },
+      {
+        "id": "filesystem-0051",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 63,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0044",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 211,
+        "evidence": "req = urllib.request.Request("
+      },
+      {
+        "id": "network-0045",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 222,
+        "evidence": "with urllib.request.urlopen(req, timeout=120) as resp:"
+      },
+      {
+        "id": "network-0052",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 222,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0046",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 233,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0047",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 236,
+        "evidence": "except urllib.error.URLError as e:"
+      },
+      {
+        "id": "filesystem-0048",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 431,
+        "evidence": "json_path.write_text(json.dumps({"
+      },
+      {
+        "id": "filesystem-0049",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 443,
+        "evidence": "Path(args.output).write_text(output, encoding=\"utf-8\")"
+      },
+      {
+        "id": "filesystem-0050",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x-profile-analyzer.py",
+        "line": 472,
+        "evidence": "output_path.write_text(report, encoding=\"utf-8\")"
+      },
+      {
+        "id": "filesystem-0123",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x_discover.py",
+        "line": 82,
+        "evidence": "Path(cache_file).write_text(json.dumps(cache, ensure_ascii=False, indent=2))"
+      },
+      {
+        "id": "filesystem-0276",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 33,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0270",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 42,
+        "evidence": "with open(CACHE_FILE, 'w') as f:"
+      },
+      {
+        "id": "filesystem-0274",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 42,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0271",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 43,
+        "evidence": "json.dump(list(ids)[-500:], f)"
+      },
+      {
+        "id": "filesystem-0272",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 91,
+        "evidence": "with open(RESULT_FILE, 'w') as f:"
+      },
+      {
+        "id": "filesystem-0275",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 91,
+        "evidence": "open"
+      },
+      {
+        "id": "filesystem-0273",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "scripts/x_mentions_nitter.py",
+        "line": 92,
+        "evidence": "json.dump(output, f, ensure_ascii=False, indent=2)"
+      },
+      {
+        "id": "docs-0015",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "README.md",
+        "line": 1,
+        "evidence": "<div align=\"center\">"
+      },
+      {
+        "id": "docs-0017",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "SKILL.md",
+        "line": 1,
+        "evidence": "---"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 35.0,
+    "quality_score": 95.0,
+    "security_score": 0.0
+  },
+  "updated_at": "2026-03-24T13:16:55.065969+00:00"
+}

@@ -1,0 +1,712 @@
+{
+  "id": "simoneavogadro-android-reverse-engineering-skill",
+  "name": "android-reverse-engineering-skill",
+  "slug": "simoneavogadro-android-reverse-engineering-skill",
+  "primary_category": "agent-operations",
+  "secondary_categories": [],
+  "tags": [
+    "security-reversing",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "Android reverse engineering skill",
+  "description": "Automated Skill Tree audit for SimoneAvogadro/android-reverse-engineering-skill. Source category: security-reversing.",
+  "source": {
+    "repo_url": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+    "platform": "github",
+    "owner": "SimoneAvogadro",
+    "repo": "android-reverse-engineering-skill",
+    "stars": 1340
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".md",
+      ".sh",
+      ".json"
+    ]
+  },
+  "capabilities": [
+    "credentials-access",
+    "network"
+  ],
+  "security": {
+    "risk_level": "high",
+    "summary": [
+      "Overall risk assessed as HIGH based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": false,
+    "shell_execution": false,
+    "browser_control": false,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "secret",
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 64,
+    "last_audited_at": "2026-03-24T13:16:56.684570+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "sensitive-path-0001",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 8,
+        "evidence": "- **Extracts and documents APIs**: Retrofit endpoints, OkHttp calls, hardcoded URLs, auth headers and tokens"
+      },
+      {
+        "id": "permissions-0002",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/commands/decompile.md",
+        "line": 38,
+        "evidence": "The install script auto-detects the OS and installs without sudo when possible (user-local install to `~/.local/`). If sudo is needed, it will prompt — if the user declines or sudo is unavailable, the script prints exact manual instructions (exit code 2). Show those instructions to the user and stop."
+      },
+      {
+        "id": "permissions-0004",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/SKILL.md",
+        "line": 43,
+        "evidence": "- Installs without sudo when possible (downloads to `~/.local/share/`, symlinks in `~/.local/bin/`)"
+      },
+      {
+        "id": "permissions-0005",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/SKILL.md",
+        "line": 44,
+        "evidence": "- Uses sudo and the system package manager when necessary (apt, dnf, pacman)"
+      },
+      {
+        "id": "permissions-0006",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/SKILL.md",
+        "line": 45,
+        "evidence": "- If sudo is needed but unavailable or the user declines, it prints the exact manual command and exits with code 2 — show these instructions to the user"
+      },
+      {
+        "id": "sensitive-path-0007",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/SKILL.md",
+        "line": 169,
+        "evidence": "- **Headers**: `Authorization: Bearer <token>`"
+      },
+      {
+        "id": "sensitive-path-0023",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/api-extraction-patterns.md",
+        "line": 80,
+        "evidence": "## Hardcoded URLs and Secrets"
+      },
+      {
+        "id": "sensitive-path-0024",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/api-extraction-patterns.md",
+        "line": 86,
+        "evidence": "# API keys and tokens"
+      },
+      {
+        "id": "sensitive-path-0025",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/api-extraction-patterns.md",
+        "line": 87,
+        "evidence": "grep -rni 'api[_-]\\?key\\|api[_-]\\?secret\\|auth[_-]\\?token\\|bearer\\|access[_-]\\?token\\|client[_-]\\?secret' sources/"
+      },
+      {
+        "id": "sensitive-path-0026",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/api-extraction-patterns.md",
+        "line": 106,
+        "evidence": "- `Authorization: Bearer <token>`"
+      },
+      {
+        "id": "sensitive-path-0009",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/call-flow-analysis.md",
+        "line": 119,
+        "evidence": "grep -rni 'API_KEY\\|CLIENT_ID\\|APP_KEY\\|SECRET' sources/"
+      },
+      {
+        "id": "permissions-0010",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 10,
+        "evidence": "sudo apt update"
+      },
+      {
+        "id": "permissions-0011",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 11,
+        "evidence": "sudo apt install openjdk-17-jdk"
+      },
+      {
+        "id": "permissions-0012",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 17,
+        "evidence": "sudo dnf install java-17-openjdk-devel"
+      },
+      {
+        "id": "permissions-0013",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 23,
+        "evidence": "sudo pacman -S jdk17-openjdk"
+      },
+      {
+        "id": "permissions-0014",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 29,
+        "evidence": "brew install openjdk@17"
+      },
+      {
+        "id": "permissions-0015",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 66,
+        "evidence": "brew install jadx"
+      },
+      {
+        "id": "permissions-0016",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 117,
+        "evidence": "brew install vineflower"
+      },
+      {
+        "id": "permissions-0017",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 147,
+        "evidence": "brew install dex2jar"
+      },
+      {
+        "id": "permissions-0018",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 176,
+        "evidence": "sudo apt install apktool"
+      },
+      {
+        "id": "permissions-0019",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 179,
+        "evidence": "brew install apktool"
+      },
+      {
+        "id": "permissions-0020",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 190,
+        "evidence": "sudo apt install adb"
+      },
+      {
+        "id": "permissions-0021",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 193,
+        "evidence": "brew install android-platform-tools"
+      },
+      {
+        "id": "sensitive-path-0063",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/find-api-calls.sh",
+        "line": 112,
+        "evidence": "run_grep -i '(api[_-]?key|auth[_-]?token|bearer|authorization|x-api-key|client[_-]?secret|access[_-]?token)'"
+      },
+      {
+        "id": "permissions-0027",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 9,
+        "evidence": "#   2 — requires manual action (e.g. sudo needed but not available)"
+      },
+      {
+        "id": "permissions-0028",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 28,
+        "evidence": "- Uses sudo if available and needed"
+      },
+      {
+        "id": "permissions-0029",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 54,
+        "evidence": "elif command -v apt-get &>/dev/null; then"
+      },
+      {
+        "id": "permissions-0030",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 62,
+        "evidence": "# Check sudo availability"
+      },
+      {
+        "id": "permissions-0031",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 63,
+        "evidence": "if command -v sudo &>/dev/null; then"
+      },
+      {
+        "id": "permissions-0032",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 64,
+        "evidence": "if sudo -n true 2>/dev/null; then"
+      },
+      {
+        "id": "permissions-0033",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 67,
+        "evidence": "# sudo exists but may need password — we'll try it and let it prompt"
+      },
+      {
+        "id": "permissions-0034",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 81,
+        "evidence": "# --- Helper: install via system package manager (needs sudo on Linux) ---"
+      },
+      {
+        "id": "permissions-0035",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 87,
+        "evidence": "brew install \"$pkg\""
+      },
+      {
+        "id": "permissions-0036",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 92,
+        "evidence": "sudo apt-get update -qq && sudo apt-get install -y -qq \"$pkg\""
+      },
+      {
+        "id": "permissions-0037",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 94,
+        "evidence": "manual \"Run: sudo apt-get install $pkg\""
+      },
+      {
+        "id": "permissions-0038",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 100,
+        "evidence": "sudo dnf install -y \"$pkg\""
+      },
+      {
+        "id": "permissions-0039",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 102,
+        "evidence": "manual \"Run: sudo dnf install $pkg\""
+      },
+      {
+        "id": "permissions-0040",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 108,
+        "evidence": "sudo pacman -S --noconfirm \"$pkg\""
+      },
+      {
+        "id": "permissions-0041",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 110,
+        "evidence": "manual \"Run: sudo pacman -S $pkg\""
+      },
+      {
+        "id": "network-0042",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 122,
+        "evidence": "if command -v curl &>/dev/null; then"
+      },
+      {
+        "id": "network-0043",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 123,
+        "evidence": "curl -fsSL -o \"$dest\" \"$url\""
+      },
+      {
+        "id": "network-0044",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 124,
+        "evidence": "elif command -v wget &>/dev/null; then"
+      },
+      {
+        "id": "network-0045",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 125,
+        "evidence": "wget -q -O \"$dest\" \"$url\""
+      },
+      {
+        "id": "network-0046",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 127,
+        "evidence": "fail \"Neither curl nor wget available.\""
+      },
+      {
+        "id": "network-0047",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 136,
+        "evidence": "if command -v curl &>/dev/null; then"
+      },
+      {
+        "id": "network-0048",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 137,
+        "evidence": "curl -fsSL \"$url\" | grep '\"tag_name\"' | head -1 | sed 's/.*\"tag_name\":[[:space:]]*\"\\([^\"]*\\)\".*/\\1/'"
+      },
+      {
+        "id": "network-0049",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 138,
+        "evidence": "elif command -v wget &>/dev/null; then"
+      },
+      {
+        "id": "network-0050",
+        "severity": "medium",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 139,
+        "evidence": "wget -q -O - \"$url\" | grep '\"tag_name\"' | head -1 | sed 's/.*\"tag_name\":[[:space:]]*\"\\([^\"]*\\)\".*/\\1/'"
+      },
+      {
+        "id": "permissions-0051",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 182,
+        "evidence": "brew)    brew install openjdk@17 ;;"
+      },
+      {
+        "id": "permissions-0052",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 210,
+        "evidence": "brew install jadx"
+      },
+      {
+        "id": "permissions-0053",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 215,
+        "evidence": "# User-local install from GitHub releases (no sudo needed)"
+      },
+      {
+        "id": "permissions-0054",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 237,
+        "evidence": "chmod +x \"$install_dir/bin/jadx\" \"$install_dir/bin/jadx-gui\" 2>/dev/null || true"
+      },
+      {
+        "id": "permissions-0055",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 275,
+        "evidence": "if brew install vineflower 2>/dev/null; then"
+      },
+      {
+        "id": "permissions-0056",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 282,
+        "evidence": "# Download JAR from GitHub releases (no sudo needed)"
+      },
+      {
+        "id": "permissions-0057",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 305,
+        "evidence": "chmod +x \"$HOME/.local/bin/vineflower\""
+      },
+      {
+        "id": "permissions-0058",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 325,
+        "evidence": "if brew install dex2jar 2>/dev/null; then"
+      },
+      {
+        "id": "permissions-0059",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 332,
+        "evidence": "# Download from GitHub (no sudo needed)"
+      },
+      {
+        "id": "permissions-0060",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 375,
+        "evidence": "chmod +x \"$bin_dir\"/*.sh 2>/dev/null || true"
+      },
+      {
+        "id": "permissions-0061",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 397,
+        "evidence": "brew)    info \"Installing apktool via Homebrew...\"; brew install apktool ;;"
+      },
+      {
+        "id": "permissions-0062",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/scripts/install-dep.sh",
+        "line": 417,
+        "evidence": "brew)    info \"Installing adb via Homebrew...\"; brew install android-platform-tools ;;"
+      },
+      {
+        "id": "network-0064",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": ".claude-plugin/marketplace.json",
+        "line": 2,
+        "evidence": "\"$schema\": \"https://anthropic.com/claude-code/marketplace.schema.json\","
+      },
+      {
+        "id": "docs-0003",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "plugins/android-reverse-engineering/commands/decompile.md",
+        "line": 1,
+        "evidence": "---"
+      },
+      {
+        "id": "docs-0008",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/SKILL.md",
+        "line": 1,
+        "evidence": "---"
+      },
+      {
+        "id": "docs-0022",
+        "severity": "info",
+        "category": "docs",
+        "title": "Operational command examples found in documentation",
+        "description": "Repository documentation contains commands that may require manual review before use.",
+        "path": "plugins/android-reverse-engineering/skills/android-reverse-engineering/references/setup-guide.md",
+        "line": 1,
+        "evidence": "# Setup Guide: Dependencies for Android Reverse Engineering"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 55.0,
+    "quality_score": 90.0,
+    "security_score": 0.0
+  },
+  "updated_at": "2026-03-24T13:16:56.691621+00:00"
+}

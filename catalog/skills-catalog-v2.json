@@ -1,0 +1,1721 @@
+{
+  "version": "v2",
+  "generated_at": "2026-03-24",
+  "count": 100,
+  "discovery_queries": [
+    "claude code skill",
+    "claude skills",
+    "awesome claude code",
+    "openclaw skills",
+    "agent skills",
+    "copilot skills",
+    "AI agent skills",
+    "cursor rules skills",
+    "mcp server skills",
+    "openclaw skill",
+    "agent memory tools",
+    "claude code subagents"
+  ],
+  "items": [
+    {
+      "name": "superpowers",
+      "repo": "obra/superpowers",
+      "category": "general",
+      "source": "https://github.com/obra/superpowers",
+      "stars": 109623,
+      "summary": "An agentic skills framework & software development methodology that works.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 68,
+        "collection_tier": "core",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "anthropics/skills",
+      "category": "general",
+      "source": "https://github.com/anthropics/skills",
+      "stars": 101633,
+      "summary": "Public repository for Agent Skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 68,
+        "collection_tier": "core",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "category": "registry",
+      "source": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "stars": 47432,
+      "summary": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 63.4,
+        "collection_tier": "core",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "awesome-openclaw-skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "category": "registry",
+      "source": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "stars": 41534,
+      "summary": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 57.5,
+        "collection_tier": "core",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "awesome-claude-code",
+      "repo": "hesreallyhim/awesome-claude-code",
+      "category": "registry",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code",
+      "stars": 31478,
+      "summary": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 47.5,
+        "collection_tier": "core",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "awesome-copilot",
+      "repo": "github/awesome-copilot",
+      "category": "registry",
+      "source": "https://github.com/github/awesome-copilot",
+      "stars": 26791,
+      "summary": "Community-contributed instructions, agents, skills, and configurations to help you make the most of GitHub Copilot.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 42.8,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "agent-skills",
+      "repo": "vercel-labs/agent-skills",
+      "category": "general",
+      "source": "https://github.com/vercel-labs/agent-skills",
+      "stars": 23745,
+      "summary": "Vercel's official collection of agent skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 31.7,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "cli",
+      "repo": "googleworkspace/cli",
+      "category": "tooling",
+      "source": "https://github.com/googleworkspace/cli",
+      "stars": 22330,
+      "summary": "Google Workspace CLI — one command-line tool for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more. Dynamically built from Google Discovery Service. Includes AI agent skills.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 38.3,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "planning-with-files",
+      "repo": "OthmanAdi/planning-with-files",
+      "category": "general",
+      "source": "https://github.com/OthmanAdi/planning-with-files",
+      "stars": 17032,
+      "summary": "Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 25.0,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "obsidian-skills",
+      "repo": "kepano/obsidian-skills",
+      "category": "memory-knowledge",
+      "source": "https://github.com/kepano/obsidian-skills",
+      "stars": 16718,
+      "summary": "Agent skills for Obsidian. Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 32.7,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "claude-scientific-skills",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "category": "general",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
+      "stars": 16054,
+      "summary": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 24.1,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-claude-code-subagents",
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "category": "registry",
+      "source": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "stars": 14991,
+      "summary": "A collection of 100+ specialized Claude Code subagents covering a wide range of development use cases",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 31.0,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "Agent-Skills-for-Context-Engineering",
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "category": "memory-knowledge",
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "stars": 14280,
+      "summary": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 30.3,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "agentskills",
+      "repo": "agentskills/agentskills",
+      "category": "general",
+      "source": "https://github.com/agentskills/agentskills",
+      "stars": 14063,
+      "summary": "Specification and documentation for Agent Skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 22.1,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-agent-skills",
+      "repo": "VoltAgent/awesome-agent-skills",
+      "category": "registry",
+      "source": "https://github.com/VoltAgent/awesome-agent-skills",
+      "stars": 12649,
+      "summary": "Claude Code Skills and 700+ agent skills from official dev teams and the community, compatible with Codex, Antigravity, Gemini CLI, Cursor and others.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 28.6,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "vercel-labs/skills",
+      "category": "tooling",
+      "source": "https://github.com/vercel-labs/skills",
+      "stars": 11562,
+      "summary": "The open agent skills tool - npx skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 27.6,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "humanizer",
+      "repo": "blader/humanizer",
+      "category": "general",
+      "source": "https://github.com/blader/humanizer",
+      "stars": 10863,
+      "summary": "Claude Code skill that removes signs of AI-generated writing from text",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 30.9,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "travisvn/awesome-claude-skills",
+      "category": "registry",
+      "source": "https://github.com/travisvn/awesome-claude-skills",
+      "stars": 9651,
+      "summary": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows — particularly Claude Code",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 25.7,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "pm-skills",
+      "repo": "phuryn/pm-skills",
+      "category": "marketing",
+      "source": "https://github.com/phuryn/pm-skills",
+      "stars": 8068,
+      "summary": "PM Skills Marketplace: 100+ agentic skills, commands, and plugins — from discovery to strategy, execution, launch, and growth.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.1,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "BehiSecc/awesome-claude-skills",
+      "category": "registry",
+      "source": "https://github.com/BehiSecc/awesome-claude-skills",
+      "stars": 7826,
+      "summary": "A curated list of Claude Skills.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 35.8,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "Jeffallan/claude-skills",
+      "category": "general",
+      "source": "https://github.com/Jeffallan/claude-skills",
+      "stars": 7234,
+      "summary": "66 Specialized Skills for Full-Stack Developers. Transform Claude Code into your expert pair programmer.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 27.2,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "category": "marketing",
+      "source": "https://github.com/alirezarezvani/claude-skills",
+      "stars": 6664,
+      "summary": "+192 Claude Code skills & agent plugins for Claude Code, Codex, Gemini CLI, Cursor, and 8 more coding agents — engineering, marketing, product, compliance, C-level advisory.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 14.7,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "Humanizer-zh",
+      "repo": "op7418/Humanizer-zh",
+      "category": "general",
+      "source": "https://github.com/op7418/Humanizer-zh",
+      "stars": 5138,
+      "summary": "Humanizer 的汉化版本，Claude Code Skills，旨在消除文本中 AI 生成的痕迹。",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 25.1,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "last30days-skill",
+      "repo": "mvanhorn/last30days-skill",
+      "category": "general",
+      "source": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 4968,
+      "summary": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 13.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "antfu/skills",
+      "category": "general",
+      "source": "https://github.com/antfu/skills",
+      "stars": 4281,
+      "summary": "Anthony Fu's curated collection of agent skills.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 12.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "dev-browser",
+      "repo": "SawyerHood/dev-browser",
+      "category": "general",
+      "source": "https://github.com/SawyerHood/dev-browser",
+      "stars": 3967,
+      "summary": "A Claude Skill to give your agent the ability to use a web browser",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -8.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "trailofbits/skills",
+      "category": "security",
+      "source": "https://github.com/trailofbits/skills",
+      "stars": 3862,
+      "summary": "Trail of Bits Claude Code skills for security research, vulnerability detection, and audit workflows",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -0.1,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-openclaw-skills-zh",
+      "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+      "category": "registry",
+      "source": "https://github.com/clawdbot-ai/awesome-openclaw-skills-zh",
+      "stars": 3573,
+      "summary": "OpenClaw 中文官方技能库 | 翻译自 Clawdbot 官方技能，按场景分类整理，支持中文自然语言调用",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 31.6,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "Acontext",
+      "repo": "memodb-io/Acontext",
+      "category": "memory-knowledge",
+      "source": "https://github.com/memodb-io/Acontext",
+      "stars": 3185,
+      "summary": "Agent Skills as a Memory Layer",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 19.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "pinme",
+      "repo": "glitternetwork/pinme",
+      "category": "deployment",
+      "source": "https://github.com/glitternetwork/pinme",
+      "stars": 3029,
+      "summary": "Deploy Your Frontend in a Single Command. Claude Code Skills supported.",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -13.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "remotion-dev/skills",
+      "category": "general",
+      "source": "https://github.com/remotion-dev/skills",
+      "stars": 2351,
+      "summary": "Agent Skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 10.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "vuejs-ai/skills",
+      "category": "framework-domain",
+      "source": "https://github.com/vuejs-ai/skills",
+      "stars": 2043,
+      "summary": "Agent skills for Vue 3 development",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 10.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "openclaw-master-skills",
+      "repo": "LeoYeAI/openclaw-master-skills",
+      "category": "registry",
+      "source": "https://github.com/LeoYeAI/openclaw-master-skills",
+      "stars": 2014,
+      "summary": "🧠 Curated collection of 339+ best OpenClaw skills — weekly updated by MyClaw.ai from ClawHub, GitHub & community. AI, productivity, dev, marketing, finance & more.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 30.0,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "godogen",
+      "repo": "htdt/godogen",
+      "category": "framework-domain",
+      "source": "https://github.com/htdt/godogen",
+      "stars": 1973,
+      "summary": "Claude Code skills that build complete Godot 4 projects from a game description",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 22.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "agent-scan",
+      "repo": "snyk/agent-scan",
+      "category": "security",
+      "source": "https://github.com/snyk/agent-scan",
+      "stars": 1963,
+      "summary": "Security scanner for AI agents, MCP servers and agent skills.",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -2.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claudekit-skills",
+      "repo": "mrgoonie/claudekit-skills",
+      "category": "general",
+      "source": "https://github.com/mrgoonie/claudekit-skills",
+      "stars": 1883,
+      "summary": "All powerful skills of ClaudeKit.cc!",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 21.9,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "agent-skills",
+      "repo": "apify/agent-skills",
+      "category": "general",
+      "source": "https://github.com/apify/agent-skills",
+      "stars": 1728,
+      "summary": "Collection of Apify Agent Skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 9.7,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "agent-skills",
+      "repo": "supabase/agent-skills",
+      "category": "general",
+      "source": "https://github.com/supabase/agent-skills",
+      "stars": 1695,
+      "summary": "Agent Skills to help developers using AI agents with Supabase",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 9.7,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "expo/skills",
+      "category": "general",
+      "source": "https://github.com/expo/skills",
+      "stars": 1535,
+      "summary": "A collection of AI agent skills for working with Expo projects and Expo Application Services",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 9.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skill-scanner",
+      "repo": "cisco-ai-defense/skill-scanner",
+      "category": "security",
+      "source": "https://github.com/cisco-ai-defense/skill-scanner",
+      "stars": 1523,
+      "summary": "Security Scanner for Agent Skills",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -2.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "android-reverse-engineering-skill",
+      "repo": "SimoneAvogadro/android-reverse-engineering-skill",
+      "category": "security",
+      "source": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+      "stars": 1345,
+      "summary": "Claude Code skill to support Android app's reverse engineering",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -2.7,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-workflow-v2",
+      "repo": "CloudAI-X/claude-workflow-v2",
+      "category": "tooling",
+      "source": "https://github.com/CloudAI-X/claude-workflow-v2",
+      "stars": 1301,
+      "summary": "Universal Claude Code workflow plugin with agents, skills, hooks, and commands",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 17.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "videocut-skills",
+      "repo": "Ceeon/videocut-skills",
+      "category": "media-data",
+      "source": "https://github.com/Ceeon/videocut-skills",
+      "stars": 1190,
+      "summary": "用 Claude Code Skills 做的视频剪辑 Agent",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 5.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-llm-skills",
+      "repo": "Prat011/awesome-llm-skills",
+      "category": "registry",
+      "source": "https://github.com/Prat011/awesome-llm-skills",
+      "stars": 1032,
+      "summary": "A curated list of awesome LLM and AI Agent Skills, resources and tools for customising AI Agent workflows - that works with Claude Code, Codex, Gemini CLI and your custom AI Agents",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 17.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skill-codex",
+      "repo": "skills-directory/skill-codex",
+      "category": "registry",
+      "source": "https://github.com/skills-directory/skill-codex",
+      "stars": 997,
+      "summary": "A claude code skill to delegate prompts to codex",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -3.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "Ai-Agent-Skills",
+      "repo": "MoizIbnYousaf/Ai-Agent-Skills",
+      "category": "general",
+      "source": "https://github.com/MoizIbnYousaf/Ai-Agent-Skills",
+      "stars": 954,
+      "summary": "my curated agent skills library ",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 9.0,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "simonw/claude-skills",
+      "category": "general",
+      "source": "https://github.com/simonw/claude-skills",
+      "stars": 924,
+      "summary": "The contents of /mnt/skills in Claude's code interpreter environment",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.9,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "app-store-preflight-skills",
+      "repo": "truongduy2611/app-store-preflight-skills",
+      "category": "general",
+      "source": "https://github.com/truongduy2611/app-store-preflight-skills",
+      "stars": 913,
+      "summary": "AI agent skill to scan iOS/macOS projects for App Store rejection patterns before submission",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.9,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "synalinks-skills",
+      "repo": "SynaLinks/synalinks-skills",
+      "category": "general",
+      "source": "https://github.com/SynaLinks/synalinks-skills",
+      "stars": 898,
+      "summary": "Claude skills for Synalinks OSS",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.9,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-claude-code-toolkit",
+      "repo": "rohitg00/awesome-claude-code-toolkit",
+      "category": "registry",
+      "source": "https://github.com/rohitg00/awesome-claude-code-toolkit",
+      "stars": 893,
+      "summary": "The most comprehensive toolkit for Claude Code -- 135 agents, 35 curated skills (+400,000 via SkillKit), 42 commands, 150+ plugins, 19 hooks, 15 rules, 7 templates, 8 MCP configs, and more.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.9,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "Swift-Agent-Skills",
+      "repo": "twostraws/Swift-Agent-Skills",
+      "category": "registry",
+      "source": "https://github.com/twostraws/Swift-Agent-Skills",
+      "stars": 810,
+      "summary": "A curated directory of open-source AI agent skills for Swift and Apple platform development.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.8,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-code-subagents",
+      "repo": "0xfurai/claude-code-subagents",
+      "category": "general",
+      "source": "https://github.com/0xfurai/claude-code-subagents",
+      "stars": 793,
+      "summary": "A comprehensive collection of 100+ production-ready development subagents for Claude Code",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.8,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "slavingia/skills",
+      "category": "general",
+      "source": "https://github.com/slavingia/skills",
+      "stars": 788,
+      "summary": "Claude Code skills based on The Minimalist Entrepreneur by Sahil Lavingia",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.8,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "x-tweet-fetcher",
+      "repo": "ythx-101/x-tweet-fetcher",
+      "category": "media-data",
+      "source": "https://github.com/ythx-101/x-tweet-fetcher",
+      "stars": 722,
+      "summary": "🦞 Fetch tweets and replies from X/Twitter without login or API keys. OpenClaw skill.",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -15.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-code-skills",
+      "repo": "daymade/claude-code-skills",
+      "category": "general",
+      "source": "https://github.com/daymade/claude-code-skills",
+      "stars": 714,
+      "summary": "Professional Claude Code skills marketplace featuring production-ready skills for enhanced development workflows.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.7,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "iothackbot",
+      "repo": "BrownFineSecurity/iothackbot",
+      "category": "security",
+      "source": "https://github.com/BrownFineSecurity/iothackbot",
+      "stars": 710,
+      "summary": "IoT HackBot: A collection of Claude Skills and custom tooling for hybrid IoT pentesting",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -3.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "x-article-publisher-skill",
+      "repo": "wshuyi/x-article-publisher-skill",
+      "category": "media-data",
+      "source": "https://github.com/wshuyi/x-article-publisher-skill",
+      "stars": 675,
+      "summary": "Claude Code skill for publishing Markdown articles to X (Twitter) Articles",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -15.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "dotnet-skills",
+      "repo": "Aaronontheweb/dotnet-skills",
+      "category": "framework-domain",
+      "source": "https://github.com/Aaronontheweb/dotnet-skills",
+      "stars": 675,
+      "summary": "Claude Code skills and sub-agents for .NET Developers",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.7,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-claude-code-plugins",
+      "repo": "ccplugins/awesome-claude-code-plugins",
+      "category": "registry",
+      "source": "https://github.com/ccplugins/awesome-claude-code-plugins",
+      "stars": 647,
+      "summary": "Awesome Claude Code plugins — a curated list of slash commands, subagents, MCP servers, and hooks for Claude Code",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "jezweb/claude-skills",
+      "category": "general",
+      "source": "https://github.com/jezweb/claude-skills",
+      "stars": 646,
+      "summary": "Skills for Claude Code CLI such as full stack dev Cloudflare, React, Tailwind v4, and AI integrations.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-code-skill-factory",
+      "repo": "alirezarezvani/claude-code-skill-factory",
+      "category": "deployment",
+      "source": "https://github.com/alirezarezvani/claude-code-skill-factory",
+      "stars": 626,
+      "summary": "Claude Code Skill Factory — A powerful open-source toolkit for building and deploying production-ready Claude Skills, Code Agents, custom Slash Commands, and LLM Prompts at scale. Easily generate structured skill templates, automate workflow integration, and accelerate AI agent development with a clean, developer-friendly setup.",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -15.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "opc-skills",
+      "repo": "ReScienceLab/opc-skills",
+      "category": "general",
+      "source": "https://github.com/ReScienceLab/opc-skills",
+      "stars": 623,
+      "summary": "Agent Skills for Solopreneurs",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "angular-skills",
+      "repo": "analogjs/angular-skills",
+      "category": "general",
+      "source": "https://github.com/analogjs/angular-skills",
+      "stars": 565,
+      "summary": "Agent Skills for Angular Developers",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-skills-collection",
+      "repo": "abubakarsiddik31/claude-skills-collection",
+      "category": "general",
+      "source": "https://github.com/abubakarsiddik31/claude-skills-collection",
+      "stars": 562,
+      "summary": "A curated collection of official and community-built Claude Skills – extend Anthropic's Claude with powerful, modular capabilities for productivity, creativity, coding, and more.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "antigravity-skills",
+      "repo": "rmyndharis/antigravity-skills",
+      "category": "general",
+      "source": "https://github.com/rmyndharis/antigravity-skills",
+      "stars": 561,
+      "summary": "A curated collection of Agent Skills for Google Antigravity",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "chops",
+      "repo": "Shpigford/chops",
+      "category": "general",
+      "source": "https://github.com/Shpigford/chops",
+      "stars": 551,
+      "summary": "Your AI agent skills, finally organized. A macOS app to browse, edit, and manage skills across Claude Code, Cursor, Codex, Windsurf, and Amp.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.6,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "auto-commenter",
+      "repo": "rokpiy/auto-commenter",
+      "category": "general",
+      "source": "https://github.com/rokpiy/auto-commenter",
+      "stars": 545,
+      "summary": "A Claude skill that automatically posts personalized, authentic comments in your target communities.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "agent-skill-creator",
+      "repo": "FrancyJGLisboa/agent-skill-creator",
+      "category": "tooling",
+      "source": "https://github.com/FrancyJGLisboa/agent-skill-creator",
+      "stars": 542,
+      "summary": "Turn any workflow into reusable AI agent skills that install on 14+ tools — Claude Code, Copilot, Cursor, Windsurf, Codex, Gemini, Kiro, and more. One SKILL.md, every platform.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-openclaw-skills",
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "category": "registry",
+      "source": "https://github.com/sundial-org/awesome-openclaw-skills",
+      "stars": 507,
+      "summary": "Top OpenClaw skills, with the most popular and useful ones.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 28.5,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "second-brain-skills",
+      "repo": "coleam00/second-brain-skills",
+      "category": "memory-knowledge",
+      "source": "https://github.com/coleam00/second-brain-skills",
+      "stars": 498,
+      "summary": "A collection of Claude Skills to turn Claude Code into a Second Brain",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 28.5,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "ClawBio",
+      "repo": "ClawBio/ClawBio",
+      "category": "general",
+      "source": "https://github.com/ClawBio/ClawBio",
+      "stars": 498,
+      "summary": "🦖 ClawBio — The first bioinformatics-native AI agent skill library. Local-first. Reproducible. Built on OpenClaw.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-skills-marketplace",
+      "repo": "mhattingpete/claude-skills-marketplace",
+      "category": "general",
+      "source": "https://github.com/mhattingpete/claude-skills-marketplace",
+      "stars": 494,
+      "summary": "Claude Code Skills for software engineering workflows - Git automation, testing, and code review",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "webgpu-claude-skill",
+      "repo": "dgreenheck/webgpu-claude-skill",
+      "category": "general",
+      "source": "https://github.com/dgreenheck/webgpu-claude-skill",
+      "stars": 456,
+      "summary": "A Claude skill for developing WebGPU applications with Three.js",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.5,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-agent-skills",
+      "repo": "JackyST0/awesome-agent-skills",
+      "category": "registry",
+      "source": "https://github.com/JackyST0/awesome-agent-skills",
+      "stars": 405,
+      "summary": "🤖 精选的 AI Agent Skills 列表，适用于 Cursor、Claude Code、GitHub Copilot 等 AI 编程工具",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "open-skills",
+      "repo": "instavm/open-skills",
+      "category": "general",
+      "source": "https://github.com/instavm/open-skills",
+      "stars": 385,
+      "summary": "OpenSkills: Run Claude Skills Locally using any LLM",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "convexskills",
+      "repo": "waynesutton/convexskills",
+      "category": "general",
+      "source": "https://github.com/waynesutton/convexskills",
+      "stars": 383,
+      "summary": "AI agent skills and templates for building production ready apps with Convex. Patterns for queries, mutations, cron jobs, webhooks, migrations, and more.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "chujianyun/skills",
+      "category": "general",
+      "source": "https://github.com/chujianyun/skills",
+      "stars": 383,
+      "summary": "WuMing's Claude Skills",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "repren",
+      "repo": "jlevy/repren",
+      "category": "tooling",
+      "source": "https://github.com/jlevy/repren",
+      "stars": 371,
+      "summary": "Power rename/refactor tool (now with Claude Code skill support!)",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "openclaw-search-skills",
+      "repo": "blessonism/openclaw-search-skills",
+      "category": "general",
+      "source": "https://github.com/blessonism/openclaw-search-skills",
+      "stars": 361,
+      "summary": "OpenClaw skills for deep search — multi-source search, content extraction, and structured research reports.",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "Gentleman-Skills",
+      "repo": "Gentleman-Programming/Gentleman-Skills",
+      "category": "general",
+      "source": "https://github.com/Gentleman-Programming/Gentleman-Skills",
+      "stars": 360,
+      "summary": "Community-driven AI agent skills for Claude Code, OpenCode, and other AI assistants. Curated patterns and community contributions.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "solid-skills",
+      "repo": "ramziddin/solid-skills",
+      "category": "general",
+      "source": "https://github.com/ramziddin/solid-skills",
+      "stars": 358,
+      "summary": "AI agent skill for writing senior-engineer quality code through SOLID principles, TDD, and clean architecture",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-skills-mcp",
+      "repo": "K-Dense-AI/claude-skills-mcp",
+      "category": "tooling",
+      "source": "https://github.com/K-Dense-AI/claude-skills-mcp",
+      "stars": 354,
+      "summary": "MCP server for searching and retrieving Claude Agent Skills using vector search",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.4,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "agent-sandbox-skill",
+      "repo": "disler/agent-sandbox-skill",
+      "category": "general",
+      "source": "https://github.com/disler/agent-sandbox-skill",
+      "stars": 345,
+      "summary": "An agent skill for managing isolated execution environments",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "model-hierarchy-skill",
+      "repo": "zscole/model-hierarchy-skill",
+      "category": "general",
+      "source": "https://github.com/zscole/model-hierarchy-skill",
+      "stars": 335,
+      "summary": "OpenClaw skill for cost-optimized model routing based on task complexity",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "ai-labs-claude-skills",
+      "repo": "ailabs-393/ai-labs-claude-skills",
+      "category": "general",
+      "source": "https://github.com/ailabs-393/ai-labs-claude-skills",
+      "stars": 333,
+      "summary": "This package is use to remove the hustle of finding claudeskills and shift them into any of the user project. This project become a bridge between user's usage and claude skills ",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-claude-agents",
+      "repo": "rahulvrane/awesome-claude-agents",
+      "category": "registry",
+      "source": "https://github.com/rahulvrane/awesome-claude-agents",
+      "stars": 298,
+      "summary": "collection of awesome claude code subagents!",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "tapestry-skills",
+      "repo": "michalparkola/tapestry-skills",
+      "category": "media-data",
+      "source": "https://github.com/michalparkola/tapestry-skills",
+      "stars": 296,
+      "summary": "Claude Code skills to download sources (articles, PDFs, YouTube video transcripts)",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 16.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-skillz",
+      "repo": "NTCoding/claude-skillz",
+      "category": "general",
+      "source": "https://github.com/NTCoding/claude-skillz",
+      "stars": 276,
+      "summary": "Random Claude skills for common, simple programming tasks",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.3,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "personal-os-skills",
+      "repo": "ArtemXTech/personal-os-skills",
+      "category": "memory-knowledge",
+      "source": "https://github.com/ArtemXTech/personal-os-skills",
+      "stars": 274,
+      "summary": "Claude Code skills for Obsidian | Claude Code Lab starts Mar 17",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 28.3,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "awesome-claude-code-setup",
+      "repo": "cassler/awesome-claude-code-setup",
+      "category": "registry",
+      "source": "https://github.com/cassler/awesome-claude-code-setup",
+      "stars": 260,
+      "summary": "Give Claude the super powers it deserves with this power user collection of bash scripts and slash commands",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 28.3,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "ClaudeSkills",
+      "repo": "staruhub/ClaudeSkills",
+      "category": "registry",
+      "source": "https://github.com/staruhub/ClaudeSkills",
+      "stars": 250,
+      "summary": "Some sharing on Claude Skills",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 28.2,
+        "collection_tier": "candidate",
+        "why_now": "High ecosystem signal and useful representative value for initial Skill Tree coverage."
+      }
+    },
+    {
+      "name": "x-bookmarks",
+      "repo": "sharbelxyz/x-bookmarks",
+      "category": "media-data",
+      "source": "https://github.com/sharbelxyz/x-bookmarks",
+      "stars": 248,
+      "summary": "OpenClaw skill: turn your X bookmarks into agent actions. Stop hoarding. Start applying.",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 4.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-code-skills",
+      "repo": "levnikolaevich/claude-code-skills",
+      "category": "security",
+      "source": "https://github.com/levnikolaevich/claude-code-skills",
+      "stars": 246,
+      "summary": "Plugin suite + bundled MCP servers for Claude Code. Full delivery lifecycle: Agile pipeline with multi-model AI review, project bootstrap, documentation generation, codebase audits, performance optimization, community workflows. Includes hex-line (hash-verified editing), hex-graph (code knowledge graph), and hex-ssh (remote SSH) MCP servers.",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Description implies networking, delegation, privileged actions, deployment, scraping, or security-sensitive workflows."
+      },
+      "curation": {
+        "priority_score": -3.8,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "revealjs-skill",
+      "repo": "ryanbbrown/revealjs-skill",
+      "category": "general",
+      "source": "https://github.com/ryanbbrown/revealjs-skill",
+      "stars": 239,
+      "summary": "Claude Code skill for making reveal.js presentations",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly content, catalog, or low-privilege workflow scope from description."
+      },
+      "curation": {
+        "priority_score": 20.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "skilld",
+      "repo": "harlan-zw/skilld",
+      "category": "general",
+      "source": "https://github.com/harlan-zw/skilld",
+      "stars": 233,
+      "summary": "Generate AI agent skills from your NPM dependencies. npx skilld",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "agent-skills",
+      "repo": "jdrhyne/agent-skills",
+      "category": "general",
+      "source": "https://github.com/jdrhyne/agent-skills",
+      "stars": 218,
+      "summary": "A collection of AI agent skills for Clawdbot, Claude Code, Codex",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "awesome-claude-code",
+      "repo": "jqueryscript/awesome-claude-code",
+      "category": "registry",
+      "source": "https://github.com/jqueryscript/awesome-claude-code",
+      "stars": 213,
+      "summary": "A curated list of awesome tools, IDE integrations, frameworks, and other resources for developers working with Anthropic's Claude Code. ",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "Awesome-Efficient-Agents",
+      "repo": "yxf203/Awesome-Efficient-Agents",
+      "category": "registry",
+      "source": "https://github.com/yxf203/Awesome-Efficient-Agents",
+      "stars": 209,
+      "summary": "Survey and paper list on efficiency-guided LLM agents (memory, tool learning, planning).",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 16.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "kotlin-agent-skills",
+      "repo": "Kotlin/kotlin-agent-skills",
+      "category": "general",
+      "source": "https://github.com/Kotlin/kotlin-agent-skills",
+      "stars": 205,
+      "summary": "A collection of AI agent skills useful for projects using Kotlin language",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    },
+    {
+      "name": "claude-code-subagents",
+      "repo": "NicholasSpisak/claude-code-subagents",
+      "category": "general",
+      "source": "https://github.com/NicholasSpisak/claude-code-subagents",
+      "stars": 196,
+      "summary": "",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Executable skill logic or automation likely; repo-level audit recommended before promotion."
+      },
+      "curation": {
+        "priority_score": 8.2,
+        "collection_tier": "noise",
+        "why_now": "Low priority or noisy for initial library."
+      }
+    }
+  ]
+}

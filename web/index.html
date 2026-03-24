@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Tree</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Skill Tree · Phase 2 MVP</p>
+        <h1>Search, classify, and audit AI Agent skills.</h1>
+        <p class="lede">
+          Static MVP that combines the first 50 cataloged skills with the first automated audit batch.
+        </p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <section class="panel">
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="search skills, repo, summary..." />
+        </section>
+
+        <section class="panel">
+          <h2>Risk</h2>
+          <div class="filters" id="risk-filters"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Category</h2>
+          <div class="filters" id="category-filters"></div>
+        </section>
+      </aside>
+
+      <section class="content">
+        <div class="panel toolbar">
+          <div>
+            <h2>Catalog</h2>
+            <p id="results-summary">Loading…</p>
+          </div>
+        </div>
+        <div id="grid" class="grid"></div>
+      </section>
+    </main>
+
+    <template id="card-template">
+      <article class="card">
+        <div class="card-top">
+          <div>
+            <div class="meta-row">
+              <span class="badge category"></span>
+              <span class="badge risk"></span>
+            </div>
+            <h3 class="title"></h3>
+            <p class="repo"></p>
+          </div>
+          <div class="score-box">
+            <div class="score-label">Security</div>
+            <div class="score"></div>
+          </div>
+        </div>
+        <p class="summary"></p>
+        <div class="facts"></div>
+        <details>
+          <summary>Audit details</summary>
+          <div class="audit"></div>
+        </details>
+      </article>
+    </template>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

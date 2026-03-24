@@ -1,0 +1,1649 @@
+{
+  "id": "blessonism-openclaw-search-skills",
+  "name": "openclaw-search-skills",
+  "slug": "blessonism-openclaw-search-skills",
+  "primary_category": "agent-operations",
+  "secondary_categories": [],
+  "tags": [
+    "research-search",
+    "skill-tree",
+    "security-audited"
+  ],
+  "summary": "OpenClaw skills for multi-source search and reporting",
+  "description": "Automated Skill Tree audit for blessonism/openclaw-search-skills. Source category: research-search.",
+  "source": {
+    "repo_url": "https://github.com/blessonism/openclaw-search-skills",
+    "platform": "github",
+    "owner": "blessonism",
+    "repo": "openclaw-search-skills",
+    "stars": 359
+  },
+  "compatibility": {
+    "agents": [
+      "claude-code",
+      "openclaw",
+      "codex"
+    ],
+    "languages": [
+      ".md",
+      ".py",
+      ".json"
+    ]
+  },
+  "capabilities": [
+    "credentials-access",
+    "file-write",
+    "network",
+    "shell-execution"
+  ],
+  "security": {
+    "risk_level": "high",
+    "summary": [
+      "Overall risk assessed as HIGH based on static repository inspection.",
+      "Repository contains outbound network request patterns that should be reviewed.",
+      "Repository can write, modify, or delete local files.",
+      "Repository invokes shell / subprocess style execution paths.",
+      "Repository references credential-like or sensitive filesystem locations."
+    ],
+    "network_access": true,
+    "file_write": true,
+    "shell_execution": true,
+    "browser_control": false,
+    "credentials_access": true,
+    "sensitive_paths": [
+      "\\.aws",
+      "\\.env",
+      "credentials",
+      "secret",
+      "token"
+    ]
+  },
+  "audit": {
+    "status": "reviewed",
+    "findings_count": 157,
+    "last_audited_at": "2026-03-24T13:16:53.885119+00:00",
+    "auditor": "吕明亮",
+    "recommendation": "avoid",
+    "findings": [
+      {
+        "id": "sensitive-path-0001",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 201,
+        "evidence": "**方式一：Credentials 文件（推荐）**"
+      },
+      {
+        "id": "sensitive-path-0002",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 203,
+        "evidence": "创建 `~/.openclaw/credentials/search.json`："
+      },
+      {
+        "id": "sensitive-path-0003",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 233,
+        "evidence": "环境变量会覆盖 credentials 文件中的同名配置。"
+      },
+      {
+        "id": "sensitive-path-0004",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 242,
+        "evidence": "- Credentials：在 `~/.openclaw/credentials/search.json` 里增加一项，例如："
+      },
+      {
+        "id": "sensitive-path-0005",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 255,
+        "evidence": "### MinerU Token（可选，content-extract 需要）"
+      },
+      {
+        "id": "sensitive-path-0006",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 260,
+        "evidence": "cp mineru-extract/.env.example mineru-extract/.env"
+      },
+      {
+        "id": "sensitive-path-0007",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 261,
+        "evidence": "# 编辑 .env，填入你的 MinerU token（从 https://mineru.net/apiManage 获取）"
+      },
+      {
+        "id": "permissions-0008",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 268,
+        "evidence": "pip install requests"
+      },
+      {
+        "id": "permissions-0009",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "README.md",
+        "line": 271,
+        "evidence": "pip install trafilatura beautifulsoup4 lxml"
+      },
+      {
+        "id": "sensitive-path-0010",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 295,
+        "evidence": "- **Credentials 文件**：统一凭据管理，`~/.openclaw/credentials/search.json` 集中存放所有搜索源 key"
+      },
+      {
+        "id": "sensitive-path-0011",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "README.md",
+        "line": 387,
+        "evidence": "- API Keys：Exa 和/或 Tavily（search-layer），Grok API（可选，第四搜索源），MinerU token（可选，content-extract）"
+      },
+      {
+        "id": "sensitive-path-0154",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "content-extract/SKILL.md",
+        "line": 13,
+        "evidence": "- **Token 探针**：先用低成本 probe 判断可不可以直接抓；不行再走重解析（MinerU）。"
+      },
+      {
+        "id": "sensitive-path-0155",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "content-extract/scripts/content_extract.py",
+        "line": 44,
+        "evidence": "if v := os.environ.get(\"MINERU_WRAPPER_PATH\"):"
+      },
+      {
+        "id": "execution-0156",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Shell or dynamic execution detected",
+        "description": "Code invokes subprocesses, shell commands, or dynamic execution APIs.",
+        "path": "content-extract/scripts/content_extract.py",
+        "line": 97,
+        "evidence": "p = subprocess.run(cmd, capture_output=True, text=True)"
+      },
+      {
+        "id": "execution-0157",
+        "severity": "medium",
+        "category": "execution",
+        "title": "Process execution detected",
+        "description": "Python AST found explicit process execution call.",
+        "path": "content-extract/scripts/content_extract.py",
+        "line": 97,
+        "evidence": "subprocess.run"
+      },
+      {
+        "id": "sensitive-path-0077",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 174,
+        "evidence": "- **Credentials file**: centralizes search credentials in `~/.openclaw/credentials/search.json`"
+      },
+      {
+        "id": "sensitive-path-0078",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 233,
+        "evidence": "**Option 1: credentials file (recommended)**"
+      },
+      {
+        "id": "sensitive-path-0079",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 235,
+        "evidence": "Create `~/.openclaw/credentials/search.json`:"
+      },
+      {
+        "id": "sensitive-path-0080",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 267,
+        "evidence": "Environment variables override credentials-file values when both are present."
+      },
+      {
+        "id": "sensitive-path-0081",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 271,
+        "evidence": "### MinerU token (optional, for `content-extract`)"
+      },
+      {
+        "id": "sensitive-path-0082",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 276,
+        "evidence": "cp mineru-extract/.env.example mineru-extract/.env"
+      },
+      {
+        "id": "sensitive-path-0083",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 277,
+        "evidence": "# Then edit .env and fill in your MinerU token from https://mineru.net/apiManage"
+      },
+      {
+        "id": "permissions-0084",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "docs/README_EN.md",
+        "line": 284,
+        "evidence": "pip install requests"
+      },
+      {
+        "id": "permissions-0085",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "docs/README_EN.md",
+        "line": 287,
+        "evidence": "pip install trafilatura beautifulsoup4 lxml"
+      },
+      {
+        "id": "sensitive-path-0086",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "docs/README_EN.md",
+        "line": 362,
+        "evidence": "- API keys: Exa/Tavily (base `search-layer` setup), Grok (optional), OpenAlex/Semantic Scholar (optional for academic mode), MinerU token (optional for `content-extract`)"
+      },
+      {
+        "id": "sensitive-path-0087",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/SKILL.md",
+        "line": 20,
+        "evidence": "- Set `MINERU_TOKEN` (Bearer token from mineru.net)"
+      },
+      {
+        "id": "sensitive-path-0088",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/SKILL.md",
+        "line": 26,
+        "evidence": "### 1) Configure token (skill-local)"
+      },
+      {
+        "id": "sensitive-path-0089",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/SKILL.md",
+        "line": 28,
+        "evidence": "Put secrets in **skill root** `.env` (do not paste into chat outputs):"
+      },
+      {
+        "id": "sensitive-path-0090",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/SKILL.md",
+        "line": 31,
+        "evidence": "# In the mineru-extract skill directory: .env"
+      },
+      {
+        "id": "sensitive-path-0091",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/SKILL.md",
+        "line": 32,
+        "evidence": "MINERU_TOKEN=your_token_here"
+      },
+      {
+        "id": "sensitive-path-0124",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 11,
+        "evidence": "- .env next to this script"
+      },
+      {
+        "id": "sensitive-path-0125",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 12,
+        "evidence": "- ../.env (skill root)"
+      },
+      {
+        "id": "sensitive-path-0126",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 15,
+        "evidence": "- MINERU_TOKEN: Bearer token from mineru.net"
+      },
+      {
+        "id": "sensitive-path-0129",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 47,
+        "evidence": "if k and k not in os.environ:"
+      },
+      {
+        "id": "sensitive-path-0130",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 48,
+        "evidence": "os.environ[k] = v"
+      },
+      {
+        "id": "sensitive-path-0131",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 53,
+        "evidence": "_load_dotenv(here.parent / \".env\")"
+      },
+      {
+        "id": "sensitive-path-0132",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 54,
+        "evidence": "_load_dotenv(here.parent.parent / \".env\")"
+      },
+      {
+        "id": "sensitive-path-0133",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 58,
+        "evidence": "if v := os.environ.get(\"OPENCLAW_WORKSPACE\"):"
+      },
+      {
+        "id": "sensitive-path-0141",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 105,
+        "evidence": "def create_task(*, api_base: str, token: str, source_url: str, model_version: str, is_ocr: bool | None, enable_formula: bool | None, enable_table: bool | None, language: str | None, page_ranges: str | None, extra_formats: list[str] | None) -> str:"
+      },
+      {
+        "id": "sensitive-path-0142",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 124,
+        "evidence": "headers={\"Authorization\": f\"Bearer {token}\"},"
+      },
+      {
+        "id": "sensitive-path-0143",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 137,
+        "evidence": "def poll_task(*, api_base: str, token: str, task_id: str, timeout_sec: int = 600, poll_interval: float = 2.0) -> dict:"
+      },
+      {
+        "id": "sensitive-path-0144",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 142,
+        "evidence": "res = _http_json(\"GET\", endpoint, headers={\"Authorization\": f\"Bearer {token}\"}, timeout=60)"
+      },
+      {
+        "id": "sensitive-path-0145",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 201,
+        "evidence": "ap.add_argument(\"--api-base\", default=os.environ.get(\"MINERU_API_BASE\", \"https://mineru.net\"))"
+      },
+      {
+        "id": "sensitive-path-0146",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 218,
+        "evidence": "token = os.environ.get(\"MINERU_TOKEN\")"
+      },
+      {
+        "id": "sensitive-path-0147",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 219,
+        "evidence": "if not token:"
+      },
+      {
+        "id": "sensitive-path-0148",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 220,
+        "evidence": "print(\"Missing MINERU_TOKEN (set env or skill .env)\", file=sys.stderr)"
+      },
+      {
+        "id": "sensitive-path-0149",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 237,
+        "evidence": "token=token,"
+      },
+      {
+        "id": "sensitive-path-0150",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 248,
+        "evidence": "data = poll_task(api_base=args.api_base, token=token, task_id=task_id, timeout_sec=args.timeout, poll_interval=args.poll_interval)"
+      },
+      {
+        "id": "sensitive-path-0092",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 13,
+        "evidence": "- Secrets loaded from .env (skill root) or environment."
+      },
+      {
+        "id": "sensitive-path-0093",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 16,
+        "evidence": "- MINERU_TOKEN (required): bearer token"
+      },
+      {
+        "id": "sensitive-path-0096",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 39,
+        "evidence": "if v := os.environ.get(\"OPENCLAW_WORKSPACE\"):"
+      },
+      {
+        "id": "sensitive-path-0097",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 58,
+        "evidence": "if k and k not in os.environ:"
+      },
+      {
+        "id": "sensitive-path-0098",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 59,
+        "evidence": "os.environ[k] = v"
+      },
+      {
+        "id": "sensitive-path-0099",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 64,
+        "evidence": "_load_dotenv(here.parent / \".env\")"
+      },
+      {
+        "id": "sensitive-path-0100",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 65,
+        "evidence": "_load_dotenv(here.parent.parent / \".env\")"
+      },
+      {
+        "id": "sensitive-path-0108",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 143,
+        "evidence": "def create_task(*, api_base: str, token: str, payload: dict) -> str:"
+      },
+      {
+        "id": "sensitive-path-0109",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 145,
+        "evidence": "res = _http_json(\"POST\", endpoint, headers={\"Authorization\": f\"Bearer {token}\"}, payload=payload, timeout=90)"
+      },
+      {
+        "id": "sensitive-path-0110",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 154,
+        "evidence": "def poll_task(*, api_base: str, token: str, task_id: str, timeout_sec: int, poll_interval: float) -> dict:"
+      },
+      {
+        "id": "sensitive-path-0111",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 159,
+        "evidence": "res = _http_json(\"GET\", endpoint, headers={\"Authorization\": f\"Bearer {token}\"}, timeout=60)"
+      },
+      {
+        "id": "sensitive-path-0112",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 198,
+        "evidence": "def parse_one_url(*, api_base: str, token: str, source_url: str, enable_ocr: bool, language: str, page_ranges: str | None, model_version: str | None, enable_table: bool | None, enable_formula: bool | None, extra_formats: list[str] | None, timeout_sec: int, poll_interval: float, cache: bool, force: bool) -> dict:"
+      },
+      {
+        "id": "sensitive-path-0113",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 231,
+        "evidence": "task_id = create_task(api_base=api_base, token=token, payload=payload)"
+      },
+      {
+        "id": "sensitive-path-0114",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 232,
+        "evidence": "data = poll_task(api_base=api_base, token=token, task_id=task_id, timeout_sec=timeout_sec, poll_interval=poll_interval)"
+      },
+      {
+        "id": "sensitive-path-0117",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 285,
+        "evidence": "token = os.environ.get(\"MINERU_TOKEN\")"
+      },
+      {
+        "id": "sensitive-path-0118",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 286,
+        "evidence": "if not token:"
+      },
+      {
+        "id": "sensitive-path-0119",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 289,
+        "evidence": "\"error\": \"Missing MINERU_TOKEN. Set env or put it in skill .env file.\","
+      },
+      {
+        "id": "sensitive-path-0120",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 294,
+        "evidence": "api_base = os.environ.get(\"MINERU_API_BASE\", \"https://mineru.net\")"
+      },
+      {
+        "id": "sensitive-path-0121",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 324,
+        "evidence": "token=token,"
+      },
+      {
+        "id": "sensitive-path-0012",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/SKILL.md",
+        "line": 136,
+        "evidence": "- Exa 端点默认是 `https://api.exa.ai/search`；如需自建/代理，可通过 `EXA_API_BASE`/`EXA_API_URL` 或 `~/.openclaw/credentials/search.json` 里的 `exaApiBase` 覆盖（示例：`https://exa.example.com`）"
+      },
+      {
+        "id": "sensitive-path-0013",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/SKILL.md",
+        "line": 142,
+        "evidence": "- 需要在 `~/.openclaw/credentials/search.json` 中配置 Grok 的 `apiUrl`、`apiKey`、`model`（或通过环境变量 `GROK_API_URL`、`GROK_API_KEY`、`GROK_MODEL`）"
+      },
+      {
+        "id": "sensitive-path-0016",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/chain_tracker.py",
+        "line": 166,
+        "evidence": "# Cap candidates to avoid token explosion (max 20 per level)"
+      },
+      {
+        "id": "sensitive-path-0056",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 67,
+        "evidence": "# GitHub token discovery"
+      },
+      {
+        "id": "sensitive-path-0057",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 69,
+        "evidence": "def _find_github_token() -> str | None:"
+      },
+      {
+        "id": "sensitive-path-0058",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 70,
+        "evidence": "\"\"\"Find GitHub token from env or git-credentials.\"\"\""
+      },
+      {
+        "id": "sensitive-path-0059",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 71,
+        "evidence": "if tok := os.environ.get(\"GITHUB_TOKEN\"):"
+      },
+      {
+        "id": "sensitive-path-0060",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 73,
+        "evidence": "if tok := os.environ.get(\"GH_TOKEN\"):"
+      },
+      {
+        "id": "sensitive-path-0061",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 75,
+        "evidence": "cred_path = os.path.expanduser(\"~/.git-credentials\")"
+      },
+      {
+        "id": "sensitive-path-0062",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 82,
+        "evidence": "# Format: https://user:token@github.com"
+      },
+      {
+        "id": "sensitive-path-0063",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 91,
+        "evidence": "def _gh_headers(token: str | None) -> dict:"
+      },
+      {
+        "id": "sensitive-path-0064",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 93,
+        "evidence": "if token:"
+      },
+      {
+        "id": "sensitive-path-0065",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 94,
+        "evidence": "headers[\"Authorization\"] = f\"Bearer {token}\""
+      },
+      {
+        "id": "sensitive-path-0066",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 242,
+        "evidence": "token: str | None, max_comments: int = 100) -> dict:"
+      },
+      {
+        "id": "sensitive-path-0067",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 245,
+        "evidence": "headers = _gh_headers(token)"
+      },
+      {
+        "id": "sensitive-path-0068",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 359,
+        "evidence": "_enrich_with_timeline(owner, repo, number, token, result, repo_ctx)"
+      },
+      {
+        "id": "sensitive-path-0069",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 371,
+        "evidence": "token: str | None, result: dict, repo_ctx: str):"
+      },
+      {
+        "id": "sensitive-path-0070",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 373,
+        "evidence": "headers = _gh_headers(token)"
+      },
+      {
+        "id": "sensitive-path-0072",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 923,
+        "evidence": "token = _find_github_token()"
+      },
+      {
+        "id": "sensitive-path-0073",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 929,
+        "evidence": "token, max_comments)"
+      },
+      {
+        "id": "sensitive-path-0074",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 959,
+        "evidence": "token = _find_github_token()"
+      },
+      {
+        "id": "sensitive-path-0075",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 966,
+        "evidence": "token, args.max_comments)"
+      },
+      {
+        "id": "sensitive-path-0047",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 30,
+        "evidence": "# Credentials loader (reuse search-layer pattern)"
+      },
+      {
+        "id": "sensitive-path-0048",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 34,
+        "evidence": "cred_path = Path.home() / \".openclaw\" / \"credentials\" / \"search.json\""
+      },
+      {
+        "id": "sensitive-path-0049",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 47,
+        "evidence": "if v := os.environ.get(env):"
+      },
+      {
+        "id": "sensitive-path-0050",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 68,
+        "evidence": "\"max_tokens\": 1024,"
+      },
+      {
+        "id": "sensitive-path-0051",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 162,
+        "evidence": "creds: API credentials dict (loaded from file if None)."
+      },
+      {
+        "id": "permissions-0019",
+        "severity": "medium",
+        "category": "permissions",
+        "title": "Elevated permission or system modification pattern detected",
+        "description": "Code or docs reference privileged commands, package installation, or service persistence.",
+        "path": "search-layer/scripts/search.py",
+        "line": 70,
+        "evidence": "print('{\"error\": \"requests library not installed. Run: pip install requests\"}',"
+      },
+      {
+        "id": "sensitive-path-0020",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 271,
+        "evidence": "def _find_credentials() -> str | None:"
+      },
+      {
+        "id": "sensitive-path-0021",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 272,
+        "evidence": "\"\"\"Find search.json credentials file.\"\"\""
+      },
+      {
+        "id": "sensitive-path-0022",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 274,
+        "evidence": "os.path.expanduser(\"~/.openclaw/credentials/search.json\"),"
+      },
+      {
+        "id": "sensitive-path-0023",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 275,
+        "evidence": "os.path.join(os.getcwd(), \"credentials/search.json\"),"
+      },
+      {
+        "id": "sensitive-path-0024",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 285,
+        "evidence": "# 1. Credentials file (primary)"
+      },
+      {
+        "id": "sensitive-path-0025",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 286,
+        "evidence": "cred_path = _find_credentials()"
+      },
+      {
+        "id": "sensitive-path-0026",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 319,
+        "evidence": "# 2. Env vars (override / fallback for users without credentials file)"
+      },
+      {
+        "id": "sensitive-path-0027",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 320,
+        "evidence": "if v := os.environ.get(\"EXA_API_KEY\"):"
+      },
+      {
+        "id": "sensitive-path-0028",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 322,
+        "evidence": "if v := (os.environ.get(\"EXA_API_BASE\") or os.environ.get(\"EXA_API_URL\")):"
+      },
+      {
+        "id": "sensitive-path-0029",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 324,
+        "evidence": "if v := os.environ.get(\"TAVILY_API_KEY\"):"
+      },
+      {
+        "id": "sensitive-path-0030",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 326,
+        "evidence": "if v := os.environ.get(\"GROK_API_KEY\"):"
+      },
+      {
+        "id": "sensitive-path-0031",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 328,
+        "evidence": "if v := os.environ.get(\"GROK_API_URL\"):"
+      },
+      {
+        "id": "sensitive-path-0032",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 330,
+        "evidence": "if v := os.environ.get(\"GROK_MODEL\"):"
+      },
+      {
+        "id": "sensitive-path-0033",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 392,
+        "evidence": "\"max_tokens\": 2048,"
+      },
+      {
+        "id": "sensitive-path-0038",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 979,
+        "evidence": "token = ft._find_github_token()"
+      },
+      {
+        "id": "sensitive-path-0039",
+        "severity": "medium",
+        "category": "sensitive-path",
+        "title": "Sensitive path or credential reference detected",
+        "description": "Code references credential-like files, tokens, or secret-bearing paths.",
+        "path": "search-layer/scripts/search.py",
+        "line": 982,
+        "evidence": "gh[\"owner\"], gh[\"repo\"], gh[\"number\"], token, max_comments=50)"
+      },
+      {
+        "id": "network-0127",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 32,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0128",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 33,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0134",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 72,
+        "evidence": "req = urllib.request.Request(url=url, data=data, method=method.upper(), headers=hdrs)"
+      },
+      {
+        "id": "network-0135",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 74,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0152",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 74,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0136",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 77,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0137",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 84,
+        "evidence": "except urllib.error.URLError as e:"
+      },
+      {
+        "id": "network-0138",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 92,
+        "evidence": "req = urllib.request.Request(url=url, method=\"GET\", headers=hdrs)"
+      },
+      {
+        "id": "network-0139",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 94,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0153",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 94,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0140",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 96,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "filesystem-0151",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "mineru-extract/scripts/mineru_extract.py",
+        "line": 259,
+        "evidence": "zip_path.write_bytes(zip_bytes)"
+      },
+      {
+        "id": "network-0094",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 32,
+        "evidence": "import urllib.error"
+      },
+      {
+        "id": "network-0095",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 33,
+        "evidence": "import urllib.request"
+      },
+      {
+        "id": "network-0101",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 77,
+        "evidence": "req = urllib.request.Request(url=url, data=data, method=method.upper(), headers=hdrs)"
+      },
+      {
+        "id": "network-0102",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 79,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0122",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 79,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0103",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 82,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "network-0104",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 89,
+        "evidence": "except urllib.error.URLError as e:"
+      },
+      {
+        "id": "network-0105",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 97,
+        "evidence": "req = urllib.request.Request(url=url, method=\"GET\", headers=hdrs)"
+      },
+      {
+        "id": "network-0106",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 99,
+        "evidence": "with urllib.request.urlopen(req, timeout=timeout) as resp:"
+      },
+      {
+        "id": "network-0123",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 99,
+        "evidence": "urllib.request.urlopen"
+      },
+      {
+        "id": "network-0107",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 101,
+        "evidence": "except urllib.error.HTTPError as e:"
+      },
+      {
+        "id": "filesystem-0115",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 239,
+        "evidence": "zip_path.write_bytes(zip_bytes)"
+      },
+      {
+        "id": "filesystem-0116",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "mineru-extract/scripts/mineru_parse_documents.py",
+        "line": 260,
+        "evidence": "meta_path.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding=\"utf-8\")"
+      },
+      {
+        "id": "network-0014",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/references/authority-domains.json",
+        "line": 62,
+        "evidence": "\"openai.com\","
+      },
+      {
+        "id": "network-0015",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/references/authority-domains.json",
+        "line": 63,
+        "evidence": "\"anthropic.com\","
+      },
+      {
+        "id": "filesystem-0017",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "File write or destructive file operation detected",
+        "description": "Code appears to create, modify, or delete local files.",
+        "path": "search-layer/scripts/chain_tracker.py",
+        "line": 214,
+        "evidence": "Path(args.output).write_text(out)"
+      },
+      {
+        "id": "network-0052",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 30,
+        "evidence": "from urllib.parse import urlparse"
+      },
+      {
+        "id": "network-0053",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 31,
+        "evidence": "from urllib.request import Request, urlopen"
+      },
+      {
+        "id": "network-0054",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 32,
+        "evidence": "from urllib.error import HTTPError, URLError"
+      },
+      {
+        "id": "network-0055",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 44,
+        "evidence": "from urllib.parse import urlencode"
+      },
+      {
+        "id": "filesystem-0076",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 78,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0071",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/fetch_thread.py",
+        "line": 731,
+        "evidence": "from urllib.parse import urljoin"
+      },
+      {
+        "id": "network-0045",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 25,
+        "evidence": "from urllib.request import Request, urlopen"
+      },
+      {
+        "id": "network-0046",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/relevance_gate.py",
+        "line": 26,
+        "evidence": "from urllib.error import HTTPError"
+      },
+      {
+        "id": "network-0018",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/search.py",
+        "line": 33,
+        "evidence": "from urllib.parse import urlparse, urlencode, parse_qs, urlunparse"
+      },
+      {
+        "id": "filesystem-0044",
+        "severity": "low",
+        "category": "filesystem",
+        "title": "Filesystem mutation call detected",
+        "description": "Python AST found explicit file mutation operation.",
+        "path": "search-layer/scripts/search.py",
+        "line": 289,
+        "evidence": "open"
+      },
+      {
+        "id": "network-0034",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/search.py",
+        "line": 397,
+        "evidence": "r = requests.post("
+      },
+      {
+        "id": "network-0040",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "search-layer/scripts/search.py",
+        "line": 397,
+        "evidence": "requests.post"
+      },
+      {
+        "id": "network-0035",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/search.py",
+        "line": 616,
+        "evidence": "r = requests.post("
+      },
+      {
+        "id": "network-0041",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "search-layer/scripts/search.py",
+        "line": 616,
+        "evidence": "requests.post"
+      },
+      {
+        "id": "network-0036",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/search.py",
+        "line": 660,
+        "evidence": "r = requests.post("
+      },
+      {
+        "id": "network-0042",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "search-layer/scripts/search.py",
+        "line": 660,
+        "evidence": "requests.post"
+      },
+      {
+        "id": "network-0037",
+        "severity": "low",
+        "category": "network",
+        "title": "Network request capability detected",
+        "description": "Code appears to make outbound network requests or use HTTP clients.",
+        "path": "search-layer/scripts/search.py",
+        "line": 818,
+        "evidence": "r = requests.post("
+      },
+      {
+        "id": "network-0043",
+        "severity": "low",
+        "category": "network",
+        "title": "HTTP client call detected",
+        "description": "Python AST found explicit outbound HTTP call.",
+        "path": "search-layer/scripts/search.py",
+        "line": 818,
+        "evidence": "requests.post"
+      }
+    ]
+  },
+  "discovery": {
+    "discovered_from": "T-041 shortlist / T-043 priority set",
+    "catalog_version": "v1",
+    "featured": true,
+    "popularity_score": 35.0,
+    "quality_score": 90.0,
+    "security_score": 0.0
+  },
+  "updated_at": "2026-03-24T13:16:53.893811+00:00"
+}
