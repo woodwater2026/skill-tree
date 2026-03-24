@@ -1,0 +1,3524 @@
+{
+  "version": "v2-shortlist-upgrade",
+  "generated_at": "2026-03-24",
+  "source": "skills-catalog-v3.json",
+  "global_priority_items": [
+    {
+      "repo": "obra/superpowers",
+      "name": "superpowers",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "stars": 109953,
+      "risk": "medium",
+      "priority_score": 68,
+      "decision": "优先收录",
+      "decision_reason": "实用性强、技能身份清晰、适合作为首批库代表项。"
+    },
+    {
+      "repo": "anthropics/skills",
+      "name": "skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "stars": 101756,
+      "risk": "medium",
+      "priority_score": 68,
+      "decision": "优先收录",
+      "decision_reason": "实用性强、技能身份清晰、适合作为首批库代表项。"
+    },
+    {
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "platforms": [
+        "Claude Code"
+      ],
+      "category": "registry",
+      "stars": 47479,
+      "risk": "medium",
+      "priority_score": 63.5,
+      "decision": "优先收录",
+      "decision_reason": "可作为平台级流量入口或跨生态锚点。"
+    },
+    {
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "name": "awesome-openclaw-skills",
+      "platforms": [
+        "OpenClaw"
+      ],
+      "category": "registry",
+      "stars": 41578,
+      "risk": "medium",
+      "priority_score": 57.6,
+      "decision": "优先收录",
+      "decision_reason": "可作为平台级流量入口或跨生态锚点。"
+    },
+    {
+      "repo": "hesreallyhim/awesome-claude-code",
+      "name": "awesome-claude-code",
+      "platforms": [
+        "Claude Code"
+      ],
+      "category": "registry",
+      "stars": 31586,
+      "risk": "medium",
+      "priority_score": 47.6,
+      "decision": "优先收录",
+      "decision_reason": "可作为平台级流量入口或跨生态锚点。"
+    }
+  ],
+  "by_platform": {
+    "Cross-platform": {
+      "优先收录": [
+        {
+          "repo": "obra/superpowers",
+          "name": "superpowers",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "general",
+          "stars": 109953,
+          "risk": "medium",
+          "priority_score": 68,
+          "decision": "优先收录",
+          "decision_reason": "实用性强、技能身份清晰、适合作为首批库代表项。"
+        },
+        {
+          "repo": "anthropics/skills",
+          "name": "skills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "general",
+          "stars": 101756,
+          "risk": "medium",
+          "priority_score": 68,
+          "decision": "优先收录",
+          "decision_reason": "实用性强、技能身份清晰、适合作为首批库代表项。"
+        }
+      ],
+      "观察": [
+        {
+          "repo": "googleworkspace/cli",
+          "name": "cli",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "tooling",
+          "stars": 22356,
+          "risk": "medium",
+          "priority_score": 38.4,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "kepano/obsidian-skills",
+          "name": "obsidian-skills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "memory-knowledge",
+          "stars": 16780,
+          "risk": "medium",
+          "priority_score": 32.8,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "vercel-labs/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "general",
+          "stars": 23752,
+          "risk": "medium",
+          "priority_score": 31.8,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+          "name": "Agent-Skills-for-Context-Engineering",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "memory-knowledge",
+          "stars": 14291,
+          "risk": "medium",
+          "priority_score": 30.3,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "arunpranav-at/PACT",
+          "name": "PACT",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "tooling",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "vercel-labs/skills",
+          "name": "skills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "tooling",
+          "stars": 11582,
+          "risk": "medium",
+          "priority_score": 27.6,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "yxf203/Awesome-Efficient-Agents",
+          "name": "Awesome-Efficient-Agents",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "registry",
+          "stars": 209,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "twostraws/Swift-Agent-Skills",
+          "name": "Swift-Agent-Skills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "registry",
+          "stars": 812,
+          "risk": "medium",
+          "priority_score": 16.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "higress-group/himarket",
+          "name": "himarket",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "registry",
+          "stars": 1028,
+          "risk": "medium",
+          "priority_score": 17.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "TanStack/cli",
+          "name": "cli",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "tooling",
+          "stars": 1213,
+          "risk": "medium",
+          "priority_score": 17.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "memodb-io/Acontext",
+          "name": "Acontext",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "memory-knowledge",
+          "stars": 3187,
+          "risk": "medium",
+          "priority_score": 19.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "libukai/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "registry",
+          "stars": 3447,
+          "risk": "medium",
+          "priority_score": 19.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "marckden7719/PromptEngineer",
+          "name": "PromptEngineer",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "general",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "agentskills/agentskills",
+          "name": "agentskills",
+          "platforms": [
+            "Cross-platform"
+          ],
+          "category": "general",
+          "stars": 14072,
+          "risk": "medium",
+          "priority_score": 22.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "Claude Code": {
+      "优先收录": [
+        {
+          "repo": "ComposioHQ/awesome-claude-skills",
+          "name": "awesome-claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 47479,
+          "risk": "medium",
+          "priority_score": 63.5,
+          "decision": "优先收录",
+          "decision_reason": "可作为平台级流量入口或跨生态锚点。"
+        },
+        {
+          "repo": "hesreallyhim/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 31586,
+          "risk": "medium",
+          "priority_score": 47.6,
+          "decision": "优先收录",
+          "decision_reason": "可作为平台级流量入口或跨生态锚点。"
+        }
+      ],
+      "观察": [
+        {
+          "repo": "BehiSecc/awesome-claude-skills",
+          "name": "awesome-claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 7836,
+          "risk": "low",
+          "priority_score": 35.8,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "VoltAgent/awesome-claude-code-subagents",
+          "name": "awesome-claude-code-subagents",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 15002,
+          "risk": "medium",
+          "priority_score": 31.0,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "blader/humanizer",
+          "name": "humanizer",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 10879,
+          "risk": "low",
+          "priority_score": 30.9,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "VoltAgent/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 12665,
+          "risk": "medium",
+          "priority_score": 28.7,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "RoundTable02/tutor-skills",
+          "name": "tutor-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "memory-knowledge",
+          "stars": 530,
+          "risk": "low",
+          "priority_score": 28.5,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "coleam00/second-brain-skills",
+          "name": "second-brain-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "memory-knowledge",
+          "stars": 498,
+          "risk": "low",
+          "priority_score": 28.5,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "LeastBit/Claude_skills_zh-CN",
+          "name": "Claude_skills_zh-CN",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 283,
+          "risk": "low",
+          "priority_score": 28.3,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ArtemXTech/personal-os-skills",
+          "name": "personal-os-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "memory-knowledge",
+          "stars": 275,
+          "risk": "low",
+          "priority_score": 28.3,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "cassler/awesome-claude-code-setup",
+          "name": "awesome-claude-code-setup",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 260,
+          "risk": "low",
+          "priority_score": 28.3,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "staruhub/ClaudeSkills",
+          "name": "ClaudeSkills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 251,
+          "risk": "low",
+          "priority_score": 28.3,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Wechat-ggGitHub/wechat-claude-code",
+          "name": "wechat-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 115,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Chat2AnyLLM/awesome-claude-skills",
+          "name": "awesome-claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 98,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "pascalporedda/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 73,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Mindrally/skills",
+          "name": "skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 43,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "hesreallyhim/awesome-claude-code-output-styles-that-i-really-like",
+          "name": "awesome-claude-code-output-styles-that-i-really-like",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 35,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "hcastro/cursor2claude",
+          "name": "cursor2claude",
+          "platforms": [
+            "Claude Code",
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 25,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ohld/ton-analyst",
+          "name": "ton-analyst",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 22,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "gmickel/outlookctl",
+          "name": "outlookctl",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 16,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "shipshitdev/library",
+          "name": "library",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 14,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "momo2young/humanize-academic-writing",
+          "name": "humanize-academic-writing",
+          "platforms": [
+            "Claude Code",
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 8,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "wgdotnet/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ythx-101/skill-loader",
+          "name": "skill-loader",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "pgagarinov/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 4,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "yiancode/AwesomeClaudeCode",
+          "name": "AwesomeClaudeCode",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 4,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "infra403/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 4,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "lucianfialho/awesome-claude-code-hooks",
+          "name": "awesome-claude-code-hooks",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 4,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Jeffallan/claude-skills",
+          "name": "claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 7241,
+          "risk": "low",
+          "priority_score": 27.2,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "travisvn/awesome-claude-skills",
+          "name": "awesome-claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 9663,
+          "risk": "medium",
+          "priority_score": 25.7,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "op7418/Humanizer-zh",
+          "name": "Humanizer-zh",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 5142,
+          "risk": "low",
+          "priority_score": 25.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "OthmanAdi/planning-with-files",
+          "name": "planning-with-files",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 17047,
+          "risk": "medium",
+          "priority_score": 25.0,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "Mizoreww/awesome-claude-code-config",
+          "name": "awesome-claude-code-config",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 175,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "LangGPT/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 192,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "NicholasSpisak/claude-code-subagents",
+          "name": "claude-code-subagents",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "cross-agent",
+          "stars": 196,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "jqueryscript/awesome-claude-code",
+          "name": "awesome-claude-code",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 213,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "jdrhyne/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 218,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "michalparkola/tapestry-skills",
+          "name": "tapestry-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "media-data",
+          "stars": 296,
+          "risk": "low",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "rahulvrane/awesome-claude-agents",
+          "name": "awesome-claude-agents",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 298,
+          "risk": "medium",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "marian2js/opengoat",
+          "name": "opengoat",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 299,
+          "risk": "medium",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "zippoxer/subtask",
+          "name": "subtask",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "cross-agent",
+          "stars": 320,
+          "risk": "medium",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "jlevy/repren",
+          "name": "repren",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "tooling",
+          "stars": 371,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "xingkongliang/skills-manager",
+          "name": "skills-manager",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "tooling",
+          "stars": 372,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "JackyST0/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 407,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "aaron-he-zhu/seo-geo-claude-skills",
+          "name": "seo-geo-claude-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "security",
+          "stars": 483,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "FrancyJGLisboa/agent-skill-creator",
+          "name": "agent-skill-creator",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "tooling",
+          "stars": 544,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Shpigford/chops",
+          "name": "chops",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 564,
+          "risk": "medium",
+          "priority_score": 16.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ccplugins/awesome-claude-code-plugins",
+          "name": "awesome-claude-code-plugins",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 647,
+          "risk": "medium",
+          "priority_score": 16.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "0xfurai/claude-code-subagents",
+          "name": "claude-code-subagents",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "cross-agent",
+          "stars": 793,
+          "risk": "medium",
+          "priority_score": 16.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "rohitg00/awesome-claude-code-toolkit",
+          "name": "awesome-claude-code-toolkit",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "registry",
+          "stars": 895,
+          "risk": "medium",
+          "priority_score": 16.9,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Prat011/awesome-llm-skills",
+          "name": "awesome-llm-skills",
+          "platforms": [
+            "Claude Code",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 1033,
+          "risk": "medium",
+          "priority_score": 17.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "CloudAI-X/claude-workflow-v2",
+          "name": "claude-workflow-v2",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "tooling",
+          "stars": 1301,
+          "risk": "medium",
+          "priority_score": 17.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "tech-leads-club/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 1796,
+          "risk": "medium",
+          "priority_score": 17.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "nidhinjs/prompt-master",
+          "name": "prompt-master",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "memory-knowledge",
+          "stars": 2217,
+          "risk": "medium",
+          "priority_score": 18.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "davepoon/buildwithclaude",
+          "name": "buildwithclaude",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 2631,
+          "risk": "medium",
+          "priority_score": 18.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "twostraws/SwiftUI-Agent-Skill",
+          "name": "SwiftUI-Agent-Skill",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "tooling",
+          "stars": 3032,
+          "risk": "medium",
+          "priority_score": 19.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "heilcheng/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "registry",
+          "stars": 3363,
+          "risk": "medium",
+          "priority_score": 19.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "k1064190/claude-code-gemini-cli-skills",
+          "name": "claude-code-gemini-cli-skills",
+          "platforms": [
+            "Claude Code",
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ponyodong2026/claude-prompt-engineering-skills",
+          "name": "claude-prompt-engineering-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "VsevolodUstinov/openclaw-skill-claude-code",
+          "name": "openclaw-skill-claude-code",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 10,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "panaversity/claude-code-skills-lab",
+          "name": "claude-code-skills-lab",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 38,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "treylom/prompt-engineering-skills",
+          "name": "prompt-engineering-skills",
+          "platforms": [
+            "Claude Code",
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 53,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ShawhinT/ai-tutor-skill",
+          "name": "ai-tutor-skill",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 58,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ognjengt/founder-skills",
+          "name": "founder-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 100,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "jamesrochabrun/skills",
+          "name": "skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 101,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "adaptyvbio/protein-design-skills",
+          "name": "protein-design-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 118,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Wirasm/worktree-manager-skill",
+          "name": "worktree-manager-skill",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 125,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "chrisvoncsefalvay/claude-d3js-skill",
+          "name": "claude-d3js-skill",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 135,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Microck/ordinary-claude-skills",
+          "name": "ordinary-claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 143,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "distil-labs/distil-cli-skill",
+          "name": "distil-cli-skill",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 144,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "K-Dense-AI/claude-scientific-skills",
+          "name": "claude-scientific-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "media-data",
+          "stars": 16071,
+          "risk": "medium",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+          "name": "ai-marketing-claude-code-skills",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw"
+          ],
+          "category": "marketing",
+          "stars": 167,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "posit-dev/skills",
+          "name": "skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 205,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "kkoppenhaver/cc-nano-banana",
+          "name": "cc-nano-banana",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 210,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ryanbbrown/revealjs-skill",
+          "name": "revealjs-skill",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 239,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "NTCoding/claude-skillz",
+          "name": "claude-skillz",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 276,
+          "risk": "low",
+          "priority_score": 20.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ailabs-393/ai-labs-claude-skills",
+          "name": "ai-labs-claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 333,
+          "risk": "low",
+          "priority_score": 20.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "chujianyun/skills",
+          "name": "skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 384,
+          "risk": "low",
+          "priority_score": 20.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "instavm/open-skills",
+          "name": "open-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 385,
+          "risk": "low",
+          "priority_score": 20.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "dgreenheck/webgpu-claude-skill",
+          "name": "webgpu-claude-skill",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 457,
+          "risk": "low",
+          "priority_score": 20.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "rokpiy/auto-commenter",
+          "name": "auto-commenter",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 545,
+          "risk": "low",
+          "priority_score": 20.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "abubakarsiddik31/claude-skills-collection",
+          "name": "claude-skills-collection",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 562,
+          "risk": "low",
+          "priority_score": 20.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "jezweb/claude-skills",
+          "name": "claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 646,
+          "risk": "low",
+          "priority_score": 20.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "CharlesWiltgen/Axiom",
+          "name": "Axiom",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 679,
+          "risk": "low",
+          "priority_score": 20.7,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "slavingia/skills",
+          "name": "skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 897,
+          "risk": "low",
+          "priority_score": 20.9,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "SynaLinks/synalinks-skills",
+          "name": "synalinks-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 898,
+          "risk": "low",
+          "priority_score": 20.9,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "simonw/claude-skills",
+          "name": "claude-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 924,
+          "risk": "low",
+          "priority_score": 20.9,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "shuvonsec/claude-bug-bounty",
+          "name": "claude-bug-bounty",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 1116,
+          "risk": "low",
+          "priority_score": 21.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Lum1104/Understand-Anything",
+          "name": "Understand-Anything",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "media-data",
+          "stars": 5806,
+          "risk": "low",
+          "priority_score": 21.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "mrgoonie/claudekit-skills",
+          "name": "claudekit-skills",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "general",
+          "stars": 1884,
+          "risk": "low",
+          "priority_score": 21.9,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "htdt/godogen",
+          "name": "godogen",
+          "platforms": [
+            "Claude Code"
+          ],
+          "category": "framework-domain",
+          "stars": 1978,
+          "risk": "low",
+          "priority_score": 22.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "OpenClaw": {
+      "优先收录": [
+        {
+          "repo": "VoltAgent/awesome-openclaw-skills",
+          "name": "awesome-openclaw-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 41578,
+          "risk": "medium",
+          "priority_score": 57.6,
+          "decision": "优先收录",
+          "decision_reason": "可作为平台级流量入口或跨生态锚点。"
+        }
+      ],
+      "观察": [
+        {
+          "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+          "name": "awesome-openclaw-skills-zh",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 3576,
+          "risk": "low",
+          "priority_score": 31.6,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "LeoYeAI/openclaw-master-skills",
+          "name": "openclaw-master-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 2012,
+          "risk": "low",
+          "priority_score": 30.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "sundial-org/awesome-openclaw-skills",
+          "name": "awesome-openclaw-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 509,
+          "risk": "low",
+          "priority_score": 28.5,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "AIPMAndy/awesome-openclaw-skills-CN",
+          "name": "awesome-openclaw-skills-CN",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 77,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "EESJGong/scholar-skill",
+          "name": "scholar-skill",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "memory-knowledge",
+          "stars": 61,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Rito-w/awesome-openclaw-skills-zh",
+          "name": "awesome-openclaw-skills-zh",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 56,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ythx-101/skill-loader",
+          "name": "skill-loader",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "jdrhyne/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 218,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "gavdalf/total-recall",
+          "name": "total-recall",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "memory-knowledge",
+          "stars": 240,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "marian2js/opengoat",
+          "name": "opengoat",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 299,
+          "risk": "medium",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "blessonism/openclaw-search-skills",
+          "name": "openclaw-search-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "media-data",
+          "stars": 362,
+          "risk": "low",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "supermemoryai/openclaw-supermemory",
+          "name": "openclaw-supermemory",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "memory-knowledge",
+          "stars": 667,
+          "risk": "medium",
+          "priority_score": 16.7,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "mergisi/awesome-openclaw-agents",
+          "name": "awesome-openclaw-agents",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 1850,
+          "risk": "medium",
+          "priority_score": 17.9,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "davepoon/buildwithclaude",
+          "name": "buildwithclaude",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw"
+          ],
+          "category": "registry",
+          "stars": 2631,
+          "risk": "medium",
+          "priority_score": 18.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "EverMind-AI/EverMemOS",
+          "name": "EverMemOS",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "memory-knowledge",
+          "stars": 3142,
+          "risk": "medium",
+          "priority_score": 19.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "RamithaW/openclaw-skill-n8n",
+          "name": "openclaw-skill-n8n",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 8,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "kesslerio/finance-news-openclaw-skill",
+          "name": "finance-news-openclaw-skill",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 9,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "VsevolodUstinov/openclaw-skill-claude-code",
+          "name": "openclaw-skill-claude-code",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 10,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "phuc-nt/openclaw-skills",
+          "name": "openclaw-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 18,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Capminal/openclaw-skills",
+          "name": "openclaw-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 23,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "chenmuwen0930-rgb/openclaw-skill-snowtrace",
+          "name": "openclaw-skill-snowtrace",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 30,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "huge8888/OPENCLAW-SKILL-SAFE",
+          "name": "OPENCLAW-SKILL-SAFE",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 39,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Ca1nlee/persona-cloner-skill",
+          "name": "persona-cloner-skill",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 42,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "iswalle/getnote-openclaw",
+          "name": "getnote-openclaw",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 54,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "IanShaw027/wemp-operator",
+          "name": "wemp-operator",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 65,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "susanudgzf/Aave-Claw",
+          "name": "Aave-Claw",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 73,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "aliramw/dingtalk-ai-table",
+          "name": "dingtalk-ai-table",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 76,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "oh-ashen-one/reddit-growth-skill",
+          "name": "reddit-growth-skill",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "marketing",
+          "stars": 133,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "tuya/tuya-openclaw-skills",
+          "name": "tuya-openclaw-skills",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 151,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+          "name": "ai-marketing-claude-code-skills",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw"
+          ],
+          "category": "marketing",
+          "stars": 167,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "vigorX777/content-collector-skill",
+          "name": "content-collector-skill",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 195,
+          "risk": "low",
+          "priority_score": 20.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "zscole/model-hierarchy-skill",
+          "name": "model-hierarchy-skill",
+          "platforms": [
+            "OpenClaw"
+          ],
+          "category": "general",
+          "stars": 335,
+          "risk": "low",
+          "priority_score": 20.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "GitHub Copilot": {
+      "优先收录": [],
+      "观察": [
+        {
+          "repo": "github/awesome-copilot",
+          "name": "awesome-copilot",
+          "platforms": [
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 26810,
+          "risk": "medium",
+          "priority_score": 42.8,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "instructa/ai-prompts",
+          "name": "ai-prompts",
+          "platforms": [
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 1021,
+          "risk": "low",
+          "priority_score": 29.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "SalesforceDiariesBySanket/Copilot-Skills-Salesforce",
+          "name": "Copilot-Skills-Salesforce",
+          "platforms": [
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 14,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "devartifex/copilot-updates",
+          "name": "copilot-updates",
+          "platforms": [
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "lunasoft2001/github-copilot-excel-analyzer",
+          "name": "github-copilot-excel-analyzer",
+          "platforms": [
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "xingkongliang/skills-manager",
+          "name": "skills-manager",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "tooling",
+          "stars": 372,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "JackyST0/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 407,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "FrancyJGLisboa/agent-skill-creator",
+          "name": "agent-skill-creator",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "tooling",
+          "stars": 544,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "tech-leads-club/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 1796,
+          "risk": "medium",
+          "priority_score": 17.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "heilcheng/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "registry",
+          "stars": 3363,
+          "risk": "medium",
+          "priority_score": 19.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "Cursor": {
+      "优先收录": [],
+      "观察": [
+        {
+          "repo": "sanjeed5/awesome-cursor-rules-mdc",
+          "name": "awesome-cursor-rules-mdc",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "registry",
+          "stars": 3408,
+          "risk": "low",
+          "priority_score": 31.4,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "NeekChaw/RIPER-5",
+          "name": "RIPER-5",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 2564,
+          "risk": "low",
+          "priority_score": 30.6,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "flyeric0212/cursor-rules",
+          "name": "cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 1733,
+          "risk": "low",
+          "priority_score": 29.7,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "instructa/ai-prompts",
+          "name": "ai-prompts",
+          "platforms": [
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 1021,
+          "risk": "low",
+          "priority_score": 29.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "RayFernando1337/llm-cursor-rules",
+          "name": "llm-cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 881,
+          "risk": "low",
+          "priority_score": 28.9,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "VoltAgent/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 12665,
+          "risk": "medium",
+          "priority_score": 28.7,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "jabrena/cursor-rules-java",
+          "name": "cursor-rules-java",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 334,
+          "risk": "low",
+          "priority_score": 28.3,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "comol/cursor_rules_1c",
+          "name": "cursor_rules_1c",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 199,
+          "risk": "low",
+          "priority_score": 28.2,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "alchaincyf/cursor-rules-huasheng",
+          "name": "cursor-rules-huasheng",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 135,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "brookslybrand/react-router-cursor-rules",
+          "name": "react-router-cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 118,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "brunogama/ios-cursor-rules",
+          "name": "ios-cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 68,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "pranav270-create/mdc_autogen",
+          "name": "mdc_autogen",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 56,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "callmerio/RIPER-lite",
+          "name": "RIPER-lite",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 47,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "tyrchen/rust-lib-template",
+          "name": "rust-lib-template",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 44,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "AndreRatzenberger/cursor-rules",
+          "name": "cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 43,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Mindrally/skills",
+          "name": "skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 43,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "jabrena/cursor-rules-spring-boot",
+          "name": "cursor-rules-spring-boot",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "registry",
+          "stars": 42,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "barisercan/cursorrules",
+          "name": "cursorrules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 34,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Van-LLM-Crew/cursor-secure-coding",
+          "name": "cursor-secure-coding",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 29,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "AIFlowML/cursor_rules",
+          "name": "cursor_rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 25,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "hcastro/cursor2claude",
+          "name": "cursor2claude",
+          "platforms": [
+            "Claude Code",
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 25,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "wutongci/cursor_rule",
+          "name": "cursor_rule",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 19,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "shipshitdev/library",
+          "name": "library",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 14,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "elizaOS/.cursor",
+          "name": ".cursor",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 13,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "supatest-ai/cursor-rules-generator",
+          "name": "cursor-rules-generator",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 12,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "gclm/cursor-rule",
+          "name": "cursor-rule",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 10,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "snake-mustang/ht-cursor-rules",
+          "name": "ht-cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 9,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "momo2young/humanize-academic-writing",
+          "name": "humanize-academic-writing",
+          "platforms": [
+            "Claude Code",
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 8,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "shaoruu/cursor-skills",
+          "name": "cursor-skills",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "0xfnzero/AI-Skills",
+          "name": "AI-Skills",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "madebyjake/cursor-config",
+          "name": "cursor-config",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Cooperzheng/ue-dev-playbook",
+          "name": "ue-dev-playbook",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "thehimel/cursor-rules-and-prompts",
+          "name": "cursor-rules-and-prompts",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "cross-agent",
+          "stars": 219,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "marian2js/opengoat",
+          "name": "opengoat",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 299,
+          "risk": "medium",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "xingkongliang/skills-manager",
+          "name": "skills-manager",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "tooling",
+          "stars": 372,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "JackyST0/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 407,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "aaron-he-zhu/seo-geo-claude-skills",
+          "name": "seo-geo-claude-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "security",
+          "stars": 483,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "FrancyJGLisboa/agent-skill-creator",
+          "name": "agent-skill-creator",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "tooling",
+          "stars": 544,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Shpigford/chops",
+          "name": "chops",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 564,
+          "risk": "medium",
+          "priority_score": 16.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "tech-leads-club/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 1796,
+          "risk": "medium",
+          "priority_score": 17.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Artl13/cursor-skill-fullstack-native-app-builder",
+          "name": "cursor-skill-fullstack-native-app-builder",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "framework-domain",
+          "stars": 2,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ivangrynenko/cursorrules",
+          "name": "cursorrules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "framework-domain",
+          "stars": 78,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "BlueBirdBack/godot-cursorrules",
+          "name": "godot-cursorrules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "framework-domain",
+          "stars": 108,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Aaronontheweb/dotnet-cursor-rules",
+          "name": "dotnet-cursor-rules",
+          "platforms": [
+            "Cursor"
+          ],
+          "category": "framework-domain",
+          "stars": 126,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "Codex": {
+      "优先收录": [],
+      "观察": [
+        {
+          "repo": "Dimillian/Skills",
+          "name": "Skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 2332,
+          "risk": "low",
+          "priority_score": 30.3,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Dimillian/CodexSkillManager",
+          "name": "CodexSkillManager",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 953,
+          "risk": "low",
+          "priority_score": 29.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "am-will/codex-skills",
+          "name": "codex-skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 814,
+          "risk": "low",
+          "priority_score": 28.8,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "VoltAgent/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 12665,
+          "risk": "medium",
+          "priority_score": 28.7,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "renocrypt/latex-arxiv-SKILL",
+          "name": "latex-arxiv-SKILL",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 217,
+          "risk": "low",
+          "priority_score": 28.2,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "jMerta/codex-skills",
+          "name": "codex-skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "registry",
+          "stars": 123,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "aelf-hzz780/AI-bounty-skill",
+          "name": "AI-bounty-skill",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 73,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "proflead/codex-skills-library",
+          "name": "codex-skills-library",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 67,
+          "risk": "low",
+          "priority_score": 28.1,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "sherman/codex-skills",
+          "name": "codex-skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 37,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "grp06/useful-codex-skills",
+          "name": "useful-codex-skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 35,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "serejaris/justdoit",
+          "name": "justdoit",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 30,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "mzbac/skills",
+          "name": "skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 27,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ohld/ton-analyst",
+          "name": "ton-analyst",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 22,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "olliepro/Codex-Reflect-Skill",
+          "name": "Codex-Reflect-Skill",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "memory-knowledge",
+          "stars": 18,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "gmickel/outlookctl",
+          "name": "outlookctl",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 16,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "shipshitdev/library",
+          "name": "library",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 14,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "mosif16/codex-Skills",
+          "name": "codex-Skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 14,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "lemikeone/Codex-skill-raycast-extension",
+          "name": "Codex-skill-raycast-extension",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 9,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "vadimcomanescu/codex-skills",
+          "name": "codex-skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "registry",
+          "stars": 6,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "blader/cto-review",
+          "name": "cto-review",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ythx-101/skill-loader",
+          "name": "skill-loader",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "pythrick/codex-conductor",
+          "name": "codex-conductor",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 4,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "lzfxxx/prompt-to-drawio-skill",
+          "name": "prompt-to-drawio-skill",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 4,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "marcosgalleterobbva/bitbucketdc-skill",
+          "name": "bitbucketdc-skill",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 3,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "tinker495/codex-assets",
+          "name": "codex-assets",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 2,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "lukeslp/archive-geepers-gpt",
+          "name": "archive-geepers-gpt",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 2,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "jdrhyne/agent-skills",
+          "name": "agent-skills",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 218,
+          "risk": "medium",
+          "priority_score": 16.2,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "marian2js/opengoat",
+          "name": "opengoat",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 299,
+          "risk": "medium",
+          "priority_score": 16.3,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "xingkongliang/skills-manager",
+          "name": "skills-manager",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "tooling",
+          "stars": 372,
+          "risk": "medium",
+          "priority_score": 16.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "aaron-he-zhu/seo-geo-claude-skills",
+          "name": "seo-geo-claude-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex"
+          ],
+          "category": "security",
+          "stars": 483,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "ComposioHQ/awesome-codex-skills",
+          "name": "awesome-codex-skills",
+          "platforms": [
+            "Codex"
+          ],
+          "category": "registry",
+          "stars": 526,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "FrancyJGLisboa/agent-skill-creator",
+          "name": "agent-skill-creator",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "tooling",
+          "stars": 544,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Shpigford/chops",
+          "name": "chops",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 564,
+          "risk": "medium",
+          "priority_score": 16.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Prat011/awesome-llm-skills",
+          "name": "awesome-llm-skills",
+          "platforms": [
+            "Claude Code",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 1033,
+          "risk": "medium",
+          "priority_score": 17.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "twostraws/SwiftUI-Agent-Skill",
+          "name": "SwiftUI-Agent-Skill",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "tooling",
+          "stars": 3032,
+          "risk": "medium",
+          "priority_score": 19.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "heilcheng/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "GitHub Copilot",
+            "Codex"
+          ],
+          "category": "registry",
+          "stars": 3363,
+          "risk": "medium",
+          "priority_score": 19.4,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Lum1104/Understand-Anything",
+          "name": "Understand-Anything",
+          "platforms": [
+            "Claude Code",
+            "Codex"
+          ],
+          "category": "media-data",
+          "stars": 5806,
+          "risk": "low",
+          "priority_score": 21.8,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "Windsurf": {
+      "优先收录": [],
+      "观察": [
+        {
+          "repo": "instructa/ai-prompts",
+          "name": "ai-prompts",
+          "platforms": [
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot"
+          ],
+          "category": "registry",
+          "stars": 1021,
+          "risk": "low",
+          "priority_score": 29.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "falconnt/windsurf-skills",
+          "name": "windsurf-skills",
+          "platforms": [
+            "Windsurf"
+          ],
+          "category": "cross-agent",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "FrancyJGLisboa/agent-skill-creator",
+          "name": "agent-skill-creator",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "tooling",
+          "stars": 544,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Shpigford/chops",
+          "name": "chops",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "Codex"
+          ],
+          "category": "cross-agent",
+          "stars": 564,
+          "risk": "medium",
+          "priority_score": 16.6,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    },
+    "Gemini CLI": {
+      "优先收录": [],
+      "观察": [
+        {
+          "repo": "VoltAgent/awesome-agent-skills",
+          "name": "awesome-agent-skills",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 12665,
+          "risk": "medium",
+          "priority_score": 28.7,
+          "decision": "观察",
+          "decision_reason": "有一定生态价值，但需继续观察权限边界、维护活跃度和实际复用率。"
+        },
+        {
+          "repo": "glaforge/deslopify",
+          "name": "deslopify",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 12,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "Jsebayhi/prompt-engineering-extension",
+          "name": "prompt-engineering-extension",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "ythx-101/skill-loader",
+          "name": "skill-loader",
+          "platforms": [
+            "Claude Code",
+            "OpenClaw",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 5,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "DaRipper91/Gemini-Skills_and_Config",
+          "name": "Gemini-Skills_and_Config",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        },
+        {
+          "repo": "macrochen/enable-chrome-gemini-skill",
+          "name": "enable-chrome-gemini-skill",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "cross-agent",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 28.0,
+          "decision": "观察",
+          "decision_reason": "具备潜力但暂不值得进入首批库。"
+        }
+      ],
+      "丢弃": [
+        {
+          "repo": "FrancyJGLisboa/agent-skill-creator",
+          "name": "agent-skill-creator",
+          "platforms": [
+            "Claude Code",
+            "Cursor",
+            "Windsurf",
+            "GitHub Copilot",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "tooling",
+          "stars": 544,
+          "risk": "medium",
+          "priority_score": 16.5,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "Prat011/awesome-llm-skills",
+          "name": "awesome-llm-skills",
+          "platforms": [
+            "Claude Code",
+            "Codex",
+            "Gemini CLI"
+          ],
+          "category": "registry",
+          "stars": 1033,
+          "risk": "medium",
+          "priority_score": 17.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "h3x49r4m/gemini-cli-skills",
+          "name": "gemini-cli-skills",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "nand1234/gemini-cli-skills",
+          "name": "gemini-cli-skills",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "k1064190/claude-code-gemini-cli-skills",
+          "name": "claude-code-gemini-cli-skills",
+          "platforms": [
+            "Claude Code",
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "azakordonets/gemini-cli-skills-discovery-issue",
+          "name": "gemini-cli-skills-discovery-issue",
+          "platforms": [
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 1,
+          "risk": "low",
+          "priority_score": 20.0,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        },
+        {
+          "repo": "treylom/prompt-engineering-skills",
+          "name": "prompt-engineering-skills",
+          "platforms": [
+            "Claude Code",
+            "Gemini CLI"
+          ],
+          "category": "general",
+          "stars": 53,
+          "risk": "low",
+          "priority_score": 20.1,
+          "decision": "丢弃",
+          "decision_reason": "技能身份弱或生态信号不足，属于目录噪音。"
+        }
+      ]
+    }
+  },
+  "rules_summary": {
+    "优先收录": "core tier + low/medium risk + clear skill identity + direct representative value",
+    "观察": "worth watching but not yet good enough for first library",
+    "丢弃": "high-risk by default, noisy, duplicative, or weak skill identity"
+  }
+}

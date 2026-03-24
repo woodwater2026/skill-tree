@@ -65,6 +65,24 @@ tools/       Ingestion, normalization, and audit utilities
 web/         Static Web UI MVP (Phase 2)
 ```
 
+## Start Here
+
+New contributors should start with:
+
+1. `docs/START_HERE.md` — one-page onboarding and layer entry map
+2. `docs/operations/minimum-ops-rules.md` — hard operating rules
+3. `docs/operations/intake-ingestion-guide.md` — how intake becomes index-ready data
+
+## Layer Entry Map
+
+- **Catalog** → `catalog/skills-catalog-v1.json`, `catalog/skills-catalog-v2.json`
+- **Shortlist** → `docs/data/skills-shortlist-v2.json`
+- **Risk Library** → `docs/data/skills-risk-sample-library-v1.json`
+- **Intake** → `docs/data/skills-intake-v1.json`
+- **Index** → `catalog/index.json`
+
+Rule of record: product/UI only consumes **Index**.
+
 ## Data Model
 
 Each skill record includes:

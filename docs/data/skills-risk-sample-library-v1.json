@@ -1,0 +1,486 @@
+{
+  "version": "risk-sample-library-v1",
+  "generated_at": "2026-03-24",
+  "groups": {
+    "目录套目录 / 低增量信号": [
+      {
+        "repo": "JackyST0/awesome-agent-skills",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "GitHub Copilot"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "JackyST0/awesome-agent-skills",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "GitHub Copilot"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "JackyST0/awesome-agent-skills",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "GitHub Copilot"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "LangGPT/awesome-claude-code",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "Mizoreww/awesome-claude-code-config",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "Prat011/awesome-llm-skills",
+        "platforms": [
+          "Claude Code",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "Prat011/awesome-llm-skills",
+        "platforms": [
+          "Claude Code",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "Prat011/awesome-llm-skills",
+        "platforms": [
+          "Claude Code",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "ccplugins/awesome-claude-code-plugins",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "heilcheng/awesome-agent-skills",
+        "platforms": [
+          "Claude Code",
+          "GitHub Copilot",
+          "Codex"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "heilcheng/awesome-agent-skills",
+        "platforms": [
+          "Claude Code",
+          "GitHub Copilot",
+          "Codex"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "heilcheng/awesome-agent-skills",
+        "platforms": [
+          "Claude Code",
+          "GitHub Copilot",
+          "Codex"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "jqueryscript/awesome-claude-code",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "libukai/awesome-agent-skills",
+        "platforms": [
+          "Cross-platform"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "mergisi/awesome-openclaw-agents",
+        "platforms": [
+          "OpenClaw"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "rahulvrane/awesome-claude-agents",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "rohitg00/awesome-claude-code-toolkit",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      },
+      {
+        "repo": "yxf203/Awesome-Efficient-Agents",
+        "platforms": [
+          "Cross-platform"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "不重复收录；仅作为发现源维护。"
+      }
+    ],
+    "通用高风险 / 噪音样本": [
+      {
+        "repo": "Aaronontheweb/dotnet-cursor-rules",
+        "platforms": [
+          "Cursor"
+        ],
+        "category": "framework-domain",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "Artl13/cursor-skill-fullstack-native-app-builder",
+        "platforms": [
+          "Cursor"
+        ],
+        "category": "framework-domain",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "BlueBirdBack/godot-cursorrules",
+        "platforms": [
+          "Cursor"
+        ],
+        "category": "framework-domain",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+        "platforms": [
+          "Claude Code",
+          "OpenClaw"
+        ],
+        "category": "marketing",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+        "platforms": [
+          "Claude Code",
+          "OpenClaw"
+        ],
+        "category": "marketing",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "Ca1nlee/persona-cloner-skill",
+        "platforms": [
+          "OpenClaw"
+        ],
+        "category": "general",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "Capminal/openclaw-skills",
+        "platforms": [
+          "OpenClaw"
+        ],
+        "category": "general",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "CharlesWiltgen/Axiom",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "general",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "CloudAI-X/claude-workflow-v2",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "EverMind-AI/EverMemOS",
+        "platforms": [
+          "OpenClaw"
+        ],
+        "category": "memory-knowledge",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "FrancyJGLisboa/agent-skill-creator",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "GitHub Copilot",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "FrancyJGLisboa/agent-skill-creator",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "GitHub Copilot",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "FrancyJGLisboa/agent-skill-creator",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "GitHub Copilot",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "FrancyJGLisboa/agent-skill-creator",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "GitHub Copilot",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "FrancyJGLisboa/agent-skill-creator",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "GitHub Copilot",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "FrancyJGLisboa/agent-skill-creator",
+        "platforms": [
+          "Claude Code",
+          "Cursor",
+          "Windsurf",
+          "GitHub Copilot",
+          "Codex",
+          "Gemini CLI"
+        ],
+        "category": "tooling",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "IanShaw027/wemp-operator",
+        "platforms": [
+          "OpenClaw"
+        ],
+        "category": "general",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "K-Dense-AI/claude-scientific-skills",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "media-data",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "Lum1104/Understand-Anything",
+        "platforms": [
+          "Claude Code",
+          "Codex"
+        ],
+        "category": "media-data",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      },
+      {
+        "repo": "Lum1104/Understand-Anything",
+        "platforms": [
+          "Claude Code",
+          "Codex"
+        ],
+        "category": "media-data",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "维持观察，不进入首批库。"
+      }
+    ],
+    "委托执行 / 多执行层链路": [
+      {
+        "repo": "0xfurai/claude-code-subagents",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "cross-agent",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "要求披露下游执行层、权限继承关系与失败回退路径。"
+      },
+      {
+        "repo": "ComposioHQ/awesome-codex-skills",
+        "platforms": [
+          "Codex"
+        ],
+        "category": "registry",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "要求披露下游执行层、权限继承关系与失败回退路径。"
+      },
+      {
+        "repo": "NicholasSpisak/claude-code-subagents",
+        "platforms": [
+          "Claude Code"
+        ],
+        "category": "cross-agent",
+        "risk": "medium",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "要求披露下游执行层、权限继承关系与失败回退路径。"
+      }
+    ],
+    "网络抓取 / 代理外联": [
+      {
+        "repo": "blessonism/openclaw-search-skills",
+        "platforms": [
+          "OpenClaw"
+        ],
+        "category": "media-data",
+        "risk": "low",
+        "discard_reason": "技能身份弱或生态信号不足，属于目录噪音。",
+        "screening_rule_hint": "默认不进首批库；需明确外联范围、代理依赖与合规边界。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "version": "intake-v1",
+  "generated_at": "2026-03-24",
+  "count": 5,
+  "items": [
+    {
+      "repo": "obra/superpowers",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "risk": "medium",
+      "priority_score": 68,
+      "intake_status": "正式收录",
+      "why_admit": "实用性强、技能身份清晰、适合作为首批库代表项。",
+      "direct_value": "作为首批库代表项，提供高信号入口、基础设施锚点或关键类别覆盖。"
+    },
+    {
+      "repo": "anthropics/skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "risk": "medium",
+      "priority_score": 68,
+      "intake_status": "正式收录",
+      "why_admit": "实用性强、技能身份清晰、适合作为首批库代表项。",
+      "direct_value": "作为首批库代表项，提供高信号入口、基础设施锚点或关键类别覆盖。"
+    },
+    {
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "platforms": [
+        "Claude Code"
+      ],
+      "category": "registry",
+      "risk": "medium",
+      "priority_score": 63.5,
+      "intake_status": "正式收录",
+      "why_admit": "可作为平台级流量入口或跨生态锚点。",
+      "direct_value": "作为首批库代表项，提供高信号入口、基础设施锚点或关键类别覆盖。"
+    },
+    {
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "platforms": [
+        "OpenClaw"
+      ],
+      "category": "registry",
+      "risk": "medium",
+      "priority_score": 57.6,
+      "intake_status": "正式收录",
+      "why_admit": "可作为平台级流量入口或跨生态锚点。",
+      "direct_value": "作为首批库代表项，提供高信号入口、基础设施锚点或关键类别覆盖。"
+    },
+    {
+      "repo": "hesreallyhim/awesome-claude-code",
+      "platforms": [
+        "Claude Code"
+      ],
+      "category": "registry",
+      "risk": "medium",
+      "priority_score": 47.6,
+      "intake_status": "正式收录",
+      "why_admit": "可作为平台级流量入口或跨生态锚点。",
+      "direct_value": "作为首批库代表项，提供高信号入口、基础设施锚点或关键类别覆盖。"
+    }
+  ]
+}
