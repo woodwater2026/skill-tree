@@ -1,0 +1,51 @@
+{
+  "version": "v1",
+  "generated_at": "2026-03-24T22:30:00Z",
+  "categories": [
+    {
+      "id": "development",
+      "label": "Development",
+      "children": ["code-generation", "refactoring", "debugging", "testing", "code-review", "documentation", "devops-ci"]
+    },
+    {
+      "id": "research",
+      "label": "Research",
+      "children": ["web-research", "competitive-analysis", "market-analysis", "data-gathering", "summarization"]
+    },
+    {
+      "id": "productivity",
+      "label": "Productivity",
+      "children": ["task-management", "workflow-automation", "personal-knowledge", "note-processing", "scheduling-planning"]
+    },
+    {
+      "id": "communication",
+      "label": "Communication",
+      "children": ["messaging", "email-outreach", "social-posting", "meeting-support", "translation"]
+    },
+    {
+      "id": "data-analysis",
+      "label": "Data & Analysis",
+      "children": ["data-extraction", "data-cleaning", "visualization", "reporting", "monitoring", "observability"]
+    },
+    {
+      "id": "security-compliance",
+      "label": "Security & Compliance",
+      "children": ["security-audit", "permission-review", "secret-scanning", "policy-enforcement", "risk-assessment"]
+    },
+    {
+      "id": "agent-operations",
+      "label": "Agent Operations",
+      "children": ["agent-orchestration", "context-management", "budget-management", "session-recovery", "memory-management", "tool-routing"]
+    },
+    {
+      "id": "system-environment",
+      "label": "System / Environment",
+      "children": ["environment-setup", "dependency-management", "file-management", "browser-automation", "local-system-integration"]
+    },
+    {
+      "id": "creativity",
+      "label": "Creativity",
+      "children": ["writing", "design", "image-media-workflows", "brainstorming"]
+    }
+  ]
+}

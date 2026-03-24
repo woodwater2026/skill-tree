@@ -1,0 +1,607 @@
+{
+  "version": "v1",
+  "generated_at": "2026-03-24",
+  "count": 50,
+  "items": [
+    {
+      "name": "skills",
+      "repo": "anthropics/skills",
+      "category": "registry",
+      "source": "https://github.com/anthropics/skills",
+      "stars": 101213,
+      "summary": "Official public repository for Agent Skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "awesome-claude-code",
+      "repo": "hesreallyhim/awesome-claude-code",
+      "category": "registry",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code",
+      "stars": 31155,
+      "summary": "Curated Claude Code skills / hooks / commands / plugins list",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "category": "registry",
+      "source": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "stars": 47291,
+      "summary": "Large discovery index for Claude Skills and related tooling",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "awesome-agent-skills",
+      "repo": "VoltAgent/awesome-agent-skills",
+      "category": "registry",
+      "source": "https://github.com/VoltAgent/awesome-agent-skills",
+      "stars": 12582,
+      "summary": "Cross-agent curated library compatible with Claude Code, Codex and others",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "awesome-openclaw-skills",
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "category": "registry",
+      "source": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "stars": 41369,
+      "summary": "Large OpenClaw skill collection sourced from registry",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "travisvn/awesome-claude-skills",
+      "category": "registry",
+      "source": "https://github.com/travisvn/awesome-claude-skills",
+      "stars": 9612,
+      "summary": "Curated Claude Skills resources and tool list",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "awesome-claude-skills",
+      "repo": "BehiSecc/awesome-claude-skills",
+      "category": "registry",
+      "source": "https://github.com/BehiSecc/awesome-claude-skills",
+      "stars": 7813,
+      "summary": "Curated Claude skills list with practical entries",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "alirezarezvani/claude-skills",
+      "category": "registry",
+      "source": "https://github.com/alirezarezvani/claude-skills",
+      "stars": 6594,
+      "summary": "Large cross-domain Claude Code skill library",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "Jeffallan/claude-skills",
+      "category": "developer-workflow",
+      "source": "https://github.com/Jeffallan/claude-skills",
+      "stars": 7212,
+      "summary": "Full-stack developer skill pack for Claude Code",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "antfu/skills",
+      "category": "developer-workflow",
+      "source": "https://github.com/antfu/skills",
+      "stars": 4268,
+      "summary": "Anthony Fu curated agent skills collection",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "claude-code-skills",
+      "repo": "daymade/claude-code-skills",
+      "category": "marketplace",
+      "source": "https://github.com/daymade/claude-code-skills",
+      "stars": 712,
+      "summary": "Marketplace-style repo for production Claude Code skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "claude-code-skill-factory",
+      "repo": "alirezarezvani/claude-code-skill-factory",
+      "category": "tooling",
+      "source": "https://github.com/alirezarezvani/claude-code-skill-factory",
+      "stars": 625,
+      "summary": "Toolkit for building and deploying Claude skills at scale",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "agentskills",
+      "repo": "agentskills/agentskills",
+      "category": "specification",
+      "source": "https://github.com/agentskills/agentskills",
+      "stars": 14019,
+      "summary": "Specification/docs for Agent Skills ecosystem",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "vercel-labs/skills",
+      "category": "tooling",
+      "source": "https://github.com/vercel-labs/skills",
+      "stars": 11486,
+      "summary": "Open agent skills tool distributed via npx",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "agent-skills",
+      "repo": "vercel-labs/agent-skills",
+      "category": "registry",
+      "source": "https://github.com/vercel-labs/agent-skills",
+      "stars": 23708,
+      "summary": "Official Vercel collection of agent skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "awesome-copilot",
+      "repo": "github/awesome-copilot",
+      "category": "registry",
+      "source": "https://github.com/github/awesome-copilot",
+      "stars": 26720,
+      "summary": "GitHub Copilot instructions, agents, skills and configs",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "copilot-plugins",
+      "repo": "github/copilot-plugins",
+      "category": "tooling",
+      "source": "https://github.com/github/copilot-plugins",
+      "stars": null,
+      "summary": "Official Copilot plugins/skills/hooks extensibility collection",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "trailofbits/skills",
+      "category": "security",
+      "source": "https://github.com/trailofbits/skills",
+      "stars": 3851,
+      "summary": "Security research and audit skills by Trail of Bits",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "skill-scanner",
+      "repo": "cisco-ai-defense/skill-scanner",
+      "category": "security",
+      "source": "https://github.com/cisco-ai-defense/skill-scanner",
+      "stars": 1520,
+      "summary": "Security scanner purpose-built for agent skills",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "planning-with-files",
+      "repo": "OthmanAdi/planning-with-files",
+      "category": "planning-memory",
+      "source": "https://github.com/OthmanAdi/planning-with-files",
+      "stars": 16982,
+      "summary": "Persistent markdown planning skill for Claude Code",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "humanizer",
+      "repo": "blader/humanizer",
+      "category": "writing",
+      "source": "https://github.com/blader/humanizer",
+      "stars": 10793,
+      "summary": "Skill for rewriting AI-generated writing to sound more human",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "marketingskills",
+      "repo": "coreyhaines31/marketingskills",
+      "category": "marketing",
+      "source": "https://github.com/coreyhaines31/marketingskills",
+      "stars": null,
+      "summary": "Marketing/CRO/SEO/growth skills for Claude Code and agents",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "claude-scientific-skills",
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "category": "research-science",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
+      "stars": 16007,
+      "summary": "Research/science/engineering skill pack",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "vuejs-ai/skills",
+      "category": "frontend-framework",
+      "source": "https://github.com/vuejs-ai/skills",
+      "stars": 2034,
+      "summary": "Vue 3 development skills for agents",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "dotnet-skills",
+      "repo": "Aaronontheweb/dotnet-skills",
+      "category": "backend-framework",
+      "source": "https://github.com/Aaronontheweb/dotnet-skills",
+      "stars": 673,
+      "summary": "Claude Code skills and subagents for .NET developers",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "skills",
+      "repo": "remotion-dev/skills",
+      "category": "frontend-video",
+      "source": "https://github.com/remotion-dev/skills",
+      "stars": 2341,
+      "summary": "Agent skills from Remotion ecosystem",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "agent-skills",
+      "repo": "apify/agent-skills",
+      "category": "automation-data",
+      "source": "https://github.com/apify/agent-skills",
+      "stars": 1725,
+      "summary": "Apify collection of agent skills around web/data automation",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "android-reverse-engineering-skill",
+      "repo": "SimoneAvogadro/android-reverse-engineering-skill",
+      "category": "security-reversing",
+      "source": "https://github.com/SimoneAvogadro/android-reverse-engineering-skill",
+      "stars": 1340,
+      "summary": "Android reverse engineering skill",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "videocut-skills",
+      "repo": "Ceeon/videocut-skills",
+      "category": "media",
+      "source": "https://github.com/Ceeon/videocut-skills",
+      "stars": 1185,
+      "summary": "Video editing agent skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "skill-codex",
+      "repo": "skills-directory/skill-codex",
+      "category": "orchestration",
+      "source": "https://github.com/skills-directory/skill-codex",
+      "stars": 991,
+      "summary": "Claude skill that delegates prompts to Codex",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "second-brain-skills",
+      "repo": "coleam00/second-brain-skills",
+      "category": "memory-knowledge",
+      "source": "https://github.com/coleam00/second-brain-skills",
+      "stars": 497,
+      "summary": "Skills that turn Claude Code into a second brain",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "claude-skills",
+      "repo": "simonw/claude-skills",
+      "category": "notebook-tooling",
+      "source": "https://github.com/simonw/claude-skills",
+      "stars": 923,
+      "summary": "Claude code interpreter /mnt/skills reference contents",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "synalinks-skills",
+      "repo": "SynaLinks/synalinks-skills",
+      "category": "enterprise",
+      "source": "https://github.com/SynaLinks/synalinks-skills",
+      "stars": 898,
+      "summary": "Claude skills for Synalinks OSS workflows",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "pinme",
+      "repo": "glitternetwork/pinme",
+      "category": "deployment",
+      "source": "https://github.com/glitternetwork/pinme",
+      "stars": 3027,
+      "summary": "Single-command frontend deployment with Claude Code support",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "claudekit-skills",
+      "repo": "mtgoonie/claudekit-skills",
+      "category": "tooling",
+      "source": "https://github.com/mtgoonie/claudekit-skills",
+      "stars": null,
+      "summary": "ClaudeKit skill bundle",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "openclaw-master-skills",
+      "repo": "LeoYeAI/openclaw-master-skills",
+      "category": "registry",
+      "source": "https://github.com/LeoYeAI/openclaw-master-skills",
+      "stars": 2014,
+      "summary": "Curated OpenClaw skills meta-collection",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "awesome-openclaw-skills-zh",
+      "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+      "category": "registry",
+      "source": "https://github.com/clawdbot-ai/awesome-openclaw-skills-zh",
+      "stars": 3554,
+      "summary": "Chinese translation / curation of OpenClaw skills",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "clawhub",
+      "repo": "openclaw/clawhub",
+      "category": "registry-infra",
+      "source": "https://github.com/openclaw/clawhub",
+      "stars": null,
+      "summary": "Official OpenClaw skill directory backend",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "obsidian-skills",
+      "repo": "kepano/obsidian-skills",
+      "category": "knowledge-management",
+      "source": "https://github.com/kepano/obsidian-skills",
+      "stars": 16480,
+      "summary": "Agent skills for Obsidian / Markdown / JSON Canvas",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "awesome-openclaw-skills",
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "category": "registry",
+      "source": "https://github.com/sundial-org/awesome-openclaw-skills",
+      "stars": 504,
+      "summary": "Popular OpenClaw skills shortlist",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "openclaw-search-skills",
+      "repo": "blessonism/openclaw-search-skills",
+      "category": "research-search",
+      "source": "https://github.com/blessonism/openclaw-search-skills",
+      "stars": 359,
+      "summary": "OpenClaw skills for multi-source search and reporting",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "model-hierarchy-skill",
+      "repo": "zscole/model-hierarchy-skill",
+      "category": "cost-optimization",
+      "source": "https://github.com/zscole/model-hierarchy-skill",
+      "stars": 334,
+      "summary": "OpenClaw skill for cost-optimized model routing",
+      "safety_precheck": {
+        "rating": "low",
+        "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
+      }
+    },
+    {
+      "name": "clawpod",
+      "repo": "joinmassive/clawpod",
+      "category": "networking-growth",
+      "source": "https://github.com/joinmassive/clawpod",
+      "stars": 73,
+      "summary": "OpenClaw skill using proxy network integration",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "tuya-openclaw-skills",
+      "repo": "tuya/tuya-openclaw-skills",
+      "category": "iot-domain",
+      "source": "https://github.com/tuya/tuya-openclaw-skills",
+      "stars": 150,
+      "summary": "OpenClaw skill library for Tuya smart ecosystem",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "PaperClaw",
+      "repo": "meowscles69/PaperClaw",
+      "category": "research-academic",
+      "source": "https://github.com/meowscles69/PaperClaw",
+      "stars": 140,
+      "summary": "Academic research team skill bundle for OpenClaw",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "x-tweet-fetcher",
+      "repo": "ythx-101/x-tweet-fetcher",
+      "category": "social-data",
+      "source": "https://github.com/ythx-101/x-tweet-fetcher",
+      "stars": 719,
+      "summary": "OpenClaw skill to fetch X/Twitter data without API",
+      "safety_precheck": {
+        "rating": "high",
+        "notes": "Touches delegation, network scraping/proxying, deployment, reverse engineering, or privileged operations; requires mandatory deep audit."
+      }
+    },
+    {
+      "name": "notebooklm-py",
+      "repo": "teng-lin/notebooklm-py",
+      "category": "knowledge-tool",
+      "source": "https://github.com/teng-lin/notebooklm-py",
+      "stars": null,
+      "summary": "NotebookLM Python API and agent skill integration",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "OpenViking",
+      "repo": "volcengine/OpenViking",
+      "category": "context-memory",
+      "source": "https://github.com/volcengine/OpenViking",
+      "stars": null,
+      "summary": "Filesystem-style context database with skills integration",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "deeplake",
+      "repo": "activeloopai/deeplake",
+      "category": "context-memory",
+      "source": "https://github.com/activeloopai/deeplake",
+      "stars": null,
+      "summary": "Unified context engine / memory / skills substrate for agents",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    },
+    {
+      "name": "MemOS",
+      "repo": "MemTensor/MemOS",
+      "category": "memory-os",
+      "source": "https://github.com/MemTensor/MemOS",
+      "stars": null,
+      "summary": "Persistent skill memory OS for agent systems",
+      "safety_precheck": {
+        "rating": "medium",
+        "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
+      }
+    }
+  ]
+}
