@@ -1,6 +1,6 @@
 {
   "version": "index-v1",
-  "generated_at": "2026-03-24T13:23:01.183929+00:00",
+  "generated_at": "2026-03-25T22:05:00.226989+00:00",
   "source_catalog": "skills-catalog-v1.json",
   "source_shortlist": "skills-shortlist-v1.json",
   "count": 5,
@@ -14,6 +14,9 @@
     "category",
     "stars",
     "summary",
+    "install_cmd",
+    "use_case",
+    "risk_explanation",
     "security_rating",
     "collection_status",
     "priority_score",
@@ -31,6 +34,9 @@
       "category": "general",
       "stars": 109623,
       "summary": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
+      "install_cmd": "",
+      "use_case": "",
+      "risk_explanation": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 68,
@@ -39,7 +45,7 @@
       "safety_precheck": {},
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-24T13:23:01.183653+00:00"
+      "updated_at": "2026-03-25T22:05:00.226667+00:00"
     },
     {
       "id": "anthropics-skills",
@@ -50,6 +56,9 @@
       "category": "registry",
       "stars": 101633,
       "summary": "Official public repository for Agent Skills",
+      "install_cmd": "git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills",
+      "use_case": "Use as a high-signal reference point for the current agent-skill ecosystem.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 68,
@@ -61,7 +70,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-24T13:23:01.183897+00:00"
+      "updated_at": "2026-03-25T22:05:00.226951+00:00"
     },
     {
       "id": "composiohq-awesome-claude-skills",
@@ -72,6 +81,9 @@
       "category": "registry",
       "stars": 47432,
       "summary": "Large discovery index for Claude Skills and related tooling",
+      "install_cmd": "claude --plugin-dir ./connect-apps-plugin",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 63.4,
@@ -83,7 +95,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-24T13:23:01.183908+00:00"
+      "updated_at": "2026-03-25T22:05:00.226965+00:00"
     },
     {
       "id": "voltagent-awesome-openclaw-skills",
@@ -94,6 +106,9 @@
       "category": "registry",
       "stars": 41534,
       "summary": "Large OpenClaw skill collection sourced from registry",
+      "install_cmd": "OpenClaw is a locally-running AI assistant that operates directly on your machine. Skills extend its capabilities, allowing it to interact with external services, automate workflows, and perform specialized tasks. This collection helps you discover and install the right skills for your needs. It can also serve as a source of inspiration for OpenClaw use cases.",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 57.5,
@@ -105,7 +120,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-24T13:23:01.183915+00:00"
+      "updated_at": "2026-03-25T22:05:00.226973+00:00"
     },
     {
       "id": "hesreallyhim-awesome-claude-code",
@@ -116,6 +131,9 @@
       "category": "registry",
       "stars": 31478,
       "summary": "Curated Claude Code skills / hooks / commands / plugins list",
+      "install_cmd": "git clone https://github.com/hesreallyhim/awesome-claude-code.git ~/.claude/skills/awesome-claude-code",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 47.5,
@@ -127,7 +145,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-24T13:23:01.183926+00:00"
+      "updated_at": "2026-03-25T22:05:00.226985+00:00"
     }
   ]
 }

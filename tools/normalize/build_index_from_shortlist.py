@@ -27,7 +27,10 @@ for s in shortlist['items']:
         'source': base.get('source', f"https://github.com/{s['repo']}"),
         'category': base.get('category', s.get('category', 'unknown')),
         'stars': s.get('stars', base.get('stars', 0)),
-        'summary': base.get('summary', s.get('why_include_now', '')), 
+        'summary': base.get('summary', s.get('why_include_now', '')),
+        'install_cmd': base.get('install_cmd', ''),
+        'use_case': base.get('use_case', ''),
+        'risk_explanation': base.get('risk_explanation', ''),
         'security_rating': s.get('risk', base.get('safety_precheck', {}).get('rating', 'unknown')),
         'collection_status': 'recommended',
         'priority_score': s.get('priority_score'),
@@ -48,6 +51,7 @@ index = {
     'search_ready': True,
     'fields': [
         'id', 'slug', 'name', 'repo', 'source', 'category', 'stars', 'summary',
+        'install_cmd', 'use_case', 'risk_explanation',
         'security_rating', 'collection_status', 'priority_score', 'audit_status',
         'review_status', 'updated_at'
     ],

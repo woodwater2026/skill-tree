@@ -13,7 +13,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills",
+      "use_case": "Use as a high-signal reference point for the current agent-skill ecosystem.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "awesome-claude-code",
@@ -25,7 +28,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/hesreallyhim/awesome-claude-code.git ~/.claude/skills/awesome-claude-code",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "awesome-claude-skills",
@@ -37,7 +43,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "claude --plugin-dir ./connect-apps-plugin",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "awesome-agent-skills",
@@ -49,7 +58,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/VoltAgent/awesome-agent-skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "awesome-openclaw-skills",
@@ -61,7 +73,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "OpenClaw is a locally-running AI assistant that operates directly on your machine. Skills extend its capabilities, allowing it to interact with external services, automate workflows, and perform specialized tasks. This collection helps you discover and install the right skills for your needs. It can also serve as a source of inspiration for OpenClaw use cases.",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "awesome-claude-skills",
@@ -73,7 +88,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/travisvn/awesome-claude-skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Low risk from current metadata: mainly discovery/content scope with limited implied execution surface."
     },
     {
       "name": "awesome-claude-skills",
@@ -85,7 +103,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/BehiSecc/awesome-claude-skills.git ~/.claude/skills/awesome-claude-skills",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Low risk from current metadata: mainly discovery/content scope with limited implied execution surface."
     },
     {
       "name": "claude-skills",
@@ -97,7 +118,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/alirezarezvani/claude-skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "claude-skills",
@@ -109,7 +133,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/Jeffallan/claude-skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "skills",
@@ -121,7 +148,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/antfu/skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Low risk from current metadata: mainly discovery/content scope with limited implied execution surface."
     },
     {
       "name": "claude-code-skills",
@@ -133,7 +163,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/daymade/claude-code-skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "claude-code-skill-factory",
@@ -145,7 +178,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/alirezarezvani/claude-code-skill-factory.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "agentskills",
@@ -157,7 +193,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/agentskills/agentskills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Low risk from current metadata: mainly discovery/content scope with limited implied execution surface."
     },
     {
       "name": "skills",
@@ -169,7 +208,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/vercel-labs/skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "agent-skills",
@@ -181,7 +223,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "npx skills add vercel-labs/agent-skills",
+      "use_case": "Use as a high-signal reference point for the current agent-skill ecosystem.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "awesome-copilot",
@@ -193,7 +238,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/github/awesome-copilot.git",
+      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "copilot-plugins",
@@ -205,7 +253,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/github/copilot-plugins.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "skills",
@@ -217,7 +268,10 @@
       "safety_precheck": {
         "rating": "medium",
         "notes": "Contains executable skill logic or automation; needs repo-level audit before inclusion."
-      }
+      },
+      "install_cmd": "git clone https://github.com/trailofbits/skills.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion."
     },
     {
       "name": "skill-scanner",
@@ -229,7 +283,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/cisco-ai-defense/skill-scanner.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Low risk from current metadata: mainly discovery/content scope with limited implied execution surface."
     },
     {
       "name": "planning-with-files",
@@ -241,7 +298,10 @@
       "safety_precheck": {
         "rating": "low",
         "notes": "Mostly registry/spec/content or local workflow scope; low obvious abuse surface from description."
-      }
+      },
+      "install_cmd": "git clone https://github.com/OthmanAdi/planning-with-files.git",
+      "use_case": "Use this skill in its target ecosystem after checking the repo README for setup and permissions.",
+      "risk_explanation": "Low risk from current metadata: mainly discovery/content scope with limited implied execution surface."
     },
     {
       "name": "humanizer",
