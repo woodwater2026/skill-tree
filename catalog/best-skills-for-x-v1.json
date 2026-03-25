@@ -1,0 +1,327 @@
+{
+  "version": "v1",
+  "generated_at": "2026-03-25",
+  "count": 10,
+  "lists": [
+    {
+      "slug": "best-skills-for-code-review",
+      "title": "Best Skills for Code Review",
+      "audience": "Developers who want faster PR review, architecture feedback, and safer merge decisions.",
+      "intro": "These are the best starting points when you want an agent to review code, spot regressions, and enforce engineering standards instead of just generating code.",
+      "skills": [
+        {
+          "name": "superpowers",
+          "repo": "obra/superpowers",
+          "source": "https://github.com/obra/superpowers",
+          "why_pick": "Battle-tested engineering workflow pack with strong review, planning, and execution discipline.",
+          "best_for": "Teams or solo developers who want repeatable review rituals rather than ad hoc prompting.",
+          "watch_out": "Medium precheck risk because workflow automation can execute or influence local changes; review what gets installed and enabled."
+        },
+        {
+          "name": "Trail of Bits Security Skills",
+          "repo": "trailofbits/skills",
+          "source": "https://github.com/trailofbits/skills",
+          "why_pick": "Best fit when code review needs real security depth instead of generic style feedback.",
+          "best_for": "Security-sensitive codebases, audits, and pre-release review passes.",
+          "watch_out": "Security tooling can be noisy and may require extra dependencies; treat findings as analyst input, not final truth."
+        },
+        {
+          "name": "claude-code-agents",
+          "repo": "undeadlist/claude-code-agents",
+          "source": "https://github.com/undeadlist/claude-code-agents",
+          "why_pick": "Good option if you want multiple audit-style roles and browser-assisted QA in the same workflow.",
+          "best_for": "Larger feature work where review includes implementation, QA, and fix loops.",
+          "watch_out": "Broader automation surface means more moving parts; review permissions before enabling full workflows."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-security-audit",
+      "title": "Best Skills for Security Audit",
+      "audience": "Users evaluating third-party code, risky integrations, or production-facing agent workflows.",
+      "intro": "When the main question is not “can it work?” but “should I trust it?”, start with security-focused skills and collections.",
+      "skills": [
+        {
+          "name": "Trail of Bits Security Skills",
+          "repo": "trailofbits/skills",
+          "source": "https://github.com/trailofbits/skills",
+          "why_pick": "Strongest security-first brand and clearest fit for static analysis, code auditing, and vuln discovery.",
+          "best_for": "Serious code review, AppSec triage, and security-focused engineering teams.",
+          "watch_out": "Expect a steeper learning curve than general-purpose skill packs."
+        },
+        {
+          "name": "skill-scanner",
+          "repo": "root-sec/skill-scanner",
+          "source": "https://github.com/root-sec/skill-scanner",
+          "why_pick": "Directly useful as a scanning-oriented utility when the job is triage and inspection.",
+          "best_for": "Early-pass filtering of unknown or community-contributed skills.",
+          "watch_out": "Scanner output can produce false positives; always pair scanning with human review."
+        },
+        {
+          "name": "parry",
+          "repo": "vaporif/parry",
+          "source": "https://github.com/vaporif/parry",
+          "why_pick": "Good companion tool when your threat model includes prompt injection and unsafe tool I/O.",
+          "best_for": "Hook pipelines and agent setups exposed to untrusted text or web content.",
+          "watch_out": "Early-stage projects may change quickly, so validate maintenance health before depending on them."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-research",
+      "title": "Best Skills for Research",
+      "audience": "Researchers, analysts, and technical users gathering information, comparing options, or building evidence-backed summaries.",
+      "intro": "Good research skills help an agent collect context, structure findings, and preserve useful notes instead of creating disposable output.",
+      "skills": [
+        {
+          "name": "claude-scientific-skills",
+          "repo": "K-Dense-AI/claude-scientific-skills",
+          "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
+          "why_pick": "Broad, high-value bundle for research, analysis, engineering, and finance-adjacent workflows.",
+          "best_for": "Users who need one flexible pack across multiple research styles.",
+          "watch_out": "Larger packs can be harder to evaluate quickly; focus on the specific subskills you plan to use."
+        },
+        {
+          "name": "planning-with-files",
+          "repo": "OthmanAdi/planning-with-files",
+          "source": "https://github.com/OthmanAdi/planning-with-files",
+          "why_pick": "Useful when research needs persistent plans, decision logs, and visible progress.",
+          "best_for": "Long-running analysis tasks with multiple branches and checkpoints.",
+          "watch_out": "Because it writes workflow artifacts, keep repository clutter and path scope under control."
+        },
+        {
+          "name": "obsidian-skills",
+          "repo": "kepano/obsidian-skills",
+          "source": "https://github.com/kepano/obsidian-skills",
+          "why_pick": "Excellent if your research workflow already lives in markdown notes or Obsidian.",
+          "best_for": "Knowledge capture, note synthesis, and turning research into reusable internal documentation.",
+          "watch_out": "Best value comes when your team already uses markdown-first knowledge systems."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-debugging",
+      "title": "Best Skills for Debugging",
+      "audience": "Developers trying to isolate bugs, narrow root causes, and speed up fix loops.",
+      "intro": "The best debugging skills combine methodical workflows with enough automation to inspect, reproduce, and verify fixes.",
+      "skills": [
+        {
+          "name": "superpowers",
+          "repo": "obra/superpowers",
+          "source": "https://github.com/obra/superpowers",
+          "why_pick": "Strong for disciplined debugging, planning, and execution loops in real codebases.",
+          "best_for": "Users who want a consistent way to investigate issues instead of improvising every session.",
+          "watch_out": "Review enabled commands and scripts before trusting it in sensitive repos."
+        },
+        {
+          "name": "claude-tmux",
+          "repo": "nielsgroen/claude-tmux",
+          "source": "https://github.com/nielsgroen/claude-tmux",
+          "why_pick": "Great for switching between multiple agent sessions while debugging parallel hypotheses.",
+          "best_for": "Power users running several debugging threads or long-lived coding sessions.",
+          "watch_out": "Adds operational complexity; best for advanced terminal users."
+        },
+        {
+          "name": "claude-esp",
+          "repo": "phiat/claude-esp",
+          "source": "https://github.com/phiat/claude-esp",
+          "why_pick": "Useful when you want visibility into hidden reasoning/tool behavior during a debugging run.",
+          "best_for": "Understanding what the agent is doing under the hood during fixes or failures.",
+          "watch_out": "Observability tools may expose more session detail than casual users need."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-documentation",
+      "title": "Best Skills for Documentation",
+      "audience": "Teams turning raw implementation work into docs, handbooks, changelogs, or reusable knowledge assets.",
+      "intro": "These skills are best when the output needs to be understandable by humans later, not just useful to the agent right now.",
+      "skills": [
+        {
+          "name": "internal-comms",
+          "repo": "anthropics/skills",
+          "source": "https://github.com/anthropics/skills",
+          "why_pick": "Strong official option for clear internal writing, FAQs, and status-style communication.",
+          "best_for": "Teams documenting launches, decisions, and rollout notes.",
+          "watch_out": "It helps with format and clarity, but you still need strong source material."
+        },
+        {
+          "name": "Book Factory",
+          "repo": "robertguss/claude-skills",
+          "source": "https://github.com/robertguss/claude-skills",
+          "why_pick": "Good example of long-form structured writing workflows rather than one-shot generation.",
+          "best_for": "Large documentation projects and multi-step writing pipelines.",
+          "watch_out": "More process-heavy than most teams need for lightweight docs work."
+        },
+        {
+          "name": "obsidian-skills",
+          "repo": "kepano/obsidian-skills",
+          "source": "https://github.com/kepano/obsidian-skills",
+          "why_pick": "Strong markdown-native fit for teams building reusable internal knowledge bases.",
+          "best_for": "Documentation systems that grow over time instead of one-off pages.",
+          "watch_out": "Most useful if your docs stack already maps well to markdown and local files."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-automation",
+      "title": "Best Skills for Automation",
+      "audience": "Operators and builders who want agents to execute repeatable workflows, not just generate suggestions.",
+      "intro": "Automation skills are the most powerful—and the easiest to misuse—so usefulness and risk need to be judged together.",
+      "skills": [
+        {
+          "name": "AgentSys",
+          "repo": "avifenesh/agentsys",
+          "source": "https://github.com/avifenesh/agentsys",
+          "why_pick": "High-value automation system for end-to-end workflows, reviews, cleanup, and investigations.",
+          "best_for": "Teams that want workflow leverage across development operations.",
+          "watch_out": "Automation breadth means more permission surface; start narrow before enabling full workflows."
+        },
+        {
+          "name": "Dippy",
+          "repo": "ldayton/Dippy",
+          "source": "https://github.com/ldayton/Dippy",
+          "why_pick": "Helps reduce permission fatigue by auto-approving safer bash commands using structured parsing.",
+          "best_for": "Users who want faster agent execution without turning safety fully off.",
+          "watch_out": "Auto-approval is inherently sensitive; understand the safety rules before relying on it."
+        },
+        {
+          "name": "sudocode",
+          "repo": "sudocode-ai/sudocode",
+          "source": "https://github.com/sudocode-ai/sudocode",
+          "why_pick": "Useful for repo-local orchestration where execution should follow a shared project process.",
+          "best_for": "Teams coordinating specs, tasks, and agent execution inside a codebase.",
+          "watch_out": "Process tooling can add overhead if the team is still small or informal."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-browser-and-ui-testing",
+      "title": "Best Skills for Browser & UI Testing",
+      "audience": "Users who need agents to open apps, click through flows, and verify UI behavior instead of reasoning only from code.",
+      "intro": "These skills are best when correctness depends on what actually happens in a browser or simulator.",
+      "skills": [
+        {
+          "name": "webapp-testing",
+          "repo": "anthropics/skills",
+          "source": "https://github.com/anthropics/skills",
+          "why_pick": "Clean official fit for UI verification and local web app testing.",
+          "best_for": "Regression checks, smoke tests, and reproduction of UI bugs.",
+          "watch_out": "Browser automation can touch real user state or accounts if not isolated."
+        },
+        {
+          "name": "playwright-skill",
+          "repo": "lackeyjb/playwright-skill",
+          "source": "https://github.com/lackeyjb/playwright-skill",
+          "why_pick": "Good general-purpose browser automation option with direct practical value.",
+          "best_for": "Teams that want hands-on automation over local or staging web flows.",
+          "watch_out": "Use clean environments; browser tools can leak state across sessions if unmanaged."
+        },
+        {
+          "name": "ios-simulator-skill",
+          "repo": "conorluddy/ios-simulator-skill",
+          "source": "https://github.com/conorluddy/ios-simulator-skill",
+          "why_pick": "Rare practical option for testing mobile workflows through an agent-assisted loop.",
+          "best_for": "iOS developers who need automation and validation inside simulator-driven flows.",
+          "watch_out": "Environment setup is heavier than typical desktop/browser skills."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-devops-and-deployment",
+      "title": "Best Skills for DevOps & Deployment",
+      "audience": "Developers and operators shipping code, managing infra, and keeping deployments reproducible.",
+      "intro": "The best DevOps skills reduce toil, but they should also make infra actions more legible, not more opaque.",
+      "skills": [
+        {
+          "name": "cc-devops-skills",
+          "repo": "akin-ozer/cc-devops-skills",
+          "source": "https://github.com/akin-ozer/cc-devops-skills",
+          "why_pick": "One of the clearest infra-focused packs for generating and validating deployment-related work.",
+          "best_for": "Engineers who routinely work with cloud, IaC, and delivery pipelines.",
+          "watch_out": "Infra automation deserves careful review because mistakes can affect production resources."
+        },
+        {
+          "name": "compound-engineering-plugin",
+          "repo": "EveryInc/compound-engineering-plugin",
+          "source": "https://github.com/EveryInc/compound-engineering-plugin",
+          "why_pick": "Good for disciplined engineering workflows where lessons, guardrails, and execution patterns matter.",
+          "best_for": "Teams that care about operational quality and institutional memory.",
+          "watch_out": "Works best when the team is willing to adopt its operating model, not just cherry-pick commands."
+        },
+        {
+          "name": "claude-codex-settings",
+          "repo": "fcakyon/claude-codex-settings",
+          "source": "https://github.com/fcakyon/claude-codex-settings",
+          "why_pick": "Useful bridge pack when your workflows touch cloud platforms and developer services.",
+          "best_for": "Polytool teams working across GitHub, cloud, and external services.",
+          "watch_out": "Service integrations can expand the credential and permission surface quickly."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-knowledge-and-memory",
+      "title": "Best Skills for Knowledge & Memory",
+      "audience": "Users who want agents to accumulate context, preserve decisions, and avoid re-solving the same problem repeatedly.",
+      "intro": "Skills in this bucket are most valuable when the work lasts longer than one session and context quality matters as much as raw output speed.",
+      "skills": [
+        {
+          "name": "obsidian-skills",
+          "repo": "kepano/obsidian-skills",
+          "source": "https://github.com/kepano/obsidian-skills",
+          "why_pick": "Excellent fit for markdown-native memory, note operations, and long-term reusable knowledge.",
+          "best_for": "Writers, researchers, and teams using Obsidian or markdown repositories.",
+          "watch_out": "Local file interaction means users should understand what folders are in scope."
+        },
+        {
+          "name": "planning-with-files",
+          "repo": "OthmanAdi/planning-with-files",
+          "source": "https://github.com/OthmanAdi/planning-with-files",
+          "why_pick": "Great for agents that need persistent plans, checkpoints, and explicit task state.",
+          "best_for": "Long-running execution threads with lots of iteration and follow-up.",
+          "watch_out": "Without cleanup, planning artifacts can become clutter instead of leverage."
+        },
+        {
+          "name": "Context Engineering Kit",
+          "repo": "NeoLabHQ/context-engineering-kit",
+          "source": "https://github.com/NeoLabHQ/context-engineering-kit",
+          "why_pick": "Strong conceptual fit when the real problem is giving the agent better context, not more brute-force prompting.",
+          "best_for": "Advanced users tuning result quality and context efficiency.",
+          "watch_out": "More meta than turnkey; best for users willing to shape their own system."
+        }
+      ]
+    },
+    {
+      "slug": "best-skills-for-getting-started",
+      "title": "Best Skills for Getting Started",
+      "audience": "New users who want a small set of high-signal starting points instead of a giant marketplace dump.",
+      "intro": "If you only install a few things first, choose packs that are widely referenced, easy to understand, and broadly useful.",
+      "skills": [
+        {
+          "name": "skills",
+          "repo": "anthropics/skills",
+          "source": "https://github.com/anthropics/skills",
+          "why_pick": "Best official starting point with strong baseline credibility and examples.",
+          "best_for": "Anyone learning what a mature skill repository looks like.",
+          "watch_out": "Even official collections can include powerful capabilities; read what each skill actually does."
+        },
+        {
+          "name": "awesome-claude-code",
+          "repo": "hesreallyhim/awesome-claude-code",
+          "source": "https://github.com/hesreallyhim/awesome-claude-code",
+          "why_pick": "Best discovery surface for understanding the landscape before choosing what to install.",
+          "best_for": "Users who want breadth and discovery more than immediate automation.",
+          "watch_out": "Awesome lists help you discover options, but do not replace repo-level due diligence."
+        },
+        {
+          "name": "superpowers",
+          "repo": "obra/superpowers",
+          "source": "https://github.com/obra/superpowers",
+          "why_pick": "High-signal pack for people who want immediate workflow value once they’re ready for more than basics.",
+          "best_for": "Developers who want practical engineering leverage fast.",
+          "watch_out": "It is more opinionated and operational than a beginner-only starter pack."
+        }
+      ]
+    }
+  ]
+}
