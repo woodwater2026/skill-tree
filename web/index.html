@@ -9,112 +9,20 @@
   <body>
     <header class="hero">
       <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Skill Tree · Capability discovery + risk triage</p>
-          <h1>Upgrade agent capability without installing blind</h1>
-          <p class="lede">
-            Skill Tree helps you find useful AI agent skills, compare what they actually do, and review risk before installation.
-          </p>
-          <p class="hero-support">
-            Start from the outcome you want, review the safest starting options, then copy an install command with open eyes.
-          </p>
-          <div class="hero-cta-row">
-            <button class="hero-cta primary" type="button" data-preset="use-case">Browse by use case</button>
-            <button class="hero-cta secondary" type="button" data-preset="low-risk">See low-risk starting skills</button>
-            <button class="hero-cta tertiary" type="button" data-preset="audited">Review audited skills</button>
-          </div>
-        </div>
-        <div class="hero-proof">
-          <div class="stats" id="stats"></div>
-          <div class="hero-checklist panel-lite">
-            <h2>What users need to know fast</h2>
-            <ul>
-              <li>What problem does this skill solve?</li>
-              <li>Who should try it first?</li>
-              <li>How do I install it?</li>
-              <li>What risk am I taking?</li>
-            </ul>
-          </div>
-        </div>
+        <p class="eyebrow">Skill Tree · Phase 2 MVP</p>
+        <h1>Search, classify, and audit AI Agent skills.</h1>
+        <p class="lede">
+          Static MVP that combines the first 50 cataloged skills with the first automated audit batch.
+        </p>
+        <div class="stats" id="stats"></div>
       </div>
     </header>
-
-    <section class="outcome-entry-wrap">
-      <div class="outcome-entry-inner panel" id="best-lists-anchor">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Start from outcomes, not repo names</p>
-            <h2>Browse by use case</h2>
-          </div>
-          <p class="section-copy">Pick the job you want done first: code review, security audit, research, debugging, docs, automation, or browser testing.</p>
-        </div>
-        <div class="category-strip" id="category-nav"></div>
-      </div>
-    </section>
-
-    <section class="risk-explainer-wrap">
-      <div class="risk-explainer-inner panel" id="safe-start">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Why you can trust the labels</p>
-            <h2>What we check before recommending a skill</h2>
-          </div>
-          <p class="section-copy">Risk labels are only useful if they explain what could actually surprise you after install.</p>
-        </div>
-        <div class="risk-check-grid">
-          <div class="risk-check-card"><strong>External services</strong><span>Does it call APIs, remote endpoints, or pull data from outside your machine?</span></div>
-          <div class="risk-check-card"><strong>File changes</strong><span>Can it write, modify, or delete local files you care about?</span></div>
-          <div class="risk-check-card"><strong>Shell execution</strong><span>Does it run commands or scripts that widen the blast radius?</span></div>
-          <div class="risk-check-card"><strong>Powerful capabilities</strong><span>Does it require browser control, automation surfaces, or other elevated tools?</span></div>
-          <div class="risk-check-card"><strong>Code patterns</strong><span>Do we see suspicious behavior that deserves manual review before install?</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="best-lists-wrap" id="best-lists">
-      <div class="best-lists-inner panel">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Recommended starting points</p>
-            <h2>Best Skills for X</h2>
-          </div>
-          <p class="section-copy">Curated picks you can browse inside the site instead of hunting through raw JSON files.</p>
-        </div>
-        <div id="best-lists-grid" class="best-lists-grid"></div>
-      </div>
-    </section>
-
-    <section class="safe-start-wrap">
-      <div class="safe-start-inner panel" id="safe-start-panel">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Start here if you don't want surprises</p>
-            <h2>Safest starting skills</h2>
-          </div>
-          <p class="section-copy">Lower-risk, better-documented, or registry-first picks to help new users start without jumping straight into heavy automation.</p>
-        </div>
-        <div id="safe-start-grid" class="safe-start-grid"></div>
-      </div>
-    </section>
-
-    <section class="guides-wrap">
-      <div class="guides-inner panel">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Use it, not just browse it</p>
-            <h2>Top 10 Skill Guides</h2>
-          </div>
-          <p class="section-copy">Quick-start guidance for the highest-priority skills: how to install, how to use, who it fits, and what risk to watch.</p>
-        </div>
-        <div id="top-guides" class="guides-grid"></div>
-      </div>
-    </section>
 
     <main class="layout">
       <aside class="sidebar">
         <section class="panel">
           <label for="search">Search</label>
-          <input id="search" type="search" placeholder="search skills, repo, use case..." />
+          <input id="search" type="search" placeholder="search skills, repo, summary..." />
         </section>
 
         <section class="panel">
@@ -131,7 +39,7 @@
       <section class="content">
         <div class="panel toolbar">
           <div>
-            <h2>Useful catalog</h2>
+            <h2>Catalog</h2>
             <p id="results-summary">Loading…</p>
           </div>
         </div>
@@ -157,42 +65,9 @@
         </div>
         <p class="summary"></p>
         <div class="facts"></div>
-
-        <section class="install-box">
-          <div class="section-label">Install</div>
-          <div class="install-row">
-            <code class="install-code"></code>
-            <button class="copy-btn" type="button">Copy</button>
-          </div>
-        </section>
-
-        <section class="user-value">
-          <div class="section-label">Best use case</div>
-          <p class="use-case"></p>
-        </section>
-
-        <section class="user-value">
-          <div class="section-label">Why this risk score</div>
-          <p class="risk-explanation"></p>
-        </section>
-
-        <section class="plain-summary">
-          <div class="section-label">Human audit summary</div>
-          <ul>
-            <li><strong>What it does:</strong> <span class="human-what"></span></li>
-            <li><strong>Is it safe?</strong> <span class="human-safe"></span></li>
-            <li><strong>Main risk:</strong> <span class="human-risk"></span></li>
-          </ul>
-        </section>
-
         <details>
           <summary>Audit details</summary>
           <div class="audit"></div>
-        </details>
-
-        <details class="guide-details">
-          <summary>Quick guide</summary>
-          <div class="guide-body"></div>
         </details>
       </article>
     </template>
