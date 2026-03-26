@@ -16,6 +16,7 @@ const els = {
   riskFilters: document.getElementById("risk-filters"),
   categoryFilters: document.getElementById("category-filters"),
   categoryNav: document.getElementById("category-nav"),
+  capabilityMap: document.getElementById("capability-map-grid"),
   grid: document.getElementById("grid"),
   summary: document.getElementById("results-summary"),
   template: document.getElementById("card-template"),
@@ -39,6 +40,63 @@ const CATEGORY_LABELS = {
   tooling: "Tooling",
   security: "Security",
 };
+
+const CAPABILITY_MAP = [
+  {
+    slug: 'research',
+    title: 'Research',
+    blurb: 'Help an agent gather, structure, and retain useful context.',
+    audience: 'Researchers, analysts, PMs, technical investigators',
+    risk: 'Usually low to medium risk',
+    picks: ['claude-scientific-skills', 'obsidian-skills', 'planning-with-files'],
+    action: { type: 'query', value: 'research' },
+  },
+  {
+    slug: 'orchestration',
+    title: 'Orchestration',
+    blurb: 'Coordinate multi-step work instead of relying on one-shot prompts.',
+    audience: 'Operators, builders, multi-agent workflow designers',
+    risk: 'Usually medium risk',
+    picks: ['superpowers', 'claude-code-agents', 'AgentSys'],
+    action: { type: 'query', value: 'orchestration' },
+  },
+  {
+    slug: 'long-running-tasks',
+    title: 'Long-running Tasks',
+    blurb: 'Preserve plans, checkpoints, and state across longer jobs.',
+    audience: 'Users running long tasks, investigations, or overnight flows',
+    risk: 'Usually medium risk',
+    picks: ['planning-with-files', 'claude-tmux', 'AgentSys'],
+    action: { type: 'query', value: 'long-running tasks' },
+  },
+  {
+    slug: 'code-review',
+    title: 'Code Review',
+    blurb: 'Inspect, critique, and improve code with safer review loops.',
+    audience: 'Engineering teams, reviewers, maintainers',
+    risk: 'Usually medium risk',
+    picks: ['superpowers', 'Trail of Bits Security Skills', 'claude-code-agents'],
+    action: { type: 'list', value: 'best-for-code-review' },
+  },
+  {
+    slug: 'security-audit',
+    title: 'Security Audit',
+    blurb: 'Surface security-relevant risk before install or deploy.',
+    audience: 'Security teams, infra owners, risk reviewers',
+    risk: 'Usually medium to high risk',
+    picks: ['Trail of Bits Security Skills', 'skill-scanner', 'parry'],
+    action: { type: 'list', value: 'best-for-security' },
+  },
+  {
+    slug: 'devops-deployment',
+    title: 'DevOps & Deployment',
+    blurb: 'Manage infra, deployment, config, and operational workflows.',
+    audience: 'Platform, infra, and deployment-heavy teams',
+    risk: 'Usually medium to high risk',
+    picks: ['cc-devops-skills', 'compound-engineering-plugin', 'AgentSys'],
+    action: { type: 'list', value: 'best-for-devops' },
+  },
+];
 
 async function loadJson(path) {
   const res = await fetch(path);
@@ -146,10 +204,11 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       findings: (audit?.audit?.findings || []).slice(0, 5),
       capabilities: audit?.capabilities || [],
       platform: repoPlatform(item.repo),
-      install_cmd: enriched.install_cmd || guide.install_cmd,
-      use_case: enriched.use_case,
-      risk_explanation: enriched.risk_explanation,
-      one_line_summary: enriched.one_line_summary,
+      install_cmd: item.install_cmd || enriched.install_cmd || guide.install_cmd,
+      use_case: item.use_case || enriched.use_case,
+      risk_explanation: item.risk_explanation || enriched.risk_explanation,
+      install_friction: item.install_friction || enriched.install_friction,
+      one_line_summary: item.one_line_summary || enriched.one_line_summary,
       guide,
     };
     return {
@@ -312,6 +371,7 @@ function renderCard(item) {
         <div class="section-label">Why this risk score</div>
         <p class="risk-explanation">${item.riskExplanationText}</p>
       </section>
+      ${item.install_friction ? `<section class="user-value"><div class="section-label">Install friction</div><p class="risk-explanation">${item.install_friction}</p></section>` : ""}
       <section class="plain-summary">
         <div class="section-label">Human audit summary</div>
         <ul>
@@ -439,6 +499,27 @@ function renderTopGuides() {
     .join("");
 }
 
+function renderCapabilityMap() {
+  if (!els.capabilityMap) return;
+  els.capabilityMap.innerHTML = CAPABILITY_MAP.map((cap) => `
+    <article class="capability-card" data-capability-slug="${cap.slug}">
+      <span class="capability-chip">Capability</span>
+      <h3>${cap.title}</h3>
+      <p class="capability-sub">${cap.blurb}</p>
+      <div class="capability-skills">
+        ${cap.picks.map((pick) => `<span class="capability-skill">${pick}</span>`).join('')}
+      </div>
+      <p class="capability-for"><strong>Best for:</strong> ${cap.audience}</p>
+      <p class="capability-risk"><strong>Risk hint:</strong> ${cap.risk}</p>
+      <div class="capability-action">See best skills →</div>
+    </article>
+  `).join('');
+
+  document.querySelectorAll('.capability-card').forEach((card) => {
+    card.addEventListener('click', () => applyCapabilityAction(card.dataset.capabilitySlug));
+  });
+}
+
 function renderSafeStart() {
   if (!els.safeStart) return;
   const safeItems = state.items
@@ -483,6 +564,8 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/high-intent-skills-enriched-v1.json",
+    "../../agents/research/high-intent-skills-enriched-v1.json",
     "../catalog/skills-catalog-top20-enriched.json",
     "../../agents/research/skills-catalog-top20-enriched.json",
   ];
@@ -619,6 +702,23 @@ function applyBestListFilter(listSlug) {
   scrollToGrid();
 }
 
+function applyCapabilityAction(capabilitySlug) {
+  const cap = CAPABILITY_MAP.find((item) => item.slug === capabilitySlug);
+  if (!cap) return;
+  if (cap.action.type === 'list') {
+    applyBestListFilter(cap.action.value);
+    return;
+  }
+  state.risk = 'all';
+  state.category = 'all';
+  state.auditedOnly = false;
+  state.activeRepos = null;
+  state.query = cap.action.value;
+  els.search.value = cap.action.value;
+  render();
+  scrollToGrid();
+}
+
 async function main() {
   const [catalog, auditIndex, enrichedMap, bestLists, guides] = await Promise.all([
     loadJson("../catalog/index.json").catch(() => loadJson("../catalog/skills-catalog-v1.json")),
@@ -659,6 +759,7 @@ async function main() {
         install_cmd: item.install_cmd || enriched.install_cmd || guide.install_cmd,
         use_case: item.use_case || enriched.use_case,
         risk_explanation: item.risk_explanation || enriched.risk_explanation,
+        install_friction: item.install_friction || enriched.install_friction,
         one_line_summary: item.one_line_summary || enriched.one_line_summary || guide.one_line_summary,
         guide,
       };

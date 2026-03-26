@@ -6,12 +6,15 @@ from datetime import datetime, timezone
 ROOT = Path('/Users/woodwater/.openclaw/workspace')
 CATALOG_V1 = ROOT / 'skill-tree/catalog/skills-catalog-v1.json'
 SHORTLIST = ROOT / 'agents/research/skills-shortlist-v1.json'
+HIGH_INTENT = ROOT / 'skill-tree/catalog/high-intent-skills-enriched-v1.json'
 OUT = ROOT / 'skill-tree/catalog/index.json'
 
 catalog = json.loads(CATALOG_V1.read_text())
 shortlist = json.loads(SHORTLIST.read_text())
+high_intent = json.loads(HIGH_INTENT.read_text()) if HIGH_INTENT.exists() else {'items': []}
 
 catalog_items = {item['repo']: item for item in catalog['items']}
+high_intent_items = {item['repo']: item for item in high_intent.get('items', [])}
 
 def slugify(repo: str) -> str:
     return repo.lower().replace('_', '-').replace('/', '-')
@@ -19,6 +22,7 @@ def slugify(repo: str) -> str:
 items = []
 for s in shortlist['items']:
     base = catalog_items.get(s['repo'], {})
+    hi = high_intent_items.get(s['repo'], {})
     items.append({
         'id': slugify(s['repo']),
         'slug': slugify(s['repo']),
@@ -27,11 +31,12 @@ for s in shortlist['items']:
         'source': base.get('source', f"https://github.com/{s['repo']}"),
         'category': base.get('category', s.get('category', 'unknown')),
         'stars': s.get('stars', base.get('stars', 0)),
-        'summary': base.get('summary', s.get('why_include_now', '')),
-        'install_cmd': base.get('install_cmd', ''),
-        'use_case': base.get('use_case', ''),
-        'risk_explanation': base.get('risk_explanation', ''),
-        'security_rating': s.get('risk', base.get('safety_precheck', {}).get('rating', 'unknown')),
+        'summary': hi.get('summary', base.get('summary', s.get('why_include_now', ''))),
+        'install_cmd': hi.get('install_cmd', base.get('install_cmd', '')),
+        'use_case': hi.get('use_case', base.get('use_case', '')),
+        'risk_explanation': hi.get('risk_explanation', base.get('risk_explanation', '')),
+        'install_friction': hi.get('install_friction', ''),
+        'security_rating': hi.get('security_rating', s.get('risk', base.get('safety_precheck', {}).get('rating', 'unknown'))),
         'collection_status': 'recommended',
         'priority_score': s.get('priority_score'),
         'why_include_now': s.get('why_include_now'),
@@ -51,7 +56,7 @@ index = {
     'search_ready': True,
     'fields': [
         'id', 'slug', 'name', 'repo', 'source', 'category', 'stars', 'summary',
-        'install_cmd', 'use_case', 'risk_explanation',
+        'install_cmd', 'use_case', 'risk_explanation', 'install_friction',
         'security_rating', 'collection_status', 'priority_score', 'audit_status',
         'review_status', 'updated_at'
     ],

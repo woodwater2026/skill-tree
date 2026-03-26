@@ -1,6 +1,6 @@
 {
   "version": "index-v1",
-  "generated_at": "2026-03-25T22:05:00.226989+00:00",
+  "generated_at": "2026-03-26T17:23:34.995257+00:00",
   "source_catalog": "skills-catalog-v1.json",
   "source_shortlist": "skills-shortlist-v1.json",
   "count": 5,
@@ -17,6 +17,7 @@
     "install_cmd",
     "use_case",
     "risk_explanation",
+    "install_friction",
     "security_rating",
     "collection_status",
     "priority_score",
@@ -37,6 +38,7 @@
       "install_cmd": "",
       "use_case": "",
       "risk_explanation": "",
+      "install_friction": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 68,
@@ -45,7 +47,7 @@
       "safety_precheck": {},
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-25T22:05:00.226667+00:00"
+      "updated_at": "2026-03-26T17:23:34.994939+00:00"
     },
     {
       "id": "anthropics-skills",
@@ -59,6 +61,7 @@
       "install_cmd": "git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills",
       "use_case": "Use as a high-signal reference point for the current agent-skill ecosystem.",
       "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
+      "install_friction": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 68,
@@ -70,7 +73,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-25T22:05:00.226951+00:00"
+      "updated_at": "2026-03-26T17:23:34.995219+00:00"
     },
     {
       "id": "composiohq-awesome-claude-skills",
@@ -84,6 +87,7 @@
       "install_cmd": "claude --plugin-dir ./connect-apps-plugin",
       "use_case": "Find and compare skills quickly before deciding what to install or audit.",
       "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
+      "install_friction": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 63.4,
@@ -95,7 +99,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-25T22:05:00.226965+00:00"
+      "updated_at": "2026-03-26T17:23:34.995234+00:00"
     },
     {
       "id": "voltagent-awesome-openclaw-skills",
@@ -109,6 +113,7 @@
       "install_cmd": "OpenClaw is a locally-running AI assistant that operates directly on your machine. Skills extend its capabilities, allowing it to interact with external services, automate workflows, and perform specialized tasks. This collection helps you discover and install the right skills for your needs. It can also serve as a source of inspiration for OpenClaw use cases.",
       "use_case": "Find and compare skills quickly before deciding what to install or audit.",
       "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
+      "install_friction": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 57.5,
@@ -120,7 +125,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-25T22:05:00.226973+00:00"
+      "updated_at": "2026-03-26T17:23:34.995243+00:00"
     },
     {
       "id": "hesreallyhim-awesome-claude-code",
@@ -130,10 +135,11 @@
       "source": "https://github.com/hesreallyhim/awesome-claude-code",
       "category": "registry",
       "stars": 31478,
-      "summary": "Curated Claude Code skills / hooks / commands / plugins list",
+      "summary": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
       "install_cmd": "git clone https://github.com/hesreallyhim/awesome-claude-code.git ~/.claude/skills/awesome-claude-code",
-      "use_case": "Find and compare skills quickly before deciding what to install or audit.",
-      "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 47.5,
@@ -145,7 +151,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-25T22:05:00.226985+00:00"
+      "updated_at": "2026-03-26T17:23:34.995253+00:00"
     }
   ]
 }
