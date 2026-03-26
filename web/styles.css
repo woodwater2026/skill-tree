@@ -37,26 +37,30 @@ h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 56px); line-height: 1.02; max
 .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
 .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; min-width: 150px; }
 .stat strong { display: block; font-size: 24px; }
-.outcome-entry-wrap, .risk-explainer-wrap, .best-lists-wrap, .safe-start-wrap, .guides-wrap { padding: 16px 24px 0; }
-.outcome-entry-inner, .risk-explainer-inner, .best-lists-inner, .safe-start-inner, .guides-inner { max-width: 1200px; margin: 0 auto; }
+.capability-map-wrap, .outcome-entry-wrap, .risk-explainer-wrap, .best-lists-wrap, .safe-start-wrap, .guides-wrap { padding: 16px 24px 0; }
+.capability-map-inner, .outcome-entry-inner, .risk-explainer-inner, .best-lists-inner, .safe-start-inner, .guides-inner { max-width: 1200px; margin: 0 auto; }
 .category-strip { max-width: 1200px; margin: 16px auto 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .category-link, button.filter { border: 1px solid var(--border); background: #0d1430; color: var(--text); border-radius: 999px; padding: 8px 12px; cursor: pointer; }
 .category-link.active, button.filter.active { background: #23408c; border-color: #3e67d8; }
 .section-heading { display: flex; justify-content: space-between; gap: 20px; align-items: flex-end; margin-bottom: 14px; }
 .section-heading h2 { margin: 0; color: var(--text); font-size: 28px; }
 .section-copy { color: var(--muted); max-width: 560px; margin: 0; }
-.best-lists-grid, .guides-grid, .safe-start-grid, .risk-check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-.best-list-card, .guide-card, .safe-start-card, .risk-check-card { background: #0d1430; border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+.capability-map-grid, .best-lists-grid, .guides-grid, .safe-start-grid, .risk-check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.capability-card, .best-list-card, .guide-card, .safe-start-card, .risk-check-card { background: #0d1430; border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+.capability-card { cursor: pointer; transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease; }
+.capability-card:hover { transform: translateY(-1px); border-color: #3e67d8; box-shadow: 0 8px 18px rgba(0,0,0,.18); }
 .best-list-card.clickable { cursor: pointer; transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease; }
 .best-list-card.clickable:hover { transform: translateY(-1px); border-color: #3e67d8; box-shadow: 0 8px 18px rgba(0,0,0,.18); }
 .risk-check-card strong { display: block; margin-bottom: 8px; }
 .risk-check-card span { color: var(--muted); line-height: 1.5; }
 .best-list-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
-.best-list-head h3, .guide-card h3 { margin: 0; font-size: 18px; }
-.best-list-chip, .guide-rank { background: #1d2f5f; color: #c7d5ff; border-radius: 999px; padding: 6px 10px; font-size: 12px; white-space: nowrap; display: inline-flex; }
+.best-list-head h3, .guide-card h3, .capability-card h3 { margin: 0; font-size: 18px; }
+.best-list-chip, .guide-rank, .capability-chip { background: #1d2f5f; color: #c7d5ff; border-radius: 999px; padding: 6px 10px; font-size: 12px; white-space: nowrap; display: inline-flex; }
 .guide-rank { margin-bottom: 12px; }
-.best-list-audience, .best-list-intro, .best-list-sub, .guide-summary, .best-list-action { color: var(--muted); }
-.best-list-action { margin-top: 12px; font-weight: 600; color: var(--accent); }
+.best-list-audience, .best-list-intro, .best-list-sub, .guide-summary, .best-list-action, .capability-sub, .capability-risk, .capability-for { color: var(--muted); }
+.best-list-action, .capability-action { margin-top: 12px; font-weight: 600; color: var(--accent); }
+.capability-skills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.capability-skill { background: #091026; border: 1px solid var(--border); border-radius: 999px; padding: 6px 10px; font-size: 12px; color: #d9e4ff; }
 .best-list-items, .guide-points { margin: 14px 0 0; padding-left: 18px; }
 .best-list-items li, .guide-points li { margin-bottom: 10px; }
 .guide-meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }

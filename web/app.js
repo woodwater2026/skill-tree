@@ -550,6 +550,7 @@ function renderSafeStart() {
 
 function render() {
   renderFilters();
+  renderCapabilityMap();
   renderBestLists();
   renderTopGuides();
   renderSafeStart();
