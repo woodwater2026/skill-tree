@@ -191,10 +191,12 @@ function renderFilters() {
     .map((category) => `<button class="filter ${state.category === category ? "active" : ""}" data-kind="category" data-value="${category}">${labelCategory(category)}</button>`)
     .join("");
 
-  els.categoryNav.innerHTML = categories
-    .filter((category) => category !== "all")
-    .map((category) => `<button class="category-link ${state.category === category ? "active" : ""}" data-kind="category" data-value="${category}">${labelCategory(category)}</button>`)
-    .join("");
+  if (els.categoryNav) {
+    els.categoryNav.innerHTML = categories
+      .filter((category) => category !== "all")
+      .map((category) => `<button class="category-link ${state.category === category ? "active" : ""}" data-kind="category" data-value="${category}">${labelCategory(category)}</button>`)
+      .join("");
+  }
 
   document.querySelectorAll("button.filter, button.category-link").forEach((button) => {
     button.addEventListener("click", () => {
@@ -263,6 +265,77 @@ function renderGuideBody(item) {
 
 function renderCard(item) {
   const node = els.template.content.firstElementChild.cloneNode(true);
+
+  const installCodeEl = node.querySelector(".install-code");
+  const copyBtnEl = node.querySelector(".copy-btn");
+  const useCaseEl = node.querySelector(".use-case");
+  const riskExplanationEl = node.querySelector(".risk-explanation");
+  const humanWhatEl = node.querySelector(".human-what");
+  const humanSafeEl = node.querySelector(".human-safe");
+  const humanRiskEl = node.querySelector(".human-risk");
+  const guideBodyEl = node.querySelector(".guide-body");
+
+  if (!installCodeEl || !copyBtnEl || !useCaseEl || !riskExplanationEl || !humanWhatEl || !humanSafeEl || !humanRiskEl) {
+    node.innerHTML = `
+      <div class="card-top">
+        <div>
+          <div class="meta-row">
+            <span class="badge category">${labelCategory(item.category)}</span>
+            <span class="badge risk ${item.risk}">${item.risk}</span>
+          </div>
+          <h3 class="title">${item.name}</h3>
+          <p class="repo">${item.repo} · ${item.platform}</p>
+        </div>
+        <div class="score-box">
+          <div class="score-label">Security</div>
+          <div class="score">${item.securityScore == null ? "—" : item.securityScore}</div>
+        </div>
+      </div>
+      <p class="summary">${oneLineSummary(item)}</p>
+      <div class="facts">
+        <span class="fact">⭐ ${item.stars || 0}</span>
+        <span class="fact">Findings ${item.auditCount}</span>
+        <span class="fact">Rec ${item.recommendation}</span>
+      </div>
+      <section class="install-box">
+        <div class="section-label">Install</div>
+        <div class="install-row">
+          <code class="install-code">${item.installCommand}</code>
+          <button class="copy-btn" type="button">Copy</button>
+        </div>
+      </section>
+      <section class="user-value">
+        <div class="section-label">Best use case</div>
+        <p class="use-case">${item.useCaseText}</p>
+      </section>
+      <section class="user-value">
+        <div class="section-label">Why this risk score</div>
+        <p class="risk-explanation">${item.riskExplanationText}</p>
+      </section>
+      <section class="plain-summary">
+        <div class="section-label">Human audit summary</div>
+        <ul>
+          <li><strong>What it does:</strong> ${item.humanSummary.what}</li>
+          <li><strong>Is it safe?</strong> ${item.humanSummary.safe}</li>
+          <li><strong>Main risk:</strong> ${item.humanSummary.risk}</li>
+        </ul>
+      </section>
+      <details>
+        <summary>Audit details</summary>
+        <div class="audit">
+          <ul>${item.securitySummary.map((line) => `<li>${line}</li>`).join("")}</ul>
+        </div>
+      </details>
+      <details>
+        <summary>Quick guide</summary>
+        <div class="guide-body">${renderGuideBody(item)}</div>
+      </details>
+    `;
+    const fallbackBtn = node.querySelector('.copy-btn');
+    fallbackBtn?.addEventListener('click', () => copyInstallCommand(item.installCommand, fallbackBtn));
+    return node;
+  }
+
   node.querySelector(".category").textContent = labelCategory(item.category);
   const riskEl = node.querySelector(".risk");
   riskEl.textContent = item.risk;
@@ -278,16 +351,14 @@ function renderCard(item) {
     item.guide?.repo ? `<span class="fact">Guide ready</span>` : "",
   ].join("");
 
-  const installCode = node.querySelector(".install-code");
-  installCode.textContent = item.installCommand;
-  const copyBtn = node.querySelector(".copy-btn");
-  copyBtn.addEventListener("click", () => copyInstallCommand(item.installCommand, copyBtn));
+  installCodeEl.textContent = item.installCommand;
+  copyBtnEl.addEventListener("click", () => copyInstallCommand(item.installCommand, copyBtnEl));
 
-  node.querySelector(".use-case").textContent = item.useCaseText;
-  node.querySelector(".risk-explanation").textContent = item.riskExplanationText;
-  node.querySelector(".human-what").textContent = item.humanSummary.what;
-  node.querySelector(".human-safe").textContent = item.humanSummary.safe;
-  node.querySelector(".human-risk").textContent = item.humanSummary.risk;
+  useCaseEl.textContent = item.useCaseText;
+  riskExplanationEl.textContent = item.riskExplanationText;
+  humanWhatEl.textContent = item.humanSummary.what;
+  humanSafeEl.textContent = item.humanSummary.safe;
+  humanRiskEl.textContent = item.humanSummary.risk;
 
   node.querySelector(".audit").innerHTML = `
     <ul>
@@ -296,7 +367,7 @@ function renderCard(item) {
     ${item.findings.length ? `<p><strong>Top findings</strong></p><ul>${item.findings.map((finding) => `<li>[${finding.severity}] ${finding.title} — <code>${finding.path || "n/a"}:${finding.line || ""}</code></li>`).join("")}</ul>` : "<p>No detailed audit loaded yet.</p>"}
   `;
 
-  node.querySelector(".guide-body").innerHTML = renderGuideBody(item);
+  if (guideBodyEl) guideBodyEl.innerHTML = renderGuideBody(item);
   return node;
 }
 
