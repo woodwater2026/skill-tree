@@ -1,0 +1,384 @@
+{
+  "generated_at": "2026-03-28",
+  "count": 15,
+  "items": [
+    {
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "name": "Agent-Skills-for-Context-Engineering",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "stars": 14291,
+      "priority_score": 30.3,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; may require Python environment; may require MCP/server config; review permissions before broad use",
+      "summary": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems. Use when building, optimizing, or debugging agent systems that require effective context management.",
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "unattended_run": "supported",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "MCP",
+        "JSON",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: MCP, JSON, CLI"
+    },
+    {
+      "repo": "memodb-io/Acontext",
+      "name": "Acontext",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "stars": 3187,
+      "priority_score": 19.2,
+      "security_rating": "medium",
+      "install_cmd": "pip install acontext",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
+      "summary": "Agent Skills as a Memory Layer",
+      "source": "https://github.com/memodb-io/Acontext",
+      "unattended_run": "supported",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API, JSON, CLI"
+    },
+    {
+      "repo": "zippoxer/subtask",
+      "name": "subtask",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "stars": 320,
+      "priority_score": 16.3,
+      "security_rating": "medium",
+      "install_cmd": "brew install zippoxer/tap/subtask",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; review permissions before broad use",
+      "summary": "Claude Skill to do your tasks with subagents in Git worktrees",
+      "source": "https://github.com/zippoxer/subtask",
+      "unattended_run": "limited",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "governance_maturity": "medium",
+      "governance_rationale": "repository mentions multi-agent, delegation, or orchestration patterns; repository references schema, validation, or structured workflow controls; protocol/integration hints found: HTTP/API, CLI"
+    },
+    {
+      "repo": "yxf203/Awesome-Efficient-Agents",
+      "name": "Awesome-Efficient-Agents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "stars": 209,
+      "priority_score": 16.2,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/yxf203/Awesome-Efficient-Agents.git",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; may require Python environment; may require MCP/server config; review permissions before broad use",
+      "summary": "Survey and paper list on efficiency-guided LLM agents (memory, tool learning, planning).",
+      "source": "https://github.com/yxf203/Awesome-Efficient-Agents",
+      "unattended_run": "unknown",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API, CLI"
+    },
+    {
+      "repo": "hesreallyhim/awesome-claude-code",
+      "name": "awesome-claude-code",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "stars": 31586,
+      "priority_score": 47.6,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/hesreallyhim/awesome-claude-code.git ~/.claude/skills/awesome-claude-code",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
+      "summary": "A curated list of awesome skills, hooks, slash-commands, agent orchestrators, applications, and plugins for Claude Code by Anthropic",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code",
+      "unattended_run": "supported",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "MCP",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: MCP, CLI"
+    },
+    {
+      "repo": "kepano/obsidian-skills",
+      "name": "obsidian-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "stars": 16780,
+      "priority_score": 32.8,
+      "security_rating": "medium",
+      "install_cmd": "npx skills add git@github.com:kepano/obsidian-skills.git",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; review permissions before broad use",
+      "summary": "Agent skills for Obsidian. Teach your agent to use Markdown, Bases, JSON Canvas, and use the CLI.",
+      "source": "https://github.com/kepano/obsidian-skills",
+      "unattended_run": "limited",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "JSON",
+        "CLI"
+      ],
+      "governance_maturity": "medium",
+      "governance_rationale": "repository references schema, validation, or structured workflow controls; protocol/integration hints found: JSON, CLI"
+    },
+    {
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "name": "awesome-claude-code-subagents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "stars": 15002,
+      "priority_score": 31.0,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/VoltAgent/awesome-claude-code-subagents.git",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
+      "summary": "A collection of 100+ specialized Claude Code subagents covering a wide range of development use cases",
+      "source": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "unattended_run": "limited",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "HTTP/API"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API"
+    },
+    {
+      "repo": "serejaris/justdoit",
+      "name": "justdoit",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "stars": 30,
+      "priority_score": 28.0,
+      "security_rating": "low",
+      "install_cmd": "git clone https://github.com/serejaris/justdoit.git",
+      "use_case": "Use for high-intent agent workflows where task quality matters more than raw skill count.",
+      "risk_explanation": "Low risk from current metadata: mainly content, workflow guidance, or low-privilege integration surface.",
+      "install_friction": "low friction: mostly clone/install and read docs",
+      "summary": "Standalone Codex skill that turns vague tasks into an execution pack and asks before running",
+      "source": "https://github.com/serejaris/justdoit",
+      "unattended_run": "limited",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "unknown"
+      ],
+      "governance_maturity": "medium",
+      "governance_rationale": "repository references schema, validation, or structured workflow controls"
+    },
+    {
+      "repo": "marcosgalleterobbva/bitbucketdc-skill",
+      "name": "bitbucketdc-skill",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "stars": 3,
+      "priority_score": 28.0,
+      "security_rating": "low",
+      "install_cmd": "git clone https://github.com/marcosgalleterobbva/bitbucketdc-skill.git",
+      "use_case": "Use for high-intent agent workflows where task quality matters more than raw skill count.",
+      "risk_explanation": "Low risk from current metadata: mainly content, workflow guidance, or low-privilege integration surface.",
+      "install_friction": "needs credentials/auth setup; may require Python environment; may require MCP/server config",
+      "summary": "Codex skill for automating Bitbucket DataCenter tasks",
+      "source": "https://github.com/marcosgalleterobbva/bitbucketdc-skill",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API, JSON, CLI"
+    },
+    {
+      "repo": "OthmanAdi/planning-with-files",
+      "name": "planning-with-files",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "stars": 17047,
+      "priority_score": 25.0,
+      "security_rating": "medium",
+      "install_cmd": "npx skills add OthmanAdi/planning-with-files --skill planning-with-files -g",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; review permissions before broad use",
+      "summary": "Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition.",
+      "source": "https://github.com/OthmanAdi/planning-with-files",
+      "unattended_run": "unknown",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "JSON",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: JSON, CLI"
+    },
+    {
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "name": "claude-scientific-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "media-data",
+      "stars": 16071,
+      "priority_score": 20.1,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/K-Dense-AI/claude-scientific-skills.git",
+      "use_case": "Use when you need multi-step research, source gathering, or evidence-backed investigation workflows.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; may require Python environment; review permissions before broad use",
+      "summary": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
+      "unattended_run": "limited",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API, CLI"
+    },
+    {
+      "repo": "EverMind-AI/EverMemOS",
+      "name": "EverMemOS",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "stars": 3142,
+      "priority_score": 19.1,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/EverMind-AI/EverMemOS.git",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
+      "summary": "A memory OS that makes your OpenClaw agents more personal while saving tokens.",
+      "source": "https://github.com/EverMind-AI/EverMemOS",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "governance_maturity": "medium",
+      "governance_rationale": "repository references schema, validation, or structured workflow controls; protocol/integration hints found: HTTP/API, JSON, CLI"
+    },
+    {
+      "repo": "nidhinjs/prompt-master",
+      "name": "prompt-master",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "stars": 2217,
+      "priority_score": 18.2,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/nidhinjs/prompt-master.git ~/.claude/skills/prompt-master",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; review permissions before broad use",
+      "summary": "A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention",
+      "source": "https://github.com/nidhinjs/prompt-master",
+      "unattended_run": "supported",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API, CLI"
+    },
+    {
+      "repo": "CloudAI-X/claude-workflow-v2",
+      "name": "claude-workflow-v2",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "tooling",
+      "stars": 1301,
+      "priority_score": 17.3,
+      "security_rating": "medium",
+      "install_cmd": "npx skills add CloudAI-X/claude-workflow-v2",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
+      "summary": "Universal Claude Code workflow plugin with agents, skills, hooks, and commands",
+      "source": "https://github.com/CloudAI-X/claude-workflow-v2",
+      "unattended_run": "supported",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: HTTP/API, CLI"
+    },
+    {
+      "repo": "Prat011/awesome-llm-skills",
+      "name": "awesome-llm-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "stars": 1033,
+      "priority_score": 17.0,
+      "security_rating": "medium",
+      "install_cmd": "git clone https://github.com/Prat011/awesome-llm-skills.git ~/.claude/skills/awesome-llm-skills",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
+      "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; review permissions before broad use",
+      "summary": "A curated list of awesome LLM and AI Agent Skills, resources and tools for customising AI Agent workflows - that works with Claude Code, Codex, Gemini CLI and your custom AI Agents",
+      "source": "https://github.com/Prat011/awesome-llm-skills",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [
+        "MCP",
+        "HTTP/API",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository references governance, security, permissions, or audit controls; protocol/integration hints found: MCP, HTTP/API, CLI"
+    }
+  ]
+}

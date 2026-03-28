@@ -1,6 +1,6 @@
 {
   "version": "index-v1",
-  "generated_at": "2026-03-26T17:23:34.995257+00:00",
+  "generated_at": "2026-03-28T17:54:24.344430+00:00",
   "source_catalog": "skills-catalog-v1.json",
   "source_shortlist": "skills-shortlist-v1.json",
   "count": 5,
@@ -18,6 +18,11 @@
     "use_case",
     "risk_explanation",
     "install_friction",
+    "unattended_run",
+    "subagent_support",
+    "protocol_support",
+    "governance_maturity",
+    "governance_rationale",
     "security_rating",
     "collection_status",
     "priority_score",
@@ -39,6 +44,11 @@
       "use_case": "",
       "risk_explanation": "",
       "install_friction": "",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [],
+      "governance_maturity": "unknown",
+      "governance_rationale": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 68,
@@ -47,7 +57,7 @@
       "safety_precheck": {},
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-26T17:23:34.994939+00:00"
+      "updated_at": "2026-03-28T17:54:24.344134+00:00"
     },
     {
       "id": "anthropics-skills",
@@ -62,6 +72,11 @@
       "use_case": "Use as a high-signal reference point for the current agent-skill ecosystem.",
       "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "install_friction": "",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [],
+      "governance_maturity": "unknown",
+      "governance_rationale": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 68,
@@ -73,7 +88,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-26T17:23:34.995219+00:00"
+      "updated_at": "2026-03-28T17:54:24.344380+00:00"
     },
     {
       "id": "composiohq-awesome-claude-skills",
@@ -88,6 +103,11 @@
       "use_case": "Find and compare skills quickly before deciding what to install or audit.",
       "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "install_friction": "",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [],
+      "governance_maturity": "unknown",
+      "governance_rationale": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 63.4,
@@ -99,7 +119,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-26T17:23:34.995234+00:00"
+      "updated_at": "2026-03-28T17:54:24.344397+00:00"
     },
     {
       "id": "voltagent-awesome-openclaw-skills",
@@ -114,6 +134,11 @@
       "use_case": "Find and compare skills quickly before deciding what to install or audit.",
       "risk_explanation": "Medium risk: likely includes executable workflow logic, automation, or external tool interaction; review before broad promotion.",
       "install_friction": "",
+      "unattended_run": "unknown",
+      "subagent_support": "unknown",
+      "protocol_support": [],
+      "governance_maturity": "unknown",
+      "governance_rationale": "",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 57.5,
@@ -125,7 +150,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-26T17:23:34.995243+00:00"
+      "updated_at": "2026-03-28T17:54:24.344409+00:00"
     },
     {
       "id": "hesreallyhim-awesome-claude-code",
@@ -140,6 +165,14 @@
       "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
       "risk_explanation": "Medium risk: likely involves executable automation, external tools, or broader workflow authority; review setup and permissions first.",
       "install_friction": "needs credentials/auth setup; requires Node/npm tooling; may require Python environment; may require MCP/server config; may require Docker or local services; review permissions before broad use",
+      "unattended_run": "supported",
+      "subagent_support": "supported",
+      "protocol_support": [
+        "MCP",
+        "CLI"
+      ],
+      "governance_maturity": "high",
+      "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: MCP, CLI",
       "security_rating": "medium",
       "collection_status": "recommended",
       "priority_score": 47.5,
@@ -151,7 +184,7 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-26T17:23:34.995253+00:00"
+      "updated_at": "2026-03-28T17:54:24.344421+00:00"
     }
   ]
 }
