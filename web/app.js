@@ -43,58 +43,58 @@ const CATEGORY_LABELS = {
 
 const CAPABILITY_MAP = [
   {
-    slug: 'research',
-    title: 'Research',
-    blurb: 'Help an agent gather, structure, and retain useful context.',
-    audience: 'Researchers, analysts, PMs, technical investigators',
-    risk: 'Usually low to medium risk',
-    picks: ['claude-scientific-skills', 'obsidian-skills', 'planning-with-files'],
-    action: { type: 'query', value: 'research' },
-  },
-  {
-    slug: 'orchestration',
-    title: 'Orchestration',
-    blurb: 'Coordinate multi-step work instead of relying on one-shot prompts.',
-    audience: 'Operators, builders, multi-agent workflow designers',
-    risk: 'Usually medium risk',
-    picks: ['superpowers', 'claude-code-agents', 'AgentSys'],
-    action: { type: 'query', value: 'orchestration' },
-  },
-  {
-    slug: 'long-running-tasks',
-    title: 'Long-running Tasks',
-    blurb: 'Preserve plans, checkpoints, and state across longer jobs.',
-    audience: 'Users running long tasks, investigations, or overnight flows',
-    risk: 'Usually medium risk',
+    slug: 'long-running-support',
+    title: 'Long-running Task Support',
+    blurb: 'Keep plans, checkpoints, and progress alive across longer jobs.',
+    audience: 'Teams running investigations, batch work, and longer agent loops',
+    risk: 'Usually medium risk due to persistence and local writes',
     picks: ['planning-with-files', 'claude-tmux', 'AgentSys'],
     action: { type: 'query', value: 'long-running tasks' },
   },
   {
-    slug: 'code-review',
-    title: 'Code Review',
-    blurb: 'Inspect, critique, and improve code with safer review loops.',
-    audience: 'Engineering teams, reviewers, maintainers',
-    risk: 'Usually medium risk',
-    picks: ['superpowers', 'Trail of Bits Security Skills', 'claude-code-agents'],
-    action: { type: 'list', value: 'best-for-code-review' },
-  },
-  {
-    slug: 'security-audit',
-    title: 'Security Audit',
-    blurb: 'Surface security-relevant risk before install or deploy.',
-    audience: 'Security teams, infra owners, risk reviewers',
-    risk: 'Usually medium to high risk',
+    slug: 'governance-safety-review',
+    title: 'Governance / Safety / Review',
+    blurb: 'Add visibility, review, and control before automation becomes expensive.',
+    audience: 'Security teams, operators, and owners of high-blast-radius workflows',
+    risk: 'Usually medium to high risk because this layer touches power and policy',
     picks: ['Trail of Bits Security Skills', 'skill-scanner', 'parry'],
     action: { type: 'list', value: 'best-for-security' },
   },
   {
-    slug: 'devops-deployment',
-    title: 'DevOps & Deployment',
-    blurb: 'Manage infra, deployment, config, and operational workflows.',
-    audience: 'Platform, infra, and deployment-heavy teams',
-    risk: 'Usually medium to high risk',
-    picks: ['cc-devops-skills', 'compound-engineering-plugin', 'AgentSys'],
-    action: { type: 'list', value: 'best-for-devops' },
+    slug: 'subagent-orchestration',
+    title: 'Subagent Coordination / Orchestration',
+    blurb: 'Coordinate roles, tool chains, and multi-step flows instead of one-shot prompting.',
+    audience: 'Builders designing multi-agent or workflow-heavy systems',
+    risk: 'Usually medium risk due to wider automation breadth',
+    picks: ['superpowers', 'claude-code-agents', 'AgentSys'],
+    action: { type: 'query', value: 'orchestration' },
+  },
+  {
+    slug: 'context-protocol',
+    title: 'Context / Protocol Integration',
+    blurb: 'Connect the agent to the right context, memory, and external systems at the right time.',
+    audience: 'Users who need better context loading and protocol-aware workflows',
+    risk: 'Usually medium risk because integrations widen the surface area',
+    picks: ['obsidian-skills', 'planning-with-files', 'compound-engineering-plugin'],
+    action: { type: 'query', value: 'protocol context integration' },
+  },
+  {
+    slug: 'execution-tool-use',
+    title: 'Execution / Tool Use',
+    blurb: 'Make the agent actually do useful work across code, browser, docs, and data tasks.',
+    audience: 'Hands-on users who need direct execution leverage',
+    risk: 'Usually medium risk because execution layers touch real tools and files',
+    picks: ['superpowers', 'claude-scientific-skills', 'cc-devops-skills'],
+    action: { type: 'query', value: 'execution tool use' },
+  },
+  {
+    slug: 'knowledge-retention',
+    title: 'Knowledge / Output Retention',
+    blurb: 'Turn one-off agent work into notes, reports, memory, and reusable outputs.',
+    audience: 'Researchers, PMs, operators, and teams who need durable outputs',
+    risk: 'Usually low to medium risk',
+    picks: ['obsidian-skills', 'claude-scientific-skills', 'planning-with-files'],
+    action: { type: 'query', value: 'knowledge output retention' },
   },
 ];
 
@@ -208,6 +208,11 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       use_case: item.use_case || enriched.use_case,
       risk_explanation: item.risk_explanation || enriched.risk_explanation,
       install_friction: item.install_friction || enriched.install_friction,
+      unattended_run: item.unattended_run || enriched.unattended_run,
+      subagent_support: item.subagent_support || enriched.subagent_support,
+      protocol_support: item.protocol_support || enriched.protocol_support || [],
+      governance_maturity: item.governance_maturity || enriched.governance_maturity,
+      governance_rationale: item.governance_rationale || enriched.governance_rationale,
       one_line_summary: item.one_line_summary || enriched.one_line_summary,
       guide,
     };
@@ -372,6 +377,12 @@ function renderCard(item) {
         <p class="risk-explanation">${item.riskExplanationText}</p>
       </section>
       ${item.install_friction ? `<section class="user-value"><div class="section-label">Install friction</div><p class="risk-explanation">${item.install_friction}</p></section>` : ""}
+      ${(item.unattended_run || item.subagent_support || (item.protocol_support && item.protocol_support.length) || item.governance_maturity) ? `<section class="plain-summary"><div class="section-label">Governance & protocol fit</div><ul>
+        ${item.unattended_run ? `<li><strong>Unattended run:</strong> ${item.unattended_run}</li>` : ""}
+        ${item.subagent_support ? `<li><strong>Subagent support:</strong> ${item.subagent_support}</li>` : ""}
+        ${(item.protocol_support && item.protocol_support.length) ? `<li><strong>Protocol support:</strong> ${item.protocol_support.join(", ")}</li>` : ""}
+        ${item.governance_maturity ? `<li><strong>Governance maturity:</strong> ${item.governance_maturity}</li>` : ""}
+      </ul>${item.governance_rationale ? `<p class="risk-explanation">${item.governance_rationale}</p>` : ""}</section>` : ""}
       <section class="plain-summary">
         <div class="section-label">Human audit summary</div>
         <ul>
@@ -565,21 +576,27 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/high-intent-governance-fields-v1.json",
+    "../../agents/research/high-intent-governance-fields-v1.json",
     "../catalog/high-intent-skills-enriched-v1.json",
     "../../agents/research/high-intent-skills-enriched-v1.json",
     "../catalog/skills-catalog-top20-enriched.json",
     "../../agents/research/skills-catalog-top20-enriched.json",
   ];
+  const merged = new Map();
   for (const path of candidates) {
     try {
       const data = await loadJson(path);
       const items = Array.isArray(data.items) ? data.items : Array.isArray(data) ? data : [];
-      return new Map(items.map((item) => [item.slug || item.repo, item]));
+      for (const item of items) {
+        const key = item.slug || item.repo;
+        merged.set(key, { ...(merged.get(key) || {}), ...item });
+      }
     } catch {
       // ignore
     }
   }
-  return new Map();
+  return merged;
 }
 
 function normalizeBestLists(data) {
@@ -686,6 +703,17 @@ function applyPresetFilter(preset) {
     els.search.value = "";
     render();
     document.getElementById("best-lists")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+  if (preset === "workflow-stack") {
+    state.risk = "all";
+    state.category = "all";
+    state.auditedOnly = false;
+    state.activeRepos = null;
+    state.query = "";
+    els.search.value = "";
+    render();
+    document.getElementById("capability-map")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -761,6 +789,11 @@ async function main() {
         use_case: item.use_case || enriched.use_case,
         risk_explanation: item.risk_explanation || enriched.risk_explanation,
         install_friction: item.install_friction || enriched.install_friction,
+        unattended_run: item.unattended_run || enriched.unattended_run,
+        subagent_support: item.subagent_support || enriched.subagent_support,
+        protocol_support: item.protocol_support || enriched.protocol_support || [],
+        governance_maturity: item.governance_maturity || enriched.governance_maturity,
+        governance_rationale: item.governance_rationale || enriched.governance_rationale,
         one_line_summary: item.one_line_summary || enriched.one_line_summary || guide.one_line_summary,
         guide,
       };
