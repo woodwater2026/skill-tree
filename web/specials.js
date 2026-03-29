@@ -97,7 +97,7 @@ function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map()) {
 
 async function loadGuidePlan() {
   try {
-    const data = await loadJson('../catalog/top50-guides-gap-plan-v1.json');
+    const data = await loadJson('../../catalog/top50-guides-gap-plan-v1.json');
     return Array.isArray(data.items) ? data.items : [];
   } catch {
     return [];
@@ -106,7 +106,7 @@ async function loadGuidePlan() {
 
 async function loadP0Pack() {
   try {
-    const data = await loadJson('../catalog/top50-guides-p0-pack-v1.json');
+    const data = await loadJson('../../catalog/top50-guides-p0-pack-v1.json');
     return Array.isArray(data.items) ? data.items : [];
   } catch {
     return [];
@@ -117,7 +117,7 @@ async function main() {
   const key = getSpecialKey();
   const config = SPECIALS[key];
   const [index, guidePlan, p0Pack] = await Promise.all([
-    loadJson('../catalog/index.json'),
+    loadJson('../../catalog/index.json'),
     loadGuidePlan(),
     loadP0Pack(),
   ]);
