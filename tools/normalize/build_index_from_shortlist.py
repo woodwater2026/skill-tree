@@ -9,6 +9,7 @@ SHORTLIST = ROOT / 'agents/research/skills-shortlist-v1.json'
 HIGH_INTENT = ROOT / 'skill-tree/catalog/high-intent-skills-enriched-v1.json'
 GOVERNANCE = ROOT / 'skill-tree/catalog/high-intent-governance-fields-v1.json'
 WORKFLOW_RUNTIME = ROOT / 'skill-tree/catalog/workflow-runtime-fields-v1.json'
+SCHEDULED = ROOT / 'skill-tree/catalog/scheduled-workflow-candidates-v1.json'
 OUT = ROOT / 'skill-tree/catalog/index.json'
 
 catalog = json.loads(CATALOG_V1.read_text())
@@ -16,11 +17,13 @@ shortlist = json.loads(SHORTLIST.read_text())
 high_intent = json.loads(HIGH_INTENT.read_text()) if HIGH_INTENT.exists() else {'items': []}
 governance = json.loads(GOVERNANCE.read_text()) if GOVERNANCE.exists() else {'items': []}
 workflow_runtime = json.loads(WORKFLOW_RUNTIME.read_text()) if WORKFLOW_RUNTIME.exists() else {'items': []}
+scheduled = json.loads(SCHEDULED.read_text()) if SCHEDULED.exists() else {'items': []}
 
 catalog_items = {item['repo']: item for item in catalog['items']}
 high_intent_items = {item['repo']: item for item in high_intent.get('items', [])}
 governance_items = {item['repo']: item for item in governance.get('items', [])}
 workflow_runtime_items = {item['repo']: item for item in workflow_runtime.get('items', [])}
+scheduled_items = {item['repo']: item for item in scheduled.get('items', [])}
 
 def slugify(repo: str) -> str:
     return repo.lower().replace('_', '-').replace('/', '-')
@@ -120,6 +123,7 @@ for s in shortlist['items']:
     hi = high_intent_items.get(s['repo'], {})
     gov = governance_items.get(s['repo'], {})
     wr = workflow_runtime_items.get(s['repo'], {})
+    sched = scheduled_items.get(s['repo'], {})
     merged = {
         'id': slugify(s['repo']),
         'slug': slugify(s['repo']),
@@ -140,13 +144,14 @@ for s in shortlist['items']:
         'governance_rationale': gov.get('governance_rationale', ''),
         'security_rating': gov.get('security_rating', hi.get('security_rating', s.get('risk', base.get('safety_precheck', {}).get('rating', 'unknown')))),
         'workflow_stack_role': wr.get('workflow_stack_role', ''),
-        'supports_scheduled': wr.get('supports_scheduled', 'unknown'),
+        'supports_scheduled': sched.get('supports_scheduled', wr.get('supports_scheduled', 'unknown')),
         'supports_long_running': wr.get('supports_long_running', 'unknown'),
         'supports_multi_agent': wr.get('supports_multi_agent', 'unknown'),
         'supports_context_protocol': wr.get('supports_context_protocol', 'unknown'),
         'runtime_control_level': wr.get('runtime_control_level', 'unknown'),
         'workflow_specials': wr.get('workflow_specials', []),
-        'workflow_entry_points': wr.get('workflow_entry_points', []),
+        'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', [])),
+        'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', ''),
         'collection_status': 'recommended',
         'priority_score': s.get('priority_score'),
         'why_include_now': s.get('why_include_now'),
@@ -159,13 +164,14 @@ for s in shortlist['items']:
     merged.update(derive_workflow_fields(merged))
     merged.update({
         'workflow_stack_role': wr.get('workflow_stack_role', merged.get('workflow_stack_role', '')),
-        'supports_scheduled': wr.get('supports_scheduled', merged.get('supports_scheduled', 'unknown')),
+        'supports_scheduled': sched.get('supports_scheduled', wr.get('supports_scheduled', merged.get('supports_scheduled', 'unknown'))),
         'supports_long_running': wr.get('supports_long_running', merged.get('supports_long_running', 'unknown')),
         'supports_multi_agent': wr.get('supports_multi_agent', merged.get('supports_multi_agent', 'unknown')),
         'supports_context_protocol': wr.get('supports_context_protocol', merged.get('supports_context_protocol', 'unknown')),
         'runtime_control_level': wr.get('runtime_control_level', merged.get('runtime_control_level', 'unknown')),
         'workflow_specials': wr.get('workflow_specials', merged.get('workflow_specials', [])),
-        'workflow_entry_points': wr.get('workflow_entry_points', merged.get('workflow_entry_points', [])),
+        'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', merged.get('workflow_entry_points', []))),
+        'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', merged.get('scheduled_fit_explanation', '')),
     })
     items.append(merged)
 
@@ -181,7 +187,7 @@ index = {
         'install_cmd', 'use_case', 'risk_explanation', 'install_friction',
         'unattended_run', 'subagent_support', 'protocol_support', 'governance_maturity', 'governance_rationale',
         'workflow_stack_role', 'supports_scheduled', 'supports_long_running', 'supports_multi_agent', 'supports_context_protocol',
-        'workflow_specials', 'workflow_entry_points',
+        'workflow_specials', 'workflow_entry_points', 'scheduled_fit_explanation',
         'workflow_scenarios', 'runtime_control_level', 'runtime_control_surfaces',
         'workflow_entry_signals', 'workflow_decision_axes', 'workflow_risk_signals', 'site_surfaces',
         'security_rating', 'collection_status', 'priority_score', 'audit_status',

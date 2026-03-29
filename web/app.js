@@ -311,6 +311,7 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       supports_context_protocol: item.supports_context_protocol || enriched.supports_context_protocol,
       workflow_specials: item.workflow_specials || enriched.workflow_specials || [],
       workflow_entry_points: item.workflow_entry_points || enriched.workflow_entry_points || [],
+      scheduled_fit_explanation: item.scheduled_fit_explanation || enriched.scheduled_fit_explanation,
       workflow_scenarios: item.workflow_scenarios || enriched.workflow_scenarios || [],
       runtime_control_level: item.runtime_control_level || enriched.runtime_control_level,
       runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
@@ -509,6 +510,7 @@ function renderCard(item) {
         ${item.supports_long_running ? `<li><strong>Long-running support:</strong> ${item.supports_long_running}</li>` : ""}
         ${item.supports_multi_agent ? `<li><strong>Multi-agent support:</strong> ${item.supports_multi_agent}</li>` : ""}
         ${item.supports_context_protocol ? `<li><strong>Context protocol support:</strong> ${item.supports_context_protocol}</li>` : ""}
+        ${item.scheduled_fit_explanation ? `<li><strong>Scheduled fit:</strong> ${item.scheduled_fit_explanation}</li>` : ""}
         ${item.runtime_control_level ? `<li><strong>Runtime control:</strong> ${item.runtime_control_level}</li>` : ""}
         ${(item.runtime_control_surfaces && item.runtime_control_surfaces.length) ? `<li><strong>Control surfaces:</strong> ${item.runtime_control_surfaces.join(", ")}</li>` : ""}
         ${(item.workflow_entry_signals && item.workflow_entry_signals.length) ? `<li><strong>Enter when:</strong> ${item.workflow_entry_signals.slice(0, 2).join(" · ")}</li>` : ""}
@@ -735,6 +737,8 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/scheduled-workflow-candidates-v1.json",
+    "../../agents/research/scheduled-workflow-candidates-v1.json",
     "../catalog/workflow-runtime-fields-v1.json",
     "../catalog/high-intent-governance-fields-v1.json",
     "../../agents/research/high-intent-governance-fields-v1.json",
@@ -999,6 +1003,7 @@ async function main() {
         supports_context_protocol: item.supports_context_protocol || enriched.supports_context_protocol,
         workflow_specials: item.workflow_specials || enriched.workflow_specials || [],
         workflow_entry_points: item.workflow_entry_points || enriched.workflow_entry_points || [],
+        scheduled_fit_explanation: item.scheduled_fit_explanation || enriched.scheduled_fit_explanation,
         workflow_scenarios: item.workflow_scenarios || enriched.workflow_scenarios || [],
         runtime_control_level: item.runtime_control_level || enriched.runtime_control_level,
         runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
