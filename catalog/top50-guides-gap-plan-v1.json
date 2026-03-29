@@ -1,0 +1,985 @@
+{
+  "generated_at": "2026-03-29",
+  "top50_count": 50,
+  "covered_top10": 10,
+  "remaining_to_plan": 40,
+  "priority_batches": {
+    "P0": {
+      "count": 10,
+      "repos": [
+        "clawdbot-ai/awesome-openclaw-skills-zh",
+        "sanjeed5/awesome-cursor-rules-mdc",
+        "VoltAgent/awesome-claude-code-subagents",
+        "blader/humanizer",
+        "NeekChaw/RIPER-5",
+        "muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "Dimillian/Skills",
+        "LeoYeAI/openclaw-master-skills",
+        "flyeric0212/cursor-rules",
+        "instructa/ai-prompts"
+      ]
+    },
+    "P1": {
+      "count": 15,
+      "repos": [
+        "Dimillian/CodexSkillManager",
+        "RayFernando1337/llm-cursor-rules",
+        "am-will/codex-skills",
+        "VoltAgent/awesome-agent-skills",
+        "RoundTable02/tutor-skills",
+        "sundial-org/awesome-openclaw-skills",
+        "coleam00/second-brain-skills",
+        "jabrena/cursor-rules-java",
+        "LeastBit/Claude_skills_zh-CN",
+        "ArtemXTech/personal-os-skills",
+        "cassler/awesome-claude-code-setup",
+        "staruhub/ClaudeSkills",
+        "renocrypt/latex-arxiv-SKILL",
+        "comol/cursor_rules_1c",
+        "alchaincyf/cursor-rules-huasheng"
+      ]
+    },
+    "P2": {
+      "count": 15,
+      "repos": [
+        "jMerta/codex-skills",
+        "brookslybrand/react-router-cursor-rules",
+        "Wechat-ggGitHub/wechat-claude-code",
+        "Chat2AnyLLM/awesome-claude-skills",
+        "AIPMAndy/awesome-openclaw-skills-CN",
+        "pascalporedda/awesome-claude-code",
+        "aelf-hzz780/AI-bounty-skill",
+        "brunogama/ios-cursor-rules",
+        "proflead/codex-skills-library",
+        "EESJGong/scholar-skill",
+        "Rito-w/awesome-openclaw-skills-zh",
+        "pranav270-create/mdc_autogen",
+        "callmerio/RIPER-lite",
+        "tyrchen/rust-lib-template",
+        "AndreRatzenberger/cursor-rules"
+      ]
+    }
+  },
+  "items": [
+    {
+      "rank": 1,
+      "repo": "obra/superpowers",
+      "category": "general",
+      "stars": 109953,
+      "priority_score": 68,
+      "group": "General Utility",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 2,
+      "repo": "anthropics/skills",
+      "category": "general",
+      "stars": 101756,
+      "priority_score": 68,
+      "group": "General Utility",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 3,
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "category": "registry",
+      "stars": 47479,
+      "priority_score": 63.5,
+      "group": "Orchestration / Workflow",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 4,
+      "repo": "VoltAgent/awesome-openclaw-skills",
+      "category": "registry",
+      "stars": 41578,
+      "priority_score": 57.6,
+      "group": "Platform / Discovery",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 5,
+      "repo": "hesreallyhim/awesome-claude-code",
+      "category": "registry",
+      "stars": 31586,
+      "priority_score": 47.6,
+      "group": "Orchestration / Workflow",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 6,
+      "repo": "github/awesome-copilot",
+      "category": "registry",
+      "stars": 26810,
+      "priority_score": 42.8,
+      "group": "Platform / Discovery",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 7,
+      "repo": "googleworkspace/cli",
+      "category": "tooling",
+      "stars": 22356,
+      "priority_score": 38.4,
+      "group": "General Utility",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 8,
+      "repo": "BehiSecc/awesome-claude-skills",
+      "category": "registry",
+      "stars": 7836,
+      "priority_score": 35.8,
+      "group": "Platform / Discovery",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 9,
+      "repo": "kepano/obsidian-skills",
+      "category": "memory-knowledge",
+      "stars": 16780,
+      "priority_score": 32.8,
+      "group": "Research / Context",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 10,
+      "repo": "vercel-labs/agent-skills",
+      "category": "general",
+      "stars": 23752,
+      "priority_score": 31.8,
+      "group": "Orchestration / Workflow",
+      "status": "done_top10",
+      "missing_fields": [],
+      "recommended_next_step": "Already covered by Top 10 guide; reuse for site and expand only if UX needs shorter copy.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 11,
+      "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+      "category": "registry",
+      "stars": 3576,
+      "priority_score": 31.6,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 12,
+      "repo": "sanjeed5/awesome-cursor-rules-mdc",
+      "category": "registry",
+      "stars": 3408,
+      "priority_score": 31.4,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 13,
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "category": "registry",
+      "stars": 15002,
+      "priority_score": 31.0,
+      "group": "Orchestration / Workflow",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 14,
+      "repo": "blader/humanizer",
+      "category": "general",
+      "stars": 10879,
+      "priority_score": 30.9,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 15,
+      "repo": "NeekChaw/RIPER-5",
+      "category": "cross-agent",
+      "stars": 2564,
+      "priority_score": 30.6,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 16,
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "category": "memory-knowledge",
+      "stars": 14291,
+      "priority_score": 30.3,
+      "group": "Research / Context",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 17,
+      "repo": "Dimillian/Skills",
+      "category": "cross-agent",
+      "stars": 2332,
+      "priority_score": 30.3,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 18,
+      "repo": "LeoYeAI/openclaw-master-skills",
+      "category": "registry",
+      "stars": 2012,
+      "priority_score": 30.0,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 19,
+      "repo": "flyeric0212/cursor-rules",
+      "category": "cross-agent",
+      "stars": 1733,
+      "priority_score": 29.7,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 20,
+      "repo": "instructa/ai-prompts",
+      "category": "registry",
+      "stars": 1021,
+      "priority_score": 29.0,
+      "group": "Platform / Discovery",
+      "status": "partial_enriched",
+      "missing_fields": [
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Upgrade enriched metadata into full user guide next; highest-value remaining item.",
+      "priority_batch": "P0"
+    },
+    {
+      "rank": 21,
+      "repo": "Dimillian/CodexSkillManager",
+      "category": "cross-agent",
+      "stars": 953,
+      "priority_score": 29.0,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 22,
+      "repo": "RayFernando1337/llm-cursor-rules",
+      "category": "cross-agent",
+      "stars": 881,
+      "priority_score": 28.9,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 23,
+      "repo": "am-will/codex-skills",
+      "category": "cross-agent",
+      "stars": 814,
+      "priority_score": 28.8,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 24,
+      "repo": "VoltAgent/awesome-agent-skills",
+      "category": "registry",
+      "stars": 12665,
+      "priority_score": 28.7,
+      "group": "Orchestration / Workflow",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 25,
+      "repo": "RoundTable02/tutor-skills",
+      "category": "memory-knowledge",
+      "stars": 530,
+      "priority_score": 28.5,
+      "group": "Research / Context",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 26,
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "category": "registry",
+      "stars": 509,
+      "priority_score": 28.5,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 27,
+      "repo": "coleam00/second-brain-skills",
+      "category": "memory-knowledge",
+      "stars": 498,
+      "priority_score": 28.5,
+      "group": "Research / Context",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 28,
+      "repo": "jabrena/cursor-rules-java",
+      "category": "cross-agent",
+      "stars": 334,
+      "priority_score": 28.3,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 29,
+      "repo": "LeastBit/Claude_skills_zh-CN",
+      "category": "registry",
+      "stars": 283,
+      "priority_score": 28.3,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 30,
+      "repo": "ArtemXTech/personal-os-skills",
+      "category": "memory-knowledge",
+      "stars": 275,
+      "priority_score": 28.3,
+      "group": "Research / Context",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 31,
+      "repo": "cassler/awesome-claude-code-setup",
+      "category": "registry",
+      "stars": 260,
+      "priority_score": 28.3,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 32,
+      "repo": "staruhub/ClaudeSkills",
+      "category": "registry",
+      "stars": 251,
+      "priority_score": 28.3,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 33,
+      "repo": "renocrypt/latex-arxiv-SKILL",
+      "category": "cross-agent",
+      "stars": 217,
+      "priority_score": 28.2,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 34,
+      "repo": "comol/cursor_rules_1c",
+      "category": "cross-agent",
+      "stars": 199,
+      "priority_score": 28.2,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 35,
+      "repo": "alchaincyf/cursor-rules-huasheng",
+      "category": "cross-agent",
+      "stars": 135,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Batch after P0 set; good candidate for grouped guide writing.",
+      "priority_batch": "P1"
+    },
+    {
+      "rank": 36,
+      "repo": "jMerta/codex-skills",
+      "category": "registry",
+      "stars": 123,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 37,
+      "repo": "brookslybrand/react-router-cursor-rules",
+      "category": "cross-agent",
+      "stars": 118,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 38,
+      "repo": "Wechat-ggGitHub/wechat-claude-code",
+      "category": "registry",
+      "stars": 115,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 39,
+      "repo": "Chat2AnyLLM/awesome-claude-skills",
+      "category": "registry",
+      "stars": 98,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 40,
+      "repo": "AIPMAndy/awesome-openclaw-skills-CN",
+      "category": "registry",
+      "stars": 77,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 41,
+      "repo": "pascalporedda/awesome-claude-code",
+      "category": "registry",
+      "stars": 73,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 42,
+      "repo": "aelf-hzz780/AI-bounty-skill",
+      "category": "cross-agent",
+      "stars": 73,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 43,
+      "repo": "brunogama/ios-cursor-rules",
+      "category": "cross-agent",
+      "stars": 68,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 44,
+      "repo": "proflead/codex-skills-library",
+      "category": "cross-agent",
+      "stars": 67,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 45,
+      "repo": "EESJGong/scholar-skill",
+      "category": "memory-knowledge",
+      "stars": 61,
+      "priority_score": 28.1,
+      "group": "Research / Context",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 46,
+      "repo": "Rito-w/awesome-openclaw-skills-zh",
+      "category": "registry",
+      "stars": 56,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 47,
+      "repo": "pranav270-create/mdc_autogen",
+      "category": "cross-agent",
+      "stars": 56,
+      "priority_score": 28.1,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 48,
+      "repo": "callmerio/RIPER-lite",
+      "category": "cross-agent",
+      "stars": 47,
+      "priority_score": 28.0,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 49,
+      "repo": "tyrchen/rust-lib-template",
+      "category": "cross-agent",
+      "stars": 44,
+      "priority_score": 28.0,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    },
+    {
+      "rank": 50,
+      "repo": "AndreRatzenberger/cursor-rules",
+      "category": "cross-agent",
+      "stars": 43,
+      "priority_score": 28.0,
+      "group": "Platform / Discovery",
+      "status": "not_started",
+      "missing_fields": [
+        "install_cmd",
+        "use_case",
+        "risk_explanation",
+        "one_line_summary",
+        "fit_for",
+        "how_to_use",
+        "expected_outcome",
+        "main_risk narrative"
+      ],
+      "recommended_next_step": "Hold for later batch unless platform page specifically needs it.",
+      "priority_batch": "P2"
+    }
+  ]
+}

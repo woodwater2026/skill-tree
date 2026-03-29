@@ -73,12 +73,13 @@ function pickInstall(item) {
   return item.install_cmd || `/plugin install github:${item.repo}`;
 }
 
-function renderList(el, items) {
+function renderList(el, items, p0Repos = new Set()) {
   el.innerHTML = items.map((item) => `
     <article class="special-item">
       <div class="special-meta">
         <span class="special-chip">${item.workflow_stack_role || 'Workflow layer'}</span>
         <span class="special-chip muted">runtime ${item.runtime_control_level || 'unknown'}</span>
+        ${p0Repos.has(item.repo) ? '<span class="special-chip">P0 guide</span>' : ''}
       </div>
       <h3>${item.name}</h3>
       <p>${item.summary || item.use_case || ''}</p>
@@ -91,11 +92,26 @@ function renderList(el, items) {
   `).join('');
 }
 
+async function loadGuidePlan() {
+  try {
+    const data = await loadJson('../catalog/top50-guides-gap-plan-v1.json');
+    return Array.isArray(data.items) ? data.items : [];
+  } catch {
+    return [];
+  }
+}
+
 async function main() {
   const key = getSpecialKey();
   const config = SPECIALS[key];
-  const index = await loadJson('../catalog/index.json');
-  const items = (index.items || []).filter(config.filter);
+  const [index, guidePlan] = await Promise.all([
+    loadJson('../catalog/index.json'),
+    loadGuidePlan(),
+  ]);
+  const p0Repos = new Set(guidePlan.filter((item) => item.priority_batch === 'P0').map((item) => item.repo));
+  const items = (index.items || [])
+    .filter(config.filter)
+    .sort((a, b) => Number(p0Repos.has(b.repo)) - Number(p0Repos.has(a.repo)));
 
   document.getElementById('special-eyebrow').textContent = config.eyebrow;
   document.getElementById('special-title').textContent = config.title;
@@ -105,7 +121,7 @@ async function main() {
   document.getElementById('risk-list').innerHTML = config.risks.map((x) => `<li>${x}</li>`).join('');
   document.getElementById('stack-links').innerHTML = config.stackLinks.map((x) => `<span class="special-chip">${x}</span>`).join('');
   document.getElementById('special-count').textContent = `${items.length} matching skills in main index`;
-  renderList(document.getElementById('special-results'), items.slice(0, 8));
+  renderList(document.getElementById('special-results'), items.slice(0, 8), p0Repos);
 }
 
 main().catch((error) => {

@@ -8,6 +8,8 @@ const state = {
   bestLists: [],
   guides: [],
   guidesMap: new Map(),
+  guidePlan: [],
+  guidePlanMap: new Map(),
 };
 
 const els = {
@@ -23,6 +25,7 @@ const els = {
   bestLists: document.getElementById("best-lists-grid"),
   topGuides: document.getElementById("top-guides"),
   safeStart: document.getElementById("safe-start-grid"),
+  p0Guides: document.getElementById("p0-guides-grid"),
 };
 
 const CATEGORY_LABELS = {
@@ -610,6 +613,29 @@ function renderBestLists() {
   });
 }
 
+function renderP0Guides() {
+  if (!els.p0Guides) return;
+  const p0Repos = state.guidePlan.filter((item) => item.priority_batch === 'P0').slice(0, 6).map((item) => item.repo);
+  const p0Items = state.items.filter((item) => p0Repos.includes(item.repo));
+  els.p0Guides.innerHTML = p0Items.map((item) => {
+    const plan = state.guidePlanMap.get(item.repo);
+    return `
+      <article class="guide-card">
+        <h3>${item.name}</h3>
+        <p class="guide-summary">${oneLineSummary(item)}</p>
+        <div class="guide-meta">
+          <span class="fact">${item.platform}</span>
+          <span class="fact">${plan?.priority_batch || 'P0'}</span>
+        </div>
+        <ul class="guide-points">
+          <li><strong>Install:</strong> <code>${item.installCommand}</code></li>
+          <li><strong>Fit:</strong> ${item.useCaseText}</li>
+          <li><strong>Caution:</strong> ${item.riskExplanationText}</li>
+        </ul>
+      </article>`;
+  }).join('');
+}
+
 function renderTopGuides() {
   if (!els.topGuides) return;
   if (!state.guides.length) {
@@ -691,6 +717,7 @@ function render() {
   renderFilters();
   renderCapabilityMap();
   renderBestLists();
+  renderP0Guides();
   renderTopGuides();
   renderSafeStart();
   const items = getFilteredItems();
@@ -796,6 +823,22 @@ async function loadGuides() {
   return [];
 }
 
+async function loadGuidePlan() {
+  const candidates = [
+    "../catalog/top50-guides-gap-plan-v1.json",
+    "../../agents/research/top50-guides-gap-plan-v1.json",
+  ];
+  for (const path of candidates) {
+    try {
+      const data = await loadJson(path);
+      return Array.isArray(data.items) ? data.items : [];
+    } catch {
+      // ignore
+    }
+  }
+  return [];
+}
+
 function scrollToGrid() {
   document.getElementById("grid")?.scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -878,16 +921,19 @@ function applyCapabilityAction(capabilitySlug) {
 }
 
 async function main() {
-  const [catalog, auditIndex, enrichedMap, bestLists, guides] = await Promise.all([
+  const [catalog, auditIndex, enrichedMap, bestLists, guides, guidePlan] = await Promise.all([
     loadJson("../catalog/index.json").catch(() => loadJson("../catalog/skills-catalog-v1.json")),
     loadJson("../audits/index.json"),
     loadOptionalEnriched(),
     loadBestLists(),
     loadGuides(),
+    loadGuidePlan(),
   ]);
   state.bestLists = bestLists;
   state.guides = guides;
+  state.guidePlan = guidePlan;
   state.guidesMap = new Map(guides.map((item) => [item.repo, item]));
+  state.guidePlanMap = new Map(guidePlan.map((item) => [item.repo, item]));
   const auditItems = await Promise.all(auditIndex.items.map((slug) => loadJson(`../audits/${slug}.json`).catch(() => null)));
 
   if (catalog.version === "index-v1") {
