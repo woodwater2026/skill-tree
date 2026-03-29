@@ -131,19 +131,43 @@ async function loadP0Pack() {
   }
 }
 
+async function loadScheduledCandidates() {
+  try {
+    const data = await loadFirst([
+      '../../catalog/scheduled-workflow-candidates-v1.json',
+      '../catalog/scheduled-workflow-candidates-v1.json',
+    ]);
+    return Array.isArray(data.items) ? data.items : [];
+  } catch {
+    return [];
+  }
+}
+
 async function main() {
   const key = getSpecialKey();
   const config = SPECIALS[key];
-  const [index, guidePlan, p0Pack] = await Promise.all([
+  const [index, guidePlan, p0Pack, scheduledCandidates] = await Promise.all([
     loadFirst(['../../catalog/index.json', '../catalog/index.json']),
     loadGuidePlan(),
     loadP0Pack(),
+    loadScheduledCandidates(),
   ]);
   const p0Repos = new Set(guidePlan.filter((item) => item.priority_batch === 'P0').map((item) => item.repo));
   const p0PackMap = new Map(p0Pack.map((item) => [item.repo, item]));
-  const items = (index.items || [])
+  const mainIndexItems = (index.items || [])
     .filter(config.filter)
     .sort((a, b) => Number(p0Repos.has(b.repo)) - Number(p0Repos.has(a.repo)));
+  const fallbackItems = key === 'scheduled'
+    ? scheduledCandidates.map((item) => ({
+        ...item,
+        summary: item.one_line_summary || item.summary,
+        use_case: item.fit_for || item.use_case,
+        risk_explanation: item.main_risk || item.scheduled_fit_explanation || item.risk_explanation,
+        runtime_control_level: item.runtime_control_level || 'basic',
+        workflow_stack_role: item.workflow_stack_role || 'Scheduled workflow candidate',
+      }))
+    : [];
+  const items = mainIndexItems.length ? mainIndexItems : fallbackItems;
 
   document.getElementById('special-eyebrow').textContent = config.eyebrow;
   document.getElementById('special-title').textContent = config.title;
@@ -152,7 +176,16 @@ async function main() {
   document.getElementById('decision-axes').innerHTML = config.axes.map((x) => `<li>${x}</li>`).join('');
   document.getElementById('risk-list').innerHTML = config.risks.map((x) => `<li>${x}</li>`).join('');
   document.getElementById('stack-links').innerHTML = config.stackLinks.map((x) => `<span class="special-chip">${x}</span>`).join('');
-  document.getElementById('special-count').textContent = `${items.length} matching skills in main index`;
+  const countLabel = mainIndexItems.length
+    ? `${items.length} matching skills in main index`
+    : key === 'scheduled'
+      ? `${items.length} scheduled candidates shown while main index backfill catches up`
+      : `${items.length} matching skills in main index`;
+  document.getElementById('special-count').textContent = countLabel;
+  const introEl = document.getElementById('special-intro');
+  if (!mainIndexItems.length && key === 'scheduled') {
+    introEl.textContent = `${config.intro} Showing scheduled candidate backfill until the main index absorbs the new fields.`;
+  }
   renderList(document.getElementById('special-results'), items.slice(0, 8), p0Repos, p0PackMap);
 }
 

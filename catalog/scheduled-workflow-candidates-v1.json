@@ -1,0 +1,225 @@
+{
+  "generated_at": "2026-03-29",
+  "count": 12,
+  "items": [
+    {
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "category": "memory-knowledge",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "cron / scheduler trigger",
+        "background / long-running loop",
+        "CLI invocation",
+        "MCP-driven workflow"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "governance_maturity": "high",
+      "unattended_run": "supported"
+    },
+    {
+      "repo": "hesreallyhim/awesome-claude-code",
+      "category": "registry",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "cron / scheduler trigger",
+        "background / long-running loop",
+        "CLI invocation",
+        "MCP-driven workflow"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "governance_maturity": "high",
+      "unattended_run": "supported"
+    },
+    {
+      "repo": "nidhinjs/prompt-master",
+      "category": "memory-knowledge",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "cron / scheduler trigger",
+        "background / long-running loop",
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/nidhinjs/prompt-master",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "governance_maturity": "high",
+      "unattended_run": "supported"
+    },
+    {
+      "repo": "memodb-io/Acontext",
+      "category": "memory-knowledge",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "cron / scheduler trigger",
+        "background / long-running loop",
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/memodb-io/Acontext",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "governance_maturity": "high",
+      "unattended_run": "supported"
+    },
+    {
+      "repo": "CloudAI-X/claude-workflow-v2",
+      "category": "tooling",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "cron / scheduler trigger",
+        "background / long-running loop",
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/CloudAI-X/claude-workflow-v2",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "governance_maturity": "high",
+      "unattended_run": "supported"
+    },
+    {
+      "repo": "yxf203/Awesome-Efficient-Agents",
+      "category": "registry",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "background / long-running loop",
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/yxf203/Awesome-Efficient-Agents",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "governance_maturity": "high",
+      "unattended_run": "unknown"
+    },
+    {
+      "repo": "Prat011/awesome-llm-skills",
+      "category": "registry",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "CLI invocation",
+        "MCP-driven workflow"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/Prat011/awesome-llm-skills",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "governance_maturity": "high",
+      "unattended_run": "unknown"
+    },
+    {
+      "repo": "marcosgalleterobbva/bitbucketdc-skill",
+      "category": "cross-agent",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "low",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/marcosgalleterobbva/bitbucketdc-skill",
+      "use_case": "Use for high-intent agent workflows where task quality matters more than raw skill count.",
+      "governance_maturity": "high",
+      "unattended_run": "unknown"
+    },
+    {
+      "repo": "kepano/obsidian-skills",
+      "category": "memory-knowledge",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "background / long-running loop",
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/kepano/obsidian-skills",
+      "use_case": "Use when long-running tasks need stronger context retention, planning continuity, or knowledge reuse.",
+      "governance_maturity": "medium",
+      "unattended_run": "limited"
+    },
+    {
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "category": "registry",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "manual kickoff, then repeatable scheduled workflow"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "governance_maturity": "high",
+      "unattended_run": "limited"
+    },
+    {
+      "repo": "OthmanAdi/planning-with-files",
+      "category": "general",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/OthmanAdi/planning-with-files",
+      "use_case": "Use when one agent is not enough and you need orchestrated, multi-step, or delegated execution.",
+      "governance_maturity": "high",
+      "unattended_run": "unknown"
+    },
+    {
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "category": "media-data",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "security_rating": "medium",
+      "supports_scheduled": true,
+      "workflow_entry_points": [
+        "CLI invocation"
+      ],
+      "scheduled_fit_explanation": "Suitable for Scheduled page because it signals repeatable, automatable, or long-running workflow patterns rather than one-off prompt usage.",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
+      "use_case": "Use when you need multi-step research, source gathering, or evidence-backed investigation workflows.",
+      "governance_maturity": "high",
+      "unattended_run": "limited"
+    }
+  ]
+}
