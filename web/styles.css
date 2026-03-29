@@ -37,8 +37,8 @@ h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 56px); line-height: 1.02; max
 .stats { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
 .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; min-width: 150px; }
 .stat strong { display: block; font-size: 24px; }
-.capability-map-wrap, .outcome-entry-wrap, .risk-explainer-wrap, .best-lists-wrap, .safe-start-wrap, .guides-wrap { padding: 16px 24px 0; }
-.capability-map-inner, .outcome-entry-inner, .risk-explainer-inner, .best-lists-inner, .safe-start-inner, .guides-inner { max-width: 1200px; margin: 0 auto; }
+.capability-map-wrap, .specials-wrap, .outcome-entry-wrap, .risk-explainer-wrap, .best-lists-wrap, .safe-start-wrap, .guides-wrap { padding: 16px 24px 0; }
+.capability-map-inner, .specials-inner, .outcome-entry-inner, .risk-explainer-inner, .best-lists-inner, .safe-start-inner, .guides-inner { max-width: 1200px; margin: 0 auto; }
 .category-strip { max-width: 1200px; margin: 16px auto 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .category-link, button.filter { border: 1px solid var(--border); background: #0d1430; color: var(--text); border-radius: 999px; padding: 8px 12px; cursor: pointer; }
 .category-link.active, button.filter.active { background: #23408c; border-color: #3e67d8; }
