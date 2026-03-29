@@ -1,6 +1,6 @@
 {
   "version": "index-v1",
-  "generated_at": "2026-03-28T17:54:24.344430+00:00",
+  "generated_at": "2026-03-29T17:31:57.178907+00:00",
   "source_catalog": "skills-catalog-v1.json",
   "source_shortlist": "skills-shortlist-v1.json",
   "count": 5,
@@ -23,6 +23,20 @@
     "protocol_support",
     "governance_maturity",
     "governance_rationale",
+    "workflow_stack_role",
+    "supports_scheduled",
+    "supports_long_running",
+    "supports_multi_agent",
+    "supports_context_protocol",
+    "workflow_specials",
+    "workflow_entry_points",
+    "workflow_scenarios",
+    "runtime_control_level",
+    "runtime_control_surfaces",
+    "workflow_entry_signals",
+    "workflow_decision_axes",
+    "workflow_risk_signals",
+    "site_surfaces",
     "security_rating",
     "collection_status",
     "priority_score",
@@ -50,6 +64,14 @@
       "governance_maturity": "unknown",
       "governance_rationale": "",
       "security_rating": "medium",
+      "workflow_stack_role": "",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "unknown",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "unknown",
+      "runtime_control_level": "unknown",
+      "workflow_specials": [],
+      "workflow_entry_points": [],
       "collection_status": "recommended",
       "priority_score": 68,
       "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
@@ -57,7 +79,17 @@
       "safety_precheck": {},
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-28T17:54:24.344134+00:00"
+      "updated_at": "2026-03-29T17:31:57.178513+00:00",
+      "workflow_scenarios": [],
+      "runtime_control_surfaces": [],
+      "workflow_entry_signals": [],
+      "workflow_decision_axes": [],
+      "workflow_risk_signals": [
+        "governance depth is unclear, so runtime controls may need manual review"
+      ],
+      "site_surfaces": [
+        "catalog"
+      ]
     },
     {
       "id": "anthropics-skills",
@@ -78,6 +110,18 @@
       "governance_maturity": "unknown",
       "governance_rationale": "",
       "security_rating": "medium",
+      "workflow_stack_role": "Context / Protocol Integration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "medium",
+      "workflow_specials": [
+        "context-protocol"
+      ],
+      "workflow_entry_points": [
+        "Context / Protocol Integration"
+      ],
       "collection_status": "recommended",
       "priority_score": 68,
       "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
@@ -88,7 +132,17 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-28T17:54:24.344380+00:00"
+      "updated_at": "2026-03-29T17:31:57.178806+00:00",
+      "workflow_scenarios": [],
+      "runtime_control_surfaces": [],
+      "workflow_entry_signals": [],
+      "workflow_decision_axes": [],
+      "workflow_risk_signals": [
+        "governance depth is unclear, so runtime controls may need manual review"
+      ],
+      "site_surfaces": [
+        "catalog"
+      ]
     },
     {
       "id": "composiohq-awesome-claude-skills",
@@ -109,6 +163,14 @@
       "governance_maturity": "unknown",
       "governance_rationale": "",
       "security_rating": "medium",
+      "workflow_stack_role": "",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "unknown",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "unknown",
+      "runtime_control_level": "unknown",
+      "workflow_specials": [],
+      "workflow_entry_points": [],
       "collection_status": "recommended",
       "priority_score": 63.4,
       "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
@@ -119,7 +181,17 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-28T17:54:24.344397+00:00"
+      "updated_at": "2026-03-29T17:31:57.178840+00:00",
+      "workflow_scenarios": [],
+      "runtime_control_surfaces": [],
+      "workflow_entry_signals": [],
+      "workflow_decision_axes": [],
+      "workflow_risk_signals": [
+        "governance depth is unclear, so runtime controls may need manual review"
+      ],
+      "site_surfaces": [
+        "catalog"
+      ]
     },
     {
       "id": "voltagent-awesome-openclaw-skills",
@@ -140,6 +212,14 @@
       "governance_maturity": "unknown",
       "governance_rationale": "",
       "security_rating": "medium",
+      "workflow_stack_role": "",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "unknown",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "unknown",
+      "runtime_control_level": "unknown",
+      "workflow_specials": [],
+      "workflow_entry_points": [],
       "collection_status": "recommended",
       "priority_score": 57.5,
       "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
@@ -150,7 +230,17 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-28T17:54:24.344409+00:00"
+      "updated_at": "2026-03-29T17:31:57.178865+00:00",
+      "workflow_scenarios": [],
+      "runtime_control_surfaces": [],
+      "workflow_entry_signals": [],
+      "workflow_decision_axes": [],
+      "workflow_risk_signals": [
+        "governance depth is unclear, so runtime controls may need manual review"
+      ],
+      "site_surfaces": [
+        "catalog"
+      ]
     },
     {
       "id": "hesreallyhim-awesome-claude-code",
@@ -174,6 +264,14 @@
       "governance_maturity": "high",
       "governance_rationale": "repository signals support for scheduled/background or long-running workflows; repository mentions multi-agent, delegation, or orchestration patterns; repository references governance, security, permissions, or audit controls; protocol/integration hints found: MCP, CLI",
       "security_rating": "medium",
+      "workflow_stack_role": "",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "unknown",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "unknown",
+      "runtime_control_level": "advanced",
+      "workflow_specials": [],
+      "workflow_entry_points": [],
       "collection_status": "recommended",
       "priority_score": 47.5,
       "why_include_now": "Strong ecosystem signal, clear skill identity, and good value as an index anchor for the first Skill Tree library.",
@@ -184,7 +282,43 @@
       },
       "audit_status": "shortlisted",
       "review_status": "pending_repo_index_integration",
-      "updated_at": "2026-03-28T17:54:24.344421+00:00"
+      "updated_at": "2026-03-29T17:31:57.178888+00:00",
+      "workflow_scenarios": [
+        "scheduled",
+        "long-running",
+        "multi-agent",
+        "context-protocol"
+      ],
+      "runtime_control_surfaces": [
+        "background-execution",
+        "delegation",
+        "protocol-bridge",
+        "governance-controls"
+      ],
+      "workflow_entry_signals": [
+        "choose when work must run on a schedule or without a person watching every step",
+        "choose when the job spans multiple checkpoints, retries, or context handoffs",
+        "choose when one agent is not enough and you need delegation or orchestration",
+        "choose when the agent must load external context or connect through MCP/API/CLI bridges"
+      ],
+      "workflow_decision_axes": [
+        "operator involvement required",
+        "setup friction and local services",
+        "integration surface and protocol compatibility",
+        "coordination complexity across agents",
+        "governance depth and approval controls"
+      ],
+      "workflow_risk_signals": [
+        "unattended execution can amplify mistakes before a human notices",
+        "delegation broadens blast radius and makes failures harder to trace",
+        "protocol bridges widen the integration and credential surface area"
+      ],
+      "site_surfaces": [
+        "catalog",
+        "filters",
+        "runtime-control",
+        "specials"
+      ]
     }
   ]
 }

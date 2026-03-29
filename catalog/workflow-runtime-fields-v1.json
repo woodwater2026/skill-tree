@@ -1,0 +1,176 @@
+{
+  "generated_at": "2026-03-29T17:35:00Z",
+  "count": 15,
+  "derived_from": [
+    "catalog/high-intent-governance-fields-v1.json",
+    "agents/product/skill-tree-workflow-stack-map-v1.md",
+    "agents/product/workflow-stack-specials-v1.md"
+  ],
+  "items": [
+    {
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "workflow_stack_role": "Subagent Coordination / Orchestration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "high",
+      "workflow_specials": ["long-running", "multi-agent", "context-protocol"],
+      "workflow_entry_points": ["Long-running Task Support", "Subagent Coordination / Orchestration", "Context / Protocol Integration"]
+    },
+    {
+      "repo": "memodb-io/Acontext",
+      "workflow_stack_role": "Long-running Task Support",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "high",
+      "workflow_specials": ["long-running", "context-protocol"],
+      "workflow_entry_points": ["Long-running Task Support", "Context / Protocol Integration"]
+    },
+    {
+      "repo": "zippoxer/subtask",
+      "workflow_stack_role": "Subagent Coordination / Orchestration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "limited",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["multi-agent", "long-running"],
+      "workflow_entry_points": ["Subagent Coordination / Orchestration", "Long-running Task Support"]
+    },
+    {
+      "repo": "anthropics/skills",
+      "workflow_stack_role": "Context / Protocol Integration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["context-protocol"],
+      "workflow_entry_points": ["Context / Protocol Integration"]
+    },
+    {
+      "repo": "vercel-labs/agent-skills",
+      "workflow_stack_role": "Execution / Tool Use",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["context-protocol"],
+      "workflow_entry_points": ["Execution / Tool Use", "Context / Protocol Integration"]
+    },
+    {
+      "repo": "planner-tools/planning-with-files",
+      "workflow_stack_role": "Long-running Task Support",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "limited",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["long-running"],
+      "workflow_entry_points": ["Long-running Task Support"]
+    },
+    {
+      "repo": "OpenBMB/AgentVerse",
+      "workflow_stack_role": "Subagent Coordination / Orchestration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "limited",
+      "runtime_control_level": "high",
+      "workflow_specials": ["multi-agent", "long-running"],
+      "workflow_entry_points": ["Subagent Coordination / Orchestration", "Long-running Task Support"]
+    },
+    {
+      "repo": "microsoft/autogen",
+      "workflow_stack_role": "Subagent Coordination / Orchestration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "high",
+      "workflow_specials": ["multi-agent", "long-running", "context-protocol"],
+      "workflow_entry_points": ["Subagent Coordination / Orchestration", "Long-running Task Support", "Context / Protocol Integration"]
+    },
+    {
+      "repo": "langchain-ai/langgraph",
+      "workflow_stack_role": "Long-running Task Support",
+      "supports_scheduled": "supported",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "limited",
+      "runtime_control_level": "high",
+      "workflow_specials": ["scheduled", "long-running", "multi-agent"],
+      "workflow_entry_points": ["Long-running Task Support", "Subagent Coordination / Orchestration"]
+    },
+    {
+      "repo": "crewAIInc/crewAI",
+      "workflow_stack_role": "Subagent Coordination / Orchestration",
+      "supports_scheduled": "limited",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "limited",
+      "runtime_control_level": "high",
+      "workflow_specials": ["scheduled", "long-running", "multi-agent"],
+      "workflow_entry_points": ["Subagent Coordination / Orchestration", "Long-running Task Support"]
+    },
+    {
+      "repo": "langchain-ai/open_deep_research",
+      "workflow_stack_role": "Long-running Task Support",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "limited",
+      "supports_context_protocol": "limited",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["long-running"],
+      "workflow_entry_points": ["Long-running Task Support"]
+    },
+    {
+      "repo": "lastmile-ai/mcp-agent",
+      "workflow_stack_role": "Context / Protocol Integration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "high",
+      "workflow_specials": ["multi-agent", "context-protocol"],
+      "workflow_entry_points": ["Context / Protocol Integration", "Subagent Coordination / Orchestration"]
+    },
+    {
+      "repo": "mastra-ai/mastra",
+      "workflow_stack_role": "Long-running Task Support",
+      "supports_scheduled": "supported",
+      "supports_long_running": "supported",
+      "supports_multi_agent": "limited",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "high",
+      "workflow_specials": ["scheduled", "long-running", "context-protocol"],
+      "workflow_entry_points": ["Long-running Task Support", "Context / Protocol Integration"]
+    },
+    {
+      "repo": "openai/openai-agents-python",
+      "workflow_stack_role": "Execution / Tool Use",
+      "supports_scheduled": "limited",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "supported",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["multi-agent", "context-protocol"],
+      "workflow_entry_points": ["Execution / Tool Use", "Subagent Coordination / Orchestration", "Context / Protocol Integration"]
+    },
+    {
+      "repo": "langchain-ai/langchain-mcp-adapters",
+      "workflow_stack_role": "Context / Protocol Integration",
+      "supports_scheduled": "unknown",
+      "supports_long_running": "limited",
+      "supports_multi_agent": "unknown",
+      "supports_context_protocol": "supported",
+      "runtime_control_level": "medium",
+      "workflow_specials": ["context-protocol"],
+      "workflow_entry_points": ["Context / Protocol Integration"]
+    }
+  ]
+}

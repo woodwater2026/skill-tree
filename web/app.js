@@ -178,6 +178,92 @@ function humanAuditSummary(item) {
   };
 }
 
+function deriveWorkflowMetadata(item) {
+  const workflowScenarios = Array.isArray(item.workflow_scenarios) ? [...item.workflow_scenarios] : [];
+  const unattended = item.unattended_run || "unknown";
+  const subagent = item.subagent_support || "unknown";
+  const protocolSupport = Array.isArray(item.protocol_support) ? item.protocol_support : [];
+  const rationale = (item.governance_rationale || "").toLowerCase();
+  const useCaseText = (item.use_case || "").toLowerCase();
+
+  if (!workflowScenarios.length) {
+    if (["supported", "limited"].includes(unattended) || rationale.includes("scheduled") || rationale.includes("background")) {
+      workflowScenarios.push("scheduled");
+    }
+    if (unattended === "supported" || rationale.includes("long-running") || useCaseText.includes("planning continuity")) {
+      workflowScenarios.push("long-running");
+    }
+    if (subagent === "supported" || rationale.includes("multi-agent") || rationale.includes("delegation") || rationale.includes("orchestration")) {
+      workflowScenarios.push("multi-agent");
+    }
+    if (protocolSupport.length || rationale.includes("protocol") || rationale.includes("mcp")) {
+      workflowScenarios.push("context-protocol");
+    }
+  }
+
+  let runtimeControlLevel = item.runtime_control_level || "none";
+  if (!item.runtime_control_level) {
+    runtimeControlLevel = (["supported", "limited"].includes(unattended) || subagent === "supported" || protocolSupport.length) ? "basic" : "none";
+    if (unattended === "supported" && ["medium", "high"].includes(item.governance_maturity) && (subagent === "supported" || protocolSupport.length)) {
+      runtimeControlLevel = "advanced";
+    }
+    if (unattended === "unknown" && subagent === "unknown" && !protocolSupport.length) {
+      runtimeControlLevel = "unknown";
+    }
+  }
+
+  const runtimeControlSurfaces = Array.isArray(item.runtime_control_surfaces) ? item.runtime_control_surfaces : [];
+  if (!runtimeControlSurfaces.length) {
+    if (["supported", "limited"].includes(unattended)) runtimeControlSurfaces.push("background-execution");
+    if (subagent === "supported") runtimeControlSurfaces.push("delegation");
+    if (protocolSupport.length) runtimeControlSurfaces.push("protocol-bridge");
+    if (["medium", "high"].includes(item.governance_maturity)) runtimeControlSurfaces.push("governance-controls");
+  }
+
+  const workflowEntrySignals = Array.isArray(item.workflow_entry_signals) ? item.workflow_entry_signals : [];
+  if (!workflowEntrySignals.length) {
+    if (workflowScenarios.includes("scheduled")) workflowEntrySignals.push("choose when work must run on a schedule or without a person watching every step");
+    if (workflowScenarios.includes("long-running")) workflowEntrySignals.push("choose when the job spans multiple checkpoints, retries, or context handoffs");
+    if (workflowScenarios.includes("multi-agent")) workflowEntrySignals.push("choose when one agent is not enough and you need delegation or orchestration");
+    if (workflowScenarios.includes("context-protocol")) workflowEntrySignals.push("choose when the agent must load external context or connect through MCP/API/CLI bridges");
+  }
+
+  const workflowDecisionAxes = Array.isArray(item.workflow_decision_axes) ? item.workflow_decision_axes : [];
+  if (!workflowDecisionAxes.length) {
+    if (["supported", "limited"].includes(unattended)) workflowDecisionAxes.push("operator involvement required");
+    if (item.install_friction) workflowDecisionAxes.push("setup friction and local services");
+    if (protocolSupport.length) workflowDecisionAxes.push("integration surface and protocol compatibility");
+    if (subagent === "supported") workflowDecisionAxes.push("coordination complexity across agents");
+    if (["medium", "high"].includes(item.governance_maturity)) workflowDecisionAxes.push("governance depth and approval controls");
+  }
+
+  const workflowRiskSignals = Array.isArray(item.workflow_risk_signals) ? item.workflow_risk_signals : [];
+  if (!workflowRiskSignals.length) {
+    if (unattended === "supported") workflowRiskSignals.push("unattended execution can amplify mistakes before a human notices");
+    else if (unattended === "limited") workflowRiskSignals.push("partially unattended flows still need explicit checkpoints and fallbacks");
+    if (subagent === "supported") workflowRiskSignals.push("delegation broadens blast radius and makes failures harder to trace");
+    if (protocolSupport.length) workflowRiskSignals.push("protocol bridges widen the integration and credential surface area");
+    if (["unknown", "low"].includes(item.governance_maturity || "unknown")) workflowRiskSignals.push("governance depth is unclear, so runtime controls may need manual review");
+  }
+
+  const siteSurfaces = Array.isArray(item.site_surfaces) ? item.site_surfaces : [];
+  if (!siteSurfaces.length) {
+    siteSurfaces.push("catalog");
+    if (workflowScenarios.length) siteSurfaces.push("specials", "filters");
+    if (["basic", "advanced"].includes(runtimeControlLevel)) siteSurfaces.push("runtime-control");
+  }
+
+  return {
+    workflow_scenarios: [...new Set(workflowScenarios)],
+    runtime_control_level: runtimeControlLevel,
+    runtime_control_surfaces: [...new Set(runtimeControlSurfaces)],
+    workflow_entry_signals: [...new Set(workflowEntrySignals)],
+    workflow_decision_axes: [...new Set(workflowDecisionAxes)],
+    workflow_risk_signals: [...new Set(workflowRiskSignals)],
+    site_surfaces: [...new Set(siteSurfaces)],
+  };
+}
+
 function mergeData(catalog, audits, enrichedMap = new Map()) {
   const auditMap = new Map(audits.map((item) => [item.slug, item]));
   return catalog.items.map((item) => {
@@ -213,15 +299,34 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       protocol_support: item.protocol_support || enriched.protocol_support || [],
       governance_maturity: item.governance_maturity || enriched.governance_maturity,
       governance_rationale: item.governance_rationale || enriched.governance_rationale,
+      workflow_stack_role: item.workflow_stack_role || enriched.workflow_stack_role,
+      supports_scheduled: item.supports_scheduled || enriched.supports_scheduled,
+      supports_long_running: item.supports_long_running || enriched.supports_long_running,
+      supports_multi_agent: item.supports_multi_agent || enriched.supports_multi_agent,
+      supports_context_protocol: item.supports_context_protocol || enriched.supports_context_protocol,
+      workflow_specials: item.workflow_specials || enriched.workflow_specials || [],
+      workflow_entry_points: item.workflow_entry_points || enriched.workflow_entry_points || [],
+      workflow_scenarios: item.workflow_scenarios || enriched.workflow_scenarios || [],
+      runtime_control_level: item.runtime_control_level || enriched.runtime_control_level,
+      runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
+      workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
+      workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
+      workflow_risk_signals: item.workflow_risk_signals || enriched.workflow_risk_signals || [],
+      site_surfaces: item.site_surfaces || enriched.site_surfaces || [],
       one_line_summary: item.one_line_summary || enriched.one_line_summary,
       guide,
     };
-    return {
+    const workflow = deriveWorkflowMetadata(base);
+    const merged = {
       ...base,
-      installCommand: installCommand(base),
-      useCaseText: useCase(base),
-      riskExplanationText: riskExplanation(base),
-      humanSummary: humanAuditSummary(base),
+      ...workflow,
+    };
+    return {
+      ...merged,
+      installCommand: installCommand(merged),
+      useCaseText: useCase(merged),
+      riskExplanationText: riskExplanation(merged),
+      humanSummary: humanAuditSummary(merged),
     };
   });
 }
@@ -288,6 +393,13 @@ function getFilteredItems() {
           item.useCaseText,
           item.riskExplanationText,
           item.one_line_summary,
+          (item.workflow_scenarios || []).join(" "),
+          item.runtime_control_level,
+          (item.runtime_control_surfaces || []).join(" "),
+          (item.workflow_entry_signals || []).join(" "),
+          (item.workflow_decision_axes || []).join(" "),
+          (item.workflow_risk_signals || []).join(" "),
+          (item.site_surfaces || []).join(" "),
           guideText,
         ]
           .join(" ")
@@ -383,6 +495,22 @@ function renderCard(item) {
         ${(item.protocol_support && item.protocol_support.length) ? `<li><strong>Protocol support:</strong> ${item.protocol_support.join(", ")}</li>` : ""}
         ${item.governance_maturity ? `<li><strong>Governance maturity:</strong> ${item.governance_maturity}</li>` : ""}
       </ul>${item.governance_rationale ? `<p class="risk-explanation">${item.governance_rationale}</p>` : ""}</section>` : ""}
+      ${((item.workflow_scenarios && item.workflow_scenarios.length) || item.runtime_control_level || item.workflow_stack_role || item.workflow_specials?.length) ? `<section class="plain-summary"><div class="section-label">Workflow & runtime fit</div><ul>
+        ${item.workflow_stack_role ? `<li><strong>Workflow stack role:</strong> ${item.workflow_stack_role}</li>` : ""}
+        ${(item.workflow_specials && item.workflow_specials.length) ? `<li><strong>Special pages:</strong> ${item.workflow_specials.join(", ")}</li>` : ""}
+        ${(item.workflow_entry_points && item.workflow_entry_points.length) ? `<li><strong>Entry points:</strong> ${item.workflow_entry_points.join(", ")}</li>` : ""}
+        ${(item.workflow_scenarios && item.workflow_scenarios.length) ? `<li><strong>Scenario coverage:</strong> ${item.workflow_scenarios.join(", ")}</li>` : ""}
+        ${item.supports_scheduled ? `<li><strong>Scheduled support:</strong> ${item.supports_scheduled}</li>` : ""}
+        ${item.supports_long_running ? `<li><strong>Long-running support:</strong> ${item.supports_long_running}</li>` : ""}
+        ${item.supports_multi_agent ? `<li><strong>Multi-agent support:</strong> ${item.supports_multi_agent}</li>` : ""}
+        ${item.supports_context_protocol ? `<li><strong>Context protocol support:</strong> ${item.supports_context_protocol}</li>` : ""}
+        ${item.runtime_control_level ? `<li><strong>Runtime control:</strong> ${item.runtime_control_level}</li>` : ""}
+        ${(item.runtime_control_surfaces && item.runtime_control_surfaces.length) ? `<li><strong>Control surfaces:</strong> ${item.runtime_control_surfaces.join(", ")}</li>` : ""}
+        ${(item.workflow_entry_signals && item.workflow_entry_signals.length) ? `<li><strong>Enter when:</strong> ${item.workflow_entry_signals.slice(0, 2).join(" · ")}</li>` : ""}
+        ${(item.workflow_decision_axes && item.workflow_decision_axes.length) ? `<li><strong>Judge by:</strong> ${item.workflow_decision_axes.slice(0, 3).join(", ")}</li>` : ""}
+        ${(item.workflow_risk_signals && item.workflow_risk_signals.length) ? `<li><strong>Watch for:</strong> ${item.workflow_risk_signals.slice(0, 2).join(" · ")}</li>` : ""}
+        ${(item.site_surfaces && item.site_surfaces.length) ? `<li><strong>Site surfaces:</strong> ${item.site_surfaces.join(", ")}</li>` : ""}
+      </ul></section>` : ""}
       <section class="plain-summary">
         <div class="section-label">Human audit summary</div>
         <ul>
@@ -576,6 +704,7 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/workflow-runtime-fields-v1.json",
     "../catalog/high-intent-governance-fields-v1.json",
     "../../agents/research/high-intent-governance-fields-v1.json",
     "../catalog/high-intent-skills-enriched-v1.json",
@@ -794,15 +923,34 @@ async function main() {
         protocol_support: item.protocol_support || enriched.protocol_support || [],
         governance_maturity: item.governance_maturity || enriched.governance_maturity,
         governance_rationale: item.governance_rationale || enriched.governance_rationale,
+        workflow_stack_role: item.workflow_stack_role || enriched.workflow_stack_role,
+        supports_scheduled: item.supports_scheduled || enriched.supports_scheduled,
+        supports_long_running: item.supports_long_running || enriched.supports_long_running,
+        supports_multi_agent: item.supports_multi_agent || enriched.supports_multi_agent,
+        supports_context_protocol: item.supports_context_protocol || enriched.supports_context_protocol,
+        workflow_specials: item.workflow_specials || enriched.workflow_specials || [],
+        workflow_entry_points: item.workflow_entry_points || enriched.workflow_entry_points || [],
+        workflow_scenarios: item.workflow_scenarios || enriched.workflow_scenarios || [],
+        runtime_control_level: item.runtime_control_level || enriched.runtime_control_level,
+        runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
+        workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
+        workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
+        workflow_risk_signals: item.workflow_risk_signals || enriched.workflow_risk_signals || [],
+        site_surfaces: item.site_surfaces || enriched.site_surfaces || [],
         one_line_summary: item.one_line_summary || enriched.one_line_summary || guide.one_line_summary,
         guide,
       };
-      return {
+      const workflow = deriveWorkflowMetadata(base);
+      const merged = {
         ...base,
-        installCommand: installCommand(base),
-        useCaseText: useCase(base),
-        riskExplanationText: riskExplanation(base),
-        humanSummary: humanAuditSummary(base),
+        ...workflow,
+      };
+      return {
+        ...merged,
+        installCommand: installCommand(merged),
+        useCaseText: useCase(merged),
+        riskExplanationText: riskExplanation(merged),
+        humanSummary: humanAuditSummary(merged),
       };
     });
   } else {
