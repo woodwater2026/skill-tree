@@ -95,9 +95,24 @@ function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map()) {
   }).join('');
 }
 
+async function loadFirst(paths) {
+  let lastError = null;
+  for (const path of paths) {
+    try {
+      return await loadJson(path);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  throw lastError || new Error('No candidate paths resolved');
+}
+
 async function loadGuidePlan() {
   try {
-    const data = await loadJson('../../catalog/top50-guides-gap-plan-v1.json');
+    const data = await loadFirst([
+      '../../catalog/top50-guides-gap-plan-v1.json',
+      '../catalog/top50-guides-gap-plan-v1.json',
+    ]);
     return Array.isArray(data.items) ? data.items : [];
   } catch {
     return [];
@@ -106,7 +121,10 @@ async function loadGuidePlan() {
 
 async function loadP0Pack() {
   try {
-    const data = await loadJson('../../catalog/top50-guides-p0-pack-v1.json');
+    const data = await loadFirst([
+      '../../catalog/top50-guides-p0-pack-v1.json',
+      '../catalog/top50-guides-p0-pack-v1.json',
+    ]);
     return Array.isArray(data.items) ? data.items : [];
   } catch {
     return [];
@@ -117,7 +135,7 @@ async function main() {
   const key = getSpecialKey();
   const config = SPECIALS[key];
   const [index, guidePlan, p0Pack] = await Promise.all([
-    loadJson('../../catalog/index.json'),
+    loadFirst(['../../catalog/index.json', '../catalog/index.json']),
     loadGuidePlan(),
     loadP0Pack(),
   ]);
