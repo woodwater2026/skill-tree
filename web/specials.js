@@ -83,7 +83,7 @@ function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map()) {
         <span class="special-chip muted">runtime ${item.runtime_control_level || 'unknown'}</span>
         ${p0Repos.has(item.repo) ? '<span class="special-chip">P0 guide</span>' : ''}
       </div>
-      <h3>${item.name}</h3>
+      <h3>${item.name || (item.repo ? item.repo.split('/').pop() : 'Untitled skill')}</h3>
       <p>${item.summary || item.use_case || ''}</p>
       <ul>
         <li><strong>Install:</strong> <code>${pickInstall(item)}</code></li>
