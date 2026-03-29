@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-03-29",
+  "count": 10,
+  "source": "top50-guides-gap-plan-v1 P0 batch",
+  "items": [
+    {
+      "rank_in_p0": 1,
+      "repo": "clawdbot-ai/awesome-openclaw-skills-zh",
+      "name": "awesome-openclaw-skills-zh",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "low",
+      "one_line_summary": "OpenClaw 中文官方技能库 | 翻译自 Clawdbot 官方技能，按场景分类整理，支持中文自然语言调用",
+      "install_cmd": "openclaw skill install https://clawdhub.com/skills/[技能]",
+      "fit_for": "适合想快速进入 OpenClaw 生态、先找高信号技能入口的用户。",
+      "how_to_use": "先按你的任务场景浏览目录，再只挑 2-3 个最贴近当前工作流的 skill 深入查看，不要一次装很多。",
+      "expected_outcome": "更快找到高信号 skill，减少盲搜、盲装和重复试错。",
+      "main_risk": "主要风险不在“目录本身”，而在你可能顺手跳转并安装高风险 skill，所以仍需逐项看权限边界。"
+    },
+    {
+      "rank_in_p0": 2,
+      "repo": "sanjeed5/awesome-cursor-rules-mdc",
+      "name": "awesome-cursor-rules-mdc",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "low",
+      "one_line_summary": "Curated list of awesome Cursor Rules .mdc files",
+      "install_cmd": "git clone https://github.com/sanjeed5/awesome-cursor-rules-mdc.git",
+      "fit_for": "适合已经在 Cursor 里工作、想先拿到高质量规则/模板再逐步定制的人。",
+      "how_to_use": "先按你的任务场景浏览目录，再只挑 2-3 个最贴近当前工作流的 skill 深入查看，不要一次装很多。",
+      "expected_outcome": "更快找到高信号 skill，减少盲搜、盲装和重复试错。",
+      "main_risk": "主要风险不在“目录本身”，而在你可能顺手跳转并安装高风险 skill，所以仍需逐项看权限边界。"
+    },
+    {
+      "rank_in_p0": 3,
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "name": "awesome-claude-code-subagents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "medium",
+      "one_line_summary": "A collection of 100+ specialized Claude Code subagents covering a wide range of development use cases",
+      "install_cmd": "claude plugin marketplace add VoltAgent/awesome-claude-code-subagents",
+      "fit_for": "适合已经不满足单 agent 工作流、需要更强协调与复用能力的进阶用户。",
+      "how_to_use": "先按你的任务场景浏览目录，再只挑 2-3 个最贴近当前工作流的 skill 深入查看，不要一次装很多。",
+      "expected_outcome": "更快找到高信号 skill，减少盲搜、盲装和重复试错。",
+      "main_risk": "主要风险不在“目录本身”，而在你可能顺手跳转并安装高风险 skill，所以仍需逐项看权限边界。"
+    },
+    {
+      "rank_in_p0": 4,
+      "repo": "blader/humanizer",
+      "name": "humanizer",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "security_rating": "low",
+      "one_line_summary": "Claude Code skill that removes signs of AI-generated writing from text",
+      "install_cmd": "git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer",
+      "fit_for": "适合需要把 AI 输出快速整理到更自然可发布状态的内容型用户。",
+      "how_to_use": "先拿一段已经成型的 AI 文案局部改写，确认风格符合你的发布标准，再批量用到更多内容。",
+      "expected_outcome": "更快把 AI 生成内容调整到更自然、更接近人工表达的状态。",
+      "main_risk": "主要风险较低，更多是规则质量、维护活跃度和是否真的适配你的工作流。"
+    },
+    {
+      "rank_in_p0": 5,
+      "repo": "NeekChaw/RIPER-5",
+      "name": "RIPER-5",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "low",
+      "one_line_summary": "神级Cursor Rule",
+      "install_cmd": "Claude Code` 目录包含一系列为 [Claude](https://claude.ai/) 系列模型优化的提示词和工作流，旨在帮助开发者更高效地利用 AI 进行编程。每个子目录都针对一个特定的开发场景。",
+      "fit_for": "适合已经不满足单 agent 工作流、需要更强协调与复用能力的进阶用户。",
+      "how_to_use": "先在非关键任务里小范围试用，验证它是否能稳定减少重复工作，再决定是否长期保留。",
+      "expected_outcome": "把复杂任务拆得更清楚，提升多步骤执行和能力复用效率。",
+      "main_risk": "主要风险较低，更多是规则质量、维护活跃度和是否真的适配你的工作流。"
+    },
+    {
+      "rank_in_p0": 6,
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "name": "Agent-Skills-for-Context-Engineering",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "security_rating": "medium",
+      "one_line_summary": "A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems.",
+      "install_cmd": "git clone https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git ~/.claude/skills/Agent-Skills-for-Context-Engineering",
+      "fit_for": "适合需要长期任务连续性、知识沉淀和上下文复用的研究型用户。",
+      "how_to_use": "先在一个长任务或研究任务里试跑一轮，观察它是否真的减少上下文丢失和重复解释。",
+      "expected_outcome": "提升长任务稳定性，减少上下文漂移和知识断层。",
+      "main_risk": "主要风险在于它可能引入自动化逻辑、复杂协作链路或外部工具依赖，正式接入前要先看清权限与副作用。"
+    },
+    {
+      "rank_in_p0": 7,
+      "repo": "Dimillian/Skills",
+      "name": "Skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "low",
+      "one_line_summary": "My Codex Skills",
+      "install_cmd": "git clone https://github.com/Dimillian/Skills.git",
+      "fit_for": "适合已经不满足单 agent 工作流、需要更强协调与复用能力的进阶用户。",
+      "how_to_use": "先在非关键任务里小范围试用，验证它是否能稳定减少重复工作，再决定是否长期保留。",
+      "expected_outcome": "把复杂任务拆得更清楚，提升多步骤执行和能力复用效率。",
+      "main_risk": "主要风险较低，更多是规则质量、维护活跃度和是否真的适配你的工作流。"
+    },
+    {
+      "rank_in_p0": 8,
+      "repo": "LeoYeAI/openclaw-master-skills",
+      "name": "openclaw-master-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "low",
+      "one_line_summary": "🧠 Curated collection of 339+ best OpenClaw skills — weekly updated by MyClaw.ai from ClawHub, GitHub & community.",
+      "install_cmd": "git clone https://github.com/LeoYeAI/openclaw-master-skills.git",
+      "fit_for": "适合想快速进入 OpenClaw 生态、先找高信号技能入口的用户。",
+      "how_to_use": "先按你的任务场景浏览目录，再只挑 2-3 个最贴近当前工作流的 skill 深入查看，不要一次装很多。",
+      "expected_outcome": "更快找到高信号 skill，减少盲搜、盲装和重复试错。",
+      "main_risk": "主要风险不在“目录本身”，而在你可能顺手跳转并安装高风险 skill，所以仍需逐项看权限边界。"
+    },
+    {
+      "rank_in_p0": 9,
+      "repo": "flyeric0212/cursor-rules",
+      "name": "cursor-rules",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "low",
+      "one_line_summary": "整理和收集来自不同项目的Cursor规则文件，提供多种编程语言和框架的规则支持。",
+      "install_cmd": "git clone https://github.com/flyeric0212/cursor-rules.git .cursor/skills/cursor-rules",
+      "fit_for": "适合已经在 Cursor 里工作、想先拿到高质量规则/模板再逐步定制的人。",
+      "how_to_use": "先在一个真实项目里只启用最常用的一条规则/模板，确认产出质量后再逐步扩展。",
+      "expected_outcome": "更快建立一套可复用的 Cursor 工作习惯，而不是每次从零写规则。",
+      "main_risk": "主要风险较低，更多是规则质量、维护活跃度和是否真的适配你的工作流。"
+    },
+    {
+      "rank_in_p0": 10,
+      "repo": "instructa/ai-prompts",
+      "name": "ai-prompts",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "low",
+      "one_line_summary": "Curated AI Prompts for Cursor Rules, Cline, Windsurf and Github Copilot",
+      "install_cmd": "git clone https://github.com/instructa/ai-prompts.git .cursor/skills/ai-prompts",
+      "fit_for": "适合想快速判断这类高价值 skill 值不值得装、值不值得纳入日常工作流的用户。",
+      "how_to_use": "先按你的任务场景浏览目录，再只挑 2-3 个最贴近当前工作流的 skill 深入查看，不要一次装很多。",
+      "expected_outcome": "更快找到高信号 skill，减少盲搜、盲装和重复试错。",
+      "main_risk": "主要风险不在“目录本身”，而在你可能顺手跳转并安装高风险 skill，所以仍需逐项看权限边界。"
+    }
+  ]
+}

@@ -73,8 +73,10 @@ function pickInstall(item) {
   return item.install_cmd || `/plugin install github:${item.repo}`;
 }
 
-function renderList(el, items, p0Repos = new Set()) {
-  el.innerHTML = items.map((item) => `
+function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map()) {
+  el.innerHTML = items.map((item) => {
+    const guide = p0PackMap.get(item.repo) || {};
+    return `
     <article class="special-item">
       <div class="special-meta">
         <span class="special-chip">${item.workflow_stack_role || 'Workflow layer'}</span>
@@ -85,11 +87,12 @@ function renderList(el, items, p0Repos = new Set()) {
       <p>${item.summary || item.use_case || ''}</p>
       <ul>
         <li><strong>Install:</strong> <code>${pickInstall(item)}</code></li>
-        <li><strong>Use case:</strong> ${item.use_case || 'See catalog detail for usage guidance.'}</li>
-        <li><strong>Risk:</strong> ${item.risk_explanation || 'Review runtime and permission surface before install.'}</li>
+        <li><strong>Fit:</strong> ${guide.fit_for || item.use_case || 'See catalog detail for usage guidance.'}</li>
+        <li><strong>Usage:</strong> ${guide.how_to_use || 'Start with the install path, then validate on one narrow workflow.'}</li>
+        <li><strong>Caution:</strong> ${guide.main_risk || item.risk_explanation || 'Review runtime and permission surface before install.'}</li>
       </ul>
-    </article>
-  `).join('');
+    </article>`;
+  }).join('');
 }
 
 async function loadGuidePlan() {
@@ -101,14 +104,25 @@ async function loadGuidePlan() {
   }
 }
 
+async function loadP0Pack() {
+  try {
+    const data = await loadJson('../catalog/top50-guides-p0-pack-v1.json');
+    return Array.isArray(data.items) ? data.items : [];
+  } catch {
+    return [];
+  }
+}
+
 async function main() {
   const key = getSpecialKey();
   const config = SPECIALS[key];
-  const [index, guidePlan] = await Promise.all([
+  const [index, guidePlan, p0Pack] = await Promise.all([
     loadJson('../catalog/index.json'),
     loadGuidePlan(),
+    loadP0Pack(),
   ]);
   const p0Repos = new Set(guidePlan.filter((item) => item.priority_batch === 'P0').map((item) => item.repo));
+  const p0PackMap = new Map(p0Pack.map((item) => [item.repo, item]));
   const items = (index.items || [])
     .filter(config.filter)
     .sort((a, b) => Number(p0Repos.has(b.repo)) - Number(p0Repos.has(a.repo)));
@@ -121,7 +135,7 @@ async function main() {
   document.getElementById('risk-list').innerHTML = config.risks.map((x) => `<li>${x}</li>`).join('');
   document.getElementById('stack-links').innerHTML = config.stackLinks.map((x) => `<span class="special-chip">${x}</span>`).join('');
   document.getElementById('special-count').textContent = `${items.length} matching skills in main index`;
-  renderList(document.getElementById('special-results'), items.slice(0, 8), p0Repos);
+  renderList(document.getElementById('special-results'), items.slice(0, 8), p0Repos, p0PackMap);
 }
 
 main().catch((error) => {

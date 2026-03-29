@@ -8,6 +8,8 @@ const state = {
   bestLists: [],
   guides: [],
   guidesMap: new Map(),
+  p0Pack: [],
+  p0PackMap: new Map(),
   guidePlan: [],
   guidePlanMap: new Map(),
 };
@@ -274,7 +276,7 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
     const audit = auditMap.get(slug);
     const enriched = enrichedMap.get(slug) || enrichedMap.get(item.repo) || {};
     const category = audit?.primary_category || item.category || "unknown";
-    const guide = state.guidesMap.get(slug) || state.guidesMap.get(item.repo) || {};
+    const guide = state.p0PackMap.get(item.repo) || state.guidesMap.get(slug) || state.guidesMap.get(item.repo) || {};
     const base = {
       slug,
       name: item.name,
@@ -556,8 +558,8 @@ function renderCard(item) {
   installCodeEl.textContent = item.installCommand;
   copyBtnEl.addEventListener("click", () => copyInstallCommand(item.installCommand, copyBtnEl));
 
-  useCaseEl.textContent = item.useCaseText;
-  riskExplanationEl.textContent = item.riskExplanationText;
+  useCaseEl.textContent = item.guide?.fit_for || item.useCaseText;
+  riskExplanationEl.textContent = item.guide?.main_risk || item.riskExplanationText;
   humanWhatEl.textContent = item.humanSummary.what;
   humanSafeEl.textContent = item.humanSummary.safe;
   humanRiskEl.textContent = item.humanSummary.risk;
@@ -619,6 +621,7 @@ function renderP0Guides() {
   const p0Items = state.items.filter((item) => p0Repos.includes(item.repo));
   els.p0Guides.innerHTML = p0Items.map((item) => {
     const plan = state.guidePlanMap.get(item.repo);
+    const guide = state.p0PackMap.get(item.repo) || item.guide || {};
     return `
       <article class="guide-card">
         <h3>${item.name}</h3>
@@ -629,8 +632,9 @@ function renderP0Guides() {
         </div>
         <ul class="guide-points">
           <li><strong>Install:</strong> <code>${item.installCommand}</code></li>
-          <li><strong>Fit:</strong> ${item.useCaseText}</li>
-          <li><strong>Caution:</strong> ${item.riskExplanationText}</li>
+          <li><strong>Fit:</strong> ${guide.fit_for || item.useCaseText}</li>
+          <li><strong>Usage:</strong> ${guide.how_to_use || 'See quick guide for the first working path.'}</li>
+          <li><strong>Caution:</strong> ${guide.main_risk || item.riskExplanationText}</li>
         </ul>
       </article>`;
   }).join('');
@@ -823,6 +827,22 @@ async function loadGuides() {
   return [];
 }
 
+async function loadP0Pack() {
+  const candidates = [
+    "../catalog/top50-guides-p0-pack-v1.json",
+    "../../agents/research/top50-guides-p0-pack-v1.json",
+  ];
+  for (const path of candidates) {
+    try {
+      const data = await loadJson(path);
+      return Array.isArray(data.items) ? data.items : [];
+    } catch {
+      // ignore
+    }
+  }
+  return [];
+}
+
 async function loadGuidePlan() {
   const candidates = [
     "../catalog/top50-guides-gap-plan-v1.json",
@@ -921,18 +941,21 @@ function applyCapabilityAction(capabilitySlug) {
 }
 
 async function main() {
-  const [catalog, auditIndex, enrichedMap, bestLists, guides, guidePlan] = await Promise.all([
+  const [catalog, auditIndex, enrichedMap, bestLists, guides, p0Pack, guidePlan] = await Promise.all([
     loadJson("../catalog/index.json").catch(() => loadJson("../catalog/skills-catalog-v1.json")),
     loadJson("../audits/index.json"),
     loadOptionalEnriched(),
     loadBestLists(),
     loadGuides(),
+    loadP0Pack(),
     loadGuidePlan(),
   ]);
   state.bestLists = bestLists;
   state.guides = guides;
+  state.p0Pack = p0Pack;
   state.guidePlan = guidePlan;
   state.guidesMap = new Map(guides.map((item) => [item.repo, item]));
+  state.p0PackMap = new Map(p0Pack.map((item) => [item.repo, item]));
   state.guidePlanMap = new Map(guidePlan.map((item) => [item.repo, item]));
   const auditItems = await Promise.all(auditIndex.items.map((slug) => loadJson(`../audits/${slug}.json`).catch(() => null)));
 
@@ -941,7 +964,7 @@ async function main() {
     state.items = catalog.items.map((item) => {
       const audit = auditMap.get(item.slug);
       const enriched = enrichedMap.get(item.slug) || enrichedMap.get(item.repo) || {};
-      const guide = state.guidesMap.get(item.repo) || {};
+      const guide = state.p0PackMap.get(item.repo) || state.guidesMap.get(item.repo) || {};
       const base = {
         slug: item.slug,
         name: item.name,
