@@ -11,6 +11,7 @@ GOVERNANCE = ROOT / 'skill-tree/catalog/high-intent-governance-fields-v1.json'
 WORKFLOW_RUNTIME = ROOT / 'skill-tree/catalog/workflow-runtime-fields-v1.json'
 SCHEDULED = ROOT / 'skill-tree/catalog/scheduled-workflow-candidates-v1.json'
 RUNTIME_CONTROL = ROOT / 'skill-tree/catalog/runtime-control-fields-v1.json'
+RUNTIME_BOUNDARY = ROOT / 'skill-tree/catalog/runtime-execution-boundary-v1.json'
 OUT = ROOT / 'skill-tree/catalog/index.json'
 
 catalog = json.loads(CATALOG_V1.read_text())
@@ -20,6 +21,7 @@ governance = json.loads(GOVERNANCE.read_text()) if GOVERNANCE.exists() else {'it
 workflow_runtime = json.loads(WORKFLOW_RUNTIME.read_text()) if WORKFLOW_RUNTIME.exists() else {'items': []}
 scheduled = json.loads(SCHEDULED.read_text()) if SCHEDULED.exists() else {'items': []}
 runtime_control = json.loads(RUNTIME_CONTROL.read_text()) if RUNTIME_CONTROL.exists() else {'items': []}
+runtime_boundary = json.loads(RUNTIME_BOUNDARY.read_text()) if RUNTIME_BOUNDARY.exists() else {'items': []}
 
 catalog_items = {item['repo']: item for item in catalog['items']}
 high_intent_items = {item['repo']: item for item in high_intent.get('items', [])}
@@ -27,6 +29,7 @@ governance_items = {item['repo']: item for item in governance.get('items', [])}
 workflow_runtime_items = {item['repo']: item for item in workflow_runtime.get('items', [])}
 scheduled_items = {item['repo']: item for item in scheduled.get('items', [])}
 runtime_control_items = {item['repo']: item for item in runtime_control.get('items', [])}
+runtime_boundary_items = {item['repo']: item for item in runtime_boundary.get('items', [])}
 
 def slugify(repo: str) -> str:
     return repo.lower().replace('_', '-').replace('/', '-')
@@ -128,6 +131,7 @@ for s in shortlist['items']:
     wr = workflow_runtime_items.get(s['repo'], {})
     sched = scheduled_items.get(s['repo'], {})
     rc = runtime_control_items.get(s['repo'], {})
+    rb = runtime_boundary_items.get(s['repo'], {})
     merged = {
         'id': slugify(s['repo']),
         'slug': slugify(s['repo']),
@@ -159,6 +163,11 @@ for s in shortlist['items']:
         'workflow_lock_in': rc.get('workflow_lock_in', 'unknown'),
         'permission_visibility': rc.get('permission_visibility', 'unknown'),
         'runtime_control_rationale': rc.get('runtime_control_rationale', ''),
+        'execution_boundary': rb.get('execution_boundary', ''),
+        'where_code_runs': rb.get('where_code_runs', ''),
+        'secret_holder': rb.get('secret_holder', ''),
+        'audit_evidence': rb.get('audit_evidence', ''),
+        'background_duration_fit': rb.get('background_duration_fit', ''),
         'workflow_specials': wr.get('workflow_specials', []),
         'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', [])),
         'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', ''),
@@ -185,6 +194,11 @@ for s in shortlist['items']:
         'workflow_lock_in': rc.get('workflow_lock_in', merged.get('workflow_lock_in', 'unknown')),
         'permission_visibility': rc.get('permission_visibility', merged.get('permission_visibility', 'unknown')),
         'runtime_control_rationale': rc.get('runtime_control_rationale', merged.get('runtime_control_rationale', '')),
+        'execution_boundary': rb.get('execution_boundary', merged.get('execution_boundary', '')),
+        'where_code_runs': rb.get('where_code_runs', merged.get('where_code_runs', '')),
+        'secret_holder': rb.get('secret_holder', merged.get('secret_holder', '')),
+        'audit_evidence': rb.get('audit_evidence', merged.get('audit_evidence', '')),
+        'background_duration_fit': rb.get('background_duration_fit', merged.get('background_duration_fit', '')),
         'workflow_specials': wr.get('workflow_specials', merged.get('workflow_specials', [])),
         'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', merged.get('workflow_entry_points', []))),
         'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', merged.get('scheduled_fit_explanation', '')),
@@ -204,7 +218,7 @@ index = {
         'unattended_run', 'subagent_support', 'protocol_support', 'governance_maturity', 'governance_rationale',
         'workflow_stack_role', 'supports_scheduled', 'supports_long_running', 'supports_multi_agent', 'supports_context_protocol',
         'workflow_specials', 'workflow_entry_points', 'scheduled_fit_explanation',
-        'workflow_scenarios', 'runtime_control_level', 'distribution_layer', 'background_execution', 'local_first', 'workflow_lock_in', 'permission_visibility', 'runtime_control_rationale', 'runtime_control_surfaces',
+        'workflow_scenarios', 'runtime_control_level', 'distribution_layer', 'background_execution', 'local_first', 'workflow_lock_in', 'permission_visibility', 'runtime_control_rationale', 'execution_boundary', 'where_code_runs', 'secret_holder', 'audit_evidence', 'background_duration_fit', 'runtime_control_surfaces',
         'workflow_entry_signals', 'workflow_decision_axes', 'workflow_risk_signals', 'site_surfaces',
         'security_rating', 'collection_status', 'priority_score', 'audit_status',
         'review_status', 'updated_at'

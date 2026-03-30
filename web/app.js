@@ -32,6 +32,7 @@ const els = {
   p1Guides: document.getElementById("p1-guides-grid"),
   p0Guides: document.getElementById("p0-guides-grid"),
   runtimeControl: document.getElementById("runtime-control-grid"),
+  runtimeBoundary: document.getElementById("runtime-boundary-grid"),
 };
 
 const CATEGORY_LABELS = {
@@ -205,6 +206,42 @@ function oversightRecommendation(item) {
   return 'Review runtime behavior before install; control expectations are still unclear.';
 }
 
+function whereCodeRuns(item) {
+  if (item.where_code_runs) return item.where_code_runs;
+  const layer = (item.distribution_layer || '').toLowerCase();
+  const localFirst = (item.local_first || '').toLowerCase();
+  if (layer.includes('hosted') || layer.includes('cloud')) return 'Remote / hosted runtime';
+  if (localFirst.includes('yes') || localFirst.includes('local')) return 'Local machine with optional remote APIs';
+  if (item.runtime_control_level === 'advanced') return 'Hybrid runtime with extended control surfaces';
+  return 'Mostly local or unclear from current evidence';
+}
+
+function secretHolder(item) {
+  if (item.secret_holder) return item.secret_holder;
+  const vis = (item.permission_visibility || '').toLowerCase();
+  const layer = (item.distribution_layer || '').toLowerCase();
+  if (vis.includes('user') || vis.includes('local')) return 'User-held locally';
+  if (layer.includes('hosted') || layer.includes('cloud')) return 'Mixed or provider-involved';
+  return 'Unclear from current docs';
+}
+
+function backgroundDurationFit(item) {
+  if (item.background_duration_fit) return item.background_duration_fit;
+  const unattended = (item.unattended_run || '').toLowerCase();
+  const bg = (item.background_execution || '').toLowerCase();
+  if (unattended === 'supported' || bg.includes('long')) return 'Long-running / durable';
+  if (unattended === 'limited' || bg.includes('short')) return 'Short background tasks';
+  if (unattended === 'unsupported' || unattended === 'none') return 'Interactive only';
+  return 'Claim unclear';
+}
+
+function auditEvidence(item) {
+  if (item.audit_evidence) return item.audit_evidence;
+  if (item.findings?.length) return 'Strong evidence via static audit findings and repo inspection';
+  if (item.securitySummary?.length) return 'Partial evidence via summarized review and metadata';
+  return 'Weak evidence — rely on docs and manual review';
+}
+
 function deriveWorkflowMetadata(item) {
   const workflowScenarios = Array.isArray(item.workflow_scenarios) ? [...item.workflow_scenarios] : [];
   const unattended = item.unattended_run || "unknown";
@@ -342,6 +379,11 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       workflow_lock_in: item.workflow_lock_in || enriched.workflow_lock_in,
       permission_visibility: item.permission_visibility || enriched.permission_visibility,
       runtime_control_rationale: item.runtime_control_rationale || enriched.runtime_control_rationale,
+      execution_boundary: item.execution_boundary || enriched.execution_boundary,
+      where_code_runs: item.where_code_runs || enriched.where_code_runs,
+      secret_holder: item.secret_holder || enriched.secret_holder,
+      audit_evidence: item.audit_evidence || enriched.audit_evidence,
+      background_duration_fit: item.background_duration_fit || enriched.background_duration_fit,
       runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
       workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
       workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
@@ -552,8 +594,12 @@ function renderCard(item) {
         ${item.local_first ? `<li><strong>Local-first posture:</strong> ${item.local_first}</li>` : ""}
         ${item.workflow_lock_in ? `<li><strong>Workflow lock-in:</strong> ${item.workflow_lock_in}</li>` : ""}
         ${item.permission_visibility ? `<li><strong>Permission visibility:</strong> ${item.permission_visibility}</li>` : ""}
+        ${item.execution_boundary ? `<li><strong>Execution boundary:</strong> ${item.execution_boundary}</li>` : ""}
+        ${item.where_code_runs ? `<li><strong>Where code runs:</strong> ${item.where_code_runs}</li>` : ""}
+        ${item.secret_holder ? `<li><strong>Secret holder:</strong> ${item.secret_holder}</li>` : ""}
+        ${item.background_duration_fit ? `<li><strong>Background duration fit:</strong> ${item.background_duration_fit}</li>` : ""}
         ${(item.site_surfaces && item.site_surfaces.length) ? `<li><strong>Site surfaces:</strong> ${item.site_surfaces.join(", ")}</li>` : ""}
-      </ul>${item.runtime_control_rationale ? `<p class="risk-explanation">${item.runtime_control_rationale}</p>` : ""}</section>` : ""}
+      </ul>${item.runtime_control_rationale ? `<p class="risk-explanation">${item.runtime_control_rationale}</p>` : ""}${item.audit_evidence ? `<p class="risk-explanation"><strong>Audit evidence:</strong> ${item.audit_evidence}</p>` : ""}</section>` : ""}
       <section class="plain-summary runtime-detail">
         <div class="section-label">Runtime control</div>
         <ul>
@@ -794,6 +840,34 @@ function renderRuntimeControlMap() {
   `).join('');
 }
 
+function renderRuntimeBoundaryMap() {
+  if (!els.runtimeBoundary) return;
+  const cards = [
+    {
+      label: 'Where code runs',
+      summary: 'Is this mostly local, remote/hosted, or a hybrid runtime with unclear transitions?',
+    },
+    {
+      label: 'Secret holder',
+      summary: 'Do secrets stay with the user, move to a provider, or fall into a mixed trust model?',
+    },
+    {
+      label: 'Background duration fit',
+      summary: 'Can it actually run unattended for long enough to matter, or is background support only implied?',
+    },
+    {
+      label: 'Audit evidence',
+      summary: 'What proof do you get that execution happened and what exactly it touched?',
+    },
+  ];
+  els.runtimeBoundary.innerHTML = cards.map((card) => `
+    <div class="risk-check-card">
+      <strong>${card.label}</strong>
+      <span>${card.summary}</span>
+    </div>
+  `).join('');
+}
+
 function renderSafeStart() {
   if (!els.safeStart) return;
   const safeItems = state.items
@@ -842,6 +916,8 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/runtime-execution-boundary-v1.json",
+    "../../agents/research/runtime-execution-boundary-v1.json",
     "../catalog/runtime-control-fields-v1.json",
     "../../agents/research/runtime-control-fields-v1.json",
     "../catalog/scheduled-workflow-candidates-v1.json",
@@ -1138,6 +1214,11 @@ async function main() {
         workflow_lock_in: item.workflow_lock_in || enriched.workflow_lock_in,
         permission_visibility: item.permission_visibility || enriched.permission_visibility,
         runtime_control_rationale: item.runtime_control_rationale || enriched.runtime_control_rationale,
+        execution_boundary: item.execution_boundary || enriched.execution_boundary,
+        where_code_runs: item.where_code_runs || enriched.where_code_runs,
+        secret_holder: item.secret_holder || enriched.secret_holder,
+        audit_evidence: item.audit_evidence || enriched.audit_evidence,
+        background_duration_fit: item.background_duration_fit || enriched.background_duration_fit,
         runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
         workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
         workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
