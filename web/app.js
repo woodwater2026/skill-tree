@@ -525,12 +525,16 @@ function renderCard(item) {
   const runtimeLevelEl = node.querySelector(".runtime-level");
   const runtimeProfileEl = node.querySelector(".runtime-profile");
   const runtimeOversightEl = node.querySelector(".runtime-oversight");
+  const whereCodeRunsEl = node.querySelector(".where-code-runs");
+  const secretHolderEl = node.querySelector(".secret-holder");
+  const backgroundDurationFitEl = node.querySelector(".background-duration-fit");
+  const auditEvidenceEl = node.querySelector(".audit-evidence");
   const humanWhatEl = node.querySelector(".human-what");
   const humanSafeEl = node.querySelector(".human-safe");
   const humanRiskEl = node.querySelector(".human-risk");
   const guideBodyEl = node.querySelector(".guide-body");
 
-  if (!installCodeEl || !copyBtnEl || !useCaseEl || !riskExplanationEl || !runtimeLevelEl || !runtimeProfileEl || !runtimeOversightEl || !humanWhatEl || !humanSafeEl || !humanRiskEl) {
+  if (!installCodeEl || !copyBtnEl || !useCaseEl || !riskExplanationEl || !runtimeLevelEl || !runtimeProfileEl || !runtimeOversightEl || !whereCodeRunsEl || !secretHolderEl || !backgroundDurationFitEl || !auditEvidenceEl || !humanWhatEl || !humanSafeEl || !humanRiskEl) {
     node.innerHTML = `
       <div class="card-top">
         <div>
@@ -608,6 +612,15 @@ function renderCard(item) {
           <li><strong>Oversight recommendation:</strong> ${oversightRecommendation(item)}</li>
         </ul>
       </section>
+      <section class="plain-summary boundary-detail">
+        <div class="section-label">Runtime Boundary Snapshot</div>
+        <ul>
+          <li><strong>Where code runs:</strong> ${whereCodeRuns(item)}</li>
+          <li><strong>Secret holder:</strong> ${secretHolder(item)}</li>
+          <li><strong>Background duration fit:</strong> ${backgroundDurationFit(item)}</li>
+          <li><strong>Audit evidence:</strong> ${auditEvidence(item)}</li>
+        </ul>
+      </section>
       <section class="plain-summary">
         <div class="section-label">Human audit summary</div>
         <ul>
@@ -655,6 +668,10 @@ function renderCard(item) {
   runtimeLevelEl.textContent = item.runtime_control_level || 'unknown';
   runtimeProfileEl.textContent = runtimeProfile(item);
   runtimeOversightEl.textContent = oversightRecommendation(item);
+  whereCodeRunsEl.textContent = whereCodeRuns(item);
+  secretHolderEl.textContent = secretHolder(item);
+  backgroundDurationFitEl.textContent = backgroundDurationFit(item);
+  auditEvidenceEl.textContent = auditEvidence(item);
   humanWhatEl.textContent = item.humanSummary.what;
   humanSafeEl.textContent = item.humanSummary.safe;
   humanRiskEl.textContent = item.humanSummary.risk;
@@ -900,6 +917,7 @@ function render() {
   renderFilters();
   renderCapabilityMap();
   renderRuntimeControlMap();
+  renderRuntimeBoundaryMap();
   renderBestLists();
   renderP1Guides();
   renderP0Guides();
