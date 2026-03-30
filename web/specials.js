@@ -73,15 +73,16 @@ function pickInstall(item) {
   return item.install_cmd || `/plugin install github:${item.repo}`;
 }
 
-function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map()) {
+function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map(), p1Repos = new Set(), p1PackMap = new Map()) {
   el.innerHTML = items.map((item) => {
-    const guide = p0PackMap.get(item.repo) || {};
+    const guide = p0PackMap.get(item.repo) || p1PackMap.get(item.repo) || {};
     return `
     <article class="special-item">
       <div class="special-meta">
         <span class="special-chip">${item.workflow_stack_role || 'Workflow layer'}</span>
         <span class="special-chip muted">runtime ${item.runtime_control_level || 'unknown'}</span>
         ${p0Repos.has(item.repo) ? '<span class="special-chip">P0 guide</span>' : ''}
+        ${!p0Repos.has(item.repo) && p1Repos.has(item.repo) ? '<span class="special-chip">P1 guide</span>' : ''}
       </div>
       <h3>${item.name || (item.repo ? item.repo.split('/').pop() : 'Untitled skill')}</h3>
       <p>${item.summary || item.use_case || ''}</p>
@@ -131,6 +132,18 @@ async function loadP0Pack() {
   }
 }
 
+async function loadP1Pack() {
+  try {
+    const data = await loadFirst([
+      '../../catalog/top50-guides-p1-pack-v1.json',
+      '../catalog/top50-guides-p1-pack-v1.json',
+    ]);
+    return Array.isArray(data.items) ? data.items : [];
+  } catch {
+    return [];
+  }
+}
+
 async function loadScheduledCandidates() {
   try {
     const data = await loadFirst([
@@ -146,17 +159,25 @@ async function loadScheduledCandidates() {
 async function main() {
   const key = getSpecialKey();
   const config = SPECIALS[key];
-  const [index, guidePlan, p0Pack, scheduledCandidates] = await Promise.all([
+  const [index, guidePlan, p0Pack, p1Pack, scheduledCandidates] = await Promise.all([
     loadFirst(['../../catalog/index.json', '../catalog/index.json']),
     loadGuidePlan(),
     loadP0Pack(),
+    loadP1Pack(),
     loadScheduledCandidates(),
   ]);
   const p0Repos = new Set(guidePlan.filter((item) => item.priority_batch === 'P0').map((item) => item.repo));
   const p0PackMap = new Map(p0Pack.map((item) => [item.repo, item]));
+  const p1Repos = new Set([
+    'VoltAgent/awesome-agent-skills',
+    'RoundTable02/tutor-skills',
+    'coleam00/second-brain-skills',
+    'ArtemXTech/personal-os-skills',
+  ]);
+  const p1PackMap = new Map(p1Pack.map((item) => [item.repo, item]));
   const mainIndexItems = (index.items || [])
     .filter(config.filter)
-    .sort((a, b) => Number(p0Repos.has(b.repo)) - Number(p0Repos.has(a.repo)));
+    .sort((a, b) => (Number(p0Repos.has(b.repo)) + Number(p1Repos.has(b.repo))) - (Number(p0Repos.has(a.repo)) + Number(p1Repos.has(a.repo))));
   const fallbackItems = key === 'scheduled'
     ? scheduledCandidates.map((item) => ({
         ...item,
@@ -186,7 +207,7 @@ async function main() {
   if (!mainIndexItems.length && key === 'scheduled') {
     introEl.textContent = `${config.intro} Showing scheduled candidate backfill until the main index absorbs the new fields.`;
   }
-  renderList(document.getElementById('special-results'), items.slice(0, 8), p0Repos, p0PackMap);
+  renderList(document.getElementById('special-results'), items.slice(0, 8), p0Repos, p0PackMap, p1Repos, p1PackMap);
 }
 
 main().catch((error) => {

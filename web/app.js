@@ -10,6 +10,8 @@ const state = {
   guidesMap: new Map(),
   p0Pack: [],
   p0PackMap: new Map(),
+  p1Pack: [],
+  p1PackMap: new Map(),
   guidePlan: [],
   guidePlanMap: new Map(),
 };
@@ -27,6 +29,7 @@ const els = {
   bestLists: document.getElementById("best-lists-grid"),
   topGuides: document.getElementById("top-guides"),
   safeStart: document.getElementById("safe-start-grid"),
+  p1Guides: document.getElementById("p1-guides-grid"),
   p0Guides: document.getElementById("p0-guides-grid"),
   runtimeControl: document.getElementById("runtime-control-grid"),
 };
@@ -661,6 +664,34 @@ function renderBestLists() {
   });
 }
 
+function renderP1Guides() {
+  if (!els.p1Guides) return;
+  const repos = [
+    'VoltAgent/awesome-agent-skills',
+    'RoundTable02/tutor-skills',
+    'coleam00/second-brain-skills',
+    'ArtemXTech/personal-os-skills',
+  ];
+  const items = state.items.filter((item) => repos.includes(item.repo));
+  els.p1Guides.innerHTML = items.map((item) => {
+    const guide = state.p1PackMap.get(item.repo) || {};
+    return `
+      <article class="guide-card">
+        <h3>${item.name}</h3>
+        <p class="guide-summary">${guide.one_line_summary || oneLineSummary(item)}</p>
+        <div class="guide-meta">
+          <span class="fact">${item.platform}</span>
+          <span class="fact">P1 high-value</span>
+        </div>
+        <ul class="guide-points">
+          <li><strong>Install:</strong> <code>${guide.install_cmd || item.installCommand}</code></li>
+          <li><strong>Fit:</strong> ${guide.fit || item.useCaseText}</li>
+          <li><strong>Caution:</strong> ${guide.caution || item.riskExplanationText}</li>
+        </ul>
+      </article>`;
+  }).join('');
+}
+
 function renderP0Guides() {
   if (!els.p0Guides) return;
   const p0Repos = state.guidePlan.filter((item) => item.priority_batch === 'P0').slice(0, 6).map((item) => item.repo);
@@ -796,6 +827,7 @@ function render() {
   renderCapabilityMap();
   renderRuntimeControlMap();
   renderBestLists();
+  renderP1Guides();
   renderP0Guides();
   renderTopGuides();
   renderSafeStart();
@@ -922,6 +954,22 @@ async function loadP0Pack() {
   return [];
 }
 
+async function loadP1Pack() {
+  const candidates = [
+    "../catalog/top50-guides-p1-pack-v1.json",
+    "../../agents/research/top50-guides-p1-pack-v1.json",
+  ];
+  for (const path of candidates) {
+    try {
+      const data = await loadJson(path);
+      return Array.isArray(data.items) ? data.items : [];
+    } catch {
+      // ignore
+    }
+  }
+  return [];
+}
+
 async function loadGuidePlan() {
   const candidates = [
     "../catalog/top50-guides-gap-plan-v1.json",
@@ -1020,21 +1068,24 @@ function applyCapabilityAction(capabilitySlug) {
 }
 
 async function main() {
-  const [catalog, auditIndex, enrichedMap, bestLists, guides, p0Pack, guidePlan] = await Promise.all([
+  const [catalog, auditIndex, enrichedMap, bestLists, guides, p0Pack, p1Pack, guidePlan] = await Promise.all([
     loadJson("../catalog/index.json").catch(() => loadJson("../catalog/skills-catalog-v1.json")),
     loadJson("../audits/index.json"),
     loadOptionalEnriched(),
     loadBestLists(),
     loadGuides(),
     loadP0Pack(),
+    loadP1Pack(),
     loadGuidePlan(),
   ]);
   state.bestLists = bestLists;
   state.guides = guides;
   state.p0Pack = p0Pack;
+  state.p1Pack = p1Pack;
   state.guidePlan = guidePlan;
   state.guidesMap = new Map(guides.map((item) => [item.repo, item]));
   state.p0PackMap = new Map(p0Pack.map((item) => [item.repo, item]));
+  state.p1PackMap = new Map(p1Pack.map((item) => [item.repo, item]));
   state.guidePlanMap = new Map(guidePlan.map((item) => [item.repo, item]));
   const auditItems = await Promise.all(auditIndex.items.map((slug) => loadJson(`../audits/${slug}.json`).catch(() => null)));
 

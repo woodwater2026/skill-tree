@@ -1,0 +1,369 @@
+{
+  "generated_at": "2026-03-30",
+  "count": 15,
+  "source": "top50-guides-gap-plan-v1 P1 batch",
+  "items": [
+    {
+      "rank_in_p1": 1,
+      "repo": "VoltAgent/awesome-agent-skills",
+      "name": "awesome-agent-skills",
+      "group": "Orchestration / Workflow",
+      "priority_score": 28.7,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "medium",
+      "one_line_summary": "VoltAgent/awesome-agent-skills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/VoltAgent/awesome-agent-skills.git",
+      "usage": "先在一个真实复杂任务里试跑一次，把它当成工作流骨架来验证，再决定是否扩展到团队主流程。",
+      "fit": "适合任务复杂度上来后，需要拆分执行、子代理协作或标准化工作流的进阶用户。",
+      "expected_outcome": "提升多步骤任务的组织性和复用性，让复杂任务不再全靠单 agent 硬扛。",
+      "caution": "这类项目常引入更复杂的执行链路、子代理或外部工具依赖；正式接入前先看清控制面和失败回退路径。",
+      "recommended_surfaces": [
+        "workflow-stack-specials",
+        "detail-layer",
+        "best-skills"
+      ]
+    },
+    {
+      "rank_in_p1": 2,
+      "repo": "RoundTable02/tutor-skills",
+      "name": "tutor-skills",
+      "group": "Research / Context",
+      "priority_score": 28.5,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "security_rating": "medium",
+      "one_line_summary": "RoundTable02/tutor-skills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/RoundTable02/tutor-skills.git",
+      "usage": "先在一个需要跨多轮上下文的研究/写作任务里试用，重点观察它是否减少重复解释和上下文丢失。",
+      "fit": "适合需要长期任务连续性、知识沉淀、检索增强或研究工作流的人。",
+      "expected_outcome": "提升长任务稳定性，减少上下文漂移、知识断层和重复说明。",
+      "caution": "主要风险在于长期上下文、外部知识源或自动化流程可能带来误用和隐性依赖；要先确认数据边界。",
+      "recommended_surfaces": [
+        "workflow-stack-specials",
+        "detail-layer",
+        "best-skills"
+      ]
+    },
+    {
+      "rank_in_p1": 3,
+      "repo": "coleam00/second-brain-skills",
+      "name": "second-brain-skills",
+      "group": "Research / Context",
+      "priority_score": 28.5,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "security_rating": "medium",
+      "one_line_summary": "coleam00/second-brain-skills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/coleam00/second-brain-skills.git",
+      "usage": "先在一个需要跨多轮上下文的研究/写作任务里试用，重点观察它是否减少重复解释和上下文丢失。",
+      "fit": "适合需要长期任务连续性、知识沉淀、检索增强或研究工作流的人。",
+      "expected_outcome": "提升长任务稳定性，减少上下文漂移、知识断层和重复说明。",
+      "caution": "主要风险在于长期上下文、外部知识源或自动化流程可能带来误用和隐性依赖；要先确认数据边界。",
+      "recommended_surfaces": [
+        "workflow-stack-specials",
+        "detail-layer",
+        "best-skills"
+      ]
+    },
+    {
+      "rank_in_p1": 4,
+      "repo": "ArtemXTech/personal-os-skills",
+      "name": "personal-os-skills",
+      "group": "Research / Context",
+      "priority_score": 28.3,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "security_rating": "medium",
+      "one_line_summary": "ArtemXTech/personal-os-skills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/ArtemXTech/personal-os-skills.git",
+      "usage": "先在一个需要跨多轮上下文的研究/写作任务里试用，重点观察它是否减少重复解释和上下文丢失。",
+      "fit": "适合需要长期任务连续性、知识沉淀、检索增强或研究工作流的人。",
+      "expected_outcome": "提升长任务稳定性，减少上下文漂移、知识断层和重复说明。",
+      "caution": "主要风险在于长期上下文、外部知识源或自动化流程可能带来误用和隐性依赖；要先确认数据边界。",
+      "recommended_surfaces": [
+        "workflow-stack-specials",
+        "detail-layer",
+        "best-skills"
+      ]
+    },
+    {
+      "rank_in_p1": 5,
+      "repo": "Dimillian/CodexSkillManager",
+      "name": "CodexSkillManager",
+      "group": "Platform / Discovery",
+      "priority_score": 29.0,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "Dimillian/CodexSkillManager is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/Dimillian/CodexSkillManager.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 6,
+      "repo": "RayFernando1337/llm-cursor-rules",
+      "name": "llm-cursor-rules",
+      "group": "Platform / Discovery",
+      "priority_score": 28.9,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "RayFernando1337/llm-cursor-rules is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/RayFernando1337/llm-cursor-rules.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 7,
+      "repo": "am-will/codex-skills",
+      "name": "codex-skills",
+      "group": "Platform / Discovery",
+      "priority_score": 28.8,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "am-will/codex-skills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/am-will/codex-skills.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 8,
+      "repo": "sundial-org/awesome-openclaw-skills",
+      "name": "awesome-openclaw-skills",
+      "group": "Platform / Discovery",
+      "priority_score": 28.5,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "medium",
+      "one_line_summary": "sundial-org/awesome-openclaw-skills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/sundial-org/awesome-openclaw-skills.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 9,
+      "repo": "jabrena/cursor-rules-java",
+      "name": "cursor-rules-java",
+      "group": "Platform / Discovery",
+      "priority_score": 28.3,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "jabrena/cursor-rules-java is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/jabrena/cursor-rules-java.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 10,
+      "repo": "LeastBit/Claude_skills_zh-CN",
+      "name": "Claude_skills_zh-CN",
+      "group": "Platform / Discovery",
+      "priority_score": 28.3,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "medium",
+      "one_line_summary": "LeastBit/Claude_skills_zh-CN is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/LeastBit/Claude_skills_zh-CN.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 11,
+      "repo": "cassler/awesome-claude-code-setup",
+      "name": "awesome-claude-code-setup",
+      "group": "Platform / Discovery",
+      "priority_score": 28.3,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "medium",
+      "one_line_summary": "cassler/awesome-claude-code-setup is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/cassler/awesome-claude-code-setup.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 12,
+      "repo": "staruhub/ClaudeSkills",
+      "name": "ClaudeSkills",
+      "group": "Platform / Discovery",
+      "priority_score": 28.3,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "security_rating": "medium",
+      "one_line_summary": "staruhub/ClaudeSkills is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/staruhub/ClaudeSkills.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 13,
+      "repo": "renocrypt/latex-arxiv-SKILL",
+      "name": "latex-arxiv-SKILL",
+      "group": "Platform / Discovery",
+      "priority_score": 28.2,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "renocrypt/latex-arxiv-SKILL is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/renocrypt/latex-arxiv-SKILL.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 14,
+      "repo": "comol/cursor_rules_1c",
+      "name": "cursor_rules_1c",
+      "group": "Platform / Discovery",
+      "priority_score": 28.2,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "comol/cursor_rules_1c is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/comol/cursor_rules_1c.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    },
+    {
+      "rank_in_p1": 15,
+      "repo": "alchaincyf/cursor-rules-huasheng",
+      "name": "cursor-rules-huasheng",
+      "group": "Platform / Discovery",
+      "priority_score": 28.1,
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "security_rating": "medium",
+      "one_line_summary": "alchaincyf/cursor-rules-huasheng is a high-interest skill/project in the current agent workflow ecosystem.",
+      "install_cmd": "git clone https://github.com/alchaincyf/cursor-rules-huasheng.git",
+      "usage": "先按你的真实任务挑 2-3 个候选，再进入对应仓库看安装方式与权限要求，不要一上来全量收藏或全量安装。",
+      "fit": "适合想先找到高信号 skill/规则/模板，再决定安装与长期保留的人。",
+      "expected_outcome": "更快找到值得试的高信号项目，减少目录噪音和重复筛选。",
+      "caution": "目录/集合本身风险未必高，但你会顺手进入更多下游 skill；真正风险常出现在后续安装与权限扩张。",
+      "recommended_surfaces": [
+        "homepage",
+        "best-skills",
+        "card-layer"
+      ]
+    }
+  ],
+  "direct_surface_repos": [
+    "VoltAgent/awesome-agent-skills",
+    "RoundTable02/tutor-skills",
+    "coleam00/second-brain-skills",
+    "ArtemXTech/personal-os-skills",
+    "Dimillian/CodexSkillManager",
+    "RayFernando1337/llm-cursor-rules",
+    "am-will/codex-skills",
+    "sundial-org/awesome-openclaw-skills",
+    "jabrena/cursor-rules-java",
+    "LeastBit/Claude_skills_zh-CN",
+    "cassler/awesome-claude-code-setup",
+    "staruhub/ClaudeSkills",
+    "renocrypt/latex-arxiv-SKILL",
+    "comol/cursor_rules_1c",
+    "alchaincyf/cursor-rules-huasheng"
+  ]
+}
