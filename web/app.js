@@ -28,6 +28,7 @@ const els = {
   topGuides: document.getElementById("top-guides"),
   safeStart: document.getElementById("safe-start-grid"),
   p0Guides: document.getElementById("p0-guides-grid"),
+  runtimeControl: document.getElementById("runtime-control-grid"),
 };
 
 const CATEGORY_LABELS = {
@@ -181,6 +182,24 @@ function humanAuditSummary(item) {
           : "Do not install blindly. Treat this as a manual-review item.",
     risk: `Main risk: ${majorRisk}. Recommendation: ${recommendation}.`,
   };
+}
+
+function runtimeProfile(item) {
+  const level = item.runtime_control_level || 'unknown';
+  const surfaces = item.runtime_control_surfaces || [];
+  if (level === 'none' || level === 'unknown') return 'Manual helper';
+  if (level === 'basic' && surfaces.includes('background-execution')) return 'Workflow helper';
+  if (level === 'advanced' && surfaces.includes('delegation')) return 'Orchestration layer';
+  if (level === 'advanced' && surfaces.includes('protocol-bridge')) return 'Protocol / control-plane layer';
+  return level === 'advanced' ? 'Persistent workflow layer' : 'Workflow helper';
+}
+
+function oversightRecommendation(item) {
+  const level = item.runtime_control_level || 'unknown';
+  if (level === 'none') return 'Good starter option. Minimal review needed before first use.';
+  if (level === 'basic') return 'Review before first install. Safe when kept inside a controlled workspace.';
+  if (level === 'advanced') return 'Advanced workflow option. Use only with clear operator oversight and runtime awareness.';
+  return 'Review runtime behavior before install; control expectations are still unclear.';
 }
 
 function deriveWorkflowMetadata(item) {
@@ -452,12 +471,15 @@ function renderCard(item) {
   const copyBtnEl = node.querySelector(".copy-btn");
   const useCaseEl = node.querySelector(".use-case");
   const riskExplanationEl = node.querySelector(".risk-explanation");
+  const runtimeLevelEl = node.querySelector(".runtime-level");
+  const runtimeProfileEl = node.querySelector(".runtime-profile");
+  const runtimeOversightEl = node.querySelector(".runtime-oversight");
   const humanWhatEl = node.querySelector(".human-what");
   const humanSafeEl = node.querySelector(".human-safe");
   const humanRiskEl = node.querySelector(".human-risk");
   const guideBodyEl = node.querySelector(".guide-body");
 
-  if (!installCodeEl || !copyBtnEl || !useCaseEl || !riskExplanationEl || !humanWhatEl || !humanSafeEl || !humanRiskEl) {
+  if (!installCodeEl || !copyBtnEl || !useCaseEl || !riskExplanationEl || !runtimeLevelEl || !runtimeProfileEl || !runtimeOversightEl || !humanWhatEl || !humanSafeEl || !humanRiskEl) {
     node.innerHTML = `
       <div class="card-top">
         <div>
@@ -518,6 +540,14 @@ function renderCard(item) {
         ${(item.workflow_risk_signals && item.workflow_risk_signals.length) ? `<li><strong>Watch for:</strong> ${item.workflow_risk_signals.slice(0, 2).join(" · ")}</li>` : ""}
         ${(item.site_surfaces && item.site_surfaces.length) ? `<li><strong>Site surfaces:</strong> ${item.site_surfaces.join(", ")}</li>` : ""}
       </ul></section>` : ""}
+      <section class="plain-summary runtime-detail">
+        <div class="section-label">Runtime control</div>
+        <ul>
+          <li><strong>Control level:</strong> ${item.runtime_control_level || 'unknown'}</li>
+          <li><strong>Runtime profile:</strong> ${runtimeProfile(item)}</li>
+          <li><strong>Oversight recommendation:</strong> ${oversightRecommendation(item)}</li>
+        </ul>
+      </section>
       <section class="plain-summary">
         <div class="section-label">Human audit summary</div>
         <ul>
@@ -562,6 +592,9 @@ function renderCard(item) {
 
   useCaseEl.textContent = item.guide?.fit_for || item.useCaseText;
   riskExplanationEl.textContent = item.guide?.main_risk || item.riskExplanationText;
+  runtimeLevelEl.textContent = item.runtime_control_level || 'unknown';
+  runtimeProfileEl.textContent = runtimeProfile(item);
+  runtimeOversightEl.textContent = oversightRecommendation(item);
   humanWhatEl.textContent = item.humanSummary.what;
   humanSafeEl.textContent = item.humanSummary.safe;
   humanRiskEl.textContent = item.humanSummary.risk;
@@ -691,6 +724,34 @@ function renderCapabilityMap() {
   });
 }
 
+function renderRuntimeControlMap() {
+  if (!els.runtimeControl) return;
+  const levels = [
+    {
+      label: 'Level 1 — Guided / Explicit',
+      summary: 'Direct user intent, limited runtime power, best starting point for cautious users.',
+    },
+    {
+      label: 'Level 2 — Assisted / Scoped',
+      summary: 'Useful automation with bounded workflow scope and moderate operator review.',
+    },
+    {
+      label: 'Level 3 — Automated / Extended',
+      summary: 'Persistence, broader workflow reach, and stronger runtime assumptions.',
+    },
+    {
+      label: 'Level 4 — Orchestrated / High-Control',
+      summary: 'Subagent, protocol, or workflow-layer control that needs mature oversight.',
+    },
+  ];
+  els.runtimeControl.innerHTML = levels.map((level) => `
+    <div class="risk-check-card">
+      <strong>${level.label}</strong>
+      <span>${level.summary}</span>
+    </div>
+  `).join('');
+}
+
 function renderSafeStart() {
   if (!els.safeStart) return;
   const safeItems = state.items
@@ -722,6 +783,7 @@ function renderSafeStart() {
 function render() {
   renderFilters();
   renderCapabilityMap();
+  renderRuntimeControlMap();
   renderBestLists();
   renderP0Guides();
   renderTopGuides();

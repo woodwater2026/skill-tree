@@ -103,6 +103,19 @@
       </div>
     </section>
 
+    <section class="runtime-map-wrap">
+      <div class="runtime-map-inner panel" id="runtime-control-map">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Runtime control map</p>
+            <h2>How much runtime control does this skill assume?</h2>
+          </div>
+          <p class="section-copy">Use this before install: is it a guided helper, a scoped workflow tool, an extended automation layer, or a high-control orchestration layer?</p>
+        </div>
+        <div id="runtime-control-grid" class="risk-check-grid"></div>
+      </div>
+    </section>
+
     <section class="risk-explainer-wrap">
       <div class="risk-explainer-inner panel" id="safe-start">
         <div class="section-heading">
@@ -238,6 +251,15 @@
         <section class="user-value">
           <div class="section-label">Why this risk score</div>
           <p class="risk-explanation"></p>
+        </section>
+
+        <section class="plain-summary runtime-detail">
+          <div class="section-label">Runtime control</div>
+          <ul>
+            <li><strong>Control level:</strong> <span class="runtime-level"></span></li>
+            <li><strong>Runtime profile:</strong> <span class="runtime-profile"></span></li>
+            <li><strong>Oversight recommendation:</strong> <span class="runtime-oversight"></span></li>
+          </ul>
         </section>
 
         <section class="plain-summary">
