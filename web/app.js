@@ -333,6 +333,12 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       scheduled_fit_explanation: item.scheduled_fit_explanation || enriched.scheduled_fit_explanation,
       workflow_scenarios: item.workflow_scenarios || enriched.workflow_scenarios || [],
       runtime_control_level: item.runtime_control_level || enriched.runtime_control_level,
+      distribution_layer: item.distribution_layer || enriched.distribution_layer,
+      background_execution: item.background_execution || enriched.background_execution,
+      local_first: item.local_first || enriched.local_first,
+      workflow_lock_in: item.workflow_lock_in || enriched.workflow_lock_in,
+      permission_visibility: item.permission_visibility || enriched.permission_visibility,
+      runtime_control_rationale: item.runtime_control_rationale || enriched.runtime_control_rationale,
       runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
       workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
       workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
@@ -538,8 +544,13 @@ function renderCard(item) {
         ${(item.workflow_entry_signals && item.workflow_entry_signals.length) ? `<li><strong>Enter when:</strong> ${item.workflow_entry_signals.slice(0, 2).join(" · ")}</li>` : ""}
         ${(item.workflow_decision_axes && item.workflow_decision_axes.length) ? `<li><strong>Judge by:</strong> ${item.workflow_decision_axes.slice(0, 3).join(", ")}</li>` : ""}
         ${(item.workflow_risk_signals && item.workflow_risk_signals.length) ? `<li><strong>Watch for:</strong> ${item.workflow_risk_signals.slice(0, 2).join(" · ")}</li>` : ""}
+        ${item.distribution_layer ? `<li><strong>Distribution layer:</strong> ${item.distribution_layer}</li>` : ""}
+        ${item.background_execution ? `<li><strong>Background execution:</strong> ${item.background_execution}</li>` : ""}
+        ${item.local_first ? `<li><strong>Local-first posture:</strong> ${item.local_first}</li>` : ""}
+        ${item.workflow_lock_in ? `<li><strong>Workflow lock-in:</strong> ${item.workflow_lock_in}</li>` : ""}
+        ${item.permission_visibility ? `<li><strong>Permission visibility:</strong> ${item.permission_visibility}</li>` : ""}
         ${(item.site_surfaces && item.site_surfaces.length) ? `<li><strong>Site surfaces:</strong> ${item.site_surfaces.join(", ")}</li>` : ""}
-      </ul></section>` : ""}
+      </ul>${item.runtime_control_rationale ? `<p class="risk-explanation">${item.runtime_control_rationale}</p>` : ""}</section>` : ""}
       <section class="plain-summary runtime-detail">
         <div class="section-label">Runtime control</div>
         <ul>
@@ -799,6 +810,8 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/runtime-control-fields-v1.json",
+    "../../agents/research/runtime-control-fields-v1.json",
     "../catalog/scheduled-workflow-candidates-v1.json",
     "../../agents/research/scheduled-workflow-candidates-v1.json",
     "../catalog/workflow-runtime-fields-v1.json",
@@ -1068,6 +1081,12 @@ async function main() {
         scheduled_fit_explanation: item.scheduled_fit_explanation || enriched.scheduled_fit_explanation,
         workflow_scenarios: item.workflow_scenarios || enriched.workflow_scenarios || [],
         runtime_control_level: item.runtime_control_level || enriched.runtime_control_level,
+        distribution_layer: item.distribution_layer || enriched.distribution_layer,
+        background_execution: item.background_execution || enriched.background_execution,
+        local_first: item.local_first || enriched.local_first,
+        workflow_lock_in: item.workflow_lock_in || enriched.workflow_lock_in,
+        permission_visibility: item.permission_visibility || enriched.permission_visibility,
+        runtime_control_rationale: item.runtime_control_rationale || enriched.runtime_control_rationale,
         runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
         workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
         workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],

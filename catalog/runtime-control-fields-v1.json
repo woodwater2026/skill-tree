@@ -1,0 +1,324 @@
+{
+  "generated_at": "2026-03-30",
+  "count": 15,
+  "items": [
+    {
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "name": "Agent-Skills-for-Context-Engineering",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "MCP",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering"
+    },
+    {
+      "repo": "memodb-io/Acontext",
+      "name": "Acontext",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/memodb-io/Acontext"
+    },
+    {
+      "repo": "zippoxer/subtask",
+      "name": "subtask",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as medium",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "medium",
+      "source": "https://github.com/zippoxer/subtask"
+    },
+    {
+      "repo": "yxf203/Awesome-Efficient-Agents",
+      "name": "Awesome-Efficient-Agents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/yxf203/Awesome-Efficient-Agents"
+    },
+    {
+      "repo": "hesreallyhim/awesome-claude-code",
+      "name": "awesome-claude-code",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "MCP",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code"
+    },
+    {
+      "repo": "kepano/obsidian-skills",
+      "name": "obsidian-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as medium",
+      "protocol_support": [
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "medium",
+      "source": "https://github.com/kepano/obsidian-skills"
+    },
+    {
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "name": "awesome-claude-code-subagents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/VoltAgent/awesome-claude-code-subagents"
+    },
+    {
+      "repo": "serejaris/justdoit",
+      "name": "justdoit",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "distribution_layer": "skill pack / workflow repo",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like skill pack / workflow repo; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as medium",
+      "protocol_support": [
+        "unknown"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "medium",
+      "source": "https://github.com/serejaris/justdoit"
+    },
+    {
+      "repo": "marcosgalleterobbva/bitbucketdc-skill",
+      "name": "bitbucketdc-skill",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/marcosgalleterobbva/bitbucketdc-skill"
+    },
+    {
+      "repo": "OthmanAdi/planning-with-files",
+      "name": "planning-with-files",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/OthmanAdi/planning-with-files"
+    },
+    {
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "name": "claude-scientific-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "media-data",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills"
+    },
+    {
+      "repo": "EverMind-AI/EverMemOS",
+      "name": "EverMemOS",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as medium",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "medium",
+      "source": "https://github.com/EverMind-AI/EverMemOS"
+    },
+    {
+      "repo": "nidhinjs/prompt-master",
+      "name": "prompt-master",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/nidhinjs/prompt-master"
+    },
+    {
+      "repo": "CloudAI-X/claude-workflow-v2",
+      "name": "claude-workflow-v2",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "tooling",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/CloudAI-X/claude-workflow-v2"
+    },
+    {
+      "repo": "Prat011/awesome-llm-skills",
+      "name": "awesome-llm-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "MCP",
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/Prat011/awesome-llm-skills"
+    }
+  ]
+}

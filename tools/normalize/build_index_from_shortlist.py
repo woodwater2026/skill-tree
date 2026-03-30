@@ -10,6 +10,7 @@ HIGH_INTENT = ROOT / 'skill-tree/catalog/high-intent-skills-enriched-v1.json'
 GOVERNANCE = ROOT / 'skill-tree/catalog/high-intent-governance-fields-v1.json'
 WORKFLOW_RUNTIME = ROOT / 'skill-tree/catalog/workflow-runtime-fields-v1.json'
 SCHEDULED = ROOT / 'skill-tree/catalog/scheduled-workflow-candidates-v1.json'
+RUNTIME_CONTROL = ROOT / 'skill-tree/catalog/runtime-control-fields-v1.json'
 OUT = ROOT / 'skill-tree/catalog/index.json'
 
 catalog = json.loads(CATALOG_V1.read_text())
@@ -18,12 +19,14 @@ high_intent = json.loads(HIGH_INTENT.read_text()) if HIGH_INTENT.exists() else {
 governance = json.loads(GOVERNANCE.read_text()) if GOVERNANCE.exists() else {'items': []}
 workflow_runtime = json.loads(WORKFLOW_RUNTIME.read_text()) if WORKFLOW_RUNTIME.exists() else {'items': []}
 scheduled = json.loads(SCHEDULED.read_text()) if SCHEDULED.exists() else {'items': []}
+runtime_control = json.loads(RUNTIME_CONTROL.read_text()) if RUNTIME_CONTROL.exists() else {'items': []}
 
 catalog_items = {item['repo']: item for item in catalog['items']}
 high_intent_items = {item['repo']: item for item in high_intent.get('items', [])}
 governance_items = {item['repo']: item for item in governance.get('items', [])}
 workflow_runtime_items = {item['repo']: item for item in workflow_runtime.get('items', [])}
 scheduled_items = {item['repo']: item for item in scheduled.get('items', [])}
+runtime_control_items = {item['repo']: item for item in runtime_control.get('items', [])}
 
 def slugify(repo: str) -> str:
     return repo.lower().replace('_', '-').replace('/', '-')
@@ -124,6 +127,7 @@ for s in shortlist['items']:
     gov = governance_items.get(s['repo'], {})
     wr = workflow_runtime_items.get(s['repo'], {})
     sched = scheduled_items.get(s['repo'], {})
+    rc = runtime_control_items.get(s['repo'], {})
     merged = {
         'id': slugify(s['repo']),
         'slug': slugify(s['repo']),
@@ -149,6 +153,12 @@ for s in shortlist['items']:
         'supports_multi_agent': wr.get('supports_multi_agent', 'unknown'),
         'supports_context_protocol': wr.get('supports_context_protocol', 'unknown'),
         'runtime_control_level': wr.get('runtime_control_level', 'unknown'),
+        'distribution_layer': rc.get('distribution_layer', ''),
+        'background_execution': rc.get('background_execution', 'unknown'),
+        'local_first': rc.get('local_first', 'unknown'),
+        'workflow_lock_in': rc.get('workflow_lock_in', 'unknown'),
+        'permission_visibility': rc.get('permission_visibility', 'unknown'),
+        'runtime_control_rationale': rc.get('runtime_control_rationale', ''),
         'workflow_specials': wr.get('workflow_specials', []),
         'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', [])),
         'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', ''),
@@ -169,6 +179,12 @@ for s in shortlist['items']:
         'supports_multi_agent': wr.get('supports_multi_agent', merged.get('supports_multi_agent', 'unknown')),
         'supports_context_protocol': wr.get('supports_context_protocol', merged.get('supports_context_protocol', 'unknown')),
         'runtime_control_level': wr.get('runtime_control_level', merged.get('runtime_control_level', 'unknown')),
+        'distribution_layer': rc.get('distribution_layer', merged.get('distribution_layer', '')),
+        'background_execution': rc.get('background_execution', merged.get('background_execution', 'unknown')),
+        'local_first': rc.get('local_first', merged.get('local_first', 'unknown')),
+        'workflow_lock_in': rc.get('workflow_lock_in', merged.get('workflow_lock_in', 'unknown')),
+        'permission_visibility': rc.get('permission_visibility', merged.get('permission_visibility', 'unknown')),
+        'runtime_control_rationale': rc.get('runtime_control_rationale', merged.get('runtime_control_rationale', '')),
         'workflow_specials': wr.get('workflow_specials', merged.get('workflow_specials', [])),
         'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', merged.get('workflow_entry_points', []))),
         'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', merged.get('scheduled_fit_explanation', '')),
@@ -188,7 +204,7 @@ index = {
         'unattended_run', 'subagent_support', 'protocol_support', 'governance_maturity', 'governance_rationale',
         'workflow_stack_role', 'supports_scheduled', 'supports_long_running', 'supports_multi_agent', 'supports_context_protocol',
         'workflow_specials', 'workflow_entry_points', 'scheduled_fit_explanation',
-        'workflow_scenarios', 'runtime_control_level', 'runtime_control_surfaces',
+        'workflow_scenarios', 'runtime_control_level', 'distribution_layer', 'background_execution', 'local_first', 'workflow_lock_in', 'permission_visibility', 'runtime_control_rationale', 'runtime_control_surfaces',
         'workflow_entry_signals', 'workflow_decision_axes', 'workflow_risk_signals', 'site_surfaces',
         'security_rating', 'collection_status', 'priority_score', 'audit_status',
         'review_status', 'updated_at'
