@@ -3,6 +3,9 @@ const state = {
   query: "",
   risk: "all",
   category: "all",
+  whereCode: "all",
+  secretHolder: "all",
+  backgroundFit: "all",
   auditedOnly: false,
   activeRepos: null,
   bestLists: [],
@@ -21,6 +24,9 @@ const els = {
   search: document.getElementById("search"),
   riskFilters: document.getElementById("risk-filters"),
   categoryFilters: document.getElementById("category-filters"),
+  whereCodeFilters: document.getElementById("where-code-filters"),
+  secretHolderFilters: document.getElementById("secret-holder-filters"),
+  backgroundFitFilters: document.getElementById("background-fit-filters"),
   categoryNav: document.getElementById("category-nav"),
   capabilityMap: document.getElementById("capability-map-grid"),
   grid: document.getElementById("grid"),
@@ -436,6 +442,26 @@ function renderFilters() {
     .map((category) => `<button class="filter ${state.category === category ? "active" : ""}" data-kind="category" data-value="${category}">${labelCategory(category)}</button>`)
     .join("");
 
+  const whereCodes = ["all", ...new Set(state.items.map((item) => whereCodeRuns(item)).filter(Boolean))].sort();
+  const secretHolders = ["all", ...new Set(state.items.map((item) => secretHolder(item)).filter(Boolean))].sort();
+  const backgroundFits = ["all", ...new Set(state.items.map((item) => backgroundDurationFit(item)).filter(Boolean))].sort();
+
+  if (els.whereCodeFilters) {
+    els.whereCodeFilters.innerHTML = whereCodes
+      .map((value) => `<button class="filter ${state.whereCode === value ? "active" : ""}" data-kind="whereCode" data-value="${value}">${value}</button>`)
+      .join("");
+  }
+  if (els.secretHolderFilters) {
+    els.secretHolderFilters.innerHTML = secretHolders
+      .map((value) => `<button class="filter ${state.secretHolder === value ? "active" : ""}" data-kind="secretHolder" data-value="${value}">${value}</button>`)
+      .join("");
+  }
+  if (els.backgroundFitFilters) {
+    els.backgroundFitFilters.innerHTML = backgroundFits
+      .map((value) => `<button class="filter ${state.backgroundFit === value ? "active" : ""}" data-kind="backgroundFit" data-value="${value}">${value}</button>`)
+      .join("");
+  }
+
   if (els.categoryNav) {
     els.categoryNav.innerHTML = categories
       .filter((category) => category !== "all")
@@ -483,9 +509,12 @@ function getFilteredItems() {
           .includes(q);
       const riskOk = state.risk === "all" || item.risk === state.risk;
       const catOk = state.category === "all" || item.category === state.category;
+      const whereOk = state.whereCode === "all" || whereCodeRuns(item) === state.whereCode;
+      const secretOk = state.secretHolder === "all" || secretHolder(item) === state.secretHolder;
+      const bgOk = state.backgroundFit === "all" || backgroundDurationFit(item) === state.backgroundFit;
       const auditedOk = !state.auditedOnly || item.auditCount > 0;
       const repoOk = !state.activeRepos || state.activeRepos.has(item.repo);
-      return textOk && riskOk && catOk && auditedOk && repoOk;
+      return textOk && riskOk && catOk && whereOk && secretOk && bgOk && auditedOk && repoOk;
     })
     .sort((a, b) => (b.stars || 0) - (a.stars || 0));
 }
