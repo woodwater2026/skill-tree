@@ -91,6 +91,9 @@ function renderList(el, items, p0Repos = new Set(), p0PackMap = new Map(), p1Rep
         <li><strong>Fit:</strong> ${guide.fit_for || item.use_case || 'See catalog detail for usage guidance.'}</li>
         <li><strong>Usage:</strong> ${guide.how_to_use || 'Start with the install path, then validate on one narrow workflow.'}</li>
         <li><strong>Caution:</strong> ${guide.main_risk || item.risk_explanation || 'Review runtime and permission surface before install.'}</li>
+        <li><strong>Execution interface:</strong> ${item.execution_interface || 'Unclear'}</li>
+        <li><strong>Execution evidence:</strong> ${item.execution_evidence || item.audit_evidence || 'Weak or unspecified'}</li>
+        <li><strong>Takeover path:</strong> ${item.takeover_path || 'Unclear'}</li>
       </ul>
     </article>`;
   }).join('');

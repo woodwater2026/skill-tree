@@ -38,6 +38,7 @@ const els = {
   p1Guides: document.getElementById("p1-guides-grid"),
   p0Guides: document.getElementById("p0-guides-grid"),
   runtimeControl: document.getElementById("runtime-control-grid"),
+  executionInterface: document.getElementById("execution-interface-grid"),
   runtimeBoundary: document.getElementById("runtime-boundary-grid"),
 };
 
@@ -390,6 +391,11 @@ function mergeData(catalog, audits, enrichedMap = new Map()) {
       secret_holder: item.secret_holder || enriched.secret_holder,
       audit_evidence: item.audit_evidence || enriched.audit_evidence,
       background_duration_fit: item.background_duration_fit || enriched.background_duration_fit,
+      execution_interface: item.execution_interface || enriched.execution_interface,
+      parallel_agent_support: item.parallel_agent_support || enriched.parallel_agent_support,
+      handoff_visibility: item.handoff_visibility || enriched.handoff_visibility,
+      execution_evidence: item.execution_evidence || enriched.execution_evidence,
+      takeover_path: item.takeover_path || enriched.takeover_path,
       runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
       workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
       workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
@@ -631,8 +637,12 @@ function renderCard(item) {
         ${item.where_code_runs ? `<li><strong>Where code runs:</strong> ${item.where_code_runs}</li>` : ""}
         ${item.secret_holder ? `<li><strong>Secret holder:</strong> ${item.secret_holder}</li>` : ""}
         ${item.background_duration_fit ? `<li><strong>Background duration fit:</strong> ${item.background_duration_fit}</li>` : ""}
+        ${item.execution_interface ? `<li><strong>Execution interface:</strong> ${item.execution_interface}</li>` : ""}
+        ${item.parallel_agent_support ? `<li><strong>Parallel agent support:</strong> ${item.parallel_agent_support}</li>` : ""}
+        ${item.handoff_visibility ? `<li><strong>Handoff visibility:</strong> ${item.handoff_visibility}</li>` : ""}
+        ${item.takeover_path ? `<li><strong>Takeover path:</strong> ${item.takeover_path}</li>` : ""}
         ${(item.site_surfaces && item.site_surfaces.length) ? `<li><strong>Site surfaces:</strong> ${item.site_surfaces.join(", ")}</li>` : ""}
-      </ul>${item.runtime_control_rationale ? `<p class="risk-explanation">${item.runtime_control_rationale}</p>` : ""}${item.audit_evidence ? `<p class="risk-explanation"><strong>Audit evidence:</strong> ${item.audit_evidence}</p>` : ""}</section>` : ""}
+      </ul>${item.runtime_control_rationale ? `<p class="risk-explanation">${item.runtime_control_rationale}</p>` : ""}${item.audit_evidence ? `<p class="risk-explanation"><strong>Audit evidence:</strong> ${item.audit_evidence}</p>` : ""}${item.execution_evidence ? `<p class="risk-explanation"><strong>Execution evidence:</strong> ${item.execution_evidence}</p>` : ""}</section>` : ""}
       <section class="plain-summary runtime-detail">
         <div class="section-label">Runtime control</div>
         <ul>
@@ -886,6 +896,30 @@ function renderRuntimeControlMap() {
   `).join('');
 }
 
+function renderExecutionInterfaceMap() {
+  if (!els.executionInterface) return;
+  const cards = [
+    {
+      label: 'Chat assistant',
+      summary: 'Choose this when you want conversational steering, quick guidance, and tight human-in-the-loop control.',
+    },
+    {
+      label: 'Execution runtime',
+      summary: 'Choose this when you want meaningful task execution beyond chat, with files, tools, and bounded workflows.',
+    },
+    {
+      label: 'Multi-agent control plane',
+      summary: 'Choose this when one execution lane is not enough and you need delegation, handoffs, and orchestration.',
+    },
+  ];
+  els.executionInterface.innerHTML = cards.map((card) => `
+    <div class="risk-check-card">
+      <strong>${card.label}</strong>
+      <span>${card.summary}</span>
+    </div>
+  `).join('');
+}
+
 function renderRuntimeBoundaryMap() {
   if (!els.runtimeBoundary) return;
   const cards = [
@@ -946,6 +980,7 @@ function render() {
   renderFilters();
   renderCapabilityMap();
   renderRuntimeControlMap();
+  renderExecutionInterfaceMap();
   renderRuntimeBoundaryMap();
   renderBestLists();
   renderP1Guides();
@@ -963,6 +998,8 @@ function render() {
 
 async function loadOptionalEnriched() {
   const candidates = [
+    "../catalog/execution-interface-fields-v1.json",
+    "../../agents/research/execution-interface-fields-v1.json",
     "../catalog/runtime-execution-boundary-v1.json",
     "../../agents/research/runtime-execution-boundary-v1.json",
     "../catalog/runtime-control-fields-v1.json",
@@ -1266,6 +1303,11 @@ async function main() {
         secret_holder: item.secret_holder || enriched.secret_holder,
         audit_evidence: item.audit_evidence || enriched.audit_evidence,
         background_duration_fit: item.background_duration_fit || enriched.background_duration_fit,
+        execution_interface: item.execution_interface || enriched.execution_interface,
+        parallel_agent_support: item.parallel_agent_support || enriched.parallel_agent_support,
+        handoff_visibility: item.handoff_visibility || enriched.handoff_visibility,
+        execution_evidence: item.execution_evidence || enriched.execution_evidence,
+        takeover_path: item.takeover_path || enriched.takeover_path,
         runtime_control_surfaces: item.runtime_control_surfaces || enriched.runtime_control_surfaces || [],
         workflow_entry_signals: item.workflow_entry_signals || enriched.workflow_entry_signals || [],
         workflow_decision_axes: item.workflow_decision_axes || enriched.workflow_decision_axes || [],
