@@ -12,6 +12,7 @@ WORKFLOW_RUNTIME = ROOT / 'skill-tree/catalog/workflow-runtime-fields-v1.json'
 SCHEDULED = ROOT / 'skill-tree/catalog/scheduled-workflow-candidates-v1.json'
 RUNTIME_CONTROL = ROOT / 'skill-tree/catalog/runtime-control-fields-v1.json'
 RUNTIME_BOUNDARY = ROOT / 'skill-tree/catalog/runtime-execution-boundary-v1.json'
+EXECUTION_INTERFACE = ROOT / 'skill-tree/catalog/execution-interface-fields-v1.json'
 OUT = ROOT / 'skill-tree/catalog/index.json'
 
 catalog = json.loads(CATALOG_V1.read_text())
@@ -22,6 +23,7 @@ workflow_runtime = json.loads(WORKFLOW_RUNTIME.read_text()) if WORKFLOW_RUNTIME.
 scheduled = json.loads(SCHEDULED.read_text()) if SCHEDULED.exists() else {'items': []}
 runtime_control = json.loads(RUNTIME_CONTROL.read_text()) if RUNTIME_CONTROL.exists() else {'items': []}
 runtime_boundary = json.loads(RUNTIME_BOUNDARY.read_text()) if RUNTIME_BOUNDARY.exists() else {'items': []}
+execution_interface = json.loads(EXECUTION_INTERFACE.read_text()) if EXECUTION_INTERFACE.exists() else {'items': []}
 
 catalog_items = {item['repo']: item for item in catalog['items']}
 high_intent_items = {item['repo']: item for item in high_intent.get('items', [])}
@@ -30,6 +32,7 @@ workflow_runtime_items = {item['repo']: item for item in workflow_runtime.get('i
 scheduled_items = {item['repo']: item for item in scheduled.get('items', [])}
 runtime_control_items = {item['repo']: item for item in runtime_control.get('items', [])}
 runtime_boundary_items = {item['repo']: item for item in runtime_boundary.get('items', [])}
+execution_interface_items = {item['repo']: item for item in execution_interface.get('items', [])}
 
 def slugify(repo: str) -> str:
     return repo.lower().replace('_', '-').replace('/', '-')
@@ -132,6 +135,7 @@ for s in shortlist['items']:
     sched = scheduled_items.get(s['repo'], {})
     rc = runtime_control_items.get(s['repo'], {})
     rb = runtime_boundary_items.get(s['repo'], {})
+    ei = execution_interface_items.get(s['repo'], {})
     merged = {
         'id': slugify(s['repo']),
         'slug': slugify(s['repo']),
@@ -168,6 +172,11 @@ for s in shortlist['items']:
         'secret_holder': rb.get('secret_holder', ''),
         'audit_evidence': rb.get('audit_evidence', ''),
         'background_duration_fit': rb.get('background_duration_fit', ''),
+        'execution_interface': ei.get('execution_interface', ''),
+        'parallel_agent_support': ei.get('parallel_agent_support', 'unknown'),
+        'handoff_visibility': ei.get('handoff_visibility', 'unknown'),
+        'execution_evidence': ei.get('execution_evidence', ''),
+        'takeover_path': ei.get('takeover_path', ''),
         'workflow_specials': wr.get('workflow_specials', []),
         'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', [])),
         'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', ''),
@@ -199,6 +208,11 @@ for s in shortlist['items']:
         'secret_holder': rb.get('secret_holder', merged.get('secret_holder', '')),
         'audit_evidence': rb.get('audit_evidence', merged.get('audit_evidence', '')),
         'background_duration_fit': rb.get('background_duration_fit', merged.get('background_duration_fit', '')),
+        'execution_interface': ei.get('execution_interface', merged.get('execution_interface', '')),
+        'parallel_agent_support': ei.get('parallel_agent_support', merged.get('parallel_agent_support', 'unknown')),
+        'handoff_visibility': ei.get('handoff_visibility', merged.get('handoff_visibility', 'unknown')),
+        'execution_evidence': ei.get('execution_evidence', merged.get('execution_evidence', '')),
+        'takeover_path': ei.get('takeover_path', merged.get('takeover_path', '')),
         'workflow_specials': wr.get('workflow_specials', merged.get('workflow_specials', [])),
         'workflow_entry_points': sched.get('workflow_entry_points', wr.get('workflow_entry_points', merged.get('workflow_entry_points', []))),
         'scheduled_fit_explanation': sched.get('scheduled_fit_explanation', merged.get('scheduled_fit_explanation', '')),
@@ -218,7 +232,7 @@ index = {
         'unattended_run', 'subagent_support', 'protocol_support', 'governance_maturity', 'governance_rationale',
         'workflow_stack_role', 'supports_scheduled', 'supports_long_running', 'supports_multi_agent', 'supports_context_protocol',
         'workflow_specials', 'workflow_entry_points', 'scheduled_fit_explanation',
-        'workflow_scenarios', 'runtime_control_level', 'distribution_layer', 'background_execution', 'local_first', 'workflow_lock_in', 'permission_visibility', 'runtime_control_rationale', 'execution_boundary', 'where_code_runs', 'secret_holder', 'audit_evidence', 'background_duration_fit', 'runtime_control_surfaces',
+        'workflow_scenarios', 'runtime_control_level', 'distribution_layer', 'background_execution', 'local_first', 'workflow_lock_in', 'permission_visibility', 'runtime_control_rationale', 'execution_boundary', 'where_code_runs', 'secret_holder', 'audit_evidence', 'background_duration_fit', 'execution_interface', 'parallel_agent_support', 'handoff_visibility', 'execution_evidence', 'takeover_path', 'runtime_control_surfaces',
         'workflow_entry_signals', 'workflow_decision_axes', 'workflow_risk_signals', 'site_surfaces',
         'security_rating', 'collection_status', 'priority_score', 'audit_status',
         'review_status', 'updated_at'

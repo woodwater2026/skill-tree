@@ -1,0 +1,474 @@
+{
+  "generated_at": "2026-04-01",
+  "count": 15,
+  "items": [
+    {
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "name": "Agent-Skills-for-Context-Engineering",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "MCP",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "execution_boundary": "Primarily discovery/index layer; execution usually happens only after the user enters downstream skill repos or tools. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Mostly local reading/browsing until user installs a downstream skill; actual code execution is deferred to linked tools. MCP support suggests standardized external tool/server handoff is possible.",
+      "secret_holder": "Usually user-held in downstream tools, not in the registry layer itself.",
+      "audit_evidence": "README/docs, repo structure, and linked downstream installation paths provide the main audit evidence. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "catalog / selection interface",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "Registry/readme metadata, linked repos, and installation/docs paths are the main evidence surfaces. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually stop at selection time by not installing or invoking downstream skills; takeover is strongest before execution starts."
+    },
+    {
+      "repo": "memodb-io/Acontext",
+      "name": "Acontext",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/memodb-io/Acontext",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "zippoxer/subtask",
+      "name": "subtask",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as medium",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "medium",
+      "source": "https://github.com/zippoxer/subtask",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "yxf203/Awesome-Efficient-Agents",
+      "name": "Awesome-Efficient-Agents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/yxf203/Awesome-Efficient-Agents",
+      "execution_boundary": "Primarily discovery/index layer; execution usually happens only after the user enters downstream skill repos or tools. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Mostly local reading/browsing until user installs a downstream skill; actual code execution is deferred to linked tools.",
+      "secret_holder": "Usually user-held in downstream tools, not in the registry layer itself.",
+      "audit_evidence": "README/docs, repo structure, and linked downstream installation paths provide the main audit evidence. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "catalog / selection interface",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "Registry/readme metadata, linked repos, and installation/docs paths are the main evidence surfaces. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually stop at selection time by not installing or invoking downstream skills; takeover is strongest before execution starts."
+    },
+    {
+      "repo": "hesreallyhim/awesome-claude-code",
+      "name": "awesome-claude-code",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "MCP",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/hesreallyhim/awesome-claude-code",
+      "execution_boundary": "Primarily discovery/index layer; execution usually happens only after the user enters downstream skill repos or tools. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Mostly local reading/browsing until user installs a downstream skill; actual code execution is deferred to linked tools. MCP support suggests standardized external tool/server handoff is possible.",
+      "secret_holder": "Usually user-held in downstream tools, not in the registry layer itself.",
+      "audit_evidence": "README/docs, repo structure, and linked downstream installation paths provide the main audit evidence. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "catalog / selection interface",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "Registry/readme metadata, linked repos, and installation/docs paths are the main evidence surfaces. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually stop at selection time by not installing or invoking downstream skills; takeover is strongest before execution starts."
+    },
+    {
+      "repo": "kepano/obsidian-skills",
+      "name": "obsidian-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as medium",
+      "protocol_support": [
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "medium",
+      "source": "https://github.com/kepano/obsidian-skills",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "name": "awesome-claude-code-subagents",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "execution_boundary": "Primarily discovery/index layer; execution usually happens only after the user enters downstream skill repos or tools. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Mostly local reading/browsing until user installs a downstream skill; actual code execution is deferred to linked tools.",
+      "secret_holder": "Usually user-held in downstream tools, not in the registry layer itself.",
+      "audit_evidence": "README/docs, repo structure, and linked downstream installation paths provide the main audit evidence. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "catalog / selection interface",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "Registry/readme metadata, linked repos, and installation/docs paths are the main evidence surfaces. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually stop at selection time by not installing or invoking downstream skills; takeover is strongest before execution starts."
+    },
+    {
+      "repo": "serejaris/justdoit",
+      "name": "justdoit",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "distribution_layer": "skill pack / workflow repo",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like skill pack / workflow repo; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as medium",
+      "protocol_support": [
+        "unknown"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "medium",
+      "source": "https://github.com/serejaris/justdoit",
+      "execution_boundary": "Workflow/skill-pack layer; execution boundary depends on the host agent and whichever tools the pack calls into.",
+      "where_code_runs": "Usually inside the host agent environment, often local-first but potentially extended by external tools or protocols.",
+      "secret_holder": "Usually user-held via host agent config, plus any linked APIs/services the workflow requires.",
+      "audit_evidence": "Prompt/workflow files, install instructions, protocol mentions, and governance notes in repo metadata.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "protocol / tool interface",
+      "parallel_agent_support": "partial",
+      "handoff_visibility": "high",
+      "execution_evidence": "Protocol references, tool/server docs, and explicit integration points provide the main evidence surface.",
+      "takeover_path": "User should be able to revoke protocol/tool access, stop connected servers, or cut integration at the host-agent boundary."
+    },
+    {
+      "repo": "marcosgalleterobbva/bitbucketdc-skill",
+      "name": "bitbucketdc-skill",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "cross-agent",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/marcosgalleterobbva/bitbucketdc-skill",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "OthmanAdi/planning-with-files",
+      "name": "planning-with-files",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "general",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/OthmanAdi/planning-with-files",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "K-Dense-AI/claude-scientific-skills",
+      "name": "claude-scientific-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "media-data",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "EverMind-AI/EverMemOS",
+      "name": "EverMemOS",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "medium",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as medium",
+      "protocol_support": [
+        "HTTP/API",
+        "JSON",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "medium",
+      "source": "https://github.com/EverMind-AI/EverMemOS",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "nidhinjs/prompt-master",
+      "name": "prompt-master",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "memory-knowledge",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/nidhinjs/prompt-master",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "CloudAI-X/claude-workflow-v2",
+      "name": "claude-workflow-v2",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "tooling",
+      "distribution_layer": "tooling / runtime",
+      "background_execution": "supported",
+      "local_first": "strong",
+      "workflow_lock_in": "medium",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like tooling / runtime; background execution appears supported; local-first posture appears strong; workflow lock-in assessed as medium; permission visibility assessed as high",
+      "protocol_support": [
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "supported",
+      "governance_maturity": "high",
+      "source": "https://github.com/CloudAI-X/claude-workflow-v2",
+      "execution_boundary": "Acts closer to an execution/runtime layer, so control depends on local setup, invoked tools, and permissions granted by the user. Includes delegated/multi-agent coordination, so effective execution may span more than one agent layer.",
+      "where_code_runs": "Typically on the user machine or local runtime/tooling environment, with possible external tool/API handoff.",
+      "secret_holder": "Usually user or local environment variables; may expand to connected tool/API credentials.",
+      "audit_evidence": "CLI commands, config files, schema/validation hints, and explicit protocol/tool integration references. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "long; repository signals support for unattended or background-style execution.",
+      "execution_interface": "cli-first runtime",
+      "parallel_agent_support": "supported",
+      "handoff_visibility": "high",
+      "execution_evidence": "CLI commands, local config, and repo-documented runtime behavior provide the main evidence surface. Multi-agent/delegation signals suggest checking handoff logs and execution trace visibility.",
+      "takeover_path": "User can usually intervene via local CLI, config changes, process stop, or removing tool access from the runtime."
+    },
+    {
+      "repo": "Prat011/awesome-llm-skills",
+      "name": "awesome-llm-skills",
+      "platforms": [
+        "Cross-platform"
+      ],
+      "category": "registry",
+      "distribution_layer": "discovery / registry",
+      "background_execution": "partial",
+      "local_first": "strong",
+      "workflow_lock_in": "low",
+      "permission_visibility": "high",
+      "runtime_control_rationale": "distribution layer looks like discovery / registry; background execution appears partial; local-first posture appears strong; workflow lock-in assessed as low; permission visibility assessed as high",
+      "protocol_support": [
+        "MCP",
+        "HTTP/API",
+        "CLI"
+      ],
+      "subagent_support": "unknown",
+      "governance_maturity": "high",
+      "source": "https://github.com/Prat011/awesome-llm-skills",
+      "execution_boundary": "Primarily discovery/index layer; execution usually happens only after the user enters downstream skill repos or tools.",
+      "where_code_runs": "Mostly local reading/browsing until user installs a downstream skill; actual code execution is deferred to linked tools. MCP support suggests standardized external tool/server handoff is possible.",
+      "secret_holder": "Usually user-held in downstream tools, not in the registry layer itself.",
+      "audit_evidence": "README/docs, repo structure, and linked downstream installation paths provide the main audit evidence. Permission/governance visibility appears relatively strong from available metadata.",
+      "background_duration_fit": "medium; repeatable workflow automation exists, but always-on/background support is only partial.",
+      "execution_interface": "catalog / selection interface",
+      "parallel_agent_support": "limited",
+      "handoff_visibility": "high",
+      "execution_evidence": "Registry/readme metadata, linked repos, and installation/docs paths are the main evidence surfaces.",
+      "takeover_path": "User can usually stop at selection time by not installing or invoking downstream skills; takeover is strongest before execution starts."
+    }
+  ]
+}
