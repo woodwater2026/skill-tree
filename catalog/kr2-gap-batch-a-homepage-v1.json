@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-04-04",
+  "source": "agents/research/skill-tree-kr2-gap-batch-a-v1.json",
+  "description": "Batch A items explicitly recommended for homepage / best-skills handoff.",
+  "items": [
+    {
+      "batch_rank": 1,
+      "repo": "jMerta/codex-skills",
+      "name": "codex-skills",
+      "recommended_surface": "homepage/best-skills",
+      "install": "git clone https://github.com/jMerta/codex-skills.git",
+      "usage": "先从一个贴近当前任务的真实用例开始，不要把目录/规则类项目当成一键全装包。",
+      "fit": "适合想先找到高信号 skill / 规则 / 模板，再决定是否安装的用户。",
+      "caution": "目录类项目真正风险常在后续跳转的下游项目与权限扩张，不在列表本身。",
+      "why_surface_first": "Top 20-35 已无缺口后，这批是最值得继续补到 homepage / best-skills 的剩余候选。"
+    },
+    {
+      "batch_rank": 2,
+      "repo": "brookslybrand/react-router-cursor-rules",
+      "name": "react-router-cursor-rules",
+      "recommended_surface": "homepage/best-skills",
+      "install": "git clone https://github.com/brookslybrand/react-router-cursor-rules.git",
+      "usage": "先从一个贴近当前任务的真实用例开始，不要把目录/规则类项目当成一键全装包。",
+      "fit": "适合想先找到高信号 skill / 规则 / 模板，再决定是否安装的用户。",
+      "caution": "目录类项目真正风险常在后续跳转的下游项目与权限扩张，不在列表本身。",
+      "why_surface_first": "Top 20-35 已无缺口后，这批是最值得继续补到 homepage / best-skills 的剩余候选。"
+    },
+    {
+      "batch_rank": 3,
+      "repo": "Wechat-ggGitHub/wechat-claude-code",
+      "name": "wechat-claude-code",
+      "recommended_surface": "homepage/best-skills",
+      "install": "git clone https://github.com/Wechat-ggGitHub/wechat-claude-code.git",
+      "usage": "先从一个贴近当前任务的真实用例开始，不要把目录/规则类项目当成一键全装包。",
+      "fit": "适合想先找到高信号 skill / 规则 / 模板，再决定是否安装的用户。",
+      "caution": "目录类项目真正风险常在后续跳转的下游项目与权限扩张，不在列表本身。",
+      "why_surface_first": "Top 20-35 已无缺口后，这批是最值得继续补到 homepage / best-skills 的剩余候选。"
+    },
+    {
+      "batch_rank": 4,
+      "repo": "Chat2AnyLLM/awesome-claude-skills",
+      "name": "awesome-claude-skills",
+      "recommended_surface": "homepage/best-skills",
+      "install": "git clone https://github.com/Chat2AnyLLM/awesome-claude-skills.git",
+      "usage": "先从一个贴近当前任务的真实用例开始，不要把目录/规则类项目当成一键全装包。",
+      "fit": "适合想先找到高信号 skill / 规则 / 模板，再决定是否安装的用户。",
+      "caution": "目录类项目真正风险常在后续跳转的下游项目与权限扩张，不在列表本身。",
+      "why_surface_first": "Top 20-35 已无缺口后，这批是最值得继续补到 homepage / best-skills 的剩余候选。"
+    }
+  ]
+}

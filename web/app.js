@@ -17,6 +17,7 @@ const state = {
   p1PackMap: new Map(),
   guidePlan: [],
   guidePlanMap: new Map(),
+  batchAHomepage: [],
 };
 
 const els = {
@@ -37,6 +38,7 @@ const els = {
   safeStart: document.getElementById("safe-start-grid"),
   p1Guides: document.getElementById("p1-guides-grid"),
   p0Guides: document.getElementById("p0-guides-grid"),
+  batchAHomepage: document.getElementById("batch-a-grid"),
   runtimeControl: document.getElementById("runtime-control-grid"),
   executionInterface: document.getElementById("execution-interface-grid"),
   runtimeBoundary: document.getElementById("runtime-boundary-grid"),
@@ -847,6 +849,31 @@ function renderTopGuides() {
     .join("");
 }
 
+function renderBatchAHomepage() {
+  if (!els.batchAHomepage) return;
+  if (!state.batchAHomepage.length) {
+    els.batchAHomepage.innerHTML = '';
+    return;
+  }
+  els.batchAHomepage.innerHTML = state.batchAHomepage.map((item) => `
+    <article class="guide-card">
+      <div class="guide-rank">Batch A #${item.batch_rank}</div>
+      <h3>${item.name || item.repo.split('/').pop()}</h3>
+      <p class="guide-summary">${item.why_surface_first || ''}</p>
+      <div class="guide-meta">
+        <span class="fact">${item.repo}</span>
+        <span class="fact">homepage / best-skills</span>
+      </div>
+      <ul class="guide-points">
+        <li><strong>Install:</strong> <code>${item.install || '—'}</code></li>
+        <li><strong>Usage:</strong> ${item.usage || '—'}</li>
+        <li><strong>Fit:</strong> ${item.fit || '—'}</li>
+        <li><strong>Caution:</strong> ${item.caution || '—'}</li>
+      </ul>
+    </article>
+  `).join('');
+}
+
 function renderCapabilityMap() {
   if (!els.capabilityMap) return;
   els.capabilityMap.innerHTML = CAPABILITY_MAP.map((cap) => `
@@ -985,6 +1012,7 @@ function render() {
   renderBestLists();
   renderP1Guides();
   renderP0Guides();
+  renderBatchAHomepage();
   renderTopGuides();
   renderSafeStart();
   const items = getFilteredItems();
@@ -1073,7 +1101,25 @@ async function loadBestLists() {
     try {
       const data = await loadJson(path);
       const normalized = normalizeBestLists(data);
-      if (normalized.length) return normalized;
+      if (normalized.length) {
+        const batchASkills = state.batchAHomepage.map((item) => ({
+          name: item.name || item.repo.split('/').pop(),
+          repo: item.repo,
+          why_pick: item.why_surface_first || '',
+          best_for: item.fit || '',
+          install_cmd: item.install || '',
+        }));
+        if (batchASkills.length) {
+          normalized.unshift({
+            slug: 'kr2-batch-a-next-picks',
+            title: 'KR2 batch A next picks',
+            audience: 'High-value remaining additions recommended for homepage / best-skills handoff',
+            intro: 'Only the next worthwhile batch A entries are surfaced here, with install, fit, and caution ready for the main path.',
+            skills: batchASkills,
+          });
+        }
+        return normalized;
+      }
     } catch {
       // ignore
     }
@@ -1139,6 +1185,23 @@ async function loadGuidePlan() {
     try {
       const data = await loadJson(path);
       return Array.isArray(data.items) ? data.items : [];
+    } catch {
+      // ignore
+    }
+  }
+  return [];
+}
+
+async function loadBatchAHomepage() {
+  const candidates = [
+    "../catalog/kr2-gap-batch-a-homepage-v1.json",
+    "../../agents/research/skill-tree-kr2-gap-batch-a-v1.json",
+  ];
+  for (const path of candidates) {
+    try {
+      const data = await loadJson(path);
+      const items = Array.isArray(data.items) ? data.items : [];
+      return items.filter((item) => (item.recommended_surface || '').includes('homepage') || (item.recommended_surface || '').includes('best-skills'));
     } catch {
       // ignore
     }
@@ -1240,6 +1303,7 @@ function applyCapabilityAction(capabilitySlug) {
 }
 
 async function main() {
+  state.batchAHomepage = await loadBatchAHomepage();
   const [catalog, auditIndex, enrichedMap, bestLists, guides, p0Pack, p1Pack, guidePlan] = await Promise.all([
     loadJson("../catalog/index.json").catch(() => loadJson("../catalog/skills-catalog-v1.json")),
     loadJson("../audits/index.json"),
