@@ -159,15 +159,61 @@ async function loadScheduledCandidates() {
   }
 }
 
+async function loadBatchBSpecials() {
+  try {
+    const data = await loadFirst([
+      '../../catalog/kr2-gap-batch-b-specials-v1.json',
+      '../../agents/research/skill-tree-kr2-gap-batch-b-specials-v1.json',
+      '../catalog/kr2-gap-batch-b-specials-v1.json',
+      '../agents/research/skill-tree-kr2-gap-batch-b-specials-v1.json',
+    ]);
+    return Array.isArray(data.items) ? data.items : [];
+  } catch {
+    return [];
+  }
+}
+
+function renderBatchBSpecials(el, items) {
+  el.innerHTML = items.map((item) => `
+    <article class="special-item">
+      <div class="special-meta">
+        <span class="special-chip">Batch B #${item.batch_rank}</span>
+        <span class="special-chip muted">${item.recommended_special}</span>
+      </div>
+      <h3>${item.name || (item.repo ? item.repo.split('/').pop() : 'Untitled skill')}</h3>
+      <p>${item.why_special_first || ''}</p>
+      <ul>
+        <li><strong>Install:</strong> <code>${item.install || '—'}</code></li>
+        <li><strong>Usage:</strong> ${item.usage || '—'}</li>
+        <li><strong>Fit:</strong> ${item.fit || '—'}</li>
+        <li><strong>Caution:</strong> ${item.caution || '—'}</li>
+      </ul>
+    </article>`).join('');
+}
+
 async function main() {
   const key = getSpecialKey();
+
+  if (key === 'execution-boundary') {
+    const batchB = await loadBatchBSpecials();
+    const items = batchB.filter((item) => item.recommended_special === 'execution-boundary');
+    const countEl = document.getElementById('boundary-count');
+    const resultsEl = document.getElementById('boundary-results');
+    const activeLabelEl = document.getElementById('boundary-active-label');
+    if (countEl) countEl.textContent = `${items.length} batch B additions in execution-boundary`;
+    if (activeLabelEl) activeLabelEl.textContent = 'Showing: batch B execution-boundary additions';
+    if (resultsEl) renderBatchBSpecials(resultsEl, items);
+    return;
+  }
+
   const config = SPECIALS[key];
-  const [index, guidePlan, p0Pack, p1Pack, scheduledCandidates] = await Promise.all([
+  const [index, guidePlan, p0Pack, p1Pack, scheduledCandidates, batchB] = await Promise.all([
     loadFirst(['../../catalog/index.json', '../catalog/index.json']),
     loadGuidePlan(),
     loadP0Pack(),
     loadP1Pack(),
     loadScheduledCandidates(),
+    loadBatchBSpecials(),
   ]);
   const p0Repos = new Set(guidePlan.filter((item) => item.priority_batch === 'P0').map((item) => item.repo));
   const p0PackMap = new Map(p0Pack.map((item) => [item.repo, item]));
@@ -191,7 +237,8 @@ async function main() {
         workflow_stack_role: item.workflow_stack_role || 'Scheduled workflow candidate',
       }))
     : [];
-  const items = mainIndexItems.length ? mainIndexItems : fallbackItems;
+  const batchBMatches = batchB.filter((item) => item.recommended_special === key);
+  const items = batchBMatches.length ? batchBMatches : (mainIndexItems.length ? mainIndexItems : fallbackItems);
 
   document.getElementById('special-eyebrow').textContent = config.eyebrow;
   document.getElementById('special-title').textContent = config.title;
@@ -200,13 +247,20 @@ async function main() {
   document.getElementById('decision-axes').innerHTML = config.axes.map((x) => `<li>${x}</li>`).join('');
   document.getElementById('risk-list').innerHTML = config.risks.map((x) => `<li>${x}</li>`).join('');
   document.getElementById('stack-links').innerHTML = config.stackLinks.map((x) => `<span class="special-chip">${x}</span>`).join('');
-  const countLabel = mainIndexItems.length
-    ? `${items.length} matching skills in main index`
-    : key === 'scheduled'
-      ? `${items.length} scheduled candidates shown while main index backfill catches up`
-      : `${items.length} matching skills in main index`;
+  const countLabel = batchBMatches.length
+    ? `${items.length} batch B additions shown for ${key}`
+    : mainIndexItems.length
+      ? `${items.length} matching skills in main index`
+      : key === 'scheduled'
+        ? `${items.length} scheduled candidates shown while main index backfill catches up`
+        : `${items.length} matching skills in main index`;
   document.getElementById('special-count').textContent = countLabel;
   const introEl = document.getElementById('special-intro');
+  if (batchBMatches.length) {
+    introEl.textContent = `${config.intro} Showing focused batch B handoff for the highest-fit remaining specials entries.`;
+    renderBatchBSpecials(document.getElementById('special-results'), items.slice(0, 8));
+    return;
+  }
   if (!mainIndexItems.length && key === 'scheduled') {
     introEl.textContent = `${config.intro} Showing scheduled candidate backfill until the main index absorbs the new fields.`;
   }

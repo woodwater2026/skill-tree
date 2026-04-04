@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-04-04",
+  "source": "agents/research/skill-tree-kr2-gap-batch-b-specials-v1.json",
+  "items": [
+    {
+      "batch_rank": 1,
+      "repo": "EESJGong/scholar-skill",
+      "name": "scholar-skill",
+      "recommended_special": "context-protocol",
+      "install": "git clone https://github.com/EESJGong/scholar-skill.git ~/.claude/skills/scholar-skill",
+      "usage": "先在一个跨多轮上下文的研究或长任务里试跑，重点看它是否真的减少检索切换和上下文断层。",
+      "fit": "适合需要长期上下文、知识复用、检索增强或研究协作链路的用户。",
+      "caution": "先确认上下文来源、外部依赖和长期任务中的可控性，不要把它当成“自动变聪明”的万能层。",
+      "why_special_first": "This item is a better fit for the context-protocol specials path than for homepage because its value is clearer in scenario-led comparison."
+    },
+    {
+      "batch_rank": 2,
+      "repo": "proflead/codex-skills-library",
+      "name": "codex-skills-library",
+      "recommended_special": "execution-boundary",
+      "install": "git clone https://github.com/proflead/codex-skills-library.git",
+      "usage": "先把它当成专题页里的高信号入口，而不是默认一键安装包。",
+      "fit": "适合想先通过专题页快速判断某类项目值不值得继续深入的人。",
+      "caution": "目录/聚合项目的主要风险不在列表本身，而在后续跳转到的下游项目与权限扩张。",
+      "why_special_first": "This item is a better fit for the execution-boundary specials path than for homepage because its value is clearer in scenario-led comparison."
+    },
+    {
+      "batch_rank": 3,
+      "repo": "Rito-w/awesome-openclaw-skills-zh",
+      "name": "awesome-openclaw-skills-zh",
+      "recommended_special": "execution-boundary",
+      "install": "git clone https://github.com/Rito-w/awesome-openclaw-skills-zh.git",
+      "usage": "先把它当成专题页里的高信号入口，而不是默认一键安装包。",
+      "fit": "适合想先通过专题页快速判断某类项目值不值得继续深入的人。",
+      "caution": "目录/聚合项目的主要风险不在列表本身，而在后续跳转到的下游项目与权限扩张。",
+      "why_special_first": "This item is a better fit for the execution-boundary specials path than for homepage because its value is clearer in scenario-led comparison."
+    },
+    {
+      "batch_rank": 4,
+      "repo": "pranav270-create/mdc_autogen",
+      "name": "mdc_autogen",
+      "recommended_special": "execution-boundary",
+      "install": "git clone https://github.com/pranav270-create/mdc_autogen.git",
+      "usage": "先把它当成专题页里的高信号入口，而不是默认一键安装包。",
+      "fit": "适合想先通过专题页快速判断某类项目值不值得继续深入的人。",
+      "caution": "目录/聚合项目的主要风险不在列表本身，而在后续跳转到的下游项目与权限扩张。",
+      "why_special_first": "This item is a better fit for the execution-boundary specials path than for homepage because its value is clearer in scenario-led comparison."
+    },
+    {
+      "batch_rank": 5,
+      "repo": "callmerio/RIPER-lite",
+      "name": "RIPER-lite",
+      "recommended_special": "execution-boundary",
+      "install": "git clone https://github.com/callmerio/RIPER-lite.git",
+      "usage": "先把它当成专题页里的高信号入口，而不是默认一键安装包。",
+      "fit": "适合想先通过专题页快速判断某类项目值不值得继续深入的人。",
+      "caution": "目录/聚合项目的主要风险不在列表本身，而在后续跳转到的下游项目与权限扩张。",
+      "why_special_first": "This item is a better fit for the execution-boundary specials path than for homepage because its value is clearer in scenario-led comparison."
+    },
+    {
+      "batch_rank": 6,
+      "repo": "tyrchen/rust-lib-template",
+      "name": "rust-lib-template",
+      "recommended_special": "execution-boundary",
+      "install": "git clone https://github.com/tyrchen/rust-lib-template.git",
+      "usage": "先把它当成专题页里的高信号入口，而不是默认一键安装包。",
+      "fit": "适合想先通过专题页快速判断某类项目值不值得继续深入的人。",
+      "caution": "目录/聚合项目的主要风险不在列表本身，而在后续跳转到的下游项目与权限扩张。",
+      "why_special_first": "This item is a better fit for the execution-boundary specials path than for homepage because its value is clearer in scenario-led comparison."
+    },
+    {
+      "batch_rank": 7,
+      "repo": "AndreRatzenberger/cursor-rules",
+      "name": "cursor-rules",
+      "recommended_special": "execution-boundary",
+      "install": "git clone https://github.com/AndreRatzenberger/cursor-rules.git",
+      "usage": "先把它当成专题页里的高信号入口，而不是默认一键安装包。",
+      "fit": "适合想先通过专题页快速判断某类项目值不值得继续深入的人。",
+      "caution": "目录/聚合项目的主要风险不在列表本身，而在后续跳转到的下游项目与权限扩张。",
+      "why_special_first": "This item is a better fit for the execution-boundary specials path than for homepage because its value is clearer in scenario-led comparison."
+    }
+  ]
+}
