@@ -1193,6 +1193,18 @@ function applyPresetFilter(preset) {
     els.search.value = "";
     render();
     document.getElementById("capability-map")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
+  if (preset === "copy-install") {
+    state.risk = "all";
+    state.category = "all";
+    state.auditedOnly = false;
+    state.activeRepos = null;
+    state.query = "";
+    els.search.value = "";
+    render();
+    scrollToGrid();
+    setTimeout(() => document.querySelector('.copy-btn')?.focus(), 150);
   }
 }
 
