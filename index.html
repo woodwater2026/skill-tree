@@ -88,6 +88,41 @@
         padding: 18px;
         box-shadow: 0 18px 40px rgba(0,0,0,.2);
       }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 18px 0 20px;
+      }
+      .stat {
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 14px;
+      }
+      .stat strong {
+        display: block;
+        font-size: 26px;
+        margin-bottom: 4px;
+      }
+      .install-proof {
+        margin-top: 18px;
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px;
+      }
+      .install-proof h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+      .install-proof p { margin: 0 0 10px; }
+      .install-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
       .panel h2, .section h2 {
         margin: 0 0 10px;
         font-size: 24px;
@@ -158,10 +193,24 @@
             Skill Tree helps you discover useful AI agent skills, understand what kind of system they actually are, evaluate risk in plain language, and copy the next install step without opening five repos first.
           </p>
           <p class="support">In under 10 seconds, you should know whether to explore, evaluate, or install.</p>
+          <div class="stats">
+            <div class="stat"><strong>5</strong><span>skills already in the main path</span></div>
+            <div class="stat"><strong>10</strong><span>guide-backed entries with install / usage / fit / caution</span></div>
+            <div class="stat"><strong>2</strong><span>audited index items plus 3 visible judgment lenses</span></div>
+          </div>
           <div class="cta-row">
             <a class="cta primary" href="./web/">Explore Skills</a>
             <a class="cta secondary" href="./web/why-not-awesome.html">Evaluate Before Install</a>
             <a class="cta tertiary" href="./web/#best-lists">See Installable Picks</a>
+          </div>
+          <div class="install-proof">
+            <h3>Real install example, not just abstract CTA</h3>
+            <p>This is already live inside Skill Tree’s main path. A first-time visitor can immediately see what “copy install” means in practice.</p>
+            <div class="install-row">
+              <code>git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills</code>
+              <a class="cta tertiary" href="./web/#grid">Go to copyable install cards</a>
+            </div>
+            <p><strong>Why this matters:</strong> official public repository for Agent Skills · <strong>Risk:</strong> medium — review before broad promotion.</p>
           </div>
         </div>
         <aside class="panel">
