@@ -88,22 +88,27 @@
         padding: 18px;
         box-shadow: 0 18px 40px rgba(0,0,0,.2);
       }
-      .stats {
+      .proof-strip {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 12px;
         margin: 18px 0 20px;
       }
-      .stat {
+      .proof-pill {
         background: var(--panel-2);
         border: 1px solid var(--border);
         border-radius: 14px;
         padding: 14px;
       }
-      .stat strong {
+      .proof-pill strong {
         display: block;
-        font-size: 26px;
-        margin-bottom: 4px;
+        font-size: 15px;
+        margin-bottom: 6px;
+        color: var(--text);
+      }
+      .proof-pill span {
+        color: var(--muted);
+        line-height: 1.5;
       }
       .install-proof {
         margin-top: 18px;
@@ -221,10 +226,10 @@
             Skill Tree helps you discover useful AI agent skills, understand what kind of system they actually are, evaluate risk in plain language, and copy the next install step without opening five repos first.
           </p>
           <p class="support">In under 10 seconds, you should know whether to explore, evaluate, or install.</p>
-          <div class="stats">
-            <div class="stat"><strong>5</strong><span>skills already in the main path</span></div>
-            <div class="stat"><strong>10</strong><span>guide-backed entries with install / usage / fit / caution</span></div>
-            <div class="stat"><strong>2</strong><span>audited index items plus 3 visible judgment lenses</span></div>
+          <div class="proof-strip">
+            <div class="proof-pill"><strong>Installable picks are already visible here</strong><span>You do not need to dig through research files first — the main path already shows real skills with install commands.</span></div>
+            <div class="proof-pill"><strong>Guide-backed entries are already in the first-visit path</strong><span>The homepage and starter picks already surface install, fit, and caution instead of making you guess what to do next.</span></div>
+            <div class="proof-pill"><strong>There is already a judgment layer before install</strong><span>Skill Tree explains risk, runtime boundary, and workflow fit before you commit to a tool.</span></div>
           </div>
           <div class="cta-row">
             <a class="cta primary" href="./web/">Explore Skills</a>
