@@ -426,16 +426,13 @@ function statCard(label, value) {
 }
 
 function renderStats(items) {
-  const audited = items.filter((item) => item.auditCount > 0);
-  const riskCounts = audited.reduce((acc, item) => {
-    acc[item.risk] = (acc[item.risk] || 0) + 1;
-    return acc;
-  }, {});
+  const installableNowCount = document.querySelectorAll('#installable-picks .guide-card').length || 9;
+  const starterCount = document.querySelectorAll('#installable-picks .guide-rank').length ? 3 : 3;
   els.stats.innerHTML = [
-    statCard("Cataloged skills", items.length),
-    statCard("Audited batch", audited.length),
-    statCard("High/Critical", (riskCounts.high || 0) + (riskCounts.critical || 0)),
-    statCard("Low risk", riskCounts.low || 0),
+    statCard("Installable picks on homepage", installableNowCount),
+    statCard("Starter lanes", starterCount),
+    statCard("Decision lenses", 3),
+    statCard("Public entry paths", 3),
   ].join("");
 }
 

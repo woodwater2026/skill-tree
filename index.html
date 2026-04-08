@@ -153,6 +153,10 @@
         border-radius: 16px;
         padding: 16px;
       }
+      .pick-card.recommended {
+        border-color: var(--accent-2);
+        box-shadow: 0 0 0 1px rgba(139,180,255,.22), 0 14px 30px rgba(0,0,0,.18);
+      }
       .pick-card h3 {
         margin: 0 0 8px;
         font-size: 20px;
@@ -282,10 +286,10 @@
 
       <section class="section panel">
         <h2>Try one low-risk starting pick now</h2>
-        <p>Root stays light, so only three high-signal first-visit picks live here: one ecosystem anchor, one low-surprise registry, and one workflow-specific knowledge pick.</p>
+        <p>Do not make first-time visitors choose from scratch. Start with the default starter first, then compare the other two only if you already know your workflow.</p>
         <div class="grid">
-          <article class="pick-card">
-            <span class="pick-badge">Safest start</span>
+          <article class="pick-card recommended">
+            <span class="pick-badge recommended">Default starter</span>
             <h3>skills</h3>
             <p>Public repository for Agent Skills</p>
             <ul>
@@ -293,9 +297,10 @@
               <li><strong>Fit:</strong> 适合想快速理解当前高价值 skill 生态、挑选首批可用能力的用户。</li>
               <li><strong>Caution:</strong> 正式接入前先看清权限边界与自动化逻辑。</li>
             </ul>
+            <a class="mini-link" href="./web/#installable-picks">Start with this pick →</a>
           </article>
           <article class="pick-card">
-            <span class="pick-badge">Safest start</span>
+            <span class="pick-badge">Alternative starter</span>
             <h3>awesome-claude-skills</h3>
             <p>A curated list of Claude Skills.</p>
             <ul>
