@@ -147,6 +147,30 @@
         border-radius: 16px;
         padding: 16px;
       }
+      .pick-card {
+        background: var(--panel-2);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 16px;
+      }
+      .pick-card h3 {
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+      .pick-badge {
+        display: inline-flex;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: #1d2f5f;
+        color: #c7d5ff;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .pick-card ul {
+        margin: 12px 0 0;
+        padding-left: 18px;
+      }
+      .pick-card li { color: var(--muted); margin-bottom: 8px; }
       .mini-card h3 {
         margin: 0 0 10px;
         font-size: 20px;
@@ -252,6 +276,43 @@
             <h3>Copy install</h3>
             <p>Jump directly to install-intent surfaces where featured picks and copyable commands are already visible inside the main product path.</p>
             <a class="mini-link" href="./web/#best-lists">Open installable picks →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section panel">
+        <h2>Try one low-risk starting pick now</h2>
+        <p>Root stays light, so only three high-signal first-visit picks live here: one ecosystem anchor, one low-surprise registry, and one workflow-specific knowledge pick.</p>
+        <div class="grid">
+          <article class="pick-card">
+            <span class="pick-badge">Safest start</span>
+            <h3>skills</h3>
+            <p>Public repository for Agent Skills</p>
+            <ul>
+              <li><strong>Install:</strong> <code>git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills</code></li>
+              <li><strong>Fit:</strong> 适合想快速理解当前高价值 skill 生态、挑选首批可用能力的用户。</li>
+              <li><strong>Caution:</strong> 正式接入前先看清权限边界与自动化逻辑。</li>
+            </ul>
+          </article>
+          <article class="pick-card">
+            <span class="pick-badge">Safest start</span>
+            <h3>awesome-claude-skills</h3>
+            <p>A curated list of Claude Skills.</p>
+            <ul>
+              <li><strong>Install:</strong> <code>git clone https://github.com/BehiSecc/awesome-claude-skills.git ~/.claude/skills/awesome-claude-skills</code></li>
+              <li><strong>Fit:</strong> 适合刚开始找 skill、想先建立可选池的开发者或团队。</li>
+              <li><strong>Caution:</strong> 重点看内容质量、适配性和维护活跃度。</li>
+            </ul>
+          </article>
+          <article class="pick-card">
+            <span class="pick-badge">Workflow-specific</span>
+            <h3>obsidian-skills</h3>
+            <p>Agent skills for Obsidian.</p>
+            <ul>
+              <li><strong>Install:</strong> <code>npx skills add git@github.com:kepano/obsidian-skills.git</code></li>
+              <li><strong>Fit:</strong> 适合需要长期知识沉淀、上下文复用、研究工作流的用户。</li>
+              <li><strong>Caution:</strong> 正式接入前先看清外部工具交互和执行面。</li>
+            </ul>
           </article>
         </div>
       </section>
