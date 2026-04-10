@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First time with Skill Tree? Start here.</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --bg-2: #10182f;
+        --panel: rgba(18, 25, 51, 0.92);
+        --panel-2: #0d1430;
+        --border: #27345f;
+        --text: #ecf1ff;
+        --muted: #9dacd2;
+        --accent: #8bb4ff;
+        --accent-2: #3e67d8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      }
+      a { color: inherit; text-decoration: none; }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 40px 24px 56px; }
+      .hero { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: start; }
+      .eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: 12px; margin: 0 0 12px; }
+      h1 { margin: 0 0 14px; font-size: clamp(34px, 5vw, 60px); line-height: 1.02; }
+      .lede { margin: 0 0 14px; color: var(--muted); font-size: 19px; line-height: 1.6; max-width: 820px; }
+      .support { margin: 0 0 18px; color: var(--muted); }
+      .cta-row, .card-actions, .nav-row { display: flex; flex-wrap: wrap; gap: 12px; }
+      .cta, .copy-btn {
+        display: inline-flex; align-items: center; justify-content: center; border-radius: 999px;
+        padding: 12px 18px; font-weight: 700; border: 1px solid var(--border); background: var(--panel-2); color: var(--text);
+      }
+      .cta.primary, .copy-btn { background: #23408c; border-color: var(--accent-2); cursor: pointer; }
+      .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 18px; padding: 18px; box-shadow: 0 18px 40px rgba(0,0,0,.2); }
+      .section { margin-top: 24px; }
+      .section h2 { margin: 0 0 10px; font-size: 28px; }
+      .section p, .panel p, .panel li { color: var(--muted); line-height: 1.6; }
+      .groups { display: grid; gap: 18px; }
+      .group-head { display: flex; justify-content: space-between; gap: 16px; align-items: end; margin-bottom: 12px; }
+      .group-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+      .card { background: var(--panel-2); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+      .card.featured { border-color: var(--accent-2); box-shadow: 0 0 0 1px rgba(139,180,255,.22), 0 14px 30px rgba(0,0,0,.18); }
+      .badge { display: inline-flex; border-radius: 999px; padding: 6px 10px; background: #1d2f5f; color: #c7d5ff; font-size: 12px; margin-bottom: 10px; }
+      .card h3 { margin: 0 0 8px; font-size: 22px; }
+      .install-box { margin: 14px 0; }
+      code {
+        display: block; width: 100%; overflow-x: auto; white-space: nowrap; background: #091026; border: 1px solid var(--border);
+        border-radius: 10px; padding: 10px 12px; color: #d9e4ff; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      ul { margin: 12px 0 0; padding-left: 18px; }
+      li { margin-bottom: 8px; }
+      .helper { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }
+      @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Skill Tree · First-install entry</p>
+          <h1>First time with Skill Tree? Start here.</h1>
+          <p class="lede">Instead of browsing the whole catalog, start with a small set of installable, high-signal picks organized by readiness: safest start, installable now, and workflow-specific.</p>
+          <p class="support">Unlike a plain list, every pick here shows the install path, fit, and caution immediately.</p>
+          <div class="cta-row">
+            <button class="copy-btn" type="button" data-copy="git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer">Copy default starter</button>
+            <a class="cta" href="./">Explore full Skill Tree</a>
+            <a class="cta" href="./why-not-awesome.html">Why this is not another awesome list</a>
+          </div>
+        </div>
+        <aside class="panel">
+          <h2>Who this page is for</h2>
+          <ul>
+            <li>First-time visitors coming from an external link</li>
+            <li>People asking “what should I install first?”</li>
+            <li>Users who want a starter decision, not a full ecosystem map</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section panel">
+        <div class="group-head">
+          <div>
+            <p class="eyebrow">Default answer first</p>
+            <h2>Start with this default starter</h2>
+          </div>
+          <div class="nav-row">
+            <a class="cta" href="#alternative-starters">See alternatives</a>
+            <a class="cta" href="#workflow-specific">Jump to workflow-specific</a>
+          </div>
+        </div>
+        <div class="group-grid">
+          <article class="card featured">
+            <span class="badge">Default starter</span>
+            <h3>humanizer</h3>
+            <p>Claude Code skill that removes signs of AI-generated writing from text.</p>
+            <div class="install-box">
+              <code id="default-install">git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer</code>
+            </div>
+            <ul>
+              <li><strong>Fit:</strong> Best for first-time visitors who want one clear, low-friction install with fast visible payoff.</li>
+              <li><strong>Caution:</strong> Low to medium risk; the main question is whether the output style fits your writing workflow.</li>
+              <li><strong>Why this is a first-install pick:</strong> Single-purpose, clear command, low surprise, fast feedback.</li>
+            </ul>
+            <div class="card-actions">
+              <button class="copy-btn" type="button" data-copy="git clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer">Copy install</button>
+              <a class="cta" href="./#installable-picks">See why this pick</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section panel" id="alternative-starters">
+        <div class="group-head">
+          <div>
+            <p class="eyebrow">Three readiness lanes</p>
+            <h2>Choose by readiness, not by taxonomy</h2>
+          </div>
+        </div>
+        <div class="groups">
+          <div>
+            <h3>Safest Start</h3>
+            <div class="group-grid">
+              <article class="card">
+                <span class="badge">Alternative starter</span>
+                <h3>skills</h3>
+                <p>Public repository for Agent Skills.</p>
+                <code>git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills</code>
+                <ul>
+                  <li><strong>Fit:</strong> Good if you want to understand the ecosystem before choosing your second install.</li>
+                  <li><strong>Caution:</strong> More of an ecosystem anchor than an instant-result starter.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Stable public reference point with a clear install path.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="badge">Safest start</span>
+                <h3>Dimillian/Skills</h3>
+                <p>A directly installable skill set for Claude-style workflows.</p>
+                <code>git clone https://github.com/Dimillian/Skills.git ~/.claude/skills/Dimillian-Skills</code>
+                <ul>
+                  <li><strong>Fit:</strong> Better for users who want a clearer repo and command, but still more range than a one-purpose starter.</li>
+                  <li><strong>Caution:</strong> Pick one clear use case first instead of treating the full repo as an all-at-once install.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Directly installable and still easier to act on than a pure collection page.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="git clone https://github.com/Dimillian/Skills.git ~/.claude/skills/Dimillian-Skills">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="badge">Safest start</span>
+                <h3>obsidian-skills</h3>
+                <p>Agent skills for Obsidian.</p>
+                <code>npx skills add git@github.com:kepano/obsidian-skills.git</code>
+                <ul>
+                  <li><strong>Fit:</strong> Best if you already know you want note-taking, research, and knowledge-retention workflows.</li>
+                  <li><strong>Caution:</strong> Not a general starter if you are not already in the Obsidian workflow.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Strong workflow-specific choice with a clear install command.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="npx skills add git@github.com:kepano/obsidian-skills.git">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h3>Installable Now</h3>
+            <div class="group-grid">
+              <article class="card">
+                <span class="badge">Installable now</span>
+                <h3>superpowers</h3>
+                <p>An agentic skills framework & software development methodology that works.</p>
+                <code>git clone https://github.com/obra/superpowers.git ~/.claude/skills/superpowers</code>
+                <ul>
+                  <li><strong>Fit:</strong> Good for builders who want a practical workflow upgrade right away.</li>
+                  <li><strong>Caution:</strong> Review permissions before using it broadly.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Strong install-first value with clear practical upside.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="git clone https://github.com/obra/superpowers.git ~/.claude/skills/superpowers">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="badge">Installable now</span>
+                <h3>google-workspace-cli</h3>
+                <p>Google Workspace command line tool for mail, docs, and admin workflows.</p>
+                <code>npm install -g @googleworkspace/cli</code>
+                <ul>
+                  <li><strong>Fit:</strong> Best if you already live inside Google Workspace and want one clear tool entry.</li>
+                  <li><strong>Caution:</strong> Requires Google account authorization; skip if that is not your workflow.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Single-tool install with a direct usage model.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="npm install -g @googleworkspace/cli">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="badge">Installable now</span>
+                <h3>Agent-Skills-for-Context-Engineering</h3>
+                <p>A comprehensive collection of Agent Skills for context engineering, multi-agent architectures, and production agent systems.</p>
+                <code>git clone https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git ~/.claude/skills/Agent-Skills-for-Context-Engineering</code>
+                <ul>
+                  <li><strong>Fit:</strong> Better for users who already know they need long-context and multi-step collaboration support.</li>
+                  <li><strong>Caution:</strong> Not a universal starter; review scope before treating it as a default install.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Still actionable for users with a clear context-engineering intent.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="git clone https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering.git ~/.claude/skills/Agent-Skills-for-Context-Engineering">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div id="workflow-specific">
+            <h3>Workflow-Specific</h3>
+            <div class="group-grid">
+              <article class="card">
+                <span class="badge">Workflow-specific</span>
+                <h3>skills</h3>
+                <p>Public repository for Agent Skills.</p>
+                <code>git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills</code>
+                <ul>
+                  <li><strong>Fit:</strong> Best when you want to understand the skill ecosystem before choosing deeper workflow picks.</li>
+                  <li><strong>Caution:</strong> This is more of an ecosystem entry than a fastest-payoff first install.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Good bridge into broader exploration after the default starter.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="git clone https://github.com/anthropics/skills.git ~/.claude/skills/skills">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="badge">Workflow-specific</span>
+                <h3>Dimillian/Skills</h3>
+                <p>A directly installable skill set for Claude-style workflows.</p>
+                <code>git clone https://github.com/Dimillian/Skills.git ~/.claude/skills/Dimillian-Skills</code>
+                <ul>
+                  <li><strong>Fit:</strong> Good if you already know you want a fuller workflow layer, not just a one-purpose starter.</li>
+                  <li><strong>Caution:</strong> Choose a specific use case first.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Installable and shareable without sending users into a directory first.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="git clone https://github.com/Dimillian/Skills.git ~/.claude/skills/Dimillian-Skills">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+              <article class="card">
+                <span class="badge">Workflow-specific</span>
+                <h3>google-workspace-cli</h3>
+                <p>Google Workspace command line tool for mail, docs, and admin workflows.</p>
+                <code>npm install -g @googleworkspace/cli</code>
+                <ul>
+                  <li><strong>Fit:</strong> Best for teams already committed to Google Workspace operations.</li>
+                  <li><strong>Caution:</strong> Requires Google authorization and is not a general starter.</li>
+                  <li><strong>Why this is a first-install pick:</strong> Clear command, clear environment, clear workflow match.</li>
+                </ul>
+                <div class="card-actions">
+                  <button class="copy-btn" type="button" data-copy="npm install -g @googleworkspace/cli">Copy install</button>
+                  <a class="cta" href="./#installable-picks">See why this pick</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section panel">
+        <h2>Not sure yet?</h2>
+        <div class="helper">
+          <div>
+            <p>If you want the full product map, not just a starter decision, go back to the full Skill Tree homepage.</p>
+            <a class="cta" href="./">Explore full Skill Tree</a>
+          </div>
+          <div>
+            <p>If you want the trust and differentiation argument first, use the proof layer before installing.</p>
+            <a class="cta" href="./why-not-awesome.html">Why this is not another awesome list</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section panel">
+        <h2>See more installable picks in /web/</h2>
+        <p>This page narrows choice on purpose. If you want broader browsing after your first install decision, continue into the main Skill Tree surface.</p>
+        <div class="nav-row">
+          <a class="cta primary" href="./">Explore full Skill Tree</a>
+          <a class="cta" href="./#installable-picks">See homepage installable picks</a>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.querySelectorAll('[data-copy]').forEach((button) => {
+        button.addEventListener('click', async () => {
+          const text = button.getAttribute('data-copy') || '';
+          try {
+            await navigator.clipboard.writeText(text);
+            const old = button.textContent;
+            button.textContent = 'Copied';
+            setTimeout(() => {
+              button.textContent = old;
+            }, 1200);
+          } catch {
+            button.textContent = 'Copy failed';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
